@@ -1,0 +1,37 @@
+//
+// hero.scss
+// Override du thème Lotus Docs : fond noir + image contenue dans le viewport
+//
+
+@media (max-width:767px) {
+    .classic-hero-image img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+.hero {
+    background-size: cover;
+    padding-top: 70px;
+    background-color: $black;
+    background-image: none;
+
+    .heading,
+    .para-desc,
+    .text-muted,
+    p {
+        // Bootstrap génère .text-muted avec !important ($enable-important-utilities),
+        // il faut donc forcer ici pour gagner en spécificité.
+        color: $white !important;
+    }
+}
+
+// Contraint l'image du hero pour qu'elle reste intégralement visible
+// sans scroll, y compris sur un écran 24" en 1920x1200.
+.classic-hero-image img {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    max-height: 480px;
+    margin: 0 auto;
+}

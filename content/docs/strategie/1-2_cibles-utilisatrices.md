@@ -90,9 +90,9 @@ Il rappelle qu'environ 45 % des fonctionnalités demandées ne sont jamais utili
 
 Profil(s) métier concerné(s) : Porteur de projet, UX Designer
 
-- [Quantifier precisement le-besoin](https://rweb.greenit.fr/fr/fiches/RWEB_0002-quantifier-precisement-le-besoin)
-- [Eliminer les fonctionnalités non utilisees](https://rweb.greenit.fr/fr/fiches/RWEB_0003-eliminer-les-fonctionnalites-non-utilisees)
-- [Eliminer les fonctionnalités non essentielles](https://rweb.greenit.fr/fr/fiches/RWEB_0001-eliminer-les-fonctionnalites-non-essentielles)
+- [Quantifier precisement le-besoin](https://rweb.greenit.fr/fr/fiches/RWEB_0002-quantifier-precisement-le-besoin) : chiffrer précisément chaque dimension fonctionnelle (taux de compression d'image, temps de réponse maximal, nombre d'éléments affichés…) au regard du besoin métier réel plutôt que de s'en tenir à des valeurs par défaut, pour ne pas surdimensionner le service.
+- [Eliminer les fonctionnalités non utilisees](https://rweb.greenit.fr/fr/fiches/RWEB_0003-eliminer-les-fonctionnalites-non-utilisees) : mesurer l'usage réel des fonctionnalités en production et désactiver ou supprimer celles qui ne sont pas ou peu utilisées, pour alléger l'application et son empreinte (calcul, stockage, réseau, maintenance).
+- [Eliminer les fonctionnalités non essentielles](https://rweb.greenit.fr/fr/fiches/RWEB_0001-eliminer-les-fonctionnalites-non-essentielles) : jusqu'à 45 % des fonctionnalités demandées ne sont jamais utilisées et 70 % peuvent être considérées comme non essentielles ; réduire le périmètre fonctionnel dès la conception limite l'impact environnemental et améliore l'utilisabilité.
 
 {{% /tab %}}
 
