@@ -1,7 +1,7 @@
 ---
 weight: 200
 title: "1.2 - Cibles utilisatrices"
-description: ""
+description: "Critère 1.2 du RGESN : comment définir les cibles utilisatrices, les besoins métiers et les attentes réelles des utilisateurs d'un service numérique."
 icon: "article"
 date: "2025-12-21T13:29:09+01:00"
 lastmod: "2025-12-21T13:29:09+01:00"
