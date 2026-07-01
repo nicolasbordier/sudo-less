@@ -5,7 +5,7 @@ description: "Critère 1.1 du RGESN : comment évaluer l'utilité d'un service n
 icon: "article"
 date: "2025-12-21T13:29:05+01:00"
 lastmod: "2025-12-21T13:29:05+01:00"
-draft: true
+draft: false
 toc: true
 ---
 
