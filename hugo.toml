@@ -15,6 +15,6 @@ title = 'My New Hugo Site'
         darkMode = true
 
     [params.footer]
-        copyright = "© :YEAR: Lotus Labs. Built with [**Lotus Docs**](https://github.com/colinwilson/lotusdocs)"
+        copyright = "© :YEAR: sudo-less.dev · Contenu sous [**CC BY-SA 4.0**](https://creativecommons.org/licenses/by-sa/4.0/deed.fr) · Code sous [**MIT**](https://github.com/nicolasbordier/sudo-less/blob/main/LICENSE) · Propulsé par [**Lotus Docs**](https://github.com/colinwilson/lotusdocs)"
         # version = true # includes git commit info
 
