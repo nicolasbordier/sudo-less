@@ -1,0 +1,129 @@
+# Note: Template blocks require a 'weight' parameter so they're correctly ordered on the landing page
+
+# Hero
+hero:
+  enable: true
+  weight: 10
+  template: hero
+
+#  backgroundImage:
+#    path: "images/templates/hero"
+#    filename:
+#      desktop: "gradient-desktop.webp"
+#      mobile: "gradient-mobile.webp"
+
+  badge:
+    text: RGESN v2 — 2024
+    color: success # primary, secondary, success, danger, warning, info, light, dark
+    pill: false # boolean
+    soft: true # boolean
+
+  # titleLogo:
+  #   path: "images/logos"
+  #   filename: "title_logo.png"
+  #   alt: "sudo-less Logo"
+  #   height: 80px
+
+  title: "sudo less"
+  subtitle: Le guide pratique du **RGESN** critère par critère. Outils, méthodes et retours d'expérience pour **écoconcevoir** vos services numériques. Parce que la meilleure ligne de code est celle qu'on n'écrit pas.
+
+  image:
+    path: "images" # path to image under configured assets directory. default 'images'
+    filename: "hero_sudo_less.png" # filename of your hero image (including file extension)
+    alt: "Écoconception de services numériques" # Optional but recommended
+    boxShadow: true # default 'false' (excludes .svg images)
+    rounded: true # round the image corners? default 'false' (excludes .svg images)
+
+  ctaButton:
+    icon: eco
+    btnText: "Explorer les critères"
+    url: "/docs/strategie/"
+  cta2Button:
+    icon: github
+    btnText: "Contribuer"
+    url: "https://github.com/nicolasbordier/sudo-less"
+
+  info: "79 critères · 9 thématiques · 100% actionnable"
+
+# Feature Grid
+featureGrid:
+  enable: true
+  weight: 20
+  template: feature grid
+
+  title: Pourquoi sudo-less ?
+  subtitle: Le RGESN est un référentiel puissant mais parfois difficile à mettre en pratique. sudo-less le traduit en fiches actionnables, avec des outils concrets et des retours d'expérience terrain.
+
+  items:
+    - title: Critère par critère
+      icon: checklist
+      description: Chaque critère du RGESN est décortiqué avec son objectif, sa mise en œuvre concrète, les profils métier concernés et les moyens de test.
+      ctaLink:
+        text: commencer
+        url: /docs/strategie/
+
+    - title: Outils gratuits
+      icon: build
+      description: NumEcoDiag, Empreinte Projet, monACVnumérique… Pour chaque critère, les outils disponibles pour passer de la théorie à la pratique.
+      ctaLink:
+        text: voir les outils
+        url: /docs/outils/
+
+    - title: Multi-référentiels
+      icon: library_books
+      description: RGESN, AFNOR SPEC 2201, GR491, ISO 20125, RWEB… Les ponts entre référentiels sont identifiés pour enrichir votre démarche.
+      ctaLink:
+        text: en savoir plus
+        url: /docs/referentiels/
+
+    - title: Retours d'expérience
+      icon: groups
+      description: SPOTE, DiaLog, Orange, Digital4Better… Des organisations qui sont passées à l'acte partagent leurs apprentissages.
+      ctaLink:
+        text: lire les REX
+        url: /docs/retours-experience/
+
+    - title: Pour tous les métiers
+      icon: person
+      description: Porteur de projet, UX Designer, développeur, responsable RSE — chaque fiche identifie les profils concernés pour savoir qui fait quoi.
+      ctaLink:
+        text: trouver mon rôle
+        url: /docs/
+
+    - title: Open Source
+      icon: code
+      description: Code sous licence MIT, contenu sous CC BY-SA 4.0. Contribuez, réutilisez, partagez — dans l'esprit des communs numériques.
+      ctaLink:
+        text: contribuer
+        url: https://github.com/nicolasbordier/sudo-less
+
+    - title: Déclaration d'écoconception
+      icon: description
+      description: Apprenez à rédiger votre déclaration d'écoconception et à calculer votre score d'avancement RGESN.
+      ctaLink:
+        text: voir le guide
+        url: /docs/declaration/
+
+    - title: Sobriété first
+      icon: eco
+      description: "50 à 80 % des fonctionnalités ne sont jamais utilisées. La première bonne pratique : questionner l'utilité avant de développer."
+      ctaLink:
+        text: critère 1.1
+        url: /docs/strategie/1-1/
+
+    - title: Accessible
+      icon: accessibility
+      description: Un site léger, rapide et accessible, conçu en appliquant les recommandations qu'il décrit. Walk the talk.
+      ctaLink:
+        text: notre déclaration
+        url: /declaration-ecoconception/
+
+imageText:
+  enable: false
+  weight: 25
+  template: image text
+
+imageCompare:
+  enable: false
+  weight: 30
+  template: image compare
