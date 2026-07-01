@@ -37,7 +37,7 @@ hero:
   ctaButton:
     icon: eco
     btnText: "Explorer les critères"
-    url: "/docs/strategie/"
+    url: "docs/strategie/"
   cta2Button:
     icon: github
     btnText: "Contribuer"
@@ -60,35 +60,35 @@ featureGrid:
       description: Chaque critère du RGESN est décortiqué avec son objectif, sa mise en œuvre concrète, les profils métier concernés et les moyens de test.
       ctaLink:
         text: commencer
-        url: /docs/strategie/
+        url: docs/strategie/
 
     - title: Outils gratuits
       icon: build
       description: NumEcoDiag, Empreinte Projet, monACVnumérique… Pour chaque critère, les outils disponibles pour passer de la théorie à la pratique.
       ctaLink:
         text: voir les outils
-        url: /docs/outils/
+        url: docs/outils/
 
     - title: Multi-référentiels
       icon: library_books
       description: RGESN, AFNOR SPEC 2201, GR491, ISO 20125, RWEB… Les ponts entre référentiels sont identifiés pour enrichir votre démarche.
       ctaLink:
         text: en savoir plus
-        url: /docs/referentiels/
+        url: docs/referentiels/
 
     - title: Retours d'expérience
       icon: groups
       description: SPOTE, DiaLog, Orange, Digital4Better… Des organisations qui sont passées à l'acte partagent leurs apprentissages.
       ctaLink:
         text: lire les REX
-        url: /docs/retours-experience/
+        url: docs/retours-experience/
 
     - title: Pour tous les métiers
       icon: person
       description: Porteur de projet, UX Designer, développeur, responsable RSE — chaque fiche identifie les profils concernés pour savoir qui fait quoi.
       ctaLink:
         text: trouver mon rôle
-        url: /docs/
+        url: docs/
 
     - title: Open Source
       icon: code
@@ -102,21 +102,21 @@ featureGrid:
       description: Apprenez à rédiger votre déclaration d'écoconception et à calculer votre score d'avancement RGESN.
       ctaLink:
         text: voir le guide
-        url: /docs/declaration/
+        url: docs/declaration/
 
     - title: Sobriété first
       icon: eco
       description: "50 à 80 % des fonctionnalités ne sont jamais utilisées. La première bonne pratique : questionner l'utilité avant de développer."
       ctaLink:
         text: critère 1.1
-        url: /docs/strategie/1-1_evaluation-utilite/
+        url: docs/strategie/1-1_evaluation-utilite/
 
     - title: Accessible
       icon: accessibility
       description: Un site léger, rapide et accessible, conçu en appliquant les recommandations qu'il décrit. Walk the talk.
       ctaLink:
         text: notre déclaration
-        url: /declaration-ecoconception/
+        url: declaration-ecoconception/
 
 imageText:
   enable: false
