@@ -1,11 +1,11 @@
 ---
 weight: 600
 title: "1.6 - Collecte de données"
-description: ""
+description: "Critère 1.6 du RGESN : comment collecter, stocker et conserver les données d'un service numérique de façon responsable et raisonnée, au-delà des seules obligations RGPD."
 icon: "article"
 date: "2025-12-21T13:29:09+01:00"
-lastmod: "2025-12-21T13:29:09+01:00"
-draft: true
+lastmod: "2026-07-03T00:00:00+01:00"
+draft: false
 toc: true
 ---
 
@@ -78,9 +78,41 @@ Ne pas collecter des métadonnées servant au profilage de l'utilisateur, sauf s
 
 En fonction de chaque contexte :
 
-{{< tabs tabTotal="1">}}
+{{< tabs tabTotal="3">}}
 {{% tab tabName="RWEB" %}}
 
+Trois fiches du référentiel RWEB (Collectif GreenIT) donnent des règles de validation concrètes et chiffrées pour ce critère :
+
+- [Limiter les outils d'analytics et les données collectées](https://rweb.greenit.fr/fr/fiches/RWEB_0111-limiter-les-outils-d-analytics-et-les-donnees-collectees) *(impact 4/5, priorité 4/5)* : ne pas utiliser plus d'**un seul outil d'analytics**. La fiche illustre un anti-pattern fréquent — Google Analytics, Matomo et ContentSquare qui coexistent sur un même service parce que chaque équipe (marketing, produit, UX) a imposé son propre outil — chacun ajoutant requêtes, fichiers JavaScript et cookies supplémentaires.
+- [Réduire le volume de données stockées au strict nécessaire](https://rweb.greenit.fr/fr/fiches/RWEB_0023-reduire-le-volume-de-donnees-stockees-au-strict-necessaire) *(impact 4/5, difficulté 4/5)* : ne stocker que ce qui est indispensable ou légalement requis, via un archivage à froid après une première période d'accès puis une suppression après le délai de conservation (ex. RGPD : suppression possible dès 18 mois si la donnée n'est plus utile), et une suppression régulière des doublons/enregistrements obsolètes. Critère de validation : une donnée stockée sans utilité pour le service doit être ramenée à zéro.
+- [Optimiser la taille des cookies](https://rweb.greenit.fr/fr/fiches/RWEB_0062-optimiser-la-taille-des-cookies) : ne stocker dans les cookies que les données strictement nécessaires au fonctionnement (identifiant de session par exemple), pas des objets métier complets.
+
+{{% /tab %}}
+
+{{% tab tabName="INR - GR491" %}}
+
+Profil(s) métier concerné(s) : `Data Scientist`, `Responsable Juridique`
+
+Le critère 1.6 du RGESN fait écho à la [recommandation n°1 de la famille Backend](https://gr491.isit-europe.org/?famille=backend&num_reco=1) du [GR491](https://gr491.isit-europe.org/) (INR) : « Réduire l'impact des données de leur stockage et accès ». Elle pousse le questionnement plus loin que le seul volume stocké, notamment :
+
+- **Utilité réelle** : les jeux de données collectés sont-ils réellement nécessaires ?
+- **Données sensibles** : les données sensibles collectées sont-elles indispensables ?
+- **Cycle de vie** : les données ont-elles une date de suppression prévue ? Les données obsolètes sont-elles effectivement supprimées ?
+- **Gestion différenciée** : les données « actives » et « inactives » sont-elles gérées différemment (ex. mise en cache mémoire des données actives, archivage à froid des inactives) ?
+- **Réplication** : la réplication des bases de données est-elle dimensionnée selon la sensibilité et le besoin réel de disponibilité, plutôt que par défaut ?
+
+{{% /tab %}}
+
+{{% tab tabName="CNIL" %}}
+
+Profil(s) métier concerné(s) : `Responsable Juridique`, `Responsable RSE/Numérique soutenable`
+
+Le [Cahier IP n°9 « Données, empreinte et libertés »](https://linc.cnil.fr/cahier-ip9-donnees-empreinte-et-libertes) (LINC - CNIL, 2023), déjà cité dans la fiche RGESN de ce critère, documente en détail où convergent — et où **s'opposent** — protection des données et sobriété numérique :
+
+- **Convergences** : la minimisation des données, la limitation de la durée de conservation et la limitation des finalités (déjà imposées par le RGPD) rejoignent directement les objectifs de sobriété numérique — c'est une forme d'« hygiène numérique » commune aux deux enjeux.
+- **Tensions** : à l'inverse, certaines obligations de protection des données **augmentent** l'empreinte environnementale des traitements — le recours à la cryptographie pour sécuriser des données personnelles étant l'exemple le plus documenté par le cahier. Protection des données et écoconception ne sont donc pas toujours alignées, et un arbitrage explicite peut être nécessaire.
+
+Le guide pratique de la CNIL [Minimiser les données collectées](https://www.cnil.fr/fr/minimiser-les-donnees-collectees) complète ce cadrage avec des questions opérationnelles directement transposables à ce critère : cette donnée est-elle nécessaire à *toutes* les catégories d'utilisateurs ou seulement certaines ? Peut-on réduire sa granularité (ex. année de naissance plutôt que date complète) sans nuire à la fonctionnalité ? Un système de suppression automatique existe-t-il à l'échéance de la durée de conservation ?
 
 {{% /tab %}}
 {{< /tabs >}}
@@ -95,7 +127,11 @@ En fonction de chaque contexte :
 {{< tabs tabTotal="1">}}
 
 {{% tab tabName="Retours d'expériences" %}}
-`TODO`
+
+Contrairement aux autres critères de la famille Stratégie, les déclarations d'écoconception publiques consultées (DiaLog, SPOTE, cdg69, Acigné…) ne détaillent pas spécifiquement leur politique de collecte de données au sens de ce critère — elles se concentrent sur les budgets techniques (poids, requêtes) plutôt que sur le nombre d'outils de tracking ou la durée de conservation des données. Ce silence documentaire est en soi une indication : la minimisation des données reste, en pratique, plus documentée sous l'angle RGPD (registre de traitement, PIA) que sous l'angle écoconception.
+
+L'anti-pattern décrit par la fiche [RWEB 0111](https://rweb.greenit.fr/fr/fiches/RWEB_0111-limiter-les-outils-d-analytics-et-les-donnees-collectees) reste néanmoins l'illustration la plus concrète et la plus fréquemment observée en audit : plusieurs outils d'analytics concurrents (Google Analytics, Matomo, ContentSquare...) coexistant sur un même service, chacun ajouté par une équipe différente sans concertation ni suppression des outils devenus redondants — un cas qui justifie à lui seul de vérifier ce critère lors de toute revue d'écoconception ([critère 1.4](../1-4_revue-ecoconception/)).
+
 {{% /tab %}}
 
 {{< /tabs >}}
