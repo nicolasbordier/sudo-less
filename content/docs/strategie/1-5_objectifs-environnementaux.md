@@ -140,7 +140,7 @@ Ces deux référentiels sont surtout pertinents à l'échelle d'une organisation
 ### 
 ### Pour aller plus loin :
 
-{{< tabs tabTotal="3">}}
+{{< tabs tabTotal="1">}}
 
 {{% tab tabName="Retours d'expériences" %}}
 
@@ -151,12 +151,6 @@ En pratique, les déclarations d'écoconception publiées par les services publi
 
 Ce contraste illustre une limite pratique du critère 1.5 : suivre un **budget technique proxy dans la durée** est aujourd'hui plus répandu et plus accessible que publier une trajectoire alignée sur des indicateurs d'ACV (SBTi, ITU-T L.1470) — une voie que le critère autorise explicitement, tant que des objectifs sont fixés, suivis et documentés publiquement.
 
-{{% /tab %}}
-
-{{% tab tabName="Déclaration d'écoconception" %}}
-Pour réaliser votre déclaration d'écoconception :
-- [Déclaration d'écoconception](https://www.arcep.fr/uploads/tx_gspublication/referentiel_general_ecoconception_des_services_numeriques_version_2024.pdf#page=7)
-- [Calcul de score d'avancement](https://www.arcep.fr/uploads/tx_gspublication/referentiel_general_ecoconception_des_services_numeriques_version_2024.pdf#page=8)
 {{% /tab %}}
 
 {{< /tabs >}}

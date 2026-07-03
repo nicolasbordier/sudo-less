@@ -207,7 +207,7 @@ Ce mécanisme illustre concrètement l'esprit du critère 1.1 : l'utilité d'un 
 ### 
 ### Pour aller plus loin :
 
-{{< tabs tabTotal="4">}}
+{{< tabs tabTotal="3">}}
 
 {{% tab tabName="Retours d'expériences" %}}
 
@@ -238,12 +238,6 @@ Listes de sites éco-conçus :
 - [Retours d'expérience RGESN - Numérique écoresponsable (MiNumEco)](https://ecoresponsable.numerique.gouv.fr/ressources/documents-reference/referentiel-general-ecoconception/retour-experience/)
 - [Lowww](https://www.lowww.directory/) (sans garantie sur le niveau d'écoconception)
 - [Lowwwcarbon](https://lowwwcarbon.com/) (sans garantie sur le niveau d'écoconception)
-{{% /tab %}}
-
-{{% tab tabName="Déclaration d'écoconception" %}}
-Pour réaliser votre déclaration d'écoconception :
-- [Déclaration d'écoconception](https://www.arcep.fr/uploads/tx_gspublication/referentiel_general_ecoconception_des_services_numeriques_version_2024.pdf#page=7)
-- [Calcul de score d'avancement](https://www.arcep.fr/uploads/tx_gspublication/referentiel_general_ecoconception_des_services_numeriques_version_2024.pdf#page=8)
 {{% /tab %}}
 
 {{% tab tabName="Design systèmique" %}}

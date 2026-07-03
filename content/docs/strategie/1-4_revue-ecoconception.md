@@ -158,9 +158,22 @@ Ces deux retours d'expérience montrent la distinction attendue par le critère 
 {{% /tab %}}
 
 {{% tab tabName="Déclaration d'écoconception" %}}
-Pour réaliser votre déclaration d'écoconception :
-- [Déclaration d'écoconception](https://www.arcep.fr/uploads/tx_gspublication/referentiel_general_ecoconception_des_services_numeriques_version_2024.pdf#page=7)
-- [Calcul de score d'avancement](https://www.arcep.fr/uploads/tx_gspublication/referentiel_general_ecoconception_des_services_numeriques_version_2024.pdf#page=8)
+
+La déclaration d'écoconception est le document par lequel un service rend compte publiquement de sa démarche RGESN — c'est elle qui sert de preuve pour ce critère 1.4 (revue documentée) et pour le critère 1.5 (objectifs suivis dans le temps). L'Arcep et l'Arcom mettent à disposition des **gabarits officiels prêts à l'emploi**, à compléter directement plutôt qu'à rédiger de zéro :
+
+- **Sans calcul de score** (si seule la rédaction textuelle vous intéresse) : [Word (.docx)](https://www.arcep.fr/fileadmin/user_upload/nos-sujets/environnement/rgesn_2024_exemple_declaration_ecoconception.docx), [OpenDocument (.odt)](https://www.arcep.fr/fileadmin/user_upload/nos-sujets/environnement/rgesn_2024_exemple_declaration_ecoconception.odt), [HTML](https://www.arcep.fr/fileadmin/user_upload/nos-sujets/environnement/rgesn_2024_exemple_declaration_ecoconception.html) ou [texte brut](https://www.arcep.fr/fileadmin/user_upload/nos-sujets/environnement/rgesn_2024_exemple_declaration_ecoconception.txt).
+- **Avec calcul automatique du score d'avancement** : [tableur Excel (.xlsx)](https://ecoresponsable.numerique.gouv.fr/docs/2024/rgesn-mai2024/rgesn_2024_outil_declaration_ecoconception.xlsx) (Excel, OnlyOffice, Google Sheets, Apple Numbers) ou [tableur OpenDocument (.ods)](https://ecoresponsable.numerique.gouv.fr/docs/2024/rgesn-mai2024/rgesn_2024_outil_declaration_ecoconception.ods) (LibreOffice Calc, Apache OpenOffice Calc). Une variante « sans score » de ces mêmes tableurs existe aussi, pour qui veut juste la trame sans faire l'exercice de notation ([xlsx](https://www.arcep.fr/fileadmin/user_upload/nos-sujets/environnement/rgesn_2024_outil_declaration_ecoconception_sans_score.xlsx), [ods](https://www.arcep.fr/fileadmin/user_upload/nos-sujets/environnement/rgesn_2024_outil_declaration_ecoconception_sans_score.ods)).
+
+**Comment fonctionne le tableur avec score :** une feuille par famille RGESN (Stratégie, Spécifications, Architecture, UX/UI, Contenus, Frontend, Backend, Hébergement, Algorithmie), où chaque critère se coche comme conforme, non conforme ou non applicable. Une feuille de synthèse « Score d'avancement » calcule alors automatiquement un score pondéré, publié en page 2 de la déclaration :
+
+```
+Score = [ (critères validés Prioritaire × 1,5) + (critères validés Recommandé × 1,25) + (critères validés Modéré × 1) ]
+        ÷ [ (critères applicables Prioritaire × 1,5) + (critères applicables Recommandé × 1,25) + (critères applicables Modéré × 1) ]
+        × 100
+```
+
+La pondération valorise donc davantage un critère « Prioritaire » (×1,5, comme le 1.4) qu'un critère « Modéré » (×1) — un même nombre de critères validés ne produit pas le même score selon leur priorité. Une fois les feuilles complétées, un export PDF intégré (menu Fichier → Exporter → Créer PDF, avec les options « classeur entier », « balises de structure pour l'accessibilité » et « compatible PDF/A ») génère directement un **document de 14 pages prêt à publier**, incluant un historique des scores des évaluations précédentes — pratique pour matérialiser la revue régulière demandée par ce critère 1.4 d'une version à l'autre.
+
 {{% /tab %}}
 
 {{< /tabs >}}

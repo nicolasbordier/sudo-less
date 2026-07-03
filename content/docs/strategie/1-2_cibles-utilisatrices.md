@@ -133,7 +133,7 @@ Les équipes peuvent également solliciter gratuitement l'accompagnement d'exper
 ### Pour aller plus loin :
 
 
-{{< tabs tabTotal="3">}}
+{{< tabs tabTotal="2">}}
 
 {{% tab tabName="Retours d'expériences" %}}
 
@@ -147,12 +147,6 @@ Exemples de services numériques ayant documenté leurs cibles utilisatrices dan
 - [SPOTE](https://spote.developpement-durable.gouv.fr/article/declaration-d-ecoconception) (Pôle ministériel Écologie) : « L'identification des personnes utilisant ce service numérique a fait l'objet de recherche UX dès sa première conception, les besoins métiers et les attentes réelles sont étudiés », avec une cible resserrée sur les agents en situation professionnelle.
 - [Retours d'expérience RGESN - Numérique écoresponsable (MiNumEco)](https://ecoresponsable.numerique.gouv.fr/ressources/documents-reference/referentiel-general-ecoconception/retour-experience/) : recueil de retours d'expérience d'organisations ayant appliqué le RGESN, dont la démarche d'identification des cibles utilisatrices.
 
-{{% /tab %}}
-
-{{% tab tabName="Déclaration d'écoconception" %}}
-Pour réaliser votre déclaration d'écoconception :
-- [Déclaration d'écoconception](https://www.arcep.fr/uploads/tx_gspublication/referentiel_general_ecoconception_des_services_numeriques_version_2024.pdf#page=7)
-- [Calcul de score d'avancement](https://www.arcep.fr/uploads/tx_gspublication/referentiel_general_ecoconception_des_services_numeriques_version_2024.pdf#page=8)
 {{% /tab %}}
 
 {{% tab tabName="Normes internationales" %}}
