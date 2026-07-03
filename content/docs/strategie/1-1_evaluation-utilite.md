@@ -95,7 +95,7 @@ Via d'autre(s) référentiel(s) :
 {{< tabs tabTotal="7">}}
 {{% tab tabName="Designers Ethiques" %}}
 
-Profil(s) métier concerné(s) : Porteur de projet, UX Designer
+Profil(s) métier concerné(s) : `Porteur de projet`, `UX Designer`
 
 Afin d'évaluer l'utilité environnementale d'un service numérique les designers éthiques proposent un **arbre de décision** [version Figma](https://www.figma.com/design/f0Rw3DFIYBmXN1DaPDg0In/Arbre-de-d%C3%A9cision?node-id=2-6) ou [version PDF (364ko)](https://designersethiques.org/thematiques/ecoconception/quand-faut-il-numeriser/arbre-decisionnel_compressed.pdf)
 
@@ -117,7 +117,7 @@ Nous vous conseillons de consulter en détail :
 
 {{% tab tabName="Guide ADEME" %}}
 
-Profil(s) métier concerné(s) : Porteur de projet, Responsable RSE/Numérique soutenable
+Profil(s) métier concerné(s) : `Porteur de projet`, `Responsable RSE/Numérique soutenable`
 
 L'ADEME propose un [Guide de questionnement pour le développement de services numériques (2021, 23 pages, téléchargement gratuit sur inscription)](https://librairie.ademe.fr/industrie-et-production-durable/4739-guide-de-questionnement-pour-le-developpement-de-services-numeriques-9791029717932.html), conçu avec Ouishare pour les équipes projet.
 
@@ -133,7 +133,7 @@ Ce guide est particulièrement adapté pour ouvrir des espaces de discussion et 
 
 {{% tab tabName="Empreinte Projet (ADEME)" %}}
 
-Profil(s) métier concerné(s) : Responsable RSE/Numérique soutenable, Porteur de projet
+Profil(s) métier concerné(s) : `Responsable RSE/Numérique soutenable`, `Porteur de projet`
 
 Pour construire concrètement l'arbre de conséquences mentionné dans le « Moyen de test ou de contrôle » de ce critère, l'ADEME met à disposition :
 
@@ -146,7 +146,7 @@ Le niveau 1, seul requis pour ce critère, permet d'identifier et de comparer qu
 
 {{% tab tabName="AFNOR SPEC 2201" %}}
 
-Profil(s) métier concerné(s) : UX Designer, Porteur de projet
+Profil(s) métier concerné(s) : `UX Designer`, `Porteur de projet`
 
 Le guide [AFNOR SPEC 2201 « Écoconception des services numériques »](https://www.boutique.afnor.org/fr-fr/norme/afnor-spec-2201/ecoconception-des-services-numeriques/fa203506/323315) (téléchargement gratuit) s'ouvre, dès sa première fiche, sur la même question que ce critère : avant de concevoir la solution, il convient de questionner la pertinence du besoin.
 
@@ -162,7 +162,7 @@ Un service ou une fonctionnalité qui ne satisfait pas ces trois critères est c
 
 {{% tab tabName="INR - GR491" %}}
 
-Profil(s) métier concerné(s) : Responsable RSE/Numérique soutenable, Porteur de projet
+Profil(s) métier concerné(s) : `Responsable RSE/Numérique soutenable`, `Porteur de projet`
 
 Le critère 1.1 du RGESN est directement issu du [GR491](https://gr491.isit-europe.org/), le Guide de Référence de Conception Responsable de Services Numériques de l'**Institut du Numérique Responsable (INR)** : le RGESN a été construit en ne conservant, parmi les recommandations du GR491, que celles jugées prioritaires et les plus génériques.
 
@@ -179,7 +179,7 @@ Cette famille est particulièrement utile aux organisations qui souhaitent struc
 
 {{% tab tabName="Outils" %}}
 
-Profil(s) métier concerné(s) : Porteur de projet, Responsable RSE/Numérique soutenable, UX Designer
+Profil(s) métier concerné(s) : `Porteur de projet`, `Responsable RSE/Numérique soutenable`, `UX Designer`
 
 Plusieurs outils gratuits permettent d'outiller concrètement l'évaluation de l'utilité et des impacts environnementaux d'un service numérique :
 
@@ -191,7 +191,7 @@ Plusieurs outils gratuits permettent d'outiller concrètement l'évaluation de l
 
 {{% tab tabName="beta.gouv.fr" %}}
 
-Profil(s) métier concerné(s) : Porteur de projet, Responsable RSE/Numérique soutenable
+Profil(s) métier concerné(s) : `Porteur de projet`, `Responsable RSE/Numérique soutenable`
 
 Le programme [beta.gouv.fr](https://beta.gouv.fr/approche/) intègre nativement l'évaluation de l'utilité dans son mode de financement des « startups d'État ». Chaque produit est financé par cycles de 6 mois maximum, à l'issue desquels un [comité d'investissement](https://doc.incubateur.net/gerer-son-produit/gestion-au-quotidien/budget/preparer-un-comite-dinvestissement) (sponsors de l'administration porteuse, incubateur, intrapreneur) confronte les **indicateurs d'impact** mesurés aux objectifs fixés six mois plus tôt.
 
