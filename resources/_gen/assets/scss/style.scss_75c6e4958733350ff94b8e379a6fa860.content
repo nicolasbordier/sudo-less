@@ -11036,6 +11036,11 @@ span.menu-icon {
   .hero .text-muted,
   .hero p {
     color: #ffffff !important; }
+  .hero .heading svg {
+    height: 1em;
+    width: 1em;
+    margin-right: 0.2em;
+    vertical-align: -0.12em; }
 
 .classic-hero-image img {
   max-width: 100%;
