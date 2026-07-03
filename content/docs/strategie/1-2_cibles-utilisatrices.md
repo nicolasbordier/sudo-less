@@ -78,7 +78,7 @@ Via d'autre(s) référentiel(s) :
 {{< tabs tabTotal="4">}}
 {{% tab tabName="Designers Ethiques" %}}
 
-Profil(s) métier concerné(s) : Porteur de projet, UX Designer
+Profil(s) métier concerné(s) : `Porteur de projet`, `UX Designer`
 
 Le guide d'écoconception des Designers Éthiques consacre une étape entière à la définition du besoin, en amont de toute conception : [Définir le besoin et éliminer ce qui n'est pas essentiel](https://designersethiques.org/fr/thematiques/ecoconception/guide-d-ecoconception/2-definir-le-besoin)
 
@@ -88,7 +88,7 @@ Il rappelle qu'environ 45 % des fonctionnalités demandées ne sont jamais utili
 
 {{% tab tabName="RWEB" %}}
 
-Profil(s) métier concerné(s) : Porteur de projet, UX Designer
+Profil(s) métier concerné(s) : `Porteur de projet`, `UX Designer`
 
 - [Quantifier precisement le-besoin](https://rweb.greenit.fr/fr/fiches/RWEB_0002-quantifier-precisement-le-besoin) : chiffrer précisément chaque dimension fonctionnelle (taux de compression d'image, temps de réponse maximal, nombre d'éléments affichés…) au regard du besoin métier réel plutôt que de s'en tenir à des valeurs par défaut, pour ne pas surdimensionner le service.
 - [Eliminer les fonctionnalités non utilisees](https://rweb.greenit.fr/fr/fiches/RWEB_0003-eliminer-les-fonctionnalites-non-utilisees) : mesurer l'usage réel des fonctionnalités en production et désactiver ou supprimer celles qui ne sont pas ou peu utilisées, pour alléger l'application et son empreinte (calcul, stockage, réseau, maintenance).
@@ -98,7 +98,7 @@ Profil(s) métier concerné(s) : Porteur de projet, UX Designer
 
 {{% tab tabName="INR - GR491" %}}
 
-Profil(s) métier concerné(s) : Porteur de projet, Responsable RSE/Numérique soutenable
+Profil(s) métier concerné(s) : `Porteur de projet`, `Responsable RSE/Numérique soutenable`
 
 Le critère 1.2 du RGESN reprend directement l'une des questions de la [recommandation n°1](https://gr491.isit-europe.org/?famille=strategie&num_reco=1) du [GR491](https://gr491.isit-europe.org/) (INR) : « Définir et valider les besoins et les enjeux du projet afin d'anticiper les impacts ».
 
@@ -113,7 +113,7 @@ Cette recommandation propose une grille de questionnement plus large que le seul
 
 {{% tab tabName="DesignGouv" %}}
 
-Profil(s) métier concerné(s) : Porteur de projet, Chef de produit marketing, UX Designer
+Profil(s) métier concerné(s) : `Porteur de projet`, `Chef de produit marketing`, `UX Designer`
 
 [DesignGouv](https://design.numerique.gouv.fr/), le pôle interministériel dédié au design des services publics numériques, propose des formations gratuites pour outiller la définition des cibles utilisatrices :
 
