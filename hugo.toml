@@ -11,7 +11,9 @@ title = 'Sudo Less'
         disable = false
 
 [params]
-    [params.docs]   
+    description = "Guide pratique du RGESN critère par critère : outils, retours d'expérience et méthodes pour écoconcevoir vos services numériques."
+
+    [params.docs]
         darkMode = true
 
     [params.footer]
