@@ -1,11 +1,11 @@
 ---
 weight: 500
-title: "1.5 - Objectifs environnentaux"
-description: ""
+title: "1.5 - Objectifs environnementaux"
+description: "Critère 1.5 du RGESN : comment évaluer l'empreinte environnementale d'un service numérique et se fixer des objectifs de réduction chiffrés et suivis dans le temps."
 icon: "article"
 date: "2025-12-21T13:29:09+01:00"
-lastmod: "2025-12-21T13:29:09+01:00"
-draft: true
+lastmod: "2026-07-03T00:00:00+01:00"
+draft: false
 toc: true
 ---
 
@@ -81,16 +81,16 @@ Le **critère est validé** si l’empreinte environnementale du service a été
 ### 
 ### Comment appliquer concrètement cette recommandation ?
 
-Via d'autre(s) référentiel(s) :
+Via ces contextes et/ou référentiels :
 
-{{< tabs tabTotal="1">}}
+{{< tabs tabTotal="3">}}
 {{% tab tabName="Designers Éthiques" %}}
 
 Dans le cas où la réalisation d'une ACV n'est pas envisagée en priorité, voici 2 alternatives :
 
 - **1 - Évaluation**
 
-Réaliser une évaluation de l'empreinte environnementale via un outil de mesure (GreenITAnalysis …) (cf : [critère 1.4](../1-4_revue-ecoconception/))
+Réaliser une évaluation de l'empreinte environnementale via un outil de mesure (cf : [critère 1.4](../1-4_revue-ecoconception/))
 
 - **2 - Objectiver**
 
@@ -107,6 +107,32 @@ Dans un contexte de type "**site web**", pour définir vos indicateurs, vous pou
 Nous vous conseillons de consulter en détail le chapitre "**Etablir un budget environnemental**" de la page [Evaluer et mesurer](https://designersethiques.org/fr/thematiques/ecoconception/guide-d-ecoconception/3-evaluer-et-mesurer)
 
 {{% /tab %}}
+
+{{% tab tabName="INR - GR491" %}}
+
+Profil(s) métier concerné(s) : `Responsable RSE/Numérique soutenable`, `Porteur de projet`
+
+Le critère 1.5 du RGESN fait écho à la [recommandation n°3](https://gr491.isit-europe.org/?famille=strategie&num_reco=3) du [GR491](https://gr491.isit-europe.org/) (INR) : « Déterminer et planifier la capacité de suivre et capitaliser sur les composantes Numérique Responsable des projets ». Elle interroge, entre autres :
+
+- **Identification** : les indicateurs pour mesurer l'efficacité de la démarche NR sont-ils identifiés et suivis ?
+- **Outillage** : les outils pour mesurer cette efficacité sont-ils identifiés et communiqués aux équipes ?
+- **Couverture** : les indicateurs couvrent-ils la mesure, l'évaluation, le pilotage, l'amélioration et le contrôle du niveau de maturité NR ?
+- **Horizon temporel** : la durée de vie du projet est-elle définie ? (une donnée nécessaire pour borner une analyse de cycle de vie ou une trajectoire de réduction)
+
+{{% /tab %}}
+
+{{% tab tabName="SBTi & ITU-T L.1470" %}}
+
+Profil(s) métier concerné(s) : `Responsable RSE/Numérique soutenable`
+
+Pour aligner des objectifs de réduction sur une trajectoire climatique reconnue plutôt que sur un pourcentage arbitraire, deux référentiels complémentaires, déjà cités dans la fiche RGESN de ce critère, méritent d'être détaillés :
+
+- La [Science Based Targets initiative (SBTi)](https://sciencebasedtargets.org/) traduit les conclusions du GIEC en objectifs mesurables adaptés à chaque secteur, sur la base du GHG Protocol. Une organisation soumet sa trajectoire de réduction (scopes 1, 2 et 3), évaluée par des experts SBTi selon des critères scientifiques stricts, pour vérifier sa compatibilité avec une limitation du réchauffement à 1,5°C.
+- La recommandation [ITU-T L.1470](https://www.itu.int/rec/T-REC-L.1470), développée avec le GeSI, la GSMA et la SBTi elle-même, décline cette approche **spécifiquement pour le secteur des TIC** (réseaux mobiles et fixes, data centers, réseaux d'entreprise, terminaux utilisateurs) : elle fixe une cible sectorielle de **réduction de 45 % des émissions de GES entre 2015 et 2030**, avec une ambition de long terme à horizon 2050. Ce sont les premiers objectifs sectoriels spécifiques aux TIC validés par la SBTi.
+
+Ces deux référentiels sont surtout pertinents à l'échelle d'une organisation ou d'un grand programme ; pour un service unique, ils servent davantage de **point de repère** (un service numérique isolé peut difficilement obtenir une validation SBTi individuelle) que d'objectif directement applicable.
+
+{{% /tab %}}
 {{< /tabs >}}
 
 ---
@@ -117,7 +143,14 @@ Nous vous conseillons de consulter en détail le chapitre "**Etablir un budget e
 {{< tabs tabTotal="3">}}
 
 {{% tab tabName="Retours d'expériences" %}}
-`TODO`
+
+En pratique, les déclarations d'écoconception publiées par les services publics numériques recourent plus souvent à des **budgets techniques proxy** (option 2 de l'onglet Designers Éthiques ci-dessus) qu'à une ACV multicritère complète — cohérent avec la préconisation du critère qui n'impose pas l'ACV en priorité :
+
+- [DiaLog](https://dialog.beta.gouv.fr/ecoconception) (beta.gouv.fr) fixe un **budget de performance chiffré** (40 requêtes serveur maximum par écran, 900 Ko de ressources maximum par écran) et un **objectif quantifié de progression** dans le temps : faire passer son taux de conformité RGESN de 71 % (mars 2025) à 80 % (juin 2026) — un exemple concret d'objectif suivi dans la durée, même sans indicateur d'ACV (énergie primaire, GES, eau, ressources abiotiques).
+- [SPOTE](https://spote.developpement-durable.gouv.fr/article/declaration-d-ecoconception) (Pôle ministériel Écologie) suit la même logique de budget technique (2 Mo de transfert réseau compressé par page, 120 requêtes et 5 noms de domaine maximum) et publie une page dédiée à l'évolution de son impact écologique dans le temps, mais sans objectif chiffré de réduction publié.
+
+Ce contraste illustre une limite pratique du critère 1.5 : suivre un **budget technique proxy dans la durée** est aujourd'hui plus répandu et plus accessible que publier une trajectoire alignée sur des indicateurs d'ACV (SBTi, ITU-T L.1470) — une voie que le critère autorise explicitement, tant que des objectifs sont fixés, suivis et documentés publiquement.
+
 {{% /tab %}}
 
 {{% tab tabName="Déclaration d'écoconception" %}}
