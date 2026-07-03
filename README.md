@@ -8,7 +8,7 @@ Guide pratique du [RGESN](https://ecoresponsable.numerique.gouv.fr/publications/
 
 Le numérique pèse 2,5 % de l'empreinte carbone en France — et entre 50 % et 80 % des fonctionnalités développées sont rarement ou jamais utilisées. Le Référentiel Général d'Écoconception de Services Numériques (RGESN) pose un cadre pour inverser cette tendance, mais il reste souvent perçu comme un document institutionnel difficile à mettre en pratique.
 
-**sudo-less.dev** traduit chaque critère du RGESN en fiches actionnables : objectif, mise en œuvre pas à pas, outils gratuits, référentiels complémentaires (RWEB, AFNOR SPEC 2201, GR491, ISO 20125…) et retours d'expérience concrets d'organisations qui sont passées à l'acte.
+**sudo-less.dev** traduit chaque critère du RGESN en fiches actionnables : objectif, mise en œuvre pas à pas, outils gratuits, référentiels complémentaires (Guide des Designers Ethiques, RWEB, AFNOR SPEC 2201, GR491, ISO 20125…) et retours d'expérience concrets d'organisations qui sont passées à l'acte.
 
 L'ambition est simple : faire de l'écoconception un réflexe, pas une contrainte. Parce que la meilleure ligne de code est celle qu'on n'écrit pas.
 
