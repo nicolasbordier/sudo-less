@@ -81,7 +81,7 @@ Le **critère est validé** si l’empreinte environnementale du service a été
 ### 
 ### Comment appliquer concrètement cette recommandation ?
 
-Via ces contextes et/ou référentiels :
+En fonction de chaque contexte :
 
 {{< tabs tabTotal="3">}}
 {{% tab tabName="Designers Éthiques" %}}

@@ -73,7 +73,7 @@ Pour valider ce critère, le **profil des cibles utilisatrices ainsi que l’ana
 ### 
 ### Comment appliquer concrètement cette recommandation ?
 
-Via d'autre(s) référentiel(s) :
+En fonction de chaque contexte :
 
 {{< tabs tabTotal="4">}}
 {{% tab tabName="Designers Ethiques" %}}
@@ -89,6 +89,8 @@ Il rappelle qu'environ 45 % des fonctionnalités demandées ne sont jamais utili
 {{% tab tabName="RWEB" %}}
 
 Profil(s) métier concerné(s) : `Porteur de projet`, `UX Designer`
+
+Voici quelques exemples issus du RWEB :
 
 - [Quantifier precisement le-besoin](https://rweb.greenit.fr/fr/fiches/RWEB_0002-quantifier-precisement-le-besoin) : chiffrer précisément chaque dimension fonctionnelle (taux de compression d'image, temps de réponse maximal, nombre d'éléments affichés…) au regard du besoin métier réel plutôt que de s'en tenir à des valeurs par défaut, pour ne pas surdimensionner le service.
 - [Eliminer les fonctionnalités non utilisees](https://rweb.greenit.fr/fr/fiches/RWEB_0003-eliminer-les-fonctionnalites-non-utilisees) : mesurer l'usage réel des fonctionnalités en production et désactiver ou supprimer celles qui ne sont pas ou peu utilisées, pour alléger l'application et son empreinte (calcul, stockage, réseau, maintenance).

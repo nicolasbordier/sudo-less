@@ -76,7 +76,7 @@ Ne pas collecter des métadonnées servant au profilage de l'utilisateur, sauf s
 ###
 ### Comment appliquer concrètement cette recommandation ?
 
-Via d'autre(s) référentiel(s) :
+En fonction de chaque contexte :
 
 {{< tabs tabTotal="1">}}
 {{% tab tabName="RWEB" %}}

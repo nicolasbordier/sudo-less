@@ -90,7 +90,7 @@ Par ailleurs, cette étude devrait inclure une analyse qualitative des impacts e
 ### 
 ### Comment appliquer concrètement cette recommandation ?
 
-Via d'autre(s) référentiel(s) :
+En fonction de chaque contexte :
 
 {{< tabs tabTotal="7">}}
 {{% tab tabName="Designers Ethiques" %}}
