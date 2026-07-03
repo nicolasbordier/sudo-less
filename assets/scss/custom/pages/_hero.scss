@@ -24,6 +24,15 @@
         // il faut donc forcer ici pour gagner en spécificité.
         color: $white !important;
     }
+
+    // Logo aligné sur la taille de police du titre : 1em suit le font-size
+    // du .heading (65px desktop / 35px mobile), donc pas de media query à dupliquer.
+    .heading svg {
+        height: 1em;
+        width: 1em;
+        margin-right: 0.2em;
+        vertical-align: -0.12em;
+    }
 }
 
 // Contraint l'image du hero pour qu'elle reste intégralement visible

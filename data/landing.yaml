@@ -18,11 +18,10 @@ hero:
     pill: false # boolean
     soft: true # boolean
 
-  # titleLogo:
-  #   path: "images/logos"
-  #   filename: "title_logo.png"
-  #   alt: "sudo-less Logo"
-  #   height: 80px
+  titleLogo:
+    path: "images/logos"
+    filename: "title_logo.svg"
+    alt: "sudo-less"
 
   title: "sudo less"
   subtitle: Le guide pratique du **RGESN** critère par critère. Outils, méthodes et retours d'expérience pour **écoconcevoir** vos services numériques. Parce que la meilleure ligne de code est celle qu'on n'écrit pas.
