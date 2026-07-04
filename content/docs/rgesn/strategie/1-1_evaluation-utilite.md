@@ -183,6 +183,7 @@ Profil(s) métier concerné(s) : `Porteur de projet`, `Responsable RSE/Numériqu
 
 Plusieurs outils gratuits permettent d'outiller concrètement l'évaluation de l'utilité et des impacts environnementaux d'un service numérique :
 
+- [EcoSimulateur](https://www.figma.com/community/plugin/1430170108116488365/ecosimulateur) (Adveris) : plugin Figma gratuit qui prédit en temps réel le score EcoIndex d'une maquette, directement pendant la conception — avant même d'écrire la moindre ligne de code.
 - [NumEcoDiag](https://ecoresponsable.numerique.gouv.fr/ressources/documents-reference/referentiel-general-ecoconception/numecodiag/) (MiNumEco / DINUM) : extension navigateur gratuite qui permet de s'auto-évaluer sur les 79 critères du RGESN, dont le critère 1.1. Elle génère un badge HTML et un export CSV à intégrer dans la déclaration d'écoconception.
 - [monACVnumérique.fr](https://globalecoconcept.com/outil/) : outil en ligne permettant de réaliser une ACV simplifiée (screening) d'un service numérique en quelques minutes à partir de 10 questions macro. Utile pour obtenir rapidement un ordre de grandeur des impacts environnementaux et argumenter la justification de l'utilité du service face à ces impacts.
 - [NumEcoEval](https://spote.developpement-durable.gouv.fr/offre/numecoeval-outil-de-mesure-de-l-empreinte-environnementale-du-numerique) (MiNumEco / MTE) : solution open source permettant de calculer l'empreinte environnementale d'un système d'information complet (équipements, VMs, applications). Plus adapté à l'échelle d'un SI qu'à un seul service.
