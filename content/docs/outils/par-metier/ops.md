@@ -9,7 +9,7 @@ draft: false
 toc: true
 ---
 
-Contrairement aux outils de choix d'infrastructure de la page [Architecte](../architecte/), les ressources ci-dessous s'utilisent en **surveillance continue**, une fois le service en production — la même logique de revue régulière que le [critère 1.4](../../rgesn/strategie/1-4_revue-ecoconception/).
+Contrairement aux outils de choix d'infrastructure de la page [Architecte](../architecte/), les ressources ci-dessous s'utilisent en **surveillance continue**, une fois le service en production — la même logique de revue régulière que le [critère 1.4](../../../rgesn/strategie/1-4_revue-ecoconception/).
 
 | Outil | Catégorie | Ce qu'il apporte | Gratuit ? | Intégré à l'observabilité existante ? |
 |---|---|---|---|---|

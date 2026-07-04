@@ -9,7 +9,7 @@ draft: false
 toc: true
 ---
 
-Contrairement aux outils des autres pages, qui mesurent ou dimensionnent un service, les ressources ci-dessous servent surtout à **décider s'il faut développer, quoi développer, et jusqu'où** — la question posée dès le [critère 1.1](../../rgesn/strategie/1-1_evaluation-utilite/).
+Contrairement aux outils des autres pages, qui mesurent ou dimensionnent un service, les ressources ci-dessous servent surtout à **décider s'il faut développer, quoi développer, et jusqu'où** — la question posée dès le [critère 1.1](../../../rgesn/strategie/1-1_evaluation-utilite/).
 
 | Outil / Méthode | Catégorie | Ce qu'il apporte | Gratuit ? | Format |
 |---|---|---|---|---|
@@ -22,4 +22,4 @@ Contrairement aux outils des autres pages, qui mesurent ou dimensionnent un serv
 
 ---
 
-Ces outils s'utilisent dans l'ordre du cycle de vie du projet plutôt qu'au choix : l'**arbre de décision** et le **guide de questionnement** interviennent avant même de valider l'idée, la **règle des 3U** et **Empreinte Projet** au moment de cadrer le périmètre fonctionnel, puis **PerformanceBudget.io** et **NumEcoDiag** pour transformer ces intentions en engagements chiffrés et suivis dans la déclaration d'écoconception (voir le [critère 1.5](../../rgesn/strategie/1-5_objectifs-environnementaux/) sur la fixation d'objectifs).
+Ces outils s'utilisent dans l'ordre du cycle de vie du projet plutôt qu'au choix : l'**arbre de décision** et le **guide de questionnement** interviennent avant même de valider l'idée, la **règle des 3U** et **Empreinte Projet** au moment de cadrer le périmètre fonctionnel, puis **PerformanceBudget.io** et **NumEcoDiag** pour transformer ces intentions en engagements chiffrés et suivis dans la déclaration d'écoconception (voir le [critère 1.5](../../../rgesn/strategie/1-5_objectifs-environnementaux/) sur la fixation d'objectifs).

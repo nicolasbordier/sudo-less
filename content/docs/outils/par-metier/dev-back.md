@@ -9,7 +9,7 @@ draft: false
 toc: true
 ---
 
-Ce tableau récapitule les outils déjà présentés dans les fiches RGESN, spécifiques au développement backend, aux API et aux traitements batch : mesure de consommation par processus, mesure en CI/CD et estimation de l'empreinte matérielle (voir notamment le [critère 1.4](../../rgesn/strategie/1-4_revue-ecoconception/)).
+Ce tableau récapitule les outils déjà présentés dans les fiches RGESN, spécifiques au développement backend, aux API et aux traitements batch : mesure de consommation par processus, mesure en CI/CD et estimation de l'empreinte matérielle (voir notamment le [critère 1.4](../../../rgesn/strategie/1-4_revue-ecoconception/)).
 
 | Outil | Catégorie | Ce qu'il mesure | Gratuit ? | Intégrable en CI/CD ? |
 |---|---|---|---|---|
@@ -21,4 +21,4 @@ Ce tableau récapitule les outils déjà présentés dans les fiches RGESN, spé
 
 ---
 
-**Scaphandre** et **PowerAPI** répondent au même besoin (mesure de la consommation par processus) avec des approches différentes : Scaphandre s'appuie sur les compteurs RAPL du processeur, quand PowerAPI privilégie une approche par modèle, plus portable mais moins directement liée au matériel réel. **GreenFrame** se distingue en mesurant un scénario applicatif complet (API + dépendances) plutôt qu'un processus isolé — pertinent en CI, avant mise en production. **Boaviztapi** et **Cloud Carbon Footprint** interviennent à un niveau différent : le choix et le dimensionnement de l'infrastructure plutôt que le code applicatif lui-même — voir aussi le détail de ces outils au [critère 1.4](../../rgesn/strategie/1-4_revue-ecoconception/).
+**Scaphandre** et **PowerAPI** répondent au même besoin (mesure de la consommation par processus) avec des approches différentes : Scaphandre s'appuie sur les compteurs RAPL du processeur, quand PowerAPI privilégie une approche par modèle, plus portable mais moins directement liée au matériel réel. **GreenFrame** se distingue en mesurant un scénario applicatif complet (API + dépendances) plutôt qu'un processus isolé — pertinent en CI, avant mise en production. **Boaviztapi** et **Cloud Carbon Footprint** interviennent à un niveau différent : le choix et le dimensionnement de l'infrastructure plutôt que le code applicatif lui-même — voir aussi le détail de ces outils au [critère 1.4](../../../rgesn/strategie/1-4_revue-ecoconception/).

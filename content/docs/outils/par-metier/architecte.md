@@ -9,7 +9,7 @@ draft: false
 toc: true
 ---
 
-Contrairement aux outils de mesure applicative des pages [Dev Back](../dev-back/) et [Dev Mobile](../dev-mobile/), les ressources ci-dessous interviennent au niveau des **choix d'infrastructure et de dimensionnement** : type d'instance, hébergeur, algorithme de chiffrement (voir le [critère 1.7](../../rgesn/strategie/1-7_niveau-chiffrement/) et le détail infra du [critère 1.4](../../rgesn/strategie/1-4_revue-ecoconception/)).
+Contrairement aux outils de mesure applicative des pages [Dev Back](../dev-back/) et [Dev Mobile](../dev-mobile/), les ressources ci-dessous interviennent au niveau des **choix d'infrastructure et de dimensionnement** : type d'instance, hébergeur, algorithme de chiffrement (voir le [critère 1.7](../../../rgesn/strategie/1-7_niveau-chiffrement/) et le détail infra du [critère 1.4](../../../rgesn/strategie/1-4_revue-ecoconception/)).
 
 | Outil | Catégorie | Ce qu'il apporte | Gratuit ? | Utilisable par API/code ? |
 |---|---|---|---|---|
@@ -23,4 +23,4 @@ Contrairement aux outils de mesure applicative des pages [Dev Back](../dev-back/
 
 ---
 
-Deux logiques distinctes coexistent dans ce tableau : les outils **Boavizta** (Boaviztapi, Datavizta, Cloud Scanner) et **Cloud Carbon Footprint** permettent d'objectiver un choix *avant* ou *après* déploiement, indépendamment du fournisseur — utile pour comparer plusieurs options. Les **tableaux de bord natifs** sont plus rapides à consulter mais enferment dans l'écosystème d'un seul fournisseur. Le **guide ANSSI**, enfin, ne mesure rien : il évite de surdimensionner un mécanisme de sécurité au détriment de la sobriété — voir le tableau comparatif complet des algorithmes au [critère 1.7](../../rgesn/strategie/1-7_niveau-chiffrement/).
+Deux logiques distinctes coexistent dans ce tableau : les outils **Boavizta** (Boaviztapi, Datavizta, Cloud Scanner) et **Cloud Carbon Footprint** permettent d'objectiver un choix *avant* ou *après* déploiement, indépendamment du fournisseur — utile pour comparer plusieurs options. Les **tableaux de bord natifs** sont plus rapides à consulter mais enferment dans l'écosystème d'un seul fournisseur. Le **guide ANSSI**, enfin, ne mesure rien : il évite de surdimensionner un mécanisme de sécurité au détriment de la sobriété — voir le tableau comparatif complet des algorithmes au [critère 1.7](../../../rgesn/strategie/1-7_niveau-chiffrement/).

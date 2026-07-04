@@ -9,7 +9,7 @@ draft: false
 toc: true
 ---
 
-Ce tableau récapitule les outils déjà présentés dans les fiches RGESN, spécifiques au développement web front-end : mesure d'impact, audit de performance, vérification de compatibilité et budgets de revue régulière (voir notamment le [critère 1.4](../../rgesn/strategie/1-4_revue-ecoconception/)).
+Ce tableau récapitule les outils déjà présentés dans les fiches RGESN, spécifiques au développement web front-end : mesure d'impact, audit de performance, vérification de compatibilité et budgets de revue régulière (voir notamment le [critère 1.4](../../../rgesn/strategie/1-4_revue-ecoconception/)).
 
 | Outil | Catégorie | Ce qu'il mesure | Gratuit ? | Intégrable en CI/CD ? |
 |---|---|---|---|---|
@@ -25,4 +25,4 @@ Ce tableau récapitule les outils déjà présentés dans les fiches RGESN, spé
 
 ---
 
-Le choix dépend surtout du moment où l'outil intervient : **avant développement** (PerformanceBudget.io, Baseline), **en revue ponctuelle** (EcoIndex.fr), ou **en surveillance continue** (Lighthouse CI, EcoSonar, GreenFrame) — voir le détail de cette logique de revue régulière au [critère 1.4](../../rgesn/strategie/1-4_revue-ecoconception/).
+Le choix dépend surtout du moment où l'outil intervient : **avant développement** (PerformanceBudget.io, Baseline), **en revue ponctuelle** (EcoIndex.fr), ou **en surveillance continue** (Lighthouse CI, EcoSonar, GreenFrame) — voir le détail de cette logique de revue régulière au [critère 1.4](../../../rgesn/strategie/1-4_revue-ecoconception/).

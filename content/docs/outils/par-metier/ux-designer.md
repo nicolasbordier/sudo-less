@@ -9,7 +9,7 @@ draft: false
 toc: true
 ---
 
-Contrairement aux outils des pages [Dev Front](../dev-front/), [Dev Back](../dev-back/) et [Dev Mobile](../dev-mobile/) qui mesurent un service déjà codé, les ressources ci-dessous interviennent **avant le développement** — au moment où la plupart des choix qui déterminent l'empreinte finale du service sont pris (voir le [critère 1.1](../../rgesn/strategie/1-1_evaluation-utilite/) et le [critère 1.2](../../rgesn/strategie/1-2_cibles-utilisatrices/)).
+Contrairement aux outils des pages [Dev Front](../dev-front/), [Dev Back](../dev-back/) et [Dev Mobile](../dev-mobile/) qui mesurent un service déjà codé, les ressources ci-dessous interviennent **avant le développement** — au moment où la plupart des choix qui déterminent l'empreinte finale du service sont pris (voir le [critère 1.1](../../../rgesn/strategie/1-1_evaluation-utilite/) et le [critère 1.2](../../../rgesn/strategie/1-2_cibles-utilisatrices/)).
 
 | Outil | Catégorie | Ce qu'il apporte | Gratuit ? | Intégré au poste de travail ? |
 |---|---|---|---|---|

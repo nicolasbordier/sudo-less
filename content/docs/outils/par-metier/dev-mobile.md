@@ -9,7 +9,7 @@ draft: false
 toc: true
 ---
 
-Ce tableau récapitule les outils déjà présentés dans les fiches RGESN, spécifiques au développement mobile : mesure d'énergie sur terminal réel, automatisation de parcours, et suivi natif en production (voir notamment le [critère 1.4](../../rgesn/strategie/1-4_revue-ecoconception/)).
+Ce tableau récapitule les outils déjà présentés dans les fiches RGESN, spécifiques au développement mobile : mesure d'énergie sur terminal réel, automatisation de parcours, et suivi natif en production (voir notamment le [critère 1.4](../../../rgesn/strategie/1-4_revue-ecoconception/)).
 
 | Outil | Catégorie | Ce qu'il mesure | Gratuit ? | Intégrable en CI/CD ? |
 |---|---|---|---|---|
@@ -26,4 +26,4 @@ Ce tableau récapitule les outils déjà présentés dans les fiches RGESN, spé
 
 ---
 
-Ces outils se combinent plutôt qu'ils ne se remplacent : **Maestro** automatise le parcours, **Flashlight** ou **Proxyman** mesurent ce qui se passe pendant ce parcours (CPU/RAM/FPS ou réseau), tandis qu'**Android Vitals** et **MetricKit** prennent le relais une fois l'application publiée, en continu et sans instrumentation. **GreenSpector** reste la seule option qui mesure une consommation énergétique réelle sur banc de terminaux physiques — les autres outils gratuits en restent des proxys (réseau, CPU, wake locks). Voir le détail complet de cette logique au [critère 1.4](../../rgesn/strategie/1-4_revue-ecoconception/) et le choix des technologies standard au [critère 1.9](../../rgesn/strategie/1-9_technologies-standard/).
+Ces outils se combinent plutôt qu'ils ne se remplacent : **Maestro** automatise le parcours, **Flashlight** ou **Proxyman** mesurent ce qui se passe pendant ce parcours (CPU/RAM/FPS ou réseau), tandis qu'**Android Vitals** et **MetricKit** prennent le relais une fois l'application publiée, en continu et sans instrumentation. **GreenSpector** reste la seule option qui mesure une consommation énergétique réelle sur banc de terminaux physiques — les autres outils gratuits en restent des proxys (réseau, CPU, wake locks). Voir le détail complet de cette logique au [critère 1.4](../../../rgesn/strategie/1-4_revue-ecoconception/) et le choix des technologies standard au [critère 1.9](../../../rgesn/strategie/1-9_technologies-standard/).
