@@ -36,7 +36,7 @@ hero:
   ctaButton:
     icon: eco
     btnText: "Explorer les critères"
-    url: "docs/strategie/"
+    url: "docs/rgesn/"
   cta2Button:
     icon: github
     btnText: "Contribuer"
@@ -59,7 +59,7 @@ featureGrid:
       description: Chaque critère du RGESN est décortiqué avec son objectif, sa mise en œuvre concrète, les profils métier concernés et les moyens de test.
       ctaLink:
         text: commencer
-        url: docs/strategie/
+        url: docs/rgesn/strategie/
 
     - title: Outils gratuits
       icon: build
@@ -108,7 +108,7 @@ featureGrid:
       description: "50 à 80 % des fonctionnalités ne sont jamais utilisées. La première bonne pratique : questionner l'utilité avant de développer."
       ctaLink:
         text: critère 1.1
-        url: docs/strategie/1-1_evaluation-utilite/
+        url: docs/rgesn/strategie/1-1_evaluation-utilite/
 
     - title: Accessible
       icon: accessibility
