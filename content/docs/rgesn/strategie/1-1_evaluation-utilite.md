@@ -97,7 +97,7 @@ Via ces différentes sources :
 
 Profil(s) métier concerné(s) : `Porteur de projet`, `UX Designer`
 
-Afin d'évaluer l'utilité environnementale d'un service numérique les designers éthiques proposent un **arbre de décision** [version Figma](https://www.figma.com/design/f0Rw3DFIYBmXN1DaPDg0In/Arbre-de-d%C3%A9cision?node-id=2-6) ou [version PDF (364ko)](https://designersethiques.org/thematiques/ecoconception/quand-faut-il-numeriser/arbre-decisionnel_compressed.pdf)
+Afin d'évaluer l'utilité environnementale d'un service numérique les designers éthiques proposent un **arbre de décision** [version Figma](https://www.figma.com/design/f0Rw3DFIYBmXN1DaPDg0In/Arbre-de-d%C3%A9cision?node-id=2-6) ou [version PDF (364ko)](https://designersethiques.org/designersethiques.org/media/pages/thematiques/ecoconception/quand-faut-il-numeriser/88d898ec0e-1684838988/arbre-decisionnel_compressed.pdf)
 
 Si les critères sont remplis :
 
