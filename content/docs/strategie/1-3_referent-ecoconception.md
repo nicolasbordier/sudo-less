@@ -77,7 +77,7 @@ Le critère est validé si un **contact** (nominal ou générique) est **précis
 ###
 ### Comment appliquer cette recommandation ?
 
-En fonction de chaque contexte :
+Via ces différentes sources :
 
 {{< tabs tabTotal="4">}}
 {{% tab tabName="Designer Ethiques" %}}

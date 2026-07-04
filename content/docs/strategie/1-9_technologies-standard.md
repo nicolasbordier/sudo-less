@@ -70,7 +70,7 @@ Le critère est **validé** si le service s'appuie sur des **standards interopé
 ###
 ### Comment appliquer concrètement cette recommandation ?
 
-Via d'autre(s) référentiel(s) :
+Via ces différentes sources :
 
 {{< tabs tabTotal="2">}}
 {{% tab tabName="INR - GR491" %}}

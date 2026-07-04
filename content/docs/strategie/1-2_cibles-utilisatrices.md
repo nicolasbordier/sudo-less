@@ -73,7 +73,7 @@ Pour valider ce critère, le **profil des cibles utilisatrices ainsi que l’ana
 ### 
 ### Comment appliquer concrètement cette recommandation ?
 
-En fonction de chaque contexte :
+Via ces différentes sources :
 
 {{< tabs tabTotal="4">}}
 {{% tab tabName="Designers Ethiques" %}}

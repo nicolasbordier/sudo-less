@@ -70,7 +70,7 @@ Le critère est **validé** si le code du service est publié en licence libre, 
 ###
 ### Comment appliquer concrètement cette recommandation ?
 
-Via d'autre(s) référentiel(s) :
+Via ces différentes sources :
 
 {{< tabs tabTotal="2">}}
 {{% tab tabName="code.gouv.fr / DINUM" %}}

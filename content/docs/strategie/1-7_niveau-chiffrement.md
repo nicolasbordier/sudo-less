@@ -75,7 +75,7 @@ Le critère est **non applicable** si le service n'a pas recours à un mécanism
 ###
 ### Comment appliquer concrètement cette recommandation ?
 
-Via d'autre(s) référentiel(s) :
+Via ces différentes sources :
 
 {{< tabs tabTotal="3">}}
 {{% tab tabName="ANSSI" %}}
