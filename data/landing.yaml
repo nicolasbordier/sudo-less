@@ -110,7 +110,7 @@ featureGrid:
         text: critère 1.1
         url: docs/rgesn/strategie/1-1_evaluation-utilite/
 
-    - title: Accessible
+    - title: Accessible et éco-conçu
       icon: accessibility
       description: Un site léger, rapide et accessible, conçu en appliquant les recommandations qu'il décrit. Walk the talk.
       ctaLink:
