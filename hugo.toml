@@ -18,6 +18,6 @@ title = 'Sudo Less'
         sidebarIcons = true
 
     [params.footer]
-        copyright = "© :YEAR: sudo-less.dev · Contenu sous [**CC BY-SA 4.0**](https://creativecommons.org/licenses/by-sa/4.0/deed.fr) · Code sous [**MIT**](https://github.com/nicolasbordier/sudo-less/blob/main/LICENSE) · Propulsé par [**Lotus Docs**](https://github.com/colinwilson/lotusdocs)"
+        copyright = "© :YEAR: sudo-less.dev · Contenu sous [**CC BY-SA 4.0**](https://creativecommons.org/licenses/by-sa/4.0/deed.fr) · Code sous [**MIT**](https://github.com/nicolasbordier/sudo-less/blob/main/LICENSE)"
         # version = true # includes git commit info
 
