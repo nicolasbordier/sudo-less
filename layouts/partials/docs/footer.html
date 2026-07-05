@@ -8,9 +8,13 @@
                         {{ $yearToken := (cond (isset .Site.Params (lower "copyrightYearToken")) $.Site.Params.copyrightYearToken ":YEAR:") }}
                         {{ replace $.Site.Params.footer.copyright $yearToken (string (now.Format "2006")) | markdownify }}
                         ·
-                        <a href="{{ "docs/a-propos/declaration-ecoconception/" | relURL }}">Déclaration d'écoconception</a>
+                        <a href="{{ "docs/a-propos/declaration-ecoconception/" | relURL }}" style="white-space: nowrap;">Déclaration d'écoconception</a>
                         ·
-                        <a href="{{ "docs/a-propos/declaration-accessibilite/" | relURL }}">Déclaration d'accessibilité</a>
+                        <a href="{{ "docs/a-propos/declaration-accessibilite/" | relURL }}" style="white-space: nowrap;">Déclaration d'accessibilité</a>
+                        ·
+                        <a href="https://bff.ecoindex.fr/redirect/?url=https://nicolasbordier.github.io/sudo-less/" target="_blank" rel="noopener">
+                            <img src="https://bff.ecoindex.fr/badge/?theme=light&url=https://nicolasbordier.github.io/sudo-less/" alt="Ecoindex Badge" style="vertical-align: middle;" width="108" height="32" loading="lazy" />
+                        </a>
                     </p>
                 </div>
             </div><!--end col-->
