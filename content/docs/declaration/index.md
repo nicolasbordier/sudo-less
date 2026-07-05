@@ -1,6 +1,6 @@
 ---
 weight: 150
-title: "Déclaration"
+title: "Rédiger ma déclaration"
 description: "Comment rédiger une déclaration d'écoconception RGESN et calculer son score d'avancement : contenu obligatoire, modèles officiels, formule de calcul et exemples réels."
 icon: "fact_check"
 date: "2026-07-05T00:00:00+01:00"
