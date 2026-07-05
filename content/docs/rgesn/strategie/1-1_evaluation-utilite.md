@@ -177,6 +177,18 @@ Cette famille est particulièrement utile aux organisations qui souhaitent struc
 
 {{% /tab %}}
 
+{{% tab tabName="beta.gouv.fr" %}}
+
+Profil(s) métier concerné(s) : `Porteur de projet`, `Responsable RSE/Numérique soutenable`
+
+Le programme [beta.gouv.fr](https://beta.gouv.fr/approche/) intègre nativement l'évaluation de l'utilité dans son mode de financement des « startups d'État ». Chaque produit est financé par cycles de 6 mois maximum, à l'issue desquels un [comité d'investissement](https://doc.incubateur.net/gerer-son-produit/gestion-au-quotidien/budget/preparer-un-comite-dinvestissement) (sponsors de l'administration porteuse, incubateur, intrapreneur) confronte les **indicateurs d'impact** mesurés aux objectifs fixés six mois plus tôt.
+
+Si le service ne parvient pas à prouver son utilité, le comité d'investissement peut décider d'arrêter son financement — dès la phase d'investigation (**une idée sur trois est abandonnée avant même la construction d'un produit**) ou plus tard, y compris après plusieurs années (ex. : [Talents numériques](https://beta.gouv.fr/startups/talents.numeriques.html), ou [Peps](https://beta.gouv.fr/startups/peps.html), transféré à une association faute d'impact suffisant pour justifier son maintien par l'État). À l'inverse, un impact avéré peut déclencher un passage en phase d'accélération et une hausse des moyens.
+
+Ce mécanisme illustre concrètement l'esprit du critère 1.1 : l'utilité d'un service numérique ne se présuppose pas, elle se prouve et se réévalue dans la durée.
+
+{{% /tab %}}
+
 {{% tab tabName="Outils" %}}
 
 Profil(s) métier concerné(s) : `Porteur de projet`, `Responsable RSE/Numérique soutenable`, `UX Designer`
@@ -188,17 +200,10 @@ Plusieurs outils gratuits permettent d'outiller concrètement l'évaluation de l
 - [monACVnumérique.fr](https://globalecoconcept.com/outil/) : outil en ligne permettant de réaliser une ACV simplifiée (screening) d'un service numérique en quelques minutes à partir de 10 questions macro. Utile pour obtenir rapidement un ordre de grandeur des impacts environnementaux et argumenter la justification de l'utilité du service face à ces impacts.
 - [NumEcoEval](https://spote.developpement-durable.gouv.fr/offre/numecoeval-outil-de-mesure-de-l-empreinte-environnementale-du-numerique) (MiNumEco / MTE) : solution open source permettant de calculer l'empreinte environnementale d'un système d'information complet (équipements, VMs, applications). Plus adapté à l'échelle d'un SI qu'à un seul service.
 
-{{% /tab %}}
+Deux méthodes d'atelier complètent ces outils de mesure, à des moments différents du projet :
 
-{{% tab tabName="beta.gouv.fr" %}}
-
-Profil(s) métier concerné(s) : `Porteur de projet`, `Responsable RSE/Numérique soutenable`
-
-Le programme [beta.gouv.fr](https://beta.gouv.fr/approche/) intègre nativement l'évaluation de l'utilité dans son mode de financement des « startups d'État ». Chaque produit est financé par cycles de 6 mois maximum, à l'issue desquels un [comité d'investissement](https://doc.incubateur.net/gerer-son-produit/gestion-au-quotidien/budget/preparer-un-comite-dinvestissement) (sponsors de l'administration porteuse, incubateur, intrapreneur) confronte les **indicateurs d'impact** mesurés aux objectifs fixés six mois plus tôt.
-
-Si le service ne parvient pas à prouver son utilité, le comité d'investissement peut décider d'arrêter son financement — dès la phase d'investigation (**une idée sur trois est abandonnée avant même la construction d'un produit**) ou plus tard, y compris après plusieurs années (ex. : [Talents numériques](https://beta.gouv.fr/startups/talents.numeriques.html), ou [Peps](https://beta.gouv.fr/startups/peps.html), transféré à une association faute d'impact suffisant pour justifier son maintien par l'État). À l'inverse, un impact avéré peut déclencher un passage en phase d'accélération et une hausse des moyens.
-
-Ce mécanisme illustre concrètement l'esprit du critère 1.1 : l'utilité d'un service numérique ne se présuppose pas, elle se prouve et se réévalue dans la durée.
+- [Impact Poker](https://www.suricats-consulting.com/impact-poker-agile-engage/) (Suricats Consulting, démarche « Agile Engagé », licence Creative Commons BY-SA) : adapte le planning poker à l'évaluation d'impact — lors d'un rituel agile (refinement, planning), chaque membre de l'équipe évalue simultanément l'impact environnemental et/ou social d'une user story, avant une discussion collective. Permet de questionner l'utilité **au fil de l'eau**, fonctionnalité par fonctionnalité, sans audit ponctuel séparé.
+- [Tarot Cards of Tech](https://tarotcardsoftech.artefactgroup.com/) (Artefact, licence libre, jeu de cartes téléchargeable en PDF) : révèle les conséquences involontaires d'un produit **avant** sa mise en œuvre, sur trois dimensions (*Scale Disruption*, *Usage*, *Equity Access*). Se joue en amont, au moment du cadrage, pour anticiper les effets rebond du type de ceux illustrés dans l'onglet « Retours d'expériences » (Air BnB...), plutôt que les constater après coup.
 
 {{% /tab %}}
 {{< /tabs >}}

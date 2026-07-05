@@ -73,7 +73,7 @@ featureGrid:
       description: RGESN, AFNOR SPEC 2201, GR491, ISO 20125, RWEB… Les ponts entre référentiels sont identifiés pour enrichir votre démarche.
       ctaLink:
         text: en savoir plus
-        url: docs/referentiels/
+        url: docs/autres-referentiels/
 
     - title: Retours d'expérience
       icon: groups

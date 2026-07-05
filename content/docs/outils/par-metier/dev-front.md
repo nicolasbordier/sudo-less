@@ -21,6 +21,7 @@ Ce tableau récapitule les outils déjà présentés dans les fiches RGESN, spé
 | [Fruggr](https://www.fruggr.io/fr/) | Plateforme SaaS | ACV numérique multicritère (au-delà du seul EcoIndex), budget par unité fonctionnelle | Non (essai limité) | Oui |
 | [PerformanceBudget.io](https://www.performancebudget.io/) | Définition de budget | Aide à fixer des cibles chiffrées (poids, requêtes, temps de chargement) avant développement | Oui | Non |
 | [Baseline](https://web.dev/baseline) / [Can I Use](https://caniuse.com/) / [MDN](https://developer.mozilla.org/) | Référence de compatibilité | Vérifie qu'une API ou fonctionnalité web est standard et largement supportée, avant de l'adopter | Oui | Non (consultation) |
+| [HTTP Archive](https://httparchive.org/) | Jeu de données / rapports | Statistiques réelles (poids de page, usage JS/images, Core Web Vitals) sur des millions de sites, analysées chaque année dans le [Web Almanac](https://almanac.httparchive.org/) — pour comparer son site à la moyenne du web plutôt qu'à une cible arbitraire | Oui | Non (requêtes BigQuery ponctuelles) |
 | [GreenFrame](https://greenframe.io/) | CLI open source | Consommation (CPU, mémoire, réseau) d'un scénario Cypress rejoué dans une stack Dockerisée | Oui (CLI) | Oui |
 
 ---

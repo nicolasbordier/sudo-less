@@ -1,5 +1,5 @@
 ---
-weight: 200
+weight: 300
 title: "Outils"
 description: "Panorama des outils gratuits et payants pour passer de la théorie de l'écoconception à la pratique, par métier."
 icon: "build"

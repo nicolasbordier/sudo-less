@@ -18,6 +18,7 @@ Contrairement aux outils des pages [Dev Front](../dev-front/), [Dev Back](../dev
 | [Formations DesignGouv](https://design.numerique.gouv.fr/formations/recherche-utilisateur/introduction-recherche-utilisateur/) | Formations gratuites | Recherche utilisateur, définition de proto-personas, priorisation des segments d'utilisateurs à étudier | Oui | Non (formation) |
 | [GreenIT-Analysis](https://github.com/cnumr/GreenIT-Analysis) | Extension navigateur | Auditer une maquette déjà en ligne ou un concurrent, pour objectiver un existant avant de concevoir une alternative plus sobre | Oui | Oui (extension navigateur) |
 | [NumEcoDiag](https://ecoresponsable.numerique.gouv.fr/ressources/documents-reference/referentiel-general-ecoconception/numecodiag/) (MiNumEco/DINUM) | Extension navigateur | Auto-évaluation sur les 79 critères du RGESN — utile pour situer les responsabilités du design dans l'ensemble de la démarche | Oui | Oui (extension navigateur) |
+| [TRIZ — 40 principes d'innovation](https://innover-malin.com/triz-pour-les-nuls-partie-2-40-principes-d-innovation/) | Méthodologie de créativité | Grille de 40 principes de résolution de problèmes (théorie TRIZ, Altshuller) pour explorer des solutions de conception alternatives — segmenter, simplifier, faire autrement — avant de figer un choix technique coûteux à revenir en arrière | Oui | Non (méthode) |
 
 ---
 
