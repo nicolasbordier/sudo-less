@@ -105,10 +105,11 @@ La **gestion des conflits** (une même donnée modifiée hors ligne puis à nouv
 
 Profil(s) métier concerné(s) : `Développeur`, `Responsable IT`
 
-Pour tester ce critère, deux approches complémentaires :
+Pour tester ce critère, trois approches complémentaires :
 
 - Les **DevTools des navigateurs** (Chrome, Edge, Firefox — gratuits) permettent de simuler un débit réseau directement en local, sans matériel ni configuration réseau particulière. Voir le détail de la manipulation pour Firefox sur la fiche [critère 2.2](../2-2_anciens-terminaux/), onglet « Outils de test ».
 - [WebPageTest](https://www.webpagetest.org/) (gratuit) va plus loin : il exécute le test depuis de vrais serveurs répartis dans le monde, sur un choix de profils de connexion réels (dont 3G), et restitue un temps de chargement mesuré plutôt que simulé localement.
+- Pour **automatiser ce test en CI/CD** plutôt que de le rejouer manuellement, [sitespeed.io](https://www.sitespeed.io/documentation/sitespeed.io/connectivity/) (open source) propose une option de connectivité dédiée : `sitespeed.io -c 3g https://mon-service.fr` simule directement un débit 3G, avec une image Docker documentée pour l'exécuter dans un pipeline (`docker run --network=3g sitespeedio/sitespeed.io -c 3g ...`). [Lighthouse CI](https://github.com/GoogleChrome/lighthouse-ci) (déjà utilisé pour les budgets de performance en page [Implémentation](../../../outils/par-phase-projet/implementation/)) permet aussi de définir un débit personnalisé via `settings.throttling`, pour les équipes qui l'utilisent déjà.
 
 {{% /tab %}}
 {{< /tabs >}}
