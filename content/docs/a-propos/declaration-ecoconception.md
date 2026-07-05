@@ -1,5 +1,5 @@
 ---
-weight: 100
+weight: 300
 title: "Déclaration d'écoconception"
 description: "Déclaration d'écoconception de sudo-less.dev, rédigée selon le RGESN."
 icon: "fact_check"
