@@ -122,6 +122,8 @@ Si une application réellement native reste nécessaire, éviter de fixer un `mi
 
 Ce cas illustre bien la logique du critère : contrairement à d'autres critères de cette fiche (1.7, 1.8) où la conformité demande un effort dédié, le choix d'une **architecture web standard dès la conception** rend ce critère 1.9 quasiment automatique — alors qu'une application native nécessiterait, a posteriori, de justifier ce choix et d'en documenter les limites de compatibilité dans la déclaration d'écoconception.
 
+Plus radical encore, [Low-tech Magazine](https://solar.lowtechmagazine.com/fr/2018/09/how-to-build-a-low-tech-website/) pousse la même logique de sobriété technologique à l'extrême, tout en restant sur des standards ouverts : site **statique** (pas de génération à chaque visite), pas de framework JavaScript, poids d'images réduit au minimum, aucun logo, aucune vidéo, aucun cookie ni publicité. Le site va jusqu'à être hébergé sur un **serveur alimenté à 100 % à l'énergie solaire** — ce qui implique une disponibilité dépendante de l'ensoleillement, revendiquée comme telle plutôt que masquée (source : [ADEME, État des lieux et perspectives des démarches low-tech — fiche Numérique](https://librairie.ademe.fr/consommer-autrement/5421-demarches-low-tech.html), 2021). Un exemple utile pour rappeler que « technologie standard » n'impose pas un plafond de sobriété : les deux peuvent aller de pair bien au-delà du minimum attendu par ce critère.
+
 {{% /tab %}}
 
 {{< /tabs >}}
