@@ -123,6 +123,8 @@ La [déclaration d'écoconception de « Les entreprises s'engagent »](https://l
 
 Le [Musée d'arts de Nantes](https://museedartsdenantes.nantesmetropole.fr/declaration-d-ecoconception/) (Nantes Métropole, sur la v2 du RGESN) marque ce critère « Validé » avec une précision comparable à FACE, en listant six navigateurs et leur version minimale exacte : Google Chrome 63+, Internet Explorer 9+, Microsoft Edge 16+, Mozilla Firefox 52+, Firefox Quantum ESR 60+, Safari 11+ — une liste publiée dans les mentions légales du site plutôt que dans la seule déclaration d'écoconception, ce qui la rend directement vérifiable par n'importe quel visiteur.
 
+[Alt Impact](https://altimpact.fr/ecoconception-du-site/) (site porté par l'ADEME, audit Conserto) formule sa politique sous forme de règle plutôt que de liste figée — « compatibilité avec les navigateurs années N à N-3 » — validée avec [BrowserStack](https://www.browserstack.com/) sur des configurations réelles, jusqu'à un cas extrême rarement documenté ailleurs : **Windows XP avec Chrome 49 ou Opera 36**, jugé compatible avec des PC de 15 ans et plus. L'audit note cependant une limite honnête : le calculateur d'empreinte carbone intégré montre une faiblesse de performance sous contrainte CPU réduite, ce qui illustre qu'une compatibilité large côté navigateur ne garantit pas à elle seule une bonne performance sur tous les composants de la page.
+
 {{% /tab %}}
 
 {{< /tabs >}}

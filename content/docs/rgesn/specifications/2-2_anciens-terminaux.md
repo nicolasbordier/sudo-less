@@ -129,6 +129,8 @@ Pour tester réellement sur un équipement ancien plutôt que de se fier à une 
 
 La [déclaration d'écoconception de « Les entreprises s'engagent »](https://lesentreprises-sengagent.gouv.fr/eco-conception) (dernière mise à jour le 25 novembre 2022) formule cet objectif dès la conception plutôt qu'a posteriori : « l'usage mobile a été priorisé afin d'assurer un accès, même bas débit, avec une rétrocompatibilité de cinq ans pour éviter de contribuer au renouvellement des équipements numériques. » Cette déclaration s'appuie sur la version 1 du RGESN (79 critères) et non sur la v2 utilisée dans ce guide, mais l'intention rejoint directement l'objectif du critère : réduire la contribution du service au renouvellement prématuré des terminaux.
 
+La [déclaration d'écoconception d'Alt Impact](https://altimpact.fr/ecoconception-du-site/) (site porté par l'ADEME, audit Conserto, RGESN v1) documente de très loin la matrice de test la plus détaillée croisée dans ce guide : compatibilité visée avec « tout équipement mobile datant de 2014 (année N-10) ou plus », vérifiée avec des configurations réelles via BrowserStack — Windows 7 + Firefox 115/Chrome 109 (PC estimés compatibles 10 ans et plus), Galaxy Tab S7 (4 ans), Galaxy A11 (4 ans), iPhone X1 + Safari (5 ans), Windows 10 + IE11, et même **Windows XP + Chrome 49 ou Opera 36** (compatibilité théorique PC 15 ans et plus). Au-delà du test sur navigateur, l'audit va jusqu'à émuler un terminal réellement faible en puissance avec un **Raspberry Pi 3 sous RPiOS et Chromium 90** (écran 1024×768) : le site reste utilisable, y compris son calculateur d'empreinte CO2, avec seulement un ralentissement au chargement.
+
 {{% /tab %}}
 
 {{< /tabs >}}

@@ -210,6 +210,8 @@ Pour vérifier concrètement les trois volets du critère plutôt que de les pr�
 
 Ce cas illustre bien la structure du critère : les trois volets (adressage, chiffrement, échange de données) sont évalués indépendamment, et il suffit qu'un seul ne soit pas respecté — ici l'IPv6 — pour que le critère dans son ensemble soit marqué « Non validé », même si les deux autres volets (HTTPS, TLS 1.3) sont pleinement conformes.
 
+[Alt Impact](https://altimpact.fr/ecoconception-du-site/) (site porté par l'ADEME, audit Conserto) réussit là où FACE échoue, avec une justification aussi concise que complète : « l'hébergeur Datacampus est accessible en IPv6 / HTTPS / TLS 1.3. » Les trois volets du critère sont validés simultanément, chez le même type d'acteur (hébergeur mutualisé pour le compte d'une administration) que le cas FACE — la différence ne tient donc pas au contexte organisationnel mais bien au choix de l'hébergeur lui-même.
+
 {{% /tab %}}
 
 {{< /tabs >}}

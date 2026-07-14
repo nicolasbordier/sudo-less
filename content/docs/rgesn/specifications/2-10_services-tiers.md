@@ -166,6 +166,8 @@ Pour objectiver le poids réel des services tiers déjà en place plutôt que de
 
 Ce cas illustre une zone grise du critère : Chorus (plateforme interministérielle de facturation) est un service tiers au sens technique (externe à l'équipe projet), mais interne à l'État au sens organisationnel, sans étude d'impact publique disponible et sans levier réel pour en changer. FACE en conclut logiquement une non-applicabilité plutôt qu'une non-conformité — à la différence d'un service tiers commercial (analytics, vidéo, réseau social) où un choix alternatif reste possible.
 
+[Alt Impact](https://altimpact.fr/ecoconception-du-site/) (site porté par l'ADEME, audit Conserto) marque quant à lui ce critère **« Non validé »** de façon nette, en nommant précisément les deux services tiers en cause : « L'intégration de deux services tiers impactants sont à questionner : Google Tag Manager, Calculateur d'impact impactco2.fr. » Ce cas complète directement le [critère 2.9](../2-9_composants-interface/) sur ce même service, où le même calculateur impactco2.fr est identifié comme mal optimisé (66 requêtes, 2 Mo) — les deux critères convergent ici vers le même composant tiers problématique, illustrant qu'un seul widget mal intégré peut faire échouer plusieurs critères RGESN à la fois.
+
 {{% /tab %}}
 
 {{< /tabs >}}

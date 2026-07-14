@@ -154,6 +154,8 @@ Ce retour d'expérience montre qu'un référent isolé a peu de prise sans **obj
 
 À l'échelle d'une collectivité plutôt que d'un ministère, la [déclaration d'écoconception du Musée d'arts de Nantes](https://museedartsdenantes.nantesmetropole.fr/declaration-d-ecoconception/) (Nantes Métropole) illustre une application simple et directe du critère : un référent nommé (Thibaud Menanteau) est explicitement identifié comme contact écoconception pour l'ensemble de Nantes Métropole, plutôt que projet par projet — le critère est marqué « Validé ».
 
+Côté secteur privé, la [déclaration d'écoconception d'Alt Impact](https://altimpact.fr/ecoconception-du-site/) (site porté par l'ADEME, développé par l'agence Whodunit) nomme un référent côté maîtrise d'œuvre plutôt que côté maîtrise d'ouvrage : Jean-Baptiste Audras, Directeur Technique et Responsable Qualité chez Whodunit. Ce positionnement du référent chez le prestataire plutôt que chez le commanditaire est une variante intéressante du critère, pertinente lorsque l'expertise technique nécessaire réside surtout du côté de l'agence.
+
 {{% /tab %}}
 
 {{< /tabs >}}
