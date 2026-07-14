@@ -98,6 +98,8 @@ Ce critère est le pendant logiciel du [critère 1.10](../../strategie/1-10_api-
 
 [FACE](https://declarations-f52e8c.gitlab-pages.din.developpement-durable.gouv.fr/uploads/73f86f8cf0659b4e84d9c83adc0f0a97/face_rgesn_2024_outil_declaration_ecoconception.pdf) (Ministères Territoires Écologie Logement, déclaration du 17 janvier 2025) marque ce critère **« Non applicable »**, sans autre justification que ce statut. C'est un cas attendu et sans ambiguïté : FACE est un service web sans terminal associé commercialisé, exactement le cas d'exclusion prévu par la case « Applicabilité » du critère — contrairement aux critères voisins de cette même fiche (3.1, 3.2, 3.3), qui portaient eux sur l'architecture du service web lui-même et s'appliquaient donc pleinement.
 
+Pour un cas concret côté matériel grand public, [Fairphone](https://www.fairphone.com/software-longevity) a systématiquement dépassé ses propres engagements de départ : le Fairphone 3 (2019), initialement promis pour 5 ans de mises à jour, en a finalement reçu 7 ; le Fairphone 4 (2021), annoncé pour 5 ans avec l'ambition d'atteindre 7, est aujourd'hui garanti jusqu'en 2028 ; le Fairphone 5 (2023) vise d'emblée 8 à 10 ans de mises à jour de sécurité. Quelques années plus tard, Google (Pixel 8, octobre 2023) et Samsung (Galaxy S24, janvier 2024) ont chacun porté leur propre engagement standard de 5 à **7 ans** de mises à jour. La chronologie suggère que Fairphone avait déjà normalisé ce niveau d'engagement avant que les deux plus gros acteurs du marché ne l'adoptent à leur tour — mais aucune source consultée n'établit de lien de cause à effet explicite entre les deux ; il s'agit d'une coïncidence de calendrier documentée, pas d'une influence directe confirmée.
+
 {{% /tab %}}
 
 {{< /tabs >}}
