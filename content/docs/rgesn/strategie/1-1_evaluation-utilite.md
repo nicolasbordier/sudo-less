@@ -92,7 +92,7 @@ Par ailleurs, cette étude devrait inclure une analyse qualitative des impacts e
 
 Via ces différentes sources :
 
-{{< tabs tabTotal="7">}}
+{{< tabs tabTotal="8">}}
 {{% tab tabName="Designers Ethiques" %}}
 
 Profil(s) métier concerné(s) : `Porteur de projet`, `UX Designer`
@@ -174,6 +174,22 @@ La [famille « Stratégie » du GR491](https://gr491.isit-europe.org/?famille=st
 - **Maturité organisationnelle** : l'organisation est-elle en mesure de faire progresser son niveau de maturité vis-à-vis de l'écoconception grâce à la réalisation de ce projet ?
 
 Cette famille est particulièrement utile aux organisations qui souhaitent structurer une démarche de numérique responsable plus large que la seule dimension environnementale du RGESN (le GR491 couvre aussi les volets social et économique).
+
+{{% /tab %}}
+
+{{% tab tabName="5R (INR)" %}}
+
+Profil(s) métier concerné(s) : `Porteur de projet`, `Responsable RSE/Numérique soutenable`
+
+L'INR (Institut du Numérique Responsable) propose une hiérarchie de décision en [5 étapes, dite des « 5R »](https://fr.wiki.isit-europe.org/nr/5R), à parcourir dans l'ordre avant tout investissement dans une nouvelle solution logicielle ou un nouvel équipement :
+
+1. **Refuser** : la compréhension et l'analyse détaillée du besoin permettent d'établir la réelle nécessité d'investir dans une nouvelle solution logicielle ou un nouvel équipement — c'est exactement la question posée par ce critère 1.1.
+2. **Réduire** : limiter les investissements et installations, en particulier si l'usage envisagé n'est qu'occasionnel.
+3. **Réparer** : évaluer la possibilité de réparer ou de faire évoluer un équipement existant plutôt que de le remplacer.
+4. **Réutiliser** : envisager le prêt, la location ou le matériel reconditionné avant tout achat neuf.
+5. **Recycler** : en dernier recours, confier le matériel hors d'usage à une filière de recyclage DEEE.
+
+Cette hiérarchie prolonge la logique du critère 1.1 au-delà de la seule question initiale (« Refuser ») : une fois l'utilité du service confirmée, les étapes suivantes guident les arbitrages matériels qui en découlent — voir les critères [1.10](../1-10_api-materiel/) (API ouvertes pour prolonger la durée de vie du matériel) et [2.1](../../specifications/2-1_profils-materiels/) (profils de matériels), ainsi que la fiche [Fin de vie](../../../outils/par-phase-projet/fin-de-vie/) pour le réemploi et le recyclage.
 
 {{% /tab %}}
 

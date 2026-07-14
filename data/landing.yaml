@@ -113,9 +113,11 @@ featureGrid:
     - title: Accessible et éco-conçu
       icon: accessibility
       description: Un site léger, rapide et accessible, conçu en appliquant les recommandations qu'il décrit. Walk the talk.
-      ctaLink:
-        text: notre déclaration
-        url: declaration-ecoconception/
+      ctaLinks:
+        - text: eco
+          url: docs/a-propos/declaration-ecoconception/
+        - text: a11y
+          url: docs/a-propos/declaration-accessibilite/
 
 imageText:
   enable: false
