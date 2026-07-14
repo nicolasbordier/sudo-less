@@ -162,6 +162,8 @@ Pour la seconde vie du **matériel** libéré par un décommissionnement (réuti
 
 À l'inverse, [SNE — Système national d'enregistrement des demandes de logement social](https://ecoresponsable.numerique.gouv.fr/ressources/documents-reference/referentiel-general-ecoconception/retour-experience/), déjà cité au [critère 1.1](../../strategie/1-1_evaluation-utilite/), documente un cas concret de décommissionnement réussi : dans le cadre d'une expérimentation du RGESN accompagnée par l'INR, un **module dont l'usage avait été détourné** de sa finalité initiale a été purement et simplement décommissionné plutôt que maintenu par défaut.
 
+[Les e-novateurs](https://les-enovateurs.com/eco-conception) (média associatif sur le numérique responsable) marquent ce critère « Validé » avec un plan de décommissionnement volontairement simple, proportionné à la taille du service : « il suffit de passer le projet sur GitHub en Open Source, et d'arrêter le seul serveur de production. » Côté maintenance courante, le service dispose d'un système de redémarrage automatique et de signalement en cas d'indisponibilité, complété par l'hébergeur [Ikoula](https://www.ikoula.com/), qui assure une surveillance régulière des VPS via des agents [Zabbix](https://www.zabbix.com/).
+
 {{% /tab %}}
 
 {{< /tabs >}}

@@ -4,7 +4,7 @@ title: "1.8 - Efforts d'open source"
 description: "Critère 1.8 du RGESN : pourquoi et comment publier le code source d'un service numérique en licence libre pour allonger sa durée de vie et celle du matériel associé."
 icon: "article"
 date: "2026-07-03T00:00:00+01:00"
-lastmod: "2026-07-03T00:00:00+01:00"
+lastmod: "2026-07-14T00:00:00+01:00"
 draft: false
 toc: true
 ---
@@ -110,6 +110,7 @@ Cette politique de « open source par défaut » illustre concrètement l'esprit
 Le contraste entre deux déclarations d'écoconception publiques illustre bien les deux issues possibles de ce critère :
 
 - [FACE](https://declarations-f52e8c.gitlab-pages.din.developpement-durable.gouv.fr/uploads/73f86f8cf0659b4e84d9c83adc0f0a97/face_rgesn_2024_outil_declaration_ecoconception.pdf) (Ministères Territoires Écologie Logement, déclaration du 30 janvier 2025) marque ce critère **« Non validé »**, avec la justification suivante : « Le service numérique ne publie pas son code source sous licence open-source à ce jour. » — un exemple concret de la situation « non conforme mais honnêtement documentée » que le critère anticipe explicitement.
+- [Les e-novateurs](https://les-enovateurs.com/eco-conception) (média associatif sur le numérique responsable) marquent aussi ce critère **« Non validé »**, mais avec une justification qui montre un chantier engagé plutôt qu'une absence de démarche : « le code source est disponible sur GitHub mais de manière privée. Un nettoyage des clés API, de l'historique Git et un travail du README doit être effectué pour le rendre public. » — les trois obstacles concrets (secrets accidentellement commités, historique à assainir, documentation à écrire) qui bloquent le plus souvent le passage à l'open source d'un dépôt existant.
 - À l'inverse, l'ensemble des startups d'État de [beta.gouv.fr](https://github.com/betagouv) valident ce critère par construction : le code de services déjà cités dans ce guide (DiaLog, Territoires en Transitions…) est public dès le premier commit, sans qu'un effort de mise en conformité a posteriori soit nécessaire.
 
 Ce contraste rappelle que ce critère, noté « Fort » en difficulté, se traite bien plus facilement **en amont** (choisir une licence et un dépôt public dès l'initialisation du projet) qu'**a posteriori** sur un code déjà écrit sans cette contrainte — où subsistent alors des questions de propriété intellectuelle, de secrets métier mêlés au code, ou de dépendances propriétaires à isoler avant publication.

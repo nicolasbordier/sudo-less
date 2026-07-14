@@ -136,6 +136,8 @@ Une exception à ce silence documentaire : la [déclaration d'écoconception de 
 
 La [déclaration d'écoconception du Musée d'arts de Nantes](https://museedartsdenantes.nantesmetropole.fr/declaration-d-ecoconception/) (Nantes Métropole, sur la v2 du RGESN) illustre une nuance plus honnête encore : critère marqué « En cours de validation », avec une auto-critique explicite plutôt qu'une déclaration de conformité totale — « la collecte de données personnelles se fait dans le respect du RGPD [mais] l'intégration de Youtube nécessite la collecte de données supplémentaires qui sont soumises au consentement des utilisateurs. Dans cette optique, l'utilisation de Youtube devrait être remise en question. » Le service identifie donc lui-même son point faible plutôt que de le passer sous silence — un exemple rare de transparence sur un compromis non résolu.
 
+[Les e-novateurs](https://les-enovateurs.com/eco-conception) (média associatif sur le numérique responsable) marquent ce critère « Validé » avec une collecte réduite à deux éléments : les données de visite via [Matomo](https://matomo.org/) auto-hébergé sur leur propre serveur (pas de délégation à un tiers), et l'adresse e-mail collectée avec consentement explicite dans le seul but d'envoyer la newsletter mensuelle — un exemple concret et minimal de collecte proportionnée au besoin réel.
+
 {{% /tab %}}
 
 {{< /tabs >}}

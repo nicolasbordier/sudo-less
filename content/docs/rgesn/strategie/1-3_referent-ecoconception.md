@@ -156,6 +156,8 @@ Ce retour d'expérience montre qu'un référent isolé a peu de prise sans **obj
 
 Côté secteur privé, la [déclaration d'écoconception d'Alt Impact](https://altimpact.fr/ecoconception-du-site/) (site porté par l'ADEME, développé par l'agence Whodunit) nomme un référent côté maîtrise d'œuvre plutôt que côté maîtrise d'ouvrage : Jean-Baptiste Audras, Directeur Technique et Responsable Qualité chez Whodunit. Ce positionnement du référent chez le prestataire plutôt que chez le commanditaire est une variante intéressante du critère, pertinente lorsque l'expertise technique nécessaire réside surtout du côté de l'agence.
 
+La [déclaration d'écoconception des e-novateurs](https://les-enovateurs.com/eco-conception) (média associatif sur le numérique responsable) illustre un cas où le référent n'est pas qu'un contact administratif mais un contributeur reconnu de l'écosystème : Jérémy Pastouret, développeur au sein de l'association, a contribué à la nouvelle édition du référentiel [RWEB « Écoconception web : les 115 bonnes pratiques »](https://rweb.greenit.fr/) (Collectif GreenIT) ainsi qu'au [référentiel de l'IA frugale](https://www.ecollm.fr/guide/rgiaf/green-ai-rgiaf-bp01/) (AFNOR — Commissariat Général au Développement Durable) — deux référentiels déjà cités ailleurs sur ce site.
+
 {{% /tab %}}
 
 {{< /tabs >}}

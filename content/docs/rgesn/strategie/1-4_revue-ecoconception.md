@@ -4,7 +4,7 @@ title: "1.4 - Revue d'écoconception"
 description: "Critère 1.4 du RGESN : comment mettre en place des revues régulières et des outils de mesure pour vérifier dans la durée le respect de la démarche d'écoconception."
 icon: "article"
 date: "2025-12-21T13:29:09+01:00"
-lastmod: "2026-07-03T00:00:00+01:00"
+lastmod: "2026-07-14T00:00:00+01:00"
 draft: false
 toc: true
 ---
@@ -154,6 +154,8 @@ En complément, [GreenFrame](https://greenframe.io/) ([CLI open source](https://
 À l'inverse, [Extia / Vamos](https://www.extia-group.com/fr-fr/blog/audit-d-ecoconception-d-un-service-numerique-existant-l-exemple-de-vamos-1) illustre un **audit d'écoconception ponctuel** d'un service existant : utile en point de départ (constituer un état des lieux, prioriser les actions), mais qui ne suffit pas à lui seul à valider ce critère sans mise en place d'une cadence de revue récurrente derrière.
 
 Ces deux retours d'expérience montrent la distinction attendue par le critère 1.4 : une **revue régulière suivie dans le temps** (budget de performance, alerte de régression) apporte plus de garanties qu'un audit isolé, aussi complet soit-il.
+
+[Les e-novateurs](https://les-enovateurs.com/eco-conception) (média associatif sur le numérique responsable) documentent une revue automatisée déclenchée à chaque mise en production plutôt qu'à intervalle fixe : des tests [Playwright](https://playwright.dev/) vérifient que les pages principales et les nouvelles pages fonctionnent correctement (vidéo de test à l'appui), puis un contrôle du score **EcoIndex** est exigé au-dessus de 50 sur la page d'accueil, un nouvel article et la liste des articles — un seuil de non-régression vérifié systématiquement avant chaque déploiement plutôt qu'une mesure ponctuelle.
 
 {{% /tab %}}
 

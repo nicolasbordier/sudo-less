@@ -168,6 +168,8 @@ Ce cas illustre une zone grise du critère : Chorus (plateforme interministérie
 
 [Alt Impact](https://altimpact.fr/ecoconception-du-site/) (site porté par l'ADEME, audit Conserto) marque quant à lui ce critère **« Non validé »** de façon nette, en nommant précisément les deux services tiers en cause : « L'intégration de deux services tiers impactants sont à questionner : Google Tag Manager, Calculateur d'impact impactco2.fr. » Ce cas complète directement le [critère 2.9](../2-9_composants-interface/) sur ce même service, où le même calculateur impactco2.fr est identifié comme mal optimisé (66 requêtes, 2 Mo) — les deux critères convergent ici vers le même composant tiers problématique, illustrant qu'un seul widget mal intégré peut faire échouer plusieurs critères RGESN à la fois.
 
+[Les e-novateurs](https://les-enovateurs.com/eco-conception) (média associatif sur le numérique responsable) marquent ce critère « Validé » avec un périmètre volontairement restreint à deux services tiers, chacun justifié individuellement : Matomo, auto-hébergé sur leur propre serveur avec l'option d'archivage activée pour éviter toute surcharge de la base de données, et Mailchimp, sollicité uniquement via un appel API ponctuel lorsqu'un·e visiteur·se s'inscrit à la newsletter. Un nombre de services tiers réduit à l'essentiel, plutôt qu'une accumulation progressive et non questionnée — la même logique que celle défendue par le GR491 ci-contre.
+
 {{% /tab %}}
 
 {{< /tabs >}}

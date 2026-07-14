@@ -4,7 +4,7 @@ title: "2.5 - Terminaux d'affichage"
 description: "Critère 2.5 du RGESN : pourquoi et comment adapter un service numérique à différents types de terminaux d'affichage (responsive design), pour limiter le renouvellement de matériel."
 icon: "responsive_layout"
 date: "2026-07-05T00:00:00+01:00"
-lastmod: "2026-07-05T00:00:00+01:00"
+lastmod: "2026-07-14T00:00:00+01:00"
 draft: false
 toc: true
 ---
@@ -150,6 +150,8 @@ Pour vérifier concrètement les seuils chiffrés du critère (1 200 x 800 px, 7
 [FACE](https://declarations-f52e8c.gitlab-pages.din.developpement-durable.gouv.fr/uploads/73f86f8cf0659b4e84d9c83adc0f0a97/face_rgesn_2024_outil_declaration_ecoconception.pdf) (Ministères Territoires Écologie Logement, déclaration du 3 avril 2025) illustre un cas de **non-conformité documentée**, plutôt qu'une réussite : « Le service numérique web propose un affichage qui adapte les dimensions des composants sans être réellement responsive [...] Sur une configuration de 1200 x 800, le composant "Notes" en jaune déborde hors de la fenêtre horizontalement [...] Le composant "Notes" s'affiche correctement qu'à partir d'environ 1760 pixels, donc sur une configuration de type 1080p ou supérieur. »
 
 Ce cas est cité ici comme « Non validé » — précisément sur le seuil de 1 200 pixels fixé par le critère — et montre qu'une adaptation partielle des dimensions (fluid layout) ne suffit pas si un composant isolé reste conçu pour une largeur bien supérieure au seuil testé.
+
+[Les e-novateurs](https://les-enovateurs.com/eco-conception) (média associatif sur le numérique responsable) marquent ce critère « Validé » avec des tests sur des terminaux réels plutôt que des seules simulations : écran TV LG M2362DP 23 pouces, iPhone 5SE (320×568), iPad sous iOS 14.7 (1080×810) et Mac Pro M1 13 pouces, chacun avec une capture d'écran à l'appui. La déclaration reste honnête sur les limites malgré la validation globale : en « Évolutions potentielles », elle note un problème d'accessibilité identifié sur les tablettes en format portrait, au niveau des boutons du menu — un défaut mineur documenté plutôt que dissimulé derrière un statut « Validé » sans nuance.
 
 {{% /tab %}}
 

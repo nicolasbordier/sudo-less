@@ -128,6 +128,8 @@ Ce cas illustre une limite pratique très fréquente : la revue de code (critèr
 
 Le [Musée d'arts de Nantes](https://museedartsdenantes.nantesmetropole.fr/declaration-d-ecoconception/) (Nantes Métropole) illustre une situation intermédiaire entre les deux volets du critère : « En cours de validation », avec la justification suivante — « une revue de conception a bien été effectuée sous la forme d'une revue de design sur les maquettes du site » — mais sans mention d'une revue de code équivalente en aval. C'est l'inverse exact du constat habituel sur ce critère (revue de code répandue, revue de conception rare) : ici la revue de conception a été faite, la revue de code reste à formaliser.
 
+[Les e-novateurs](https://les-enovateurs.com/eco-conception) (média associatif sur le numérique responsable) marquent ce critère **« Non validé »**, avec une justification qui nuance le constat habituel plutôt que de simplement l'ignorer : « par défaut, nous éco-concevons chaque fonctionnalité, mais nous n'avons pas de revue humaine externe dédiée pour chaque ajout. » Ce cas illustre une distinction implicite mais importante du critère : concevoir avec des réflexes d'écoconception au fil de l'eau ne suffit pas à valider le critère sans un **processus de revue formalisé et externe**, même si la pratique de fond est bonne.
+
 {{% /tab %}}
 
 {{< /tabs >}}

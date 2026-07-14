@@ -4,7 +4,7 @@ title: "2.3 - Connexion bas débit ou hors connexion"
 description: "Critère 2.3 du RGESN : pourquoi et comment garantir l'utilisabilité d'un service numérique via une connexion bas débit (3G, 512 Kbit/s) ou hors connexion."
 icon: "wifi_off"
 date: "2026-07-04T00:00:00+01:00"
-lastmod: "2026-07-04T00:00:00+01:00"
+lastmod: "2026-07-14T00:00:00+01:00"
 draft: false
 toc: true
 ---
@@ -124,6 +124,8 @@ Pour tester ce critère, trois approches complémentaires :
 {{% tab tabName="Retours d'expériences" %}}
 
 [FACE](https://declarations-f52e8c.gitlab-pages.din.developpement-durable.gouv.fr/uploads/73f86f8cf0659b4e84d9c83adc0f0a97/face_rgesn_2024_outil_declaration_ecoconception.pdf) (Ministères Territoires Écologie Logement, déclaration du 30 janvier 2025) documente précisément le test attendu par ce critère, avec des chiffres concrets : « La page d'accueil non authentifiée, d'un poids total d'environ 1,35 Mo de données transférées (compressées), met environ 15 secondes pour être chargée complètement, et être utilisable, sur un profil de connexion **Regular 3G (750 kbps)**. » — un profil de connexion directement paramétrable dans les DevTools mentionnés ci-dessus. Le service étant construit comme une SPA (Single Page Application), la déclaration précise aussi que les pages suivant ce premier chargement restent, elles, nettement plus réactives.
+
+[Les e-novateurs](https://les-enovateurs.com/eco-conception) (média associatif sur le numérique responsable) documentent un test allant plus loin que la seule simulation en DevTools : testé sous Firefox en 2G Regular après vidage du cache, puis validé en conditions réelles **en train, y compris dans des tunnels et lors de coupures réseau** (vidéo à l'appui). Grâce à Next.js et une architecture PWA, le texte se charge en priorité, les images suivent en lazy loading, et un système de cache permet une consultation hors connexion des contenus déjà chargés — « ce qui est pratique dans le train par exemple. »
 
 {{% /tab %}}
 

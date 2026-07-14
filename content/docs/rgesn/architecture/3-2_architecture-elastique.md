@@ -134,6 +134,8 @@ Ce cas illustre une situation fréquente dans les organisations publiques : l'h�
 
 [Alt Impact](https://altimpact.fr/ecoconception-du-site/) (site porté par l'ADEME, audit Conserto) documente un cas intermédiaire, entre l'absence totale d'élasticité de FACE et l'auto-scaling complet : « l'architecture du service numérique n'est pas en capacité de faire correspondre la quantité de ressources utilisée et la consommation effective de ces ressources de façon automatique, mais l'hébergeur [Datacampus] est en capacité de le faire de façon manuelle après validation », grâce à un monitoring de fréquentation qui permet de faire évoluer au jour le jour la configuration serveur. Ce n'est pas une élasticité automatique au sens strict du critère, mais un mécanisme d'ajustement manuel piloté par la donnée réelle plutôt qu'un dimensionnement figé à la conception.
 
+[Les e-novateurs](https://les-enovateurs.com/eco-conception) (média associatif sur le numérique responsable) marquent ce critère **« Non applicable »**, avec une justification assumée plutôt que subie : « nous n'utilisons pas de solution Docker ou Kubernetes, notre configuration serveur est suffisante pour gérer un flux moyen d'utilisateur [...] nous adaptons le service au fur et à mesure des années en fonction de la demande. » Pour un média associatif à trafic stable et croissance progressive, une architecture élastique serait une complexité disproportionnée par rapport au besoin réel — un rappel utile que ce critère n'impose pas l'élasticité en toute circonstance, seulement lorsque la variation de charge la justifie.
+
 {{% /tab %}}
 
 {{< /tabs >}}
