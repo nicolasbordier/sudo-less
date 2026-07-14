@@ -134,6 +134,8 @@ L'anti-pattern décrit par la fiche [RWEB 0111](https://rweb.greenit.fr/fr/fiche
 
 Une exception à ce silence documentaire : la [déclaration d'écoconception de « Les entreprises s'engagent »](https://lesentreprises-sengagent.gouv.fr/eco-conception) (communauté lancée par la Présidence de la République, dernière mise à jour le 25 novembre 2022) affirme explicitement « aucun tracking non nécessaire et donc aucun cookie nécessitant le consentement des utilisateurs ». Cette déclaration s'appuie toutefois sur la **version 1** du RGESN (79 critères, réponse positive à 67,09 %) et non sur la v2 utilisée dans ce guide — elle ne peut donc pas être citée critère par critère avec la même précision que FACE, mais elle reste un exemple positif rare et concret sur ce point précis.
 
+La [déclaration d'écoconception du Musée d'arts de Nantes](https://museedartsdenantes.nantesmetropole.fr/declaration-d-ecoconception/) (Nantes Métropole, sur la v2 du RGESN) illustre une nuance plus honnête encore : critère marqué « En cours de validation », avec une auto-critique explicite plutôt qu'une déclaration de conformité totale — « la collecte de données personnelles se fait dans le respect du RGPD [mais] l'intégration de Youtube nécessite la collecte de données supplémentaires qui sont soumises au consentement des utilisateurs. Dans cette optique, l'utilisation de Youtube devrait être remise en question. » Le service identifie donc lui-même son point faible plutôt que de le passer sous silence — un exemple rare de transparence sur un compromis non résolu.
+
 {{% /tab %}}
 
 {{< /tabs >}}

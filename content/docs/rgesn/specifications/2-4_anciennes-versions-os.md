@@ -121,6 +121,8 @@ Pour définir et vérifier une plage de compatibilité logicielle plutôt que de
 
 La [déclaration d'écoconception de « Les entreprises s'engagent »](https://lesentreprises-sengagent.gouv.fr/eco-conception) (dernière mise à jour le 25 novembre 2022) va au-delà du minimum exigé par ce critère : « Le service supporte toutes les versions navigateurs qui ont moins de **5 ans** et qui couvrent plus de 0,2 % des parts de marché en France » — soit deux fois et demi la rétro-compatibilité minimale de deux ans demandée par le RGESN. À noter que cette déclaration s'appuie sur la version 1 du référentiel (79 critères) plutôt que sur la v2 utilisée dans ce guide, sans table de correspondance fiable entre les deux versions.
 
+Le [Musée d'arts de Nantes](https://museedartsdenantes.nantesmetropole.fr/declaration-d-ecoconception/) (Nantes Métropole, sur la v2 du RGESN) marque ce critère « Validé » avec une précision comparable à FACE, en listant six navigateurs et leur version minimale exacte : Google Chrome 63+, Internet Explorer 9+, Microsoft Edge 16+, Mozilla Firefox 52+, Firefox Quantum ESR 60+, Safari 11+ — une liste publiée dans les mentions légales du site plutôt que dans la seule déclaration d'écoconception, ce qui la rend directement vérifiable par n'importe quel visiteur.
+
 {{% /tab %}}
 
 {{< /tabs >}}

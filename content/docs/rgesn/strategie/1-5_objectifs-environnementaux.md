@@ -4,7 +4,7 @@ title: "1.5 - Objectifs environnementaux"
 description: "Critère 1.5 du RGESN : comment évaluer l'empreinte environnementale d'un service numérique et se fixer des objectifs de réduction chiffrés et suivis dans le temps."
 icon: "article"
 date: "2025-12-21T13:29:09+01:00"
-lastmod: "2026-07-03T00:00:00+01:00"
+lastmod: "2026-07-14T00:00:00+01:00"
 draft: false
 toc: true
 ---
@@ -146,6 +146,7 @@ Ces deux référentiels sont surtout pertinents à l'échelle d'une organisation
 
 En pratique, les déclarations d'écoconception publiées par les services publics numériques recourent plus souvent à des **budgets techniques proxy** (option 2 de l'onglet Designers Éthiques ci-dessus) qu'à une ACV multicritère complète — cohérent avec la préconisation du critère qui n'impose pas l'ACV en priorité :
 
+- Le [Musée d'arts de Nantes](https://museedartsdenantes.nantesmetropole.fr/declaration-d-ecoconception/) (Nantes Métropole) fixe un budget technique proxy tout aussi précis, critère marqué « Validé » : pas plus de 3 secondes de chargement d'une page (mesuré sur Samsung Galaxy S10, WiFi), pas plus de 750 Ko de données transférées au premier chargement, pas plus de 30 requêtes par page — avec des seuils de régression distincts et plus larges (1 Mo, 50 requêtes) pour détecter une dérive avant qu'elle ne devienne critique.
 - [DiaLog](https://dialog.beta.gouv.fr/ecoconception) (beta.gouv.fr) fixe un **budget de performance chiffré** (40 requêtes serveur maximum par écran, 900 Ko de ressources maximum par écran) et un **objectif quantifié de progression** dans le temps : faire passer son taux de conformité RGESN de 71 % (mars 2025) à 80 % (juin 2026) — un exemple concret d'objectif suivi dans la durée, même sans indicateur d'ACV (énergie primaire, GES, eau, ressources abiotiques).
 - [SPOTE](https://spote.developpement-durable.gouv.fr/article/declaration-d-ecoconception) (Pôle ministériel Écologie) suit la même logique de budget technique (2 Mo de transfert réseau compressé par page, 120 requêtes et 5 noms de domaine maximum) et publie une page dédiée à l'évolution de son impact écologique dans le temps, mais sans objectif chiffré de réduction publié.
 

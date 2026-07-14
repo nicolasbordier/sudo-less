@@ -134,6 +134,8 @@ Ces outils s'articulent avec le [critère 1.10](../../strategie/1-10_api-materie
 
 Ce cas illustre une situation fréquente : le service a un prestataire de Tierce Maintenance Applicative clairement identifié, ce qui rend le critère directement actionnable (une clause environnementale à ajouter au prochain renouvellement de contrat), contrairement à des services où les fournisseurs sont plus diffus ou mal recensés.
 
+Le [Musée d'arts de Nantes](https://museedartsdenantes.nantesmetropole.fr/declaration-d-ecoconception/) (Nantes Métropole) pointe une limite organisationnelle différente, également « En cours de validation » : « ce processus devrait être défini au niveau de Nantes Métropole et décliné sur l'ensemble des projets » — un constat qui rejoint le [critère 2.10](../2-10_services-tiers/) sur ce même service (justifié de façon identique). Contrairement au cas FACE où le fournisseur est identifié mais la clause absente, ici c'est la **gouvernance elle-même** qui manque : sans politique d'achat définie au niveau de la collectivité, chaque projet se retrouve à devoir la réinventer individuellement.
+
 {{% /tab %}}
 
 {{< /tabs >}}

@@ -4,7 +4,7 @@ title: "1.3 - Référent écoconception"
 description: "Critère 1.3 du RGESN : pourquoi et comment désigner un ou plusieurs référents en écoconception numérique au sein d'un projet ou d'une organisation."
 icon: "article"
 date: "2025-12-21T13:29:09+01:00"
-lastmod: "2026-07-03T00:00:00+01:00"
+lastmod: "2026-07-14T00:00:00+01:00"
 draft: false
 toc: true
 ---
@@ -139,7 +139,7 @@ Il couvre **9 domaines** (usages quotidiens, green IT, écoconception applicativ
 ### Pour aller plus loin :
 
 
-{{< tabs tabTotal="2">}}
+{{< tabs tabTotal="1">}}
 
 {{% tab tabName="Retours d'expériences" %}}
 
@@ -151,6 +151,8 @@ Le réseau des référents numérique éco-responsable ministériels, animé par
 - Le rôle de référent se heurte parfois à des **priorités contradictoires** : aux ministères de la Justice et de l'Europe et des Affaires étrangères, des contraintes de sécurité imposent le retrait de matériels encore fonctionnels, à rebours des objectifs de sobriété.
 
 Ce retour d'expérience montre qu'un référent isolé a peu de prise sans **objectifs chiffrés, mandat clair et coordination inter-équipes** — ce que formalise justement le critère 1.3 en demandant qu'un contact soit explicitement documenté dans la déclaration d'écoconception.
+
+À l'échelle d'une collectivité plutôt que d'un ministère, la [déclaration d'écoconception du Musée d'arts de Nantes](https://museedartsdenantes.nantesmetropole.fr/declaration-d-ecoconception/) (Nantes Métropole) illustre une application simple et directe du critère : un référent nommé (Thibaud Menanteau) est explicitement identifié comme contact écoconception pour l'ensemble de Nantes Métropole, plutôt que projet par projet — le critère est marqué « Validé ».
 
 {{% /tab %}}
 

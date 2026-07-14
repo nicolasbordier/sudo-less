@@ -4,7 +4,7 @@ title: "2.6 - Revue de conception et de code"
 description: "Critère 2.6 du RGESN : pourquoi et comment intégrer la réduction des impacts environnementaux, par fonctionnalité, dans une revue de conception puis une revue de code."
 icon: "rate_review"
 date: "2026-07-05T00:00:00+01:00"
-lastmod: "2026-07-05T00:00:00+01:00"
+lastmod: "2026-07-14T00:00:00+01:00"
 draft: false
 toc: true
 ---
@@ -125,6 +125,8 @@ Cette revue en deux temps s'outille différemment selon la phase :
 [FACE](https://declarations-f52e8c.gitlab-pages.din.developpement-durable.gouv.fr/uploads/73f86f8cf0659b4e84d9c83adc0f0a97/face_rgesn_2024_outil_declaration_ecoconception.pdf) (Ministères Territoires Écologie Logement, déclaration du 17 janvier 2025) marque ce critère **« Non validé »**, avec une justification en une seule phrase : « Aucune revue de conception identifiée à ce jour. »
 
 Ce cas illustre une limite pratique très fréquente : la revue de code (critère plus proche du [1.4](../../strategie/1-4_revue-ecoconception/)) est une pratique déjà répandue dans beaucoup d'équipes, alors que la **revue de conception en amont**, spécifiquement centrée sur l'empreinte environnementale de chaque fonctionnalité, reste rarement formalisée — même sur un service par ailleurs plutôt avancé dans sa démarche RGESN.
+
+Le [Musée d'arts de Nantes](https://museedartsdenantes.nantesmetropole.fr/declaration-d-ecoconception/) (Nantes Métropole) illustre une situation intermédiaire entre les deux volets du critère : « En cours de validation », avec la justification suivante — « une revue de conception a bien été effectuée sous la forme d'une revue de design sur les maquettes du site » — mais sans mention d'une revue de code équivalente en aval. C'est l'inverse exact du constat habituel sur ce critère (revue de code répandue, revue de conception rare) : ici la revue de conception a été faite, la revue de code reste à formaliser.
 
 {{% /tab %}}
 

@@ -4,7 +4,7 @@ title: "1.1 - Évaluation de l'utilité"
 description: "Critère 1.1 du RGESN : comment évaluer l'utilité d'un service numérique en tenant compte de ses impacts environnementaux."
 icon: "article"
 date: "2025-12-21T13:29:05+01:00"
-lastmod: "2025-12-21T13:29:05+01:00"
+lastmod: "2026-07-14T00:00:00+01:00"
 draft: false
 toc: true
 ---
@@ -240,6 +240,7 @@ Exemples illustrant les **effets rebond** ou les limites d'un service numérique
 
 Exemples de services numériques ayant **questionné leur utilité** dans une démarche d'écoconception :
 
+- [Musée d'arts de Nantes](https://museedartsdenantes.nantesmetropole.fr/declaration-d-ecoconception/) (Nantes Métropole) : critère marqué « Validé », avec une comparaison explicite à l'alternative non numérique — « une alternative aux services proposés (actualités, horaires, billetterie...) serait de se rendre sur place, mais l'utilisation du site web apparaît a priori moins impactante environnementalement » — et des fonctionnalités volontairement réduites au strict nécessaire.
 - [SPOTE](https://spote.developpement-durable.gouv.fr/article/declaration-d-ecoconception) (Pôle ministériel Écologie) : déclaration d'écoconception exemplaire, avec un mapping ODD détaillé et le décommissionnement de fonctionnalités peu utilisées (ex. panier de services supprimé).
 - [DiaLog](https://dialog.beta.gouv.fr/ecoconception) (beta.gouv.fr) : numérisation de la réglementation de circulation, déclaration d'écoconception publique, avec justification du besoin métier et contraintes d'accessibilité (terminaux anciens, connectivité dégradée).
 - [SNE - Système national d'enregistrement des demandes de logement social](https://ecoresponsable.numerique.gouv.fr/ressources/documents-reference/referentiel-general-ecoconception/retour-experience/) : retour d'expérience d'expérimentation du RGESN avec accompagnement INR, incluant le décommissionnement d'un module dont l'usage avait été détourné.
