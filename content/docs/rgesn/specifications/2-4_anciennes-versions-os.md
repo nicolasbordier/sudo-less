@@ -4,7 +4,7 @@ title: "2.4 - Anciennes versions d'OS et de navigateurs"
 description: "Critère 2.4 du RGESN : pourquoi et comment garantir l'utilisabilité d'un service numérique sur d'anciennes versions de systèmes d'exploitation (5 ans) et de navigateurs web (2 ans)."
 icon: "update"
 date: "2026-07-05T00:00:00+01:00"
-lastmod: "2026-07-05T00:00:00+01:00"
+lastmod: "2026-07-14T00:00:00+01:00"
 draft: false
 toc: true
 ---
@@ -118,6 +118,8 @@ Pour définir et vérifier une plage de compatibilité logicielle plutôt que de
 {{% tab tabName="Retours d'expériences" %}}
 
 [FACE](https://declarations-f52e8c.gitlab-pages.din.developpement-durable.gouv.fr/uploads/73f86f8cf0659b4e84d9c83adc0f0a97/face_rgesn_2024_outil_declaration_ecoconception.pdf) (Ministères Territoires Écologie Logement, déclaration du 17 janvier 2025) documente précisément le niveau d'information attendu par ce critère, avec une liste chiffrée de versions minimales et leur date de sortie : « Le service numérique, sous forme d'application web, s'affiche correctement sur les navigateurs suivants : Firefox 109.0 (janvier 2023) ou supérieur, Chrome/Chromium/Edge 110.0 (janvier 2023) ou supérieur, Safari 14.1 (avril 2021) ou supérieur, c'est-à-dire sur des ordinateurs Apple datant de 2012 ou au-delà. » Le seuil de janvier 2023 pour Firefox/Chrome, comparé à la date de déclaration (janvier 2025), correspond exactement aux deux ans de rétro-compatibilité minimale exigés par le critère — et la mention explicite de Safari illustre le lien direct entre version de navigateur et âge du terminal (ici, des Mac de 2012), qui rejoint le [critère 2.2](../2-2_anciens-terminaux/).
+
+La [déclaration d'écoconception de « Les entreprises s'engagent »](https://lesentreprises-sengagent.gouv.fr/eco-conception) (dernière mise à jour le 25 novembre 2022) va au-delà du minimum exigé par ce critère : « Le service supporte toutes les versions navigateurs qui ont moins de **5 ans** et qui couvrent plus de 0,2 % des parts de marché en France » — soit deux fois et demi la rétro-compatibilité minimale de deux ans demandée par le RGESN. À noter que cette déclaration s'appuie sur la version 1 du référentiel (79 critères) plutôt que sur la v2 utilisée dans ce guide, sans table de correspondance fiable entre les deux versions.
 
 {{% /tab %}}
 

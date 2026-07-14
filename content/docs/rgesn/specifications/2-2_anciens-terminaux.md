@@ -4,7 +4,7 @@ title: "2.2 - Anciens modèles de terminaux"
 description: "Critère 2.2 du RGESN : pourquoi et comment garantir l'utilisabilité d'un service numérique sur des équipements anciens (7 à 10 ans), pour limiter leur renouvellement prématuré."
 icon: "history"
 date: "2026-07-04T00:00:00+01:00"
-lastmod: "2026-07-04T00:00:00+01:00"
+lastmod: "2026-07-14T00:00:00+01:00"
 draft: false
 toc: true
 ---
@@ -126,6 +126,8 @@ Pour tester réellement sur un équipement ancien plutôt que de se fier à une 
 {{% tab tabName="Retours d'expériences" %}}
 
 [FACE](https://declarations-f52e8c.gitlab-pages.din.developpement-durable.gouv.fr/uploads/73f86f8cf0659b4e84d9c83adc0f0a97/face_rgesn_2024_outil_declaration_ecoconception.pdf) (Ministères Territoires Écologie Logement, déclaration du 30 janvier 2025) documente précisément le test attendu par ce critère : « Le service numérique est un produit web. Il a été testé avec succès sur un **ordinateur portable de 10 ans** sur un système **Linux Debian**. Aucune caractéristique ne montre de risques de non-utilisabilité sur un ancien terminal, quel que soit son système d'exploitation. » — un test qui correspond exactement au seuil de 10 ans fixé par le critère pour les services fonctionnant sur navigateur web, et qui illustre au passage qu'un OS libre (Debian) permet de faire tourner un service moderne sur un microprocesseur ancien là où un OS propriétaire récent aurait pu l'en empêcher (voir le [critère 1.9](../../strategie/1-9_technologies-standard/)).
+
+La [déclaration d'écoconception de « Les entreprises s'engagent »](https://lesentreprises-sengagent.gouv.fr/eco-conception) (dernière mise à jour le 25 novembre 2022) formule cet objectif dès la conception plutôt qu'a posteriori : « l'usage mobile a été priorisé afin d'assurer un accès, même bas débit, avec une rétrocompatibilité de cinq ans pour éviter de contribuer au renouvellement des équipements numériques. » Cette déclaration s'appuie sur la version 1 du RGESN (79 critères) et non sur la v2 utilisée dans ce guide, mais l'intention rejoint directement l'objectif du critère : réduire la contribution du service au renouvellement prématuré des terminaux.
 
 {{% /tab %}}
 

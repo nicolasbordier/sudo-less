@@ -4,7 +4,7 @@ title: "1.6 - Collecte de données"
 description: "Critère 1.6 du RGESN : comment collecter, stocker et conserver les données d'un service numérique de façon responsable et raisonnée, au-delà des seules obligations RGPD."
 icon: "article"
 date: "2025-12-21T13:29:09+01:00"
-lastmod: "2026-07-03T00:00:00+01:00"
+lastmod: "2026-07-14T00:00:00+01:00"
 draft: false
 toc: true
 ---
@@ -131,6 +131,8 @@ Le guide pratique de la CNIL [Minimiser les données collectées](https://www.cn
 Contrairement aux autres critères de la famille Stratégie, les déclarations d'écoconception publiques consultées (DiaLog, SPOTE, cdg69, Acigné…) ne détaillent pas spécifiquement leur politique de collecte de données au sens de ce critère — elles se concentrent sur les budgets techniques (poids, requêtes) plutôt que sur le nombre d'outils de tracking ou la durée de conservation des données. Ce silence documentaire est en soi une indication : la minimisation des données reste, en pratique, plus documentée sous l'angle RGPD (registre de traitement, PIA) que sous l'angle écoconception.
 
 L'anti-pattern décrit par la fiche [RWEB 0111](https://rweb.greenit.fr/fr/fiches/RWEB_0111-limiter-les-outils-d-analytics-et-les-donnees-collectees) reste néanmoins l'illustration la plus concrète et la plus fréquemment observée en audit : plusieurs outils d'analytics concurrents (Google Analytics, Matomo, ContentSquare...) coexistant sur un même service, chacun ajouté par une équipe différente sans concertation ni suppression des outils devenus redondants — un cas qui justifie à lui seul de vérifier ce critère lors de toute revue d'écoconception ([critère 1.4](../1-4_revue-ecoconception/)).
+
+Une exception à ce silence documentaire : la [déclaration d'écoconception de « Les entreprises s'engagent »](https://lesentreprises-sengagent.gouv.fr/eco-conception) (communauté lancée par la Présidence de la République, dernière mise à jour le 25 novembre 2022) affirme explicitement « aucun tracking non nécessaire et donc aucun cookie nécessitant le consentement des utilisateurs ». Cette déclaration s'appuie toutefois sur la **version 1** du RGESN (79 critères, réponse positive à 67,09 %) et non sur la v2 utilisée dans ce guide — elle ne peut donc pas être citée critère par critère avec la même précision que FACE, mais elle reste un exemple positif rare et concret sur ce point précis.
 
 {{% /tab %}}
 
