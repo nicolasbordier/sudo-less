@@ -94,7 +94,7 @@ Le critère 2.7 rejoint la [recommandation n°3 de la famille Hébergement](http
 
 Profil(s) métier concerné(s) : `Responsable IT`, `Architecte Logiciel`, `Porteur de projet`
 
-Depuis sa 5ème édition (2025), le [référentiel RWEB du Collectif GreenIT](https://rweb.greenit.fr/) publie une correspondance officielle avec les critères RGESN. La fiche [**RWEB 0115 — « Mettre en place un plan de fin de vie du site »**](https://rweb.greenit.fr/fr/fiches/RWEB_0115-mettre-en-place-un-plan-de-fin-de-vie-du-site) y est explicitement rattachée au critère **2.7** (et au 5.8).
+Depuis sa 5ème édition (2025), le [référentiel RWEB du Collectif GreenIT](https://rweb.greenit.fr/) publie une correspondance officielle avec les critères RGESN. La fiche [**RWEB 0115 — « Mettre en place un plan de fin de vie du site »**](https://rweb.greenit.fr/fr/fiches/RWEB_0115-mettre-en-place-un-plan-de-fin-de-vie-du-site) y est explicitement rattachée au critère **2.7** (et au [5.8](../../contenus/5-8_archivage-suppression/)).
 
 Elle part du même constat que la fiche RGESN — « la plupart du temps, la fin de vie d'un service numérique n'est pas anticipée » — mais détaille une checklist plus opérationnelle des ressources à couvrir dans le plan de décommissionnement : serveurs, stockage, middlewares, configurations, **code source**, documentations, et surtout les éléments souvent oubliés de la vie de développement — canaux de messagerie, jobs d'intégration continue, environnements de test.
 

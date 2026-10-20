@@ -183,7 +183,7 @@ Ce critère généralise le [critère 4.11](../4-11_poids-formats-fichiers/) (po
 Le RGESN rattache explicitement ce critère à deux autres :
 
 - le [critère 1.5](../../strategie/1-5_objectifs-environnementaux/) (objectifs environnementaux), dont l'analyse d'impact « peut permettre d'identifier les fonctionnalités avec un poids environnemental significatif » ;
-- le critère 5.5 (mode « écoute seule » pour les vidéos), pas encore publié sur ce site, qui fournit l'exemple type de « fonctionnalité substituable » à proposer.
+- le [critère 5.5](../../contenus/5-5_ecoute-seule/) (mode « écoute seule » pour les vidéos), qui fournit l'exemple type de « fonctionnalité substituable » à proposer.
 
 Le [critère 4.15](../4-15_controle-usages/) prolonge ce critère à l'échelle du service entier : une information globale sur l'empreinte des usages, et un mode sobre qui s'applique partout plutôt qu'une alternative proposée au cas par cas.
 
