@@ -67,7 +67,7 @@ Les recommandations du Guide pratique pour des achats numériques responsables e
 ---
 
 ###
-### Comment appliquer concrètement cette recommandation ?
+### Complément pour appliquer concrètement cette recommandation ?
 
 Via ces différentes sources :
 

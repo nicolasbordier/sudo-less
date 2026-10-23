@@ -79,7 +79,7 @@ Le **critère est validé** si l’empreinte environnementale du service a été
 ---
 
 ### 
-### Comment appliquer concrètement cette recommandation ?
+### Complément pour appliquer concrètement cette recommandation ?
 
 Via ces différentes sources :
 

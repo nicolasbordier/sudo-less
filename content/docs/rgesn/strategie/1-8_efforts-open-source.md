@@ -68,7 +68,7 @@ Le critère est **validé** si le code du service est publié en licence libre, 
 ---
 
 ###
-### Comment appliquer concrètement cette recommandation ?
+### Complément pour appliquer concrètement cette recommandation ?
 
 Via ces différentes sources :
 

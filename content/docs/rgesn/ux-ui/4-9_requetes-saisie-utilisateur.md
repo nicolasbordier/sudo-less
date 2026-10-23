@@ -68,7 +68,7 @@ Vérifier que les requêtes externes effectuées en appelant le site (en vidant 
 ---
 
 ###
-### Comment appliquer concrètement cette recommandation ?
+### Complément pour appliquer concrètement cette recommandation ?
 
 Via ces différentes sources :
 

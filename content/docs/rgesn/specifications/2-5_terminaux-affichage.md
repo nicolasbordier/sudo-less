@@ -71,7 +71,7 @@ Le critère est **validé** si les conditions susmentionnées sont remplies. Les
 ---
 
 ###
-### Comment appliquer concrètement cette recommandation ?
+### Complément pour appliquer concrètement cette recommandation ?
 
 Via ces différentes sources :
 

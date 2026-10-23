@@ -68,7 +68,7 @@ Contrôler la mise en œuvre en vérifiant que les limites de poids et de format
 ---
 
 ###
-### Comment appliquer concrètement cette recommandation ?
+### Complément pour appliquer concrètement cette recommandation ?
 
 Via ces différentes sources :
 

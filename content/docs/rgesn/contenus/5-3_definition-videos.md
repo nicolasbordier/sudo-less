@@ -87,7 +87,7 @@ Pour valider ce critère, documenter dans la déclaration d'écoconception les d
 ---
 
 ###
-### Comment appliquer concrètement cette recommandation ?
+### Complément pour appliquer concrètement cette recommandation ?
 
 Via ces différentes sources :
 

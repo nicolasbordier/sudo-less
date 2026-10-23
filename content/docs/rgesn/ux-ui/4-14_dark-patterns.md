@@ -69,7 +69,7 @@ Le critère est validé si l'interface utilisateur ne contient pas de dark patte
 ---
 
 ###
-### Comment appliquer concrètement cette recommandation ?
+### Complément pour appliquer concrètement cette recommandation ?
 
 Via ces différentes sources :
 

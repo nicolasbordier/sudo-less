@@ -60,7 +60,7 @@ Pour valider ce critère, indiquer la durée de maintenance du service dans la d
 ---
 
 ###
-### Comment appliquer concrètement cette recommandation ?
+### Complément pour appliquer concrètement cette recommandation ?
 
 Via ces différentes sources :
 

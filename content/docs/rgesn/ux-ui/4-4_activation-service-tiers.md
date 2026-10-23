@@ -62,7 +62,7 @@ Le critère est validé si l'activation des services tiers intégrés au service
 ---
 
 ###
-### Comment appliquer concrètement cette recommandation ?
+### Complément pour appliquer concrètement cette recommandation ?
 
 Via ces différentes sources :
 

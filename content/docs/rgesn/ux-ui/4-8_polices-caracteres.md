@@ -65,7 +65,7 @@ Le nombre et le poids des polices de caractères utilisées sont à évaluer. Le
 ---
 
 ###
-### Comment appliquer concrètement cette recommandation ?
+### Complément pour appliquer concrètement cette recommandation ?
 
 Via ces différentes sources :
 

@@ -64,7 +64,7 @@ De plus, dans l'éventualité du recours à des composants non natifs, il convie
 ---
 
 ###
-### Comment appliquer concrètement cette recommandation ?
+### Complément pour appliquer concrètement cette recommandation ?
 
 Via ces différentes sources :
 

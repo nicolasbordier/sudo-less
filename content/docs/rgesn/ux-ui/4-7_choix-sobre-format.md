@@ -62,7 +62,7 @@ Le critère est validé si le service n'utilise pas de contenu vidéo, audio ou 
 ---
 
 ###
-### Comment appliquer concrètement cette recommandation ?
+### Complément pour appliquer concrètement cette recommandation ?
 
 Via ces différentes sources :
 

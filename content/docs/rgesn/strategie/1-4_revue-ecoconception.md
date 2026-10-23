@@ -68,7 +68,7 @@ Pour valider ce critère, il convient de **mettre en œuvre une revue ou autoév
 ---
 
 ### 
-### Comment appliquer concrètement cette recommandation ?
+### Complément pour appliquer concrètement cette recommandation ?
 
 En fonction de chaque contexte :
 

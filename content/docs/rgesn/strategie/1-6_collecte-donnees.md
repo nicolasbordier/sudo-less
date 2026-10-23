@@ -74,7 +74,7 @@ Ne pas collecter des métadonnées servant au profilage de l'utilisateur, sauf s
 ---
 
 ###
-### Comment appliquer concrètement cette recommandation ?
+### Complément pour appliquer concrètement cette recommandation ?
 
 Via ces différentes sources :
 

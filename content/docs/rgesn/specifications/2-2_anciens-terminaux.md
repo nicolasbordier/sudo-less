@@ -78,7 +78,7 @@ Les **caractéristiques matérielles et logicielles** de l'équipement ancien te
 ---
 
 ###
-### Comment appliquer concrètement cette recommandation ?
+### Complément pour appliquer concrètement cette recommandation ?
 
 Via ces différentes sources :
 

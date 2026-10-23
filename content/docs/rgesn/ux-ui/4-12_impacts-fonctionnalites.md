@@ -64,7 +64,7 @@ Le critère est validé si le service ne comprend pas de fonctionnalités ayant 
 ---
 
 ###
-### Comment appliquer concrètement cette recommandation ?
+### Complément pour appliquer concrètement cette recommandation ?
 
 Via ces différentes sources :
 

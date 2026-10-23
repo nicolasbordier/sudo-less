@@ -61,7 +61,7 @@ Le critère est validé si le service s'appuie sur des environnements de dévelo
 ---
 
 ###
-### Comment appliquer concrètement cette recommandation ?
+### Complément pour appliquer concrètement cette recommandation ?
 
 Via ces différentes sources :
 

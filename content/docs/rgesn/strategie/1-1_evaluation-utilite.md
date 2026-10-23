@@ -79,7 +79,7 @@ Le rapport comprendra a minima une réponse aux questions suivantes (source : [D
 - Pour chaque fonctionnalité, est-elle vraiment nécessaire ? Peut-on faire autrement ?
 - Que se passerait-il si on ne l’avait pas ?
 
-Par ailleurs, cette étude devrait inclure une analyse qualitative des impacts environnementaux directs et indirects potentiels liés au service, qui se traduira par la réalisation d’un arbre de conséquences suivant la méthode [Empreinte Projet niveau 1 de l’ADEME](https://base-empreinte.ademe.fr/empreinte-projet) *(voir la section « Comment appliquer concrètement cette recommandation ? » ci-dessous pour le détail de l'outil)*.
+Par ailleurs, cette étude devrait inclure une analyse qualitative des impacts environnementaux directs et indirects potentiels liés au service, qui se traduira par la réalisation d’un arbre de conséquences suivant la méthode [Empreinte Projet niveau 1 de l’ADEME](https://base-empreinte.ademe.fr/empreinte-projet) *(voir la section « Complément pour appliquer concrètement cette recommandation ? » ci-dessous pour le détail de l'outil)*.
 
 
 {{% /tab %}}
@@ -88,7 +88,7 @@ Par ailleurs, cette étude devrait inclure une analyse qualitative des impacts e
 ---
 
 ### 
-### Comment appliquer concrètement cette recommandation ?
+### Complément pour appliquer concrètement cette recommandation ?
 
 Via ces différentes sources :
 

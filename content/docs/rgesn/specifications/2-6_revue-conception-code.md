@@ -69,7 +69,7 @@ Ces revues sont — le cas échéant — référencées dans la **déclaration d
 ---
 
 ###
-### Comment appliquer concrètement cette recommandation ?
+### Complément pour appliquer concrètement cette recommandation ?
 
 Via ces différentes sources :
 

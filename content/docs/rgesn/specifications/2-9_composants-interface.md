@@ -64,7 +64,7 @@ Le critère est validé si la majorité des composants d'interfaces utilisés pa
 ---
 
 ###
-### Comment appliquer concrètement cette recommandation ?
+### Complément pour appliquer concrètement cette recommandation ?
 
 Via ces différentes sources :
 

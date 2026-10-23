@@ -66,7 +66,7 @@ Un service numérique qui propose chaque image dans deux formats (exemple : JPEG
 ---
 
 ###
-### Comment appliquer concrètement cette recommandation ?
+### Complément pour appliquer concrètement cette recommandation ?
 
 Via ces différentes sources :
 

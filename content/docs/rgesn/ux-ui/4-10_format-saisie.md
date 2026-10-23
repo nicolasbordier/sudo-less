@@ -64,7 +64,7 @@ Le critère est validé si l'utilisateur est informé des formats de saisie atte
 ---
 
 ###
-### Comment appliquer concrètement cette recommandation ?
+### Complément pour appliquer concrètement cette recommandation ?
 
 Via ces différentes sources :
 

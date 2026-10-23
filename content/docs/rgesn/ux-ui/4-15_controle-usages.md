@@ -66,7 +66,7 @@ Le critère est validé si le service numérique respecte les conditions cumulat
 ---
 
 ###
-### Comment appliquer concrètement cette recommandation ?
+### Complément pour appliquer concrètement cette recommandation ?
 
 Via ces différentes sources :
 

@@ -72,7 +72,7 @@ Le critère est validé si le service ne repose pas sur une fonctionnalité de l
 ---
 
 ###
-### Comment appliquer concrètement cette recommandation ?
+### Complément pour appliquer concrètement cette recommandation ?
 
 Via ces différentes sources :
 

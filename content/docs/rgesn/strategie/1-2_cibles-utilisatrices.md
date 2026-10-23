@@ -71,7 +71,7 @@ Pour valider ce critère, le **profil des cibles utilisatrices ainsi que l’ana
 ---
 
 ### 
-### Comment appliquer concrètement cette recommandation ?
+### Complément pour appliquer concrètement cette recommandation ?
 
 Via ces différentes sources :
 

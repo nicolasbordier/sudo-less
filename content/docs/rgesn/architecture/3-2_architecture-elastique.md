@@ -66,7 +66,7 @@ Démontrer dans la déclaration d'écoconception l'adaptation de la consommation
 ---
 
 ###
-### Comment appliquer concrètement cette recommandation ?
+### Complément pour appliquer concrètement cette recommandation ?
 
 Via ces différentes sources :
 

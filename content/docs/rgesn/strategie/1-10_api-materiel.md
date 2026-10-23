@@ -63,7 +63,7 @@ Si le service numérique repose sur l'utilisation d'un terminal, équipement ou 
 ---
 
 ###
-### Comment appliquer concrètement cette recommandation ?
+### Complément pour appliquer concrètement cette recommandation ?
 
 Via ces différentes sources :
 

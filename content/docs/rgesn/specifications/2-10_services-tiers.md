@@ -68,7 +68,7 @@ Les services tiers utilisés sont à lister, en renseignant leur avancement au r
 ---
 
 ###
-### Comment appliquer concrètement cette recommandation ?
+### Complément pour appliquer concrètement cette recommandation ?
 
 Via ces différentes sources :
 

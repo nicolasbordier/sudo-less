@@ -74,7 +74,7 @@ Si certaines fonctionnalités requièrent une version plus récente, indiquer le
 ---
 
 ###
-### Comment appliquer concrètement cette recommandation ?
+### Complément pour appliquer concrètement cette recommandation ?
 
 Via ces différentes sources :
 

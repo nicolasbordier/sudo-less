@@ -77,7 +77,7 @@ Les résultats doivent être documentés dans la **déclaration d'écoconception
 ---
 
 ###
-### Comment appliquer concrètement cette recommandation ?
+### Complément pour appliquer concrètement cette recommandation ?
 
 Via ces différentes sources :
 

@@ -73,7 +73,7 @@ Le critère est **non applicable** si le service n'a pas recours à un mécanism
 ---
 
 ###
-### Comment appliquer concrètement cette recommandation ?
+### Complément pour appliquer concrètement cette recommandation ?
 
 Via ces différentes sources :
 

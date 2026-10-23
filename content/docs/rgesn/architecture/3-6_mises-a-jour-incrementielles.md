@@ -60,7 +60,7 @@ Il faut utiliser, lorsque cela est possible, un mécanisme de mise à jour qui n
 ---
 
 ###
-### Comment appliquer concrètement cette recommandation ?
+### Complément pour appliquer concrètement cette recommandation ?
 
 Via ces différentes sources :
 

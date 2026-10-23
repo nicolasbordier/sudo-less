@@ -75,7 +75,7 @@ Pour le mode de compression avec perte, documenter dans la déclaration d'écoco
 ---
 
 ###
-### Comment appliquer concrètement cette recommandation ?
+### Complément pour appliquer concrètement cette recommandation ?
 
 Via ces différentes sources :
 
@@ -208,9 +208,11 @@ Profil(s) métier concerné(s) : `Développeur`, `Designer`
 
 Ce critère forme une paire avec le [critère 5.1](../5-1_format-images/) (format de fichier adapté). Le 5.1 porte sur le **format** (AVIF, WebP, SVG…), le 5.2 sur la **taille** et la **qualité** d'encodage. Les deux se cumulent : un bon format mal dimensionné reste lourd, une bonne compression dans un format ancien aussi.
 
-Le volet « résolutions multiples » rejoint le [critère 2.5](../../specifications/2-5_terminaux-affichage/) (terminaux d'affichage), dont il est la traduction pour les images : servir à chaque terminal une image adaptée à sa taille d'écran, sans dupliquer l'interface.
+Le volet « résolutions multiples » rejoint le [critère 2.5](../../specifications/2-5_terminaux-affichage/) (terminaux d'affichage), dont il est la traduction pour les images : servir à chaque terminal une image adaptée à sa taille d'écran, sans dupliquer l'interface. Le [critère 6.4](../../frontend/6-4_dimensions-images/) (dimensions des images) en détaille la mise en œuvre : `srcset` et `sizes`, densité des écrans et redimensionnement à l'envoi des images des contributeurs.
 
 Enfin, un niveau de compression plus fort peut faire partie d'un mode sobre au sens du [critère 4.15](../../ux-ui/4-15_controle-usages/). Les Designers Éthiques y citent par exemple « l'affichage des images au clic ».
+
+Le RGESN demande de ne pas confondre ce critère avec le [critère 6.3](../../frontend/6-3_compression-ressources/), qui porte sur la compression des fichiers texte pendant le transfert (gzip, Brotli). Une image JPEG ou WebP, déjà compressée, n'y gagne rien ; une image SVG, qui est un fichier texte, en relève.
 
 {{% /tab %}}
 {{< /tabs >}}

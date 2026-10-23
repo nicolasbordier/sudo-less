@@ -71,7 +71,7 @@ Le critère est validé si le choix de frameworks et composants de l'architectur
 ---
 
 ###
-### Comment appliquer concrètement cette recommandation ?
+### Complément pour appliquer concrètement cette recommandation ?
 
 Via ces différentes sources :
 

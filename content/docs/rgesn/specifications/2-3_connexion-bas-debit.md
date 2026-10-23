@@ -66,7 +66,7 @@ Le critère est **validé** si le service numérique est utilisable **sans conne
 ---
 
 ###
-### Comment appliquer concrètement cette recommandation ?
+### Complément pour appliquer concrètement cette recommandation ?
 
 Via ces différentes sources :
 

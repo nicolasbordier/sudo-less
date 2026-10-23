@@ -62,7 +62,7 @@ Le critère est validé si le design du service numérique repose sur un chargem
 ---
 
 ###
-### Comment appliquer concrètement cette recommandation ?
+### Complément pour appliquer concrètement cette recommandation ?
 
 Via ces différentes sources :
 
