@@ -38,7 +38,7 @@ hero:
     btnText: "Explorer les critères"
     url: "docs/rgesn/"
   cta2Button:
-    icon: github
+    icon: code
     btnText: "Contribuer"
     url: "https://github.com/nicolasbordier/sudo-less"
 

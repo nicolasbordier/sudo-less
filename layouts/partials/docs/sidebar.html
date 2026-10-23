@@ -19,7 +19,7 @@
                         <li class="sidebar-dropdown {{ if eq .Site.Params.docs.sidebarIcons true -}}{{ else }}no-icon{{ end }} {{ if $active }}current active{{ end }}">
                             <button class="btn">
                                 {{ if eq .Site.Params.docs.sidebarIcons true -}}
-                                    <i class="material-icons me-2">{{- .Params.icon | default "notes" }}</i>
+                                    <i class="material-icons me-2" aria-hidden="true">{{- .Params.icon | default "notes" }}</i>
                                 {{ end }}
                                 {{- .Title }}
                             </button>
@@ -31,7 +31,7 @@
                                             <li class="sidebar-dropdown nested {{ if eq .Site.Params.docs.sidebarIcons true -}}{{ else }}no-icon{{ end }} {{ if $active }}current active{{ end }}">
                                                 <button class="btn">
                                                     {{ if eq .Site.Params.docs.sidebarIcons true -}}
-                                                        <i class="material-icons me-2">{{- .Params.icon | default "notes" }}</i>
+                                                        <i class="material-icons me-2" aria-hidden="true">{{- .Params.icon | default "notes" }}</i>
                                                     {{ end }}
                                                     {{- .Title }}
                                                 </button>
@@ -43,7 +43,7 @@
                                                                 <li class="sidebar-dropdown nested {{ if eq .Site.Params.docs.sidebarIcons true -}}{{ else }}no-icon{{ end }} {{ if $active }}current active{{ end }}">
                                                                     <button class="btn">
                                                                         {{ if eq .Site.Params.docs.sidebarIcons true -}}
-                                                                            <i class="material-icons me-2">{{- .Params.icon | default "notes" }}</i>
+                                                                            <i class="material-icons me-2" aria-hidden="true">{{- .Params.icon | default "notes" }}</i>
                                                                         {{ end }}
                                                                         {{- .Title }}
                                                                     </button>
@@ -55,7 +55,7 @@
                                                                                     <li class="sidebar-dropdown nested {{ if eq .Site.Params.docs.sidebarIcons true -}}{{ else }}no-icon{{ end }} {{ if $active }}current active{{ end }}">
                                                                                         <button class="btn">
                                                                                             {{ if eq .Site.Params.docs.sidebarIcons true -}}
-                                                                                                <i class="material-icons me-2">{{- .Params.icon | default "notes" }}</i>
+                                                                                                <i class="material-icons me-2" aria-hidden="true">{{- .Params.icon | default "notes" }}</i>
                                                                                             {{ end }}
                                                                                             {{- .Title }}
                                                                                         </button>
@@ -94,7 +94,7 @@
                         <li class="{{ if $active }}current{{ end }}">
                             <a class="sidebar-root-link" href="{{ .Permalink }}">
                                 {{ if eq .Site.Params.docs.sidebarIcons true -}}
-                                    <i class="material-icons me-2">{{ .Params.icon }}</i>
+                                    <i class="material-icons me-2" aria-hidden="true">{{ .Params.icon }}</i>
                                 {{ end }}
                                 {{ .Title }}
                             </a>

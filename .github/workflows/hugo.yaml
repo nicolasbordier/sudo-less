@@ -84,6 +84,11 @@ jobs:
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/" \
             --cacheDir "${{ runner.temp }}/hugo_cache"
+      - name: Subset icon font
+        run: |
+          python3 -m venv "${{ runner.temp }}/venv"
+          "${{ runner.temp }}/venv/bin/pip" install --quiet fonttools==4.66.1 brotli==1.2.0
+          "${{ runner.temp }}/venv/bin/python" scripts/subset-icons.py public
       - name: Cache save
         id: cache-save
         uses: actions/cache/save@v5

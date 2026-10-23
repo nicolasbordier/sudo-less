@@ -24,7 +24,7 @@
                         <div class="col-md-4 col-12">
                             <div class="d-flex features feature-primary p-3">
                                 <div class="{{ if .icon }}icon{{ else }}no-icon{{ end }} text-center rounded-3 text-primary me-3">
-                                    <i class="material-icons align-middle h4 mb-0">{{ .icon }}</i>
+                                    <i class="material-icons align-middle h4 mb-0" aria-hidden="true">{{ .icon }}</i>
                                 </div>
                                 <div class="flex-1">
                                     <h4 class="title">{{ .title }}</h4>
@@ -32,13 +32,13 @@
                                     {{ if .ctaLinks }}
                                     <div class="mt-2">
                                         {{ range $i, $link := .ctaLinks }}
-                                        {{ if $i }} · {{ end }}<a href="{{ $link.url }}" class="mt-3 h6 text-primary">{{ $link.text | markdownify }} <i class="material-icons align-top">chevron_right</i></a>
+                                        {{ if $i }} · {{ end }}<a href="{{ $link.url }}" class="mt-3 h6 text-primary">{{ $link.text | markdownify }} <i class="material-icons align-top" aria-hidden="true">chevron_right</i></a>
                                         {{ end }}
                                     </div>
                                     {{ else }}
                                     {{ with .ctaLink }}
                                     <div class="mt-2">
-                                        <a href="{{ .url }}" class="mt-3 h6 text-primary">{{ .text | markdownify }} <i class="material-icons align-top">chevron_right</i></a>
+                                        <a href="{{ .url }}" class="mt-3 h6 text-primary">{{ .text | markdownify }} <i class="material-icons align-top" aria-hidden="true">chevron_right</i></a>
                                     </div>
                                     {{ end }}
                                     {{ end }}
