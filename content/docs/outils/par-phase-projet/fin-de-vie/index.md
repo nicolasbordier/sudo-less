@@ -4,24 +4,35 @@ title: "Fin de vie"
 description: "Tableau récapitulatif des outils et pratiques pour prolonger la durée de vie d'un service ou d'un matériel, ou en organiser la décommission de façon responsable."
 icon: "recycling"
 date: "2026-07-04T00:00:00+01:00"
-lastmod: "2026-07-14T00:00:00+01:00"
+lastmod: "2026-10-23T00:00:00+01:00"
 draft: false
 toc: true
 ---
 
 La phase de **fin de vie** pose une question à double sens : comment **éviter** qu'un matériel fonctionnel devienne prématurément inutilisable ([critère 1.10](../../../rgesn/strategie/1-10_api-materiel/)), et comment **organiser** la décommission d'un service ou d'un équipement lorsqu'elle est réellement nécessaire — ce qui suppose de savoir au préalable **qui dépend encore de quoi** (voir [critère 2.7](../../../rgesn/specifications/2-7_maintenance-decommissionnement/)).
 
+Les **outils prioritaires** sont à mettre en place en premier : gratuits, utiles à la plupart des projets et liés à un critère « Prioritaire » du RGESN ou à plusieurs critères à la fois. Les **outils complémentaires** répondent à un besoin plus ciblé (un type de contenu, un écosystème ou un fournisseur particulier), sont payants, ou offrent une alternative à un outil prioritaire.
+
+## Outils prioritaires
+
 | Outil / Pratique | Catégorie | Ce qu'il apporte | Gratuit ? |
 |---|---|---|---|
-| [Tasmota](https://tasmota.github.io/docs/) / [Home Assistant](https://www.home-assistant.io/) | Firmware et hub libres | Reprend la main sur un objet connecté dont le fabricant a fermé l'API ou le service cloud | Oui |
+| [GLPI](https://www.glpi-project.org/) / [iTop](https://www.itophub.io/) | CMDB open source | Cartographie déclarative des composants et de leurs dépendances, pour ne pas décommissionner un service dont un autre dépend encore | Oui |
+| [OpenTelemetry](https://opentelemetry.io/) + [Grafana Tempo](https://grafana.com/oss/tempo/) / Jaeger | Traçage distribué | Observe les appels réellement effectués entre services en production, y compris les dépendances non documentées — plus fiable qu'un inventaire tenu à jour manuellement | Oui |
+| [Guide des licences libres](https://code.gouv.fr/fr/doc/licences-libres-dinum/) (DINUM) | Guide de référence | Publier le code source avant l'arrêt d'un service permet à des tiers de le maintenir au-delà de sa fin de vie officielle ([critère 1.8](../../../rgesn/strategie/1-8_efforts-open-source/)) | Oui |
+
+## Outils complémentaires
+
+| Outil / Pratique | Catégorie | Ce qu'il apporte | Gratuit ? |
+|---|---|---|---|
+| [Backstage](https://backstage.io/) | Service catalog (CNCF) | Combine registre déclaratif des services/propriétaires et données de traçage réelles pour fiabiliser la décision de décommissionnement | Oui |
+| [AWS Trusted Advisor](https://aws.amazon.com/trustedadvisor/) / [Compute Optimizer](https://aws.amazon.com/compute-optimizer/) | Recommandations natives (AWS) | Identifient les ressources sous-utilisées (par exemple une instance EC2 peu chargée depuis plusieurs semaines) et peuvent déclencher une notification : les candidats au décommissionnement remontent sans attendre une revue manuelle ([critère 2.7](../../../rgesn/specifications/2-7_maintenance-decommissionnement/)) | Oui (certains contrôles Trusted Advisor demandent un plan de support payant) |
+| [Tasmota](https://tasmota.github.io/docs/) / [Home Assistant](https://www.home-assistant.io/) / [ESPHome](https://esphome.io/) | Firmware et hub libres | Reprend la main sur un objet connecté dont le fabricant a fermé l'API ou le service cloud | Oui |
 | [Murena](https://murena.com/your-fairphone-3-isnt-obsolete-heres-what-to-do-when-android-support-ends/) / [/e/OS](https://murena.com/) | OS mobile open source | Prolonge la durée de vie d'un smartphone au-delà de la fin de support officielle du fabricant | Oui/Payant selon modèle |
 | [Règlement européen sur les données (Data Act)](https://digital-strategy.ec.europa.eu/en/policies/data-act) | Référentiel légal | Impose des API ouvertes pour les objets connectés, condition légale pour éviter une fin de vie forcée | Oui (référentiel) |
 | [GR491](https://gr491.isit-europe.org/crit.php?id=1-8006-hebergement-le-traitement-des-dechets-generes-par-un) — Hébergement n°1 | Critère « Incontournable » | Vérifie que les déchets matériels issus d'un datacenter sont valorisés ou recyclés plutôt qu'enfouis | Oui |
 | [Ordi3.0](http://www.ordi3-0.fr/) | Réseau de réemploi | 300 000 ordinateurs reconditionnés par an (200 structures labellisées), avec logiciels libres pour prolonger leur durée de vie jusqu'à 18 ans | Oui (réseau associatif) |
-| [Guide des licences libres](https://code.gouv.fr/fr/doc/licences-libres-dinum/) (DINUM) | Guide de référence | Publier le code source avant l'arrêt d'un service permet à des tiers de le maintenir au-delà de sa fin de vie officielle ([critère 1.8](../../../rgesn/strategie/1-8_efforts-open-source/)) | Oui |
-| [GLPI](https://www.glpi-project.org/) / [iTop](https://www.itophub.io/) | CMDB open source | Cartographie déclarative des composants et de leurs dépendances, pour ne pas décommissionner un service dont un autre dépend encore | Oui |
-| [OpenTelemetry](https://opentelemetry.io/) + [Grafana Tempo](https://grafana.com/oss/tempo/) / Jaeger | Traçage distribué | Observe les appels réellement effectués entre services en production, y compris les dépendances non documentées — plus fiable qu'un inventaire tenu à jour manuellement | Oui |
-| [Backstage](https://backstage.io/) | Service catalog (CNCF) | Combine registre déclaratif des services/propriétaires et données de traçage réelles pour fiabiliser la décision de décommissionnement | Oui |
+| [Emmabuntüs](https://emmabuntus.org/) | Distribution GNU/Linux libre | Conçue pour simplifier le reconditionnement d'ordinateurs usagés par des associations, elle prolonge la durée de vie d'un parc matériel ([critère 1.8](../../../rgesn/strategie/1-8_efforts-open-source/)) | Oui |
 
 ---
 
