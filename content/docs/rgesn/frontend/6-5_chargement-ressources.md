@@ -210,7 +210,7 @@ Les outils de build font de chaque `import()` un fichier séparé, sauf si la bi
 
 **5. Vérifier chaque préchargement.** Chaque `preload`, `prefetch` ou `preconnect` doit servir à tous les visiteurs de la page. La console de Chrome signale un `preload` inutilisé, le panneau **Performance** un « Unused preconnect ».
 
-**6. Mesurer le code inutilisé.** Dans Chrome et Edge, ouvrir le panneau [Coverage](https://developer.chrome.com/docs/devtools/coverage) (`Ctrl+Maj+P`, « Show Coverage »), cliquer sur **Reload**, puis utiliser la page. Il mesure ce qui n'a pas servi pendant l'enregistrement, pas ce qui est inutile : sur les cinq sites relevés, 61 à 94 % du code ne sert pas à la page d'accueil. Le levier, ce sont les gros blocs inutiles à **tous** les visiteurs, comme une bibliothèque qui ne sert que sur une autre page. [webpack-bundle-analyzer](https://github.com/webpack-contrib/webpack-bundle-analyzer) ou [rollup-plugin-visualizer](https://github.com/btd/rollup-plugin-visualizer) montrent les bibliothèques que contient un fichier.
+**6. Mesurer le code inutilisé.** Dans Chrome et Edge, ouvrir le panneau [Coverage](https://developer.chrome.com/docs/devtools/coverage) (`Ctrl+Maj+P`, « Show Coverage »), cliquer sur **Reload**, puis utiliser la page. Il mesure ce qui n'a pas servi pendant l'enregistrement, pas ce qui est inutile : sur les quatre sites relevés, 61 à 91 % du code ne sert pas à la page d'accueil. Le levier, ce sont les gros blocs inutiles à **tous** les visiteurs, comme une bibliothèque qui ne sert que sur une autre page. [webpack-bundle-analyzer](https://github.com/webpack-contrib/webpack-bundle-analyzer) ou [rollup-plugin-visualizer](https://github.com/btd/rollup-plugin-visualizer) montrent les bibliothèques que contient un fichier.
 
 **7. Repérer les images téléchargées sans être affichées**, avec ce script à coller dans la console après avoir fait défiler la page (l'icône du site y apparaît aussi ; c'est normal) :
 
@@ -262,7 +262,7 @@ Le 6.5 complète les leviers du budget fixé par le [critère 6.1](../6-1_poids-
 
 {{% tab tabName="Retours d'expériences" %}}
 
-Cinq pages d'accueil ont été relevées le 30 octobre 2026 dans Chromium 155, sans cache ni consentement aux cookies, sur un écran de 1 366 × 768 pixels, puis après défilement complet. Le code non utilisé est mesuré comme le fait le panneau Coverage.
+Quatre pages d'accueil ont été relevées le 30 octobre 2026 dans Chromium 155, sans cache ni consentement aux cookies, sur un écran de 1 366 × 768 pixels, puis après défilement complet. Le code non utilisé est mesuré comme le fait le panneau Coverage.
 
 | Site | Poids au chargement | Ajouté par le défilement | JavaScript : transféré, non exécuté | CSS : transféré, non utilisé |
 |---|---:|---:|---:|---:|
@@ -270,7 +270,6 @@ Cinq pages d'accueil ont été relevées le 30 octobre 2026 dans Chromium 155, s
 | [Musée d'arts de Nantes](https://museedartsdenantes.nantesmetropole.fr/) | 1 475 Ko | 528 Ko | 228 Ko, 67 % | 89 Ko, 86 % |
 | [SPOTE](https://spote.developpement-durable.gouv.fr/) | 1 038 Ko | 0 | 194 Ko, 76 % | 150 Ko, 91 % |
 | [Site du RGESN](https://ecoresponsable.numerique.gouv.fr/publications/referentiel-general-ecoconception/) | 595 Ko | 0 | 65 Ko, 61 % | 138 Ko, 91 % |
-| Ce site, sudo-less | 105 Ko | 0 | 6 Ko, 77 % | 39 Ko, 94 % |
 
 Ces proportions sont courantes (voir l'étape 6 de l'onglet « Mise en œuvre technique ») ; les constats ci-dessous portent sur ce qui ne sert à aucun visiteur.
 
@@ -281,8 +280,6 @@ Ces proportions sont courantes (voir l'étape 6 de l'onglet « Mise en œuvre te
 **SPOTE** n'utilise pas le chargement différé : quatre images (350 Ko, le tiers de la page), situées à plus de 2 000 pixels du haut, sont téléchargées à l'ouverture. Le site charge aussi deux versions du JavaScript du DSFR, la 1.12.1 et la 1.14.2.
 
 **Le site du RGESN** télécharge son logo blanc pour le mode sombre (10,9 Ko), masqué en mode clair, et les pictogrammes de la fenêtre « Paramètres d'affichage ». Sa feuille `utility.min.css` (41 Ko), qui contient les classes des 1 038 icônes du DSFR, n'est utilisée qu'à 0,2 %. Les versions `.main` du DSFR lui feraient gagner 38 Ko compressés.
-
-**Ce site, sudo-less**, ne valide pas le critère. Son thème, [Lotus Docs](https://lotusdocs.dev/), écrit dans chaque page de documentation l'index de recherche de tout le site : 257 Ko des 284 Ko du HTML de la page du [critère 6.3](../6-3_compression-ressources/), téléchargés de nouveau à chaque page, que le visiteur cherche ou non. Il faudrait le placer dans un fichier séparé, chargé au premier usage de la recherche.
 
 {{% /tab %}}
 

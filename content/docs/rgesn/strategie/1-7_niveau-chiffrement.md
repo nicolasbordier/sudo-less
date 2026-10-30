@@ -155,7 +155,7 @@ Mesuré le 30 octobre 2026 : le site du RGESN et DiaLog acceptent déjà l'écha
 7z a -t7z -mhe=on -p archive.7z dossiers/
 ```
 
-Testé le 30 octobre 2026 avec 7-Zip 26.04 sur les fiches de ce site : 1,07 Mo de texte donnent une archive de 233 Ko, compressée en LZMA2 et chiffrée en AES-256. Sans le mot de passe, demandé au lancement, la liste des fichiers ne s'affiche pas.
+Testé le 30 octobre 2026 avec 7-Zip 26.04 : l'archive est compressée en LZMA2 et chiffrée en AES-256. Sans le mot de passe, demandé au lancement, la liste des fichiers ne s'affiche pas.
 
 **5. Prouver sans conserver.** Pour une pièce justificative vérifiée une fois, garder le résultat du contrôle et une empreinte plutôt que le fichier :
 

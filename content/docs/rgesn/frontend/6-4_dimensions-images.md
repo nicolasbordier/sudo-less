@@ -159,7 +159,6 @@ Le RGESN vise « également » la consommation d'énergie du terminal. Avant d'a
 |---|---:|---:|---:|---:|
 | Bannière du site du RGESN | 1 920 × 1 080 px | 12,5 ms | 792 × 446 px | 3,5 ms |
 | Fond de carte de DiaLog | 2 377 × 1 137 px | 20,2 ms | 1 366 × 653 px | 9,0 ms |
-| Image d'accueil de ce site | 1 600 × 1 200 px | 15,8 ms | 522 × 392 px | 2,6 ms |
 
 Ces durées sont courtes sur un ordinateur récent, mais se répètent à chaque page, car le cache évite le téléchargement, pas le décodage. Elles s'allongent sur les terminaux anciens (voir le [critère 2.2](../../specifications/2-2_anciens-terminaux/)).
 
