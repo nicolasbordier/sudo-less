@@ -79,7 +79,7 @@ Le référentiel [RWEB du Collectif GreenIT](https://rweb.greenit.fr/) a deux fi
 
 [**RWEB 0033 — « Ne pas afficher les documents à l'intérieur des pages »**](https://rweb.greenit.fr/fr/fiches/RWEB_0033-ne-pas-afficher-les-documents-a-l-interieur-des-pages) part d'un constat simple : « À chaque consultation de la page, le fichier est téléchargé pour être affiché ». Elle recommande un lien de téléchargement, « afin que seuls les utilisateurs concernés le téléchargent ». Son principe de validation : **aucun** document affiché dans un contenu.
 
-La fiche [**RWEB 0108 — « Compresser les documents »**](https://rweb.greenit.fr/fr/fiches/RWEB_0108-compresser-les-documents), présentée au [critère 5.4](../5-4_compression-videos/), propose de compresser les documents en ZIP, « sauf si la compression n'apporte pas un gain évident (par exemple, cas d'un PDF parfaitement optimisé pour le Web) ». Elle est rattachée aux critères 5.2, 5.4 et 5.6, pas au 5.7. Sur le PDF du RGESN lui-même, une archive ZIP fait gagner 32 % ; mais l'utilisateur doit alors la décompresser avant de lire le document, que le navigateur n'affiche plus directement. Optimiser le PDF lui-même reste préférable.
+La fiche [**RWEB 0108 — « Compresser les documents »**](https://rweb.greenit.fr/fr/fiches/RWEB_0108-compresser-les-documents), présentée au [critère 5.4](../5-4_compression-videos/), propose de compresser les documents en ZIP, « sauf si la compression n'apporte pas un gain évident (par exemple, cas d'un PDF parfaitement optimisé pour le Web) ». Elle est rattachée aux critères [5.2](../5-2_compression-images/), 5.4 et [5.6](../5-6_compression-audio/), pas au 5.7. Sur le PDF du RGESN lui-même, une archive ZIP fait gagner 32 % ; mais l'utilisateur doit alors la décompresser avant de lire le document, que le navigateur n'affiche plus directement. Optimiser le PDF lui-même reste préférable.
 
 {{% /tab %}}
 
@@ -210,7 +210,7 @@ pdfimages -list rapport-web.pdf
 
 Profil(s) métier concerné(s) : `Développeur`, `Contributeur`
 
-Ce critère est le pendant, pour les documents, de plusieurs critères déjà publiés sur ce site :
+Ce critère est le pendant, pour les documents, de plusieurs autres critères :
 
 - le [critère 4.11](../../ux-ui/4-11_poids-formats-fichiers/) (poids et formats des fichiers) : le 4.11 demande d'**annoncer** le poids et le format, le 5.7 de les **réduire**. Le 4.11 présente aussi la compression des PDF **téléversés** par les utilisateurs, avec le cas mesuré de Territoires en Transitions ;
 - le [critère 4.7](../../ux-ui/4-7_choix-sobre-format/) (choix du format le plus sobre) : avant de choisir le format d'un fichier, se demander si un fichier est nécessaire ;

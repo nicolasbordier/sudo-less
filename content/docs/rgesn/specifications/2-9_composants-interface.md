@@ -68,14 +68,14 @@ Le critère est validé si la majorité des composants d'interfaces utilisés pa
 
 Via ces différentes sources :
 
-{{< tabs tabTotal="3">}}
+{{< tabs tabTotal="4">}}
 {{% tab tabName="INR - GR491" %}}
 
 Profil(s) métier concerné(s) : `Développeur`, `Designer`
 
 Le critère 2.9 rejoint la [recommandation n°3 de la famille Frontend](https://gr491.isit-europe.org/?famille=frontend&num_reco=3) du [GR491](https://gr491.isit-europe.org/) (INR), « Utiliser les environnements et outils qui permettent de limiter les impacts », qui pose des questions directement transposables aux design systems et bibliothèques de composants : « Les bibliothèques utilisées permettent-elles de ne prendre que les composants effectivement utiles ? », « Les dépendances non utilisées sont-elles identifiées et retirées ? », « Est-ce que la fonctionnalité attendue ne pourrait pas être mise en place avec les capacités natives du navigateur ? ».
 
-Cette dernière question rejoint directement le critère 4.5 (« Le service numérique utilise-t-il majoritairement des composants fonctionnels natifs du système d'exploitation, du navigateur ou du langage utilisé ? ») : avant de charger un design system complet, la question à se poser est si un composant HTML natif (`<dialog>`, `<details>`, validation de formulaire native) ne suffirait pas.
+Cette dernière question rejoint directement le [critère 4.5](../../ux-ui/4-5_composants-natifs/) (« Le service numérique utilise-t-il majoritairement des composants fonctionnels natifs du système d'exploitation, du navigateur ou du langage utilisé ? ») : avant de charger un design system complet, la question à se poser est si un composant HTML natif (`<dialog>`, `<details>`, validation de formulaire native) ne suffirait pas.
 
 {{% /tab %}}
 
@@ -106,6 +106,17 @@ Profil(s) métier concerné(s) : `Designer`, `Développeur`
 Les [Web Sustainability Guidelines](https://www.w3.org/TR/web-sustainability-guidelines/) du W3C consacrent une recommandation dédiée aux design systems, [**« Use a design system for interface consistency »**](https://www.w3.org/TR/web-sustainability-guidelines/#use-a-design-system-for-interface-consistency) : utiliser un design system pour les projets importants ou à contributeurs multiples, en s'appuyant sur des composants réutilisables basés sur les standards du web, en ne chargeant que les composants effectivement nécessaires à chaque page ou fonctionnalité, et en maintenant le système via une gouvernance claire (propriété, versionnage, documentation à jour).
 
 Une seconde recommandation, [**« Use optimized web typography »**](https://www.w3.org/TR/web-sustainability-guidelines/#use-optimized-web-typography), complète le critère sur un point précis et souvent oublié des design systems : limiter le nombre et la complexité des polices chargées, et restreindre les axes des polices variables aux seuls besoins réels du projet pour réduire la taille du fichier — exactement le type d'optimisation évoquée dans le retour d'expérience DSFR ci-dessous.
+
+{{% /tab %}}
+
+{{% tab tabName="Critère associé" %}}
+
+Profil(s) métier concerné(s) : `Designer`, `Développeur`
+
+- le [critère 4.5](../../ux-ui/4-5_composants-natifs/) (composants natifs) : avant un composant prêt à l'emploi, vérifier ce que le navigateur propose déjà ;
+- le [critère 3.1](../../architecture/3-1_architecture-composants/) (composants écoconçus) : la même évaluation, pour les briques d'architecture ;
+- le [critère 6.5](../../frontend/6-5_chargement-ressources/) (chargement des seules ressources utiles) : ne charger que les composants de la bibliothèque qui servent ;
+- le [critère 4.8](../../ux-ui/4-8_polices-caracteres/) (polices de caractères) : les polices qu'apporte un système de design.
 
 {{% /tab %}}
 {{< /tabs >}}

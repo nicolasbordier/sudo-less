@@ -29,8 +29,8 @@ toc: true
 | **Phase** | `Conception` |
 | **Priorité** | `Prioritaire` |
 | **Difficulté** | `Moyen` |
-| **Applicabilité** | `N/A si le service ne propose pas d'interface utilisateur sur écran` |
-| **Métiers concernés** | `Développeur` `Responsable IT` `UX Designer` |
+| **Applicabilité** | `N/A si le service numérique ne propose pas d'interface utilisateur sur écran` |
+| **Métiers concernés** | `Développeur` `Responsable IT` `Designer` |
 | **Permalink** | https://ecoresponsable.numerique.gouv.fr/publications/referentiel-general-ecoconception/critere/2.5/ |
 {{< /table >}}
 
@@ -75,7 +75,7 @@ Le critère est **validé** si les conditions susmentionnées sont remplies. Les
 
 Via ces différentes sources :
 
-{{< tabs tabTotal="5">}}
+{{< tabs tabTotal="6">}}
 {{% tab tabName="Designers Éthiques" %}}
 
 Profil(s) métier concerné(s) : `UX Designer`, `Développeur`
@@ -134,6 +134,17 @@ Pour vérifier concrètement les seuils chiffrés du critère (1 200 x 800 px, 7
 - Le **mode responsive des DevTools** (Chrome, Firefox, Edge — gratuit) permet de simuler n'importe quelle taille d'écran en local, y compris les seuils exacts du critère.
 - Pour **automatiser ce test en CI/CD**, [Playwright](https://playwright.dev/) (open source) permet de fixer une taille de fenêtre précise par script (`page.setViewportSize({ width: 1200, height: 800 })`) et de vérifier automatiquement, à chaque pull request, l'absence de débordement ou de perte de fonctionnalité — plutôt que de rejouer ce test manuellement à chaque changement d'interface.
 - [BrowserStack](https://www.browserstack.com/), déjà cité aux critères [2.2](../2-2_anciens-terminaux/) et [2.4](../2-4_anciennes-versions-os/), complète ces tests automatisés par une vérification manuelle sur de vrais terminaux (tactile, résolutions réelles de smartphones anciens).
+
+{{% /tab %}}
+
+{{% tab tabName="Critère associé" %}}
+
+Profil(s) métier concerné(s) : `Développeur`, `Designer`
+
+- le [critère 2.2](../2-2_anciens-terminaux/) (anciens terminaux) : les petits écrans sont souvent ceux des terminaux anciens ;
+- le [critère 6.4](../../frontend/6-4_dimensions-images/) (dimensions des images) : des images à la taille de chaque écran ;
+- le [critère 5.2](../../contenus/5-2_compression-images/) (compression des images) : le poids de ces images ;
+- le [critère 5.3](../../contenus/5-3_definition-videos/) (définition des vidéos) : une définition adaptée à la taille de l'écran.
 
 {{% /tab %}}
 {{< /tabs >}}

@@ -69,12 +69,12 @@ Le nombre et le poids des polices de caractères utilisées sont à évaluer. Le
 
 Via ces différentes sources :
 
-{{< tabs tabTotal="6">}}
+{{< tabs tabTotal="7">}}
 {{% tab tabName="INR - GR491" %}}
 
 Profil(s) métier concerné(s) : `Développeur`, `Architecte Logiciel`
 
-Le critère 4.8 rejoint la même [recommandation n°8 de la famille UX/UI](https://gr491.isit-europe.org/?famille=uxui&num_reco=8) du [GR491](https://gr491.isit-europe.org/) (INR), « Ingénierie média », déjà citée pour le [critère 4.6](../4-6_contenu-porteur-information/) sur ce site, mais via l'un de ses autres critères : « Le nombre de polices de caractères (fonts) et les variantes de polices appelées (graisse, caractères utilisés dans le projet) sont-ils limités ? ». Une même recommandation GR491 couvre ainsi deux critères RGESN distincts (4.6 et 4.8), preuve que le référentiel INR regroupe par famille de sujet (ici : l'ingénierie des médias) plutôt que critère par critère.
+Le critère 4.8 rejoint la même [recommandation n°8 de la famille UX/UI](https://gr491.isit-europe.org/?famille=uxui&num_reco=8) du [GR491](https://gr491.isit-europe.org/) (INR), « Ingénierie média », déjà citée pour le [critère 4.6](../4-6_contenu-porteur-information/), mais via l'un de ses autres critères : « Le nombre de polices de caractères (fonts) et les variantes de polices appelées (graisse, caractères utilisés dans le projet) sont-ils limités ? ». Une même recommandation GR491 couvre ainsi deux critères RGESN distincts (4.6 et 4.8), preuve que le référentiel INR regroupe par famille de sujet (ici : l'ingénierie des médias) plutôt que critère par critère.
 
 {{% /tab %}}
 
@@ -113,7 +113,7 @@ Le guide recommande de se limiter à 1 ou 2 polices (par exemple une pour les ti
 
 Profil(s) métier concerné(s) : `Développeur`, `Designer`
 
-Les [Web Sustainability Guidelines](https://www.w3.org/TR/web-sustainability-guidelines/) du W3C ont une fiche dédiée, [**« Use optimized web typography »**](https://www.w3.org/TR/web-sustainability-guidelines/#use-optimized-web-typography), déjà mentionnée au critère 2.9 sur ce site : « Limit the number and complexity of downloaded fonts. When using variable fonts, restrict supported axes and ranges to only those required by the project to reduce file size. » 
+Les [Web Sustainability Guidelines](https://www.w3.org/TR/web-sustainability-guidelines/) du W3C ont une fiche dédiée, [**« Use optimized web typography »**](https://www.w3.org/TR/web-sustainability-guidelines/#use-optimized-web-typography), déjà mentionnée au [critère 2.9](../../specifications/2-9_composants-interface/) : « Limit the number and complexity of downloaded fonts. When using variable fonts, restrict supported axes and ranges to only those required by the project to reduce file size. » 
 
 Elle ajoute un levier que le RGESN ne détaille pas explicitement : 
 
@@ -178,6 +178,17 @@ Et pour ne recourir à aucun téléchargement, la pile de polices système (« S
 ```css
 font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
 ```
+
+{{% /tab %}}
+
+{{% tab tabName="Critère associé" %}}
+
+Profil(s) métier concerné(s) : `Développeur`, `Architecte Logiciel`
+
+- le [critère 2.9](../../specifications/2-9_composants-interface/) (composants d'interface) : les polices qu'apporte un système de design ;
+- le [critère 6.7](../../frontend/6-7_domaine-unique/) (domaine unique) : des polices hébergées sur le domaine du service ;
+- le [critère 6.3](../../frontend/6-3_compression-ressources/) (compression des ressources) : le format WOFF2 est déjà compressé ;
+- le [critère 6.5](../../frontend/6-5_chargement-ressources/) (chargement des seules ressources utiles) : ne charger que les variantes et les caractères utilisés.
 
 {{% /tab %}}
 {{< /tabs >}}

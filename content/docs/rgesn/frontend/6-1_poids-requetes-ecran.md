@@ -79,7 +79,7 @@ Profil(s) métier concerné(s) : `Développeur`, `Architecte Logiciel`
 
 Le référentiel [RWEB du Collectif GreenIT](https://rweb.greenit.fr/) n'a pas de fiche sur le poids des pages étiquetée « RGESN 6.1 », mais trois fiches sur les requêtes :
 
-- [**RWEB 0047 — « Limiter le nombre de requêtes HTTP »**](https://rweb.greenit.fr/fr/fiches/RWEB_0047-limiter-le-nombre-de-requetes-http), rattachée aux critères 6.1 et 4.9, fixe un seuil chiffré : **40 requêtes HTTP** au plus par page. Le RGESN donne pour exemple moins de 30. La fiche justifie ce seuil côté serveur : « plus le nombre de requêtes par page est important, moins vous pourrez servir de pages par serveur ». Ses techniques (concaténer les fichiers JS et CSS, regrouper les icônes, charger les images à la demande) datent en partie d'avant HTTP/2, qui fait passer plusieurs requêtes par une même connexion. Le coût d'une requête a baissé côté réseau, mais chacune reste un échange que le serveur doit traiter.
+- [**RWEB 0047 — « Limiter le nombre de requêtes HTTP »**](https://rweb.greenit.fr/fr/fiches/RWEB_0047-limiter-le-nombre-de-requetes-http), rattachée aux critères 6.1 et [4.9](../../ux-ui/4-9_requetes-saisie-utilisateur/), fixe un seuil chiffré : **40 requêtes HTTP** au plus par page. Le RGESN donne pour exemple moins de 30. La fiche justifie ce seuil côté serveur : « plus le nombre de requêtes par page est important, moins vous pourrez servir de pages par serveur ». Ses techniques (concaténer les fichiers JS et CSS, regrouper les icônes, charger les images à la demande) datent en partie d'avant HTTP/2, qui fait passer plusieurs requêtes par une même connexion. Le coût d'une requête a baissé côté réseau, mais chacune reste un échange que le serveur doit traiter.
 - [**RWEB 0112 — « Éviter les redirections »**](https://rweb.greenit.fr/fr/fiches/RWEB_0112-eviter-les-redirections) : chaque redirection est une requête de plus, sans contenu utile. Principe de validation : **une** redirection au plus.
 - [**RWEB 0062 — « Optimiser la taille des cookies »**](https://rweb.greenit.fr/fr/fiches/RWEB_0062-optimiser-la-taille-des-cookies) rappelle qu'un cookie « est inclus dans chaque requête HTTP » : son poids se multiplie par le nombre de requêtes de l'écran.
 
@@ -187,7 +187,7 @@ Profil(s) métier concerné(s) : `Développeur`, `Responsable Produit`
 
 Le critère 6.1 fixe la contrainte ; d'autres critères donnent les moyens de la tenir.
 
-Critères déjà publiés sur ce site :
+Critères voisins :
 
 - le [critère 1.5](../../strategie/1-5_objectifs-environnementaux/) (objectifs environnementaux) : les budgets techniques y sont présentés comme la forme la plus courante d'objectif chiffré, avec les budgets publiés par DiaLog, SPOTE, le Musée d'arts de Nantes et Alt Impact ;
 - le [critère 2.3](../../specifications/2-3_connexion-bas-debit/) (connexion bas débit) donne le débit de référence pour calculer le budget ;
@@ -195,7 +195,7 @@ Critères déjà publiés sur ce site :
 - les critères [5.1](../../contenus/5-1_format-images/) à [5.4](../../contenus/5-4_compression-videos/) (images et vidéos) traitent les ressources qui pèsent le plus lourd ;
 - le [critère 2.10](../../specifications/2-10_services-tiers/) (services tiers) : leurs ressources comptent dans le budget de l'écran.
 
-Les critères suivants de la famille Frontend sont les leviers techniques du budget : le [6.2](../6-2_cache-navigateur/) (cache) et le [6.3](../6-3_compression-ressources/) (compression), le [6.4](../6-4_dimensions-images/) (dimensions des images), puis, pas encore publié sur ce site, le 6.5 (chargement des seules ressources utiles).
+Les critères suivants de la famille Frontend sont les leviers techniques du budget : le [6.2](../6-2_cache-navigateur/) (cache) et le [6.3](../6-3_compression-ressources/) (compression), le [6.4](../6-4_dimensions-images/) (dimensions des images), puis le [6.5](../6-5_chargement-ressources/) (chargement des seules ressources utiles).
 
 Les [outils pour le développement front-end](../../../outils/par-metier/dev-front/) récapitulent les outils de mesure et de définition de budget déjà présentés sur ce site.
 

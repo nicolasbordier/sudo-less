@@ -71,7 +71,7 @@ Via ces différentes sources :
 
 Profil(s) métier concerné(s) : `Designer`, `Développeur`
 
-Le critère 4.7 rejoint la [recommandation n°3 de la famille Contenus](https://gr491.isit-europe.org/crit.php?id=3-4030-contenus-les-informations-apportees-par-la-video-sont) du [GR491](https://gr491.isit-europe.org/) (INR) : « Est-ce que l'information portée par la vidéo peut être remplacée par une alternative (infographie…) ? ». Le GR491 pose la question spécifiquement du côté vidéo → alternative statique, plutôt que la hiérarchie complète texte/image/audio/vidéo du RGESN, mais avec la même logique : évaluer si le format le plus lourd choisi par défaut transporte réellement une information qu'un format plus léger ne pourrait pas transmettre tout aussi bien.
+Le critère 4.7 rejoint la [recommandation n°3 de la famille Contenus](https://gr491.isit-europe.org/crit.php?id=3-contenus-les-informations-apportees-par-la-video-sont-e14597) du [GR491](https://gr491.isit-europe.org/) (INR) : « Est-ce que l'information portée par la vidéo peut être remplacée par une alternative (infographie…) ? ». Le GR491 pose la question spécifiquement du côté vidéo → alternative statique, plutôt que la hiérarchie complète texte/image/audio/vidéo du RGESN, mais avec la même logique : évaluer si le format le plus lourd choisi par défaut transporte réellement une information qu'un format plus léger ne pourrait pas transmettre tout aussi bien.
 
 {{% /tab %}}
 
@@ -95,7 +95,7 @@ Les Designers Éthiques ont publié une ressource dédiée, [**« RGESN, ce que 
 
 Profil(s) métier concerné(s) : `Développeur`, `Designer`
 
-Ce critère est le prolongement direct du [critère 4.6](../4-6_contenu-porteur-information/) (contenu porteur d'information), déjà publié sur ce site : le 4.6 pose la question « ce média est-il utile ? » ; une fois la réponse « oui » établie, le 4.7 pose la question suivante, « une fois ce média jugé utile, quel est le format le plus léger capable de porter la même information ? ». Les [Web Sustainability Guidelines](https://www.w3.org/TR/web-sustainability-guidelines/) du W3C, déjà citées pour le 4.6 dans la fiche [**« Optimize media to reduce resource use »**](https://www.w3.org/TR/web-sustainability-guidelines/#optimize-media-to-reduce-resource-use), couvrent d'ailleurs implicitement ce prolongement dans la même recommandation : « Provide the option to disable data-intensive media or offer lower-bandwidth alternatives » — sans dédier de fiche séparée à la hiérarchie texte/image/audio/vidéo du RGESN.
+Ce critère est le prolongement direct du [critère 4.6](../4-6_contenu-porteur-information/) (contenu porteur d'information) : le 4.6 pose la question « ce média est-il utile ? » ; une fois la réponse « oui » établie, le 4.7 pose la question suivante, « une fois ce média jugé utile, quel est le format le plus léger capable de porter la même information ? ». Les [Web Sustainability Guidelines](https://www.w3.org/TR/web-sustainability-guidelines/) du W3C, déjà citées pour le 4.6 dans la fiche [**« Optimize media to reduce resource use »**](https://www.w3.org/TR/web-sustainability-guidelines/#optimize-media-to-reduce-resource-use), couvrent d'ailleurs implicitement ce prolongement dans la même recommandation : « Provide the option to disable data-intensive media or offer lower-bandwidth alternatives » — sans dédier de fiche séparée à la hiérarchie texte/image/audio/vidéo du RGESN.
 
 {{% /tab %}}
 {{< /tabs >}}

@@ -95,10 +95,10 @@ Profil(s) métier concerné(s) : `Designer`, `Développeur`
 
 Le [Guide d'écoconception de services numériques](https://designersethiques.org/fr/thematiques/ecoconception/guide-d-ecoconception/) des Designers Éthiques cite **explicitement** le critère 4.11 dans sa section [**7.9 Documents**](https://designersethiques.org/fr/thematiques/ecoconception/guide-d-ecoconception/7-realiser-et-developper/7-9-documents-a-telecharger), et en traite les deux sens :
 
-- **Téléchargement** : « Avant tout téléchargement par l'utilisateur, indiquer le poids et le format du document. » Le guide ajoute un cas que le RGESN ne traite pas : « S'il s'agit d'un document généré dont le poids n'est pas connu avant export, indiquer un poids approximatif (moyenne des exports par exemple). » Il rappelle aussi que le poids des documents « ne se voit pas dans le poids de la page elle-même », et qu'il « devrait être systématiquement écrit à côté du lien de téléchargement ».
-- **Téléversement** : « bien indiquer les formats acceptés et le poids maximum autorisé » et « ne pas permettre de soumettre le formulaire si les fichiers ne correspondent pas aux prérequis ». Le guide illustre l'enjeu par une « photo de profil à 1 Mo », taille disproportionnée qui « se répercute sur les usagers ou services qui chargeront le fichier ».
+- **Téléchargement** : « Avant tout téléchargement par l'utilisateur, indiquer le poids et le format du document. » Pour un document généré, dont le poids n'est pas connu avant l'export, le guide propose d'« indiquer un poids approximatif (moyenne des exports par exemple) », un cas que le RGESN ne traite pas.
+- **Téléversement** : « bien indiquer les formats acceptés et le poids maximum autorisé » et « ne pas permettre de soumettre le formulaire si les fichiers ne correspondent pas aux prérequis ».
 
-Un exemple du guide mérite d'être lu avec la « Mise en œuvre » du RGESN : « si les images en webp ne sont pas prises en charge, informer à l'avance l'utilisateur que seuls les jpeg et png sont acceptés ». Informer est le minimum ; le RGESN demande en plus de **prendre en charge** WebP et AVIF, pour éviter à l'utilisateur une conversion.
+Le guide propose aussi, si WebP n'est pas pris en charge, d'« informer à l'avance l'utilisateur que seuls les jpeg et png sont acceptés ». Le RGESN va plus loin : il demande de **prendre en charge** WebP et AVIF, pour éviter à l'utilisateur une conversion.
 
 La ressource [**« RGESN, ce que doivent faire les designers »**](https://designersethiques.org/fr/thematiques/ecoconception/rgesn-ce-que-doivent-faire-les-designers), déjà citée aux critères [4.9](../4-9_requetes-saisie-utilisateur/) et [4.10](../4-10_format-saisie/), donne un ordre de grandeur concret dans sa rubrique **Documents** : « Limiter le poids des fichiers uploadés : par exemple à 300 Ko une photo mise en ligne. »
 
@@ -134,7 +134,7 @@ Le DSFR va donc plus loin que le RGESN : il ne fixe aucun seuil, là où le RGES
 </a>
 ```
 
-Le DSFR propose aussi de remplir ce détail automatiquement avec l'attribut `data-fr-assess-file`. **Point de vigilance** : d'après [son code source](https://github.com/GouvernementFR/dsfr/blob/main/src/dsfr/core/script/assess/assess-file.js), le script envoie une requête `HEAD` vers chaque fichier à chaque affichage de la page pour en lire le poids. C'est peu par lien, mais c'est une requête par lien et par visite pour une information qui ne change pas. Quand le fichier est connu à la publication, il vaut mieux écrire le poids directement dans la page, ou le calculer côté serveur ou au moment du build pour un site statique. L'ancien composant « Téléchargement de fichier » du DSFR est par ailleurs [déprécié](https://github.com/GouvernementFR/dsfr/blob/main/src/dsfr/component/download/_part/doc/index.md) au profit de cette variante du composant Lien.
+Le DSFR propose aussi de remplir ce détail automatiquement avec l'attribut `data-fr-assess-file`. **Point de vigilance** : d'après [son code source](https://github.com/GouvernementFR/dsfr/blob/main/src/dsfr/core/script/assess/assess-file.js), le script envoie une requête `HEAD` vers chaque fichier, à chaque affichage de la page, pour une information qui ne change pas. Quand le fichier est connu à la publication, mieux vaut écrire le poids dans la page, ou le calculer au moment du build pour un site statique. L'ancien composant « Téléchargement de fichier » du DSFR est par ailleurs [déprécié](https://github.com/GouvernementFR/dsfr/blob/main/src/dsfr/component/download/_part/doc/index.md) au profit de cette variante du composant Lien.
 
 {{% /tab %}}
 
@@ -232,9 +232,10 @@ Le serveur doit aussi vérifier le **type réel** du fichier, à partir de son c
 
 Profil(s) métier concerné(s) : `Développeur`, `Concepteur UX / UI`
 
-Ce critère applique aux fichiers la logique du [critère 4.10](../4-10_format-saisie/) (format de saisie attendu), déjà publié sur ce site : annoncer les prérequis avant la saisie, puis bloquer la soumission tant qu'ils ne sont pas respectés. L'enjeu est simplement d'un autre ordre de grandeur. Une saisie de texte invalide renvoyée par le serveur coûte quelques kilo-octets. Un fichier refusé après envoi peut représenter plusieurs mégaoctets transférés, puis parfois stockés et sauvegardés, pour rien.
-
-Pour les **fichiers téléchargés**, ce critère complète le [critère 4.7](../4-7_choix-sobre-format/) (choix du format le plus sobre) : le 4.7 demande de choisir le format le plus léger capable de porter l'information, le 4.11 d'en annoncer le poids et le format avant le transfert. Le [critère 4.12](../4-12_impacts-fonctionnalites/) étend cette information à toute fonctionnalité significativement plus coûteuse que le reste du service, qu'elle produise un fichier ou non (vidéo en haute qualité, export, traitement long). Le [critère 5.7](../../contenus/5-7_format-documents/) (format de fichier adapté à chaque document) porte sur la compression et le choix du format des documents eux-mêmes. La fiche [**RWEB 0109 — « Optimiser les PDF »**](https://rweb.greenit.fr/fr/fiches/RWEB_0109-optimiser-les-pdf) y est rattachée ; la fiche [**RWEB 0108 — « Compresser les documents »**](https://rweb.greenit.fr/fr/fiches/RWEB_0108-compresser-les-documents) l'est aux critères 5.2, 5.4 et 5.6.
+- le [critère 4.10](../4-10_format-saisie/) (format de saisie attendu) : la même logique, appliquée aux fichiers. Un texte refusé coûte quelques kilo-octets, un fichier refusé après envoi plusieurs mégaoctets ;
+- le [critère 4.7](../4-7_choix-sobre-format/) (format le plus sobre) : le 4.7 choisit le format, le 4.11 en annonce le poids ;
+- le [critère 4.12](../4-12_impacts-fonctionnalites/) (fonctionnalités à fort impact) : la même information, pour un export ou une vidéo en haute qualité ;
+- le [critère 5.7](../../contenus/5-7_format-documents/) (format des documents) : la compression des documents eux-mêmes, avec la fiche [RWEB 0109 — « Optimiser les PDF »](https://rweb.greenit.fr/fr/fiches/RWEB_0109-optimiser-les-pdf).
 
 {{% /tab %}}
 {{< /tabs >}}

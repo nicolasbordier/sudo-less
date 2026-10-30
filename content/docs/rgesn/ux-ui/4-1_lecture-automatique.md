@@ -76,7 +76,7 @@ Le critère est validé si le service ne repose pas sur une fonctionnalité de l
 
 Via ces différentes sources :
 
-{{< tabs tabTotal="5">}}
+{{< tabs tabTotal="6">}}
 {{% tab tabName="INR - GR491" %}}
 
 Profil(s) métier concerné(s) : `Développeur`, `Concepteur UX / UI`
@@ -158,6 +158,17 @@ Pour appliquer concrètement les seuils du critère (contrôles obligatoires au-
   ```
 - **Ne jamais déclencher un média sans action explicite**, en combinant l'absence d'`autoplay` et `preload="none"` (RWEB 0106 ci-contre) — la mise en pause hors du champ de vision peut se faire simplement via l'[Intersection Observer API](https://developer.mozilla.org/fr/docs/Web/API/Intersection_Observer_API), native au navigateur, sans bibliothèque tierce, pour répondre au critère GR491 sur les vidéos hors zone active.
 - **S'appuyer sur un standard d'accessibilité existant plutôt que de réinventer un seuil** : le [critère WCAG 2.2.2 « Pause, Stop, Hide »](https://www.w3.org/WAI/WCAG21/Understanding/pause-stop-hide.html) (niveau A, obligatoire pour tout site public en France au titre du RGAA) impose déjà un mécanisme de pause/arrêt/masquage pour tout contenu en mouvement de plus de 5 secondes présenté en parallèle d'autre contenu — un contrôle d'accessibilité déjà en place peut donc, à quelques secondes de seuil près, couvrir une bonne partie de l'exigence d'écoconception du critère 4.1.
+
+{{% /tab %}}
+
+{{% tab tabName="Critère associé" %}}
+
+Profil(s) métier concerné(s) : `Développeur`, `Concepteur UX / UI`
+
+- le [critère 4.6](../4-6_contenu-porteur-information/) (contenu porteur d'information) : un média qui ne porte pas d'information n'a pas à être lu ;
+- le [critère 6.5](../../frontend/6-5_chargement-ressources/) (chargement des seules ressources utiles) : ne pas précharger un média que personne ne lance ;
+- le [critère 5.5](../../contenus/5-5_ecoute-seule/) (écoute seule) : proposer le son sans l'image ;
+- le [critère 4.4](../4-4_activation-service-tiers/) (activation d'un service tiers) : un lecteur vidéo tiers ne se charge qu'à la demande.
 
 {{% /tab %}}
 {{< /tabs >}}

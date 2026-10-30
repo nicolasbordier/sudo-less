@@ -82,7 +82,7 @@ Le critère est validé si (conditions cumulatives) :
 
 Via ces différentes sources :
 
-{{< tabs tabTotal="7">}}
+{{< tabs tabTotal="8">}}
 {{% tab tabName="INR - GR491" %}}
 
 Profil(s) métier concerné(s) : `Concepteur UX / UI`, `Développeur`
@@ -179,6 +179,17 @@ En complément des outils d'analyse d'audience ci-contre, le critère demande au
 - [**PostHog**](https://posthog.com/) (open source, auto-hébergeable) ajoute, au-dessus des statistiques d'audience classiques, l'enregistrement de session et une analyse de « user paths » : il permet de voir concrètement à quelle étape et pour quelle raison un parcours s'allonge, plutôt que de seulement constater que sa durée a augmenté.
 
 Les deux premiers relèvent d'une logique de test (synthétique, scripté, reproductible), le troisième d'une logique d'observation (utilisateurs réels, en production) — les deux approches sont complémentaires plutôt que substituables : la première prévient une régression avant mise en production, la seconde permet de comprendre un allongement déjà constaté chez de vrais utilisateurs.
+
+{{% /tab %}}
+
+{{% tab tabName="Critère associé" %}}
+
+Profil(s) métier concerné(s) : `Concepteur UX / UI`, `Développeur`
+
+- le [critère 1.2](../../strategie/1-2_cibles-utilisatrices/) (cibles utilisatrices) : les parcours essentiels se déduisent des besoins des cibles ;
+- le [critère 4.2](../4-2_defilement-infini/) (défilement infini) : une pagination ou un bouton « voir plus » plutôt qu'une liste sans fin ;
+- le [critère 6.1](../../frontend/6-1_poids-requetes-ecran/) (poids et requêtes par écran) : chaque écran du parcours a son budget ;
+- le [critère 4.14](../4-14_dark-patterns/) (procédés manipulatoires) : un parcours allongé à dessein en est un.
 
 {{% /tab %}}
 {{< /tabs >}}

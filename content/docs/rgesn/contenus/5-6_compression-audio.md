@@ -112,7 +112,7 @@ Trois enseignements :
 
 - **Le seuil est large.** Un MP3 à 128 kbit/s, réglage courant, passe juste en dessous. Le seuil écarte les fichiers non compressés ou encodés à haut débit, pas les réglages moyens.
 - **Pour la parole, on peut viser bien plus bas.** Un entretien d'une heure pèse 58 Mo en MP3 stéréo à 128 kbit/s et 11 Mo en Opus mono à 24 kbit/s, soit cinq fois moins.
-- **Le seuil n'est pas une condition du moyen de test.** Le RGESN le place dans la « Mise en œuvre » (« Éviter… »). Seuls le codec et la documentation conditionnent la validation. Le seuil reste un bon indicateur de contrôle, et c'est le principe de validation de la fiche RWEB 0105.
+- **Le seuil n'est pas une condition du moyen de test.** Le RGESN le place dans la « Mise en œuvre » : seuls le codec et la documentation conditionnent la validation. Il reste un bon indicateur de contrôle, comme dans la fiche RWEB 0105.
 
 Le guide de The Shift Project présenté au [critère 5.4](../5-4_compression-videos/) juge le gain « minime » sous 160 kbit/s pour la piste son d'une vidéo, et conseille de garder le débit d'origine. Pour un contenu audio seul, un tel réglage dépasse le seuil : 1,2 Mo par minute à 160 kbit/s.
 
@@ -122,7 +122,7 @@ Le guide de The Shift Project présenté au [critère 5.4](../5-4_compression-vi
 
 Profil(s) métier concerné(s) : `Designer`, `Contributeur`
 
-Le [Guide d'écoconception de services numériques](https://designersethiques.org/fr/thematiques/ecoconception/guide-d-ecoconception/) des Designers Éthiques cite **explicitement** le critère 5.6 dans sa section [**7.2 Vidéos et sons**](https://designersethiques.org/fr/thematiques/ecoconception/guide-d-ecoconception/7-realiser-et-developper/7-2-videos-et-sons), déjà présentée aux critères 5.3 à 5.5 : « Proposer des audios dont le mode de compression est efficace et adapté au contenu et au contexte d'écoute permet de valider le critère 5.6 ».
+Le [Guide d'écoconception de services numériques](https://designersethiques.org/fr/thematiques/ecoconception/guide-d-ecoconception/) des Designers Éthiques cite **explicitement** le critère 5.6 dans sa section [**7.2 Vidéos et sons**](https://designersethiques.org/fr/thematiques/ecoconception/guide-d-ecoconception/7-realiser-et-developper/7-2-videos-et-sons), déjà présentée aux critères [5.3](../5-3_definition-videos/) à [5.5](../5-5_ecoute-seule/) : « Proposer des audios dont le mode de compression est efficace et adapté au contenu et au contexte d'écoute permet de valider le critère 5.6 ».
 
 Le guide conseille : « beaucoup de bandes sonores peuvent être compressées en mp3 avec des logiciels comme Adobe Audition, l'encodeur gratuit Lame ou encore des sites gratuits sans perte notable pour l'utilisateur final ». Au sens du RGESN, le MP3 n'est qu'un format de repli : Opus ou AAC donnent un fichier plus léger à qualité égale.
 
@@ -136,7 +136,7 @@ Profil(s) métier concerné(s) : `Contributeur`, `Développeur`
 
 Le [GR491](https://gr491.isit-europe.org/) (INR) consacre deux conseils au son. Le premier, [« Est-ce que la définition du son est adaptée ? »](https://gr491.isit-europe.org/crit.php?id=9-frontend-les-sons-diffuses-par-le-service-sont-fea704), dans la [recommandation n°9 de la famille Frontend](https://gr491.isit-europe.org/?famille=frontend&num_reco=9), propose un test simple : « La qualité de son attendue est-elle spécifiée ? » Il énumère les leviers : « leurs durées, le nombre de répétitions, la qualité du son et enfin le type d'encodage (Codec) utilisé ». La **durée** reste le premier levier : à débit égal, un épisode deux fois plus court pèse deux fois moins.
 
-Le second, [« Est-ce que les CODECS des sons sont compressés au maximum ? »](https://gr491.isit-europe.org/crit.php?id=3-contenus-le-volume-de-donnees-utilise-par-la-a013d4), déjà cité au critère 5.4, demande de vérifier que la qualité réduite reste « compréhensive ».
+Le second, [« Est-ce que les CODECS des sons sont compressés au maximum ? »](https://gr491.isit-europe.org/crit.php?id=3-contenus-le-volume-de-donnees-utilise-par-la-a013d4), déjà cité au [critère 5.4](../5-4_compression-videos/), demande de vérifier que la qualité réduite reste « compréhensive ».
 
 Les deux conseils mettent en garde contre le coût du décodage : certains codecs très compressés demanderaient « beaucoup de ressources de traitements, ce qui atténue fortement le bénéfice global ». Pour la vidéo, c'est un vrai sujet (voir le critère 5.4). Pour l'audio, il pèse peu : d'après MDN, l'API Media Capabilities des navigateurs considère tous les codecs audio pris en charge comme économes en énergie (« All supported audio codecs report `powerEfficient` as true »).
 
@@ -183,7 +183,7 @@ ffmpeg -i concert.wav -c:a libopus -b:a 96k concert.webm
 - **Débit** : 24 kbit/s en mono pour un livre audio ou un podcast, 64 à 96 kbit/s en stéréo pour de la musique sont les valeurs du [wiki de Xiph.Org](https://wiki.xiph.org/Opus_Recommended_Settings), qui invite à les ajuster à l'écoute. Pour AAC, les valeurs viennent des exigences d'Apple Podcasts.
 - **Canaux** : `-ac 1` passe en mono, comme le demande le RGESN pour les dialogues. Une interview enregistrée en stéréo ne contient en général pas d'information spatiale utile.
 - **Fréquence d'échantillonnage** : avec Opus, il n'y a rien à régler. L'encodeur choisit lui-même la bande de fréquences restituée selon le débit, et restitue toute la bande audible dès 16 kbit/s en mono pour la voix, d'après le même wiki. Avec AAC, `-ar 24000` suit la recommandation d'Apple pour la parole à bas débit.
-- **Qualité** : réécouter le résultat au casque, sur un passage exigeant (voix aiguë, musique de générique, rires). Si des défauts apparaissent, monter d'un cran, comme pour les images au critère 5.2.
+- **Qualité** : réécouter le résultat au casque, sur un passage exigeant (voix aiguë, musique de générique, rires). Si des défauts apparaissent, monter d'un cran, comme pour les images au [critère 5.2](../5-2_compression-images/).
 
 **2. Proposer les deux formats dans l'élément `<audio>`.** Le navigateur prend le premier qu'il sait lire et ne télécharge que lui :
 
@@ -195,7 +195,7 @@ ffmpeg -i concert.wav -c:a libopus -b:a 96k concert.webm
 <p><a href="entretien.m4a" download>Télécharger l'entretien (AAC, 22 Mo)</a></p>
 ```
 
-`preload="none"` évite tout téléchargement avant la lecture (fiche RWEB 0106, critère 4.1). Le lien de téléchargement indique le poids du fichier, comme le demande le [critère 4.11](../../ux-ui/4-11_poids-formats-fichiers/) au-delà de 10 Mo.
+`preload="none"` évite tout téléchargement avant la lecture (fiche RWEB 0106, [critère 4.1](../../ux-ui/4-1_lecture-automatique/)). Le lien de téléchargement indique le poids du fichier, comme le demande le [critère 4.11](../../ux-ui/4-11_poids-formats-fichiers/) au-delà de 10 Mo.
 
 **3. Contrôler le seuil de 1 Mo par minute** sur tous les fichiers audio publiés, avec `ffprobe` (fourni avec FFmpeg) :
 
@@ -222,13 +222,8 @@ Testée le 20 octobre 2026 sur une source de test de 60 secondes (bruit et son s
 
 Profil(s) métier concerné(s) : `Développeur`, `Contributeur`
 
-Le critère 5.6 s'applique aux contenus audio seuls, mais il est lié aux deux critères vidéo qui le précèdent, déjà publiés sur ce site :
-
 - le [critère 5.4](../5-4_compression-videos/) (compression des vidéos) renvoie au 5.6 pour la piste son des vidéos : mêmes codecs, même choix entre mono et stéréo ;
-- le [critère 5.5](../5-5_ecoute-seule/) (mode « écoute seule ») : dans ce mode, la piste son est tout ce qui est transféré. Une piste en AAC stéréo à 128 kbit/s réduit fortement le gain, une piste en Opus mono à 24 kbit/s le maximise.
-
-Plusieurs critères UX/UI, déjà publiés, entrent aussi en jeu :
-
+- le [critère 5.5](../5-5_ecoute-seule/) (mode « écoute seule ») : seule la piste son est transférée, et son débit fixe le gain ;
 - le [critère 4.7](../../ux-ui/4-7_choix-sobre-format/) (choix du format le plus sobre) : pour une conférence ou un entretien, l'audio seul peut remplacer la vidéo ;
 - le [critère 4.11](../../ux-ui/4-11_poids-formats-fichiers/) (poids et formats des fichiers) : un épisode d'une heure en MP3 à 128 kbit/s dépasse 10 Mo, son poids doit être affiché avant le téléchargement ;
 - le [critère 4.1](../../ux-ui/4-1_lecture-automatique/) (lecture automatique) : un son qui ne se lance pas tout seul n'est pas téléchargé pour rien.

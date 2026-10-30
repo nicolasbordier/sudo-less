@@ -29,7 +29,7 @@ toc: true
 | **Phase** | `Conception` |
 | **Priorité** | `Prioritaire` |
 | **Difficulté** | `Moyen` |
-| **Applicabilité** | `N/A si le service ne repose pas sur un OS ou un navigateur web` |
+| **Applicabilité** | `N/A si le service numérique ne repose pas sur un système d'exploitation ou un navigateur web` |
 | **Métiers concernés** | `Responsable IT` `Responsable RSE/Numérique soutenable` `Développeur` |
 | **Permalink** | https://ecoresponsable.numerique.gouv.fr/publications/referentiel-general-ecoconception/critere/2.4/ |
 {{< /table >}}
@@ -78,7 +78,7 @@ Si certaines fonctionnalités requièrent une version plus récente, indiquer le
 
 Via ces différentes sources :
 
-{{< tabs tabTotal="3">}}
+{{< tabs tabTotal="4">}}
 {{% tab tabName="INR - GR491" %}}
 
 Profil(s) métier concerné(s) : `Responsable IT`, `Développeur`
@@ -91,7 +91,7 @@ Le critère 2.4 rejoint la même [recommandation n°4 de la famille Frontend](ht
 
 Profil(s) métier concerné(s) : `Développeur`, `Responsable IT`
 
-Le chapitre [« Tester, évaluer et maintenir »](https://designersethiques.org/fr/thematiques/ecoconception/guide-d-ecoconception/8-tester-evaluer-et-maintenir) du guide des Designers Éthiques mentionne explicitement ce critère, dans la continuité directe du critère 2.2 : « il conviendra aussi au critère 2.4 de tester sur de vieilles versions de navigateurs et systèmes d'exploitation ». Le même effort de test sur matériel ancien (2.2) doit donc être complété par un test sur **versions logicielles anciennes**, les deux dimensions (matériel et logiciel) pouvant diverger : un terminal ancien peut tourner un navigateur à jour, et inversement.
+Le chapitre [« Tester, évaluer et maintenir »](https://designersethiques.org/fr/thematiques/ecoconception/guide-d-ecoconception/8-tester-evaluer-et-maintenir) du guide des Designers Éthiques mentionne explicitement ce critère, dans la continuité directe du [critère 2.2](../2-2_anciens-terminaux/) : « il conviendra aussi au critère 2.4 de tester sur de vieilles versions de navigateurs et systèmes d'exploitation ». Le même effort de test sur matériel ancien (2.2) doit donc être complété par un test sur **versions logicielles anciennes**, les deux dimensions (matériel et logiciel) pouvant diverger : un terminal ancien peut tourner un navigateur à jour, et inversement.
 
 {{% /tab %}}
 
@@ -104,6 +104,17 @@ Pour définir et vérifier une plage de compatibilité logicielle plutôt que de
 - [Browserslist](https://browsersl.ist/) (open source) permet de déclarer, dans un seul fichier de configuration partagé par tout l'écosystème JavaScript/CSS (Autoprefixer, Babel, ESLint, PostCSS...), la plage exacte de navigateurs supportés (ex. `> 0.5%, last 2 versions, not dead`). Les outils de build appliquent alors automatiquement les polyfills et préfixes CSS nécessaires à cette plage — la compatibilité devient une configuration explicite plutôt qu'un test manuel a posteriori.
 - [BrowserStack](https://www.browserstack.com/) (payant), déjà cité au [critère 2.2](../2-2_anciens-terminaux/), donne aussi accès à un catalogue de **versions anciennes de navigateurs et d'OS réels**, utile pour valider manuellement les fonctionnalités critiques sur les versions limites définies dans Browserslist.
 - Pour **automatiser cette vérification en CI/CD** plutôt que de la découvrir en production, [eslint-plugin-compat](https://github.com/amilajack/eslint-plugin-compat) (open source) lit directement la configuration Browserslist du projet et fait échouer le lint dès qu'une API JavaScript non supportée par la plage déclarée est utilisée dans le code. Son équivalent côté CSS, [doiuse](https://github.com/anandthakker/doiuse) (plugin PostCSS), fonctionne sur le même principe pour les propriétés CSS. Les deux s'exécutent comme n'importe quel linter dans un pipeline existant, sans navigateur réel à provisionner.
+
+{{% /tab %}}
+
+{{% tab tabName="Critère associé" %}}
+
+Profil(s) métier concerné(s) : `Responsable IT`, `Développeur`
+
+- le [critère 2.2](../2-2_anciens-terminaux/) (anciens terminaux) : les deux critères se testent ensemble ;
+- le [critère 1.9](../../strategie/1-9_technologies-standard/) (technologies standard) : les standards restent pris en charge par les anciennes versions ;
+- le [critère 5.1](../../contenus/5-1_format-images/) (format des images) : un format récent demande une solution de repli ;
+- le [critère 3.4](../../architecture/3-4_mises-a-jour-correctives/) (mises à jour correctives des équipements) : la durée pendant laquelle un système reçoit encore des correctifs.
 
 {{% /tab %}}
 {{< /tabs >}}

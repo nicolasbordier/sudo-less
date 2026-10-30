@@ -29,7 +29,7 @@ toc: true
 | **Phase** | `Conception` |
 | **Priorité** | `Recommandé` |
 | **Difficulté** | `Moyen` |
-| **Applicabilité** | `Tous les services` |
+| **Applicabilité** | `Applicable à tous les services` |
 | **Métiers concernés** | `Responsable IT` `Responsable RSE/Numérique soutenable` `Développeur` |
 | **Permalink** | https://ecoresponsable.numerique.gouv.fr/publications/referentiel-general-ecoconception/critere/2.3/ |
 {{< /table >}}
@@ -70,7 +70,7 @@ Le critère est **validé** si le service numérique est utilisable **sans conne
 
 Via ces différentes sources :
 
-{{< tabs tabTotal="4">}}
+{{< tabs tabTotal="5">}}
 {{% tab tabName="INR - GR491" %}}
 
 Profil(s) métier concerné(s) : `Développeur`, `Responsable RSE/Numérique soutenable`
@@ -110,6 +110,18 @@ Pour tester ce critère, trois approches complémentaires :
 - Les **DevTools des navigateurs** (Chrome, Edge, Firefox — gratuits) permettent de simuler un débit réseau directement en local, sans matériel ni configuration réseau particulière. Voir le détail de la manipulation pour Firefox sur la fiche [critère 2.2](../2-2_anciens-terminaux/), onglet « Outils de test ».
 - [WebPageTest](https://www.webpagetest.org/) (gratuit) va plus loin : il exécute le test depuis de vrais serveurs répartis dans le monde, sur un choix de profils de connexion réels (dont 3G), et restitue un temps de chargement mesuré plutôt que simulé localement.
 - Pour **automatiser ce test en CI/CD** plutôt que de le rejouer manuellement, [sitespeed.io](https://www.sitespeed.io/documentation/sitespeed.io/connectivity/) (open source) propose une option de connectivité dédiée : `sitespeed.io -c 3g https://mon-service.fr` simule directement un débit 3G, avec une image Docker documentée pour l'exécuter dans un pipeline (`docker run --network=3g sitespeedio/sitespeed.io -c 3g ...`). [Lighthouse CI](https://github.com/GoogleChrome/lighthouse-ci) (déjà utilisé pour les budgets de performance en page [Implémentation](../../../outils/par-phase-projet/implementation/)) permet aussi de définir un débit personnalisé via `settings.throttling`, pour les équipes qui l'utilisent déjà.
+
+{{% /tab %}}
+
+{{% tab tabName="Critère associé" %}}
+
+Profil(s) métier concerné(s) : `Responsable IT`, `Développeur`
+
+- le [critère 2.1](../2-1_profils-materiels/) (profils de matériels) : le profil de connexion à retenir ;
+- le [critère 6.1](../../frontend/6-1_poids-requetes-ecran/) (poids et requêtes par écran) : le poids fixe le temps de chargement en bas débit ;
+- le [critère 6.2](../../frontend/6-2_cache-navigateur/) (cache navigateur) : une ressource en cache ne repasse pas par le réseau ;
+- le [critère 6.3](../../frontend/6-3_compression-ressources/) (compression des ressources) : moins de données à transférer ;
+- le [critère 6.5](../../frontend/6-5_chargement-ressources/) (chargement des seules ressources utiles) : ne transférer que ce qui sert.
 
 {{% /tab %}}
 {{< /tabs >}}

@@ -181,7 +181,7 @@ Pour le **contrôle**, le moyen de test du RGESN se pratique directement dans le
 
 Profil(s) métier concerné(s) : `Développeur`, `Concepteur UX / UI`
 
-Ce critère forme une paire avec le [critère 4.9](../4-9_requetes-saisie-utilisateur/) (requêtes serveur lors de la saisie utilisateur), déjà publié sur ce site : le 4.9 porte sur les requêtes déclenchées **pendant** la saisie (autocomplétion, suggestions), le 4.10 sur celles déclenchées **à la soumission** du formulaire. Un formulaire peut être conforme à l'un sans l'être à l'autre — par exemple, sans aucune autocomplétion mais validé uniquement côté serveur.
+Ce critère forme une paire avec le [critère 4.9](../4-9_requetes-saisie-utilisateur/) (requêtes serveur lors de la saisie utilisateur) : le 4.9 porte sur les requêtes déclenchées **pendant** la saisie (autocomplétion, suggestions), le 4.10 sur celles déclenchées **à la soumission** du formulaire. Un formulaire peut être conforme à l'un sans l'être à l'autre — par exemple, sans aucune autocomplétion mais validé uniquement côté serveur.
 
 Le référentiel [RWEB du Collectif GreenIT](https://rweb.greenit.fr/) n'a pas de fiche étiquetée « RGESN 4.10 », mais la fiche [**RWEB 0014 — « Préférer la saisie assistée à l'autocomplétion »**](https://rweb.greenit.fr/fr/fiches/RWEB_0014-preferer-la-saisie-assistee-a-l-autocompletion), citée au 4.9, fait le lien entre les deux critères : la « saisie assistée » qu'elle recommande — « guider l'utilisateur par un ensemble d'informations et d'indices gérés localement » — est précisément ce que demande le premier volet du 4.10.
 

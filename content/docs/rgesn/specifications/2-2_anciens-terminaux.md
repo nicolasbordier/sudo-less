@@ -29,7 +29,7 @@ toc: true
 | **Phase** | `Conception` |
 | **Priorité** | `Prioritaire` |
 | **Difficulté** | `Moyen` |
-| **Applicabilité** | `Tous les services` |
+| **Applicabilité** | `Applicable à tous les services` |
 | **Métiers concernés** | `Responsable IT` `Responsable RSE/Numérique soutenable` `Développeur` |
 | **Permalink** | https://ecoresponsable.numerique.gouv.fr/publications/referentiel-general-ecoconception/critere/2.2/ |
 {{< /table >}}
@@ -82,7 +82,7 @@ Les **caractéristiques matérielles et logicielles** de l'équipement ancien te
 
 Via ces différentes sources :
 
-{{< tabs tabTotal="3">}}
+{{< tabs tabTotal="4">}}
 {{% tab tabName="INR - GR491" %}}
 
 Profil(s) métier concerné(s) : `Responsable IT`, `Développeur`
@@ -112,6 +112,18 @@ Pour tester réellement sur un équipement ancien plutôt que de se fier à une 
 - L'onglet **Network des DevTools Firefox** (gratuit, intégré au navigateur) permet de simuler une connexion dégradée en complément des tests sur matériel ancien : ouvrir les outils de développement (`F12`), aller dans l'onglet **Réseau**, puis choisir un profil dans le menu déroulant de débit (par défaut sur « Sans limitation ») — par exemple **GPRS** ou **Bas débit** pour reproduire les conditions d'une connexion mobile dégradée ou d'une zone mal couverte. Le menu permet aussi de créer un **profil personnalisé** (débit montant/descendant et latence définis manuellement) pour coller au plus près d'un contexte réseau réel.
 
 **Point de méthode à ne pas négliger** ([RWEB 0058](https://rweb.greenit.fr/fr/fiches/RWEB_0058-assurer-la-compatibilite-avec-les-plus-anciens-appareils-et-logiciels-du-parc) : les statistiques de trafic ne suffisent pas à justifier l'abandon d'un ancien appareil ou navigateur, à cause du **biais du survivant** — les utilisateurs qui n'arrivent déjà plus à accéder au service à cause de leur configuration n'apparaissent, par définition, pas dans ces statistiques. Une recherche terrain reste nécessaire pour connaître les équipements réellement utilisés par les cibles du service.
+
+{{% /tab %}}
+
+{{% tab tabName="Critère associé" %}}
+
+Profil(s) métier concerné(s) : `Responsable IT`, `Développeur`
+
+- le [critère 2.1](../2-1_profils-materiels/) (profils de matériels) : les terminaux anciens à retenir ;
+- le [critère 2.4](../2-4_anciennes-versions-os/) (anciennes versions d'OS et de navigateurs) : un terminal ancien a souvent un système ancien ;
+- le [critère 6.1](../../frontend/6-1_poids-requetes-ecran/) (poids et requêtes par écran) : un écran léger reste utilisable sur un terminal modeste ;
+- le [critère 6.5](../../frontend/6-5_chargement-ressources/) (chargement des seules ressources utiles) : moins de code à exécuter sur un processeur lent ;
+- le [critère 3.4](../../architecture/3-4_mises-a-jour-correctives/) (mises à jour correctives des équipements) : les mises à jour qui prolongent la vie du terminal.
 
 {{% /tab %}}
 {{< /tabs >}}

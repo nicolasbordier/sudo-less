@@ -29,7 +29,7 @@ toc: true
 | **Phase** | `Conception` |
 | **Priorité** | `Recommandé` |
 | **Difficulté** | `Moyen` |
-| **Applicabilité** | `Tous les services` |
+| **Applicabilité** | `Applicable à tous les services` |
 | **Métiers concernés** |  `Data Scientist` `Responsable Juridique` |
 | **Permalink** | https://ecoresponsable.numerique.gouv.fr/publications/referentiel-general-ecoconception/critere/1.6/ |
 {{< /table >}}
@@ -78,13 +78,13 @@ Ne pas collecter des métadonnées servant au profilage de l'utilisateur, sauf s
 
 Via ces différentes sources :
 
-{{< tabs tabTotal="3">}}
+{{< tabs tabTotal="5">}}
 {{% tab tabName="RWEB" %}}
 
 Trois fiches du référentiel RWEB (Collectif GreenIT) donnent des règles de validation concrètes et chiffrées pour ce critère :
 
-- [Limiter les outils d'analytics et les données collectées](https://rweb.greenit.fr/fr/fiches/RWEB_0111-limiter-les-outils-d-analytics-et-les-donnees-collectees) *(impact 4/5, priorité 4/5)* : ne pas utiliser plus d'**un seul outil d'analytics**. La fiche illustre un anti-pattern fréquent — Google Analytics, Matomo et ContentSquare qui coexistent sur un même service parce que chaque équipe (marketing, produit, UX) a imposé son propre outil — chacun ajoutant requêtes, fichiers JavaScript et cookies supplémentaires.
-- [Réduire le volume de données stockées au strict nécessaire](https://rweb.greenit.fr/fr/fiches/RWEB_0023-reduire-le-volume-de-donnees-stockees-au-strict-necessaire) *(impact 4/5, difficulté 4/5)* : ne stocker que ce qui est indispensable ou légalement requis, via un archivage à froid après une première période d'accès puis une suppression après le délai de conservation (ex. RGPD : suppression possible dès 18 mois si la donnée n'est plus utile), et une suppression régulière des doublons/enregistrements obsolètes. Critère de validation : une donnée stockée sans utilité pour le service doit être ramenée à zéro.
+- [Limiter les outils d'analytics et les données collectées](https://rweb.greenit.fr/fr/fiches/RWEB_0111-limiter-les-outils-d-analytics-et-les-donnees-collectees) *(impact 4/5, priorité 4/5)* : ne pas utiliser plus d'**un seul outil d'analytics**. La fiche illustre un anti-pattern fréquent : Google Analytics, Matomo et ContentSquare qui coexistent sur un même service, pour satisfaire « les habitudes de chaque membre de l'équipe » marketing, chacun ajoutant requêtes, fichiers JavaScript et cookies.
+- [Réduire le volume de données stockées au strict nécessaire](https://rweb.greenit.fr/fr/fiches/RWEB_0023-reduire-le-volume-de-donnees-stockees-au-strict-necessaire) *(impact 4/5, difficulté 4/5)* : ne stocker que ce qui est indispensable ou légalement requis, via un archivage à froid après une première période d'accès puis une suppression après le délai de conservation, et une suppression régulière des doublons et enregistrements obsolètes. Son délai de « 18 mois » n'a pas de valeur générale : le RGPD ne fixe pas de durée, elle se déduit de la finalité du traitement (voir le [critère 5.8](../../contenus/5-8_archivage-suppression/)). Critère de validation : une donnée stockée sans utilité pour le service doit être ramenée à zéro.
 - [Optimiser la taille des cookies](https://rweb.greenit.fr/fr/fiches/RWEB_0062-optimiser-la-taille-des-cookies) : ne stocker dans les cookies que les données strictement nécessaires au fonctionnement (identifiant de session par exemple), pas des objets métier complets.
 
 {{% /tab %}}
@@ -115,6 +115,73 @@ Le [Cahier IP n°9 « Données, empreinte et libertés »](https://linc.cnil.fr/
 Le guide pratique de la CNIL [Minimiser les données collectées](https://www.cnil.fr/fr/minimiser-les-donnees-collectees) complète ce cadrage avec des questions opérationnelles directement transposables à ce critère : cette donnée est-elle nécessaire à *toutes* les catégories d'utilisateurs ou seulement certaines ? Peut-on réduire sa granularité (ex. année de naissance plutôt que date complète) sans nuire à la fonctionnalité ? Un système de suppression automatique existe-t-il à l'échéance de la durée de conservation ?
 
 {{% /tab %}}
+
+{{% tab tabName="Mise en œuvre technique" %}}
+
+Profil(s) métier concerné(s) : `Développeur`, `Responsable Juridique`
+
+**1. Tenir l'inventaire des données collectées**, versionné avec le code : une ligne par donnée, personnelle ou non, métadonnées comprises.
+
+| Donnée | Finalité | Durée |
+|---|---|---|
+| Adresse e-mail | Lettre d'information, avec consentement | Jusqu'au désabonnement |
+| Journaux d'accès (IP, URL, date) | Sécurité | 6 mois à 1 an ([CNIL](https://www.cnil.fr/fr/la-cnil-publie-une-recommandation-relative-aux-mesures-de-journalisation)) |
+| Mesure d'audience | Statistiques de fréquentation | 13 mois pour le traceur, 25 mois pour les données |
+
+Une donnée sans ligne n'a pas à être collectée. Les durées s'appliquent avec les mécanismes du [critère 7.2](../../backend/7-2_durees-conservation/).
+
+**2. Réduire la granularité dès le formulaire**, comme le suggère la CNIL (onglet CNIL) : l'année de naissance plutôt que la date complète.
+
+```html
+<label for="annee">Année de naissance</label>
+<input id="annee" name="annee_naissance" type="number" inputmode="numeric" autocomplete="bday-year">
+```
+
+**3. Un seul outil de mesure d'audience** (fiche RWEB 0111), si possible sans cookie. Avec Matomo, une ligne placée avant `trackPageView` désactive les cookies ([Matomo](https://matomo.org/faq/general/faq_157/)) :
+
+```js
+var _paq = window._paq = window._paq || [];
+_paq.push(['disableCookies']);
+_paq.push(['trackPageView']);
+```
+
+Avec un cookie, l'outil peut être exempté de consentement s'il respecte les conditions de la [CNIL](https://www.cnil.fr/fr/cookies-et-autres-traceurs/regles/cookies-solutions-pour-les-outils-de-mesure-daudience) (page du 4 juillet 2025) : finalité limitée à la mesure d'audience, pour le compte exclusif de l'éditeur, données statistiques anonymes, pas de suivi d'un site à l'autre. La CNIL cite une durée de vie de 13 mois pour le traceur, et 25 mois au plus pour conserver les données.
+
+**4. Vérifier ce que le service dépose sur le terminal**, sans rien accepter dans le bandeau, dans une fenêtre de navigation privée. Après le chargement, coller dans la console :
+
+```js
+({
+  cookies: document.cookie ? document.cookie.split('; ').map((c) => c.split('=')[0]) : [],
+  localStorage: Object.keys(localStorage),
+  sessionStorage: Object.keys(sessionStorage),
+  indexedDB: (await indexedDB.databases()).map((b) => b.name),
+})
+```
+
+Les cookies `HttpOnly` n'y figurent pas : l'onglet **Application** de Chromium ou **Stockage** de Firefox les montre tous. Les domaines tiers contactés se relèvent avec le script du [critère 6.7](../../frontend/6-7_domaine-unique/).
+
+Testé le 30 octobre 2026 dans Chromium 155, avant tout choix dans les bandeaux :
+
+- **DiaLog** ne dépose rien ;
+- **les e-novateurs** déposent un cookie de langue et celui de Wysistat, leur mesure d'audience ;
+- **le Musée d'arts de Nantes** dépose, outre celui de son bandeau, trois cookies de Piano Analytics valables 13 mois, dont un identifiant de navigateur. L'un d'eux enregistre le mode « essential », celui que [Piano](https://docs.piano.io/en/analytics/consent-management) prévoit pour une mesure exemptée de consentement ;
+- **SPOTE** dépose un cookie `SRV` sur son domaine et sur `audience-sites.din.developpement-durable.gouv.fr`.
+
+**5. Documenter** dans la déclaration d'écoconception : l'inventaire, ou un renvoi au registre des traitements pour les données personnelles, comme l'autorise le moyen de test ; l'outil de mesure d'audience et ses réglages ; les cookies déposés sans consentement et leur justification.
+
+{{% /tab %}}
+
+{{% tab tabName="Critère associé" %}}
+
+Profil(s) métier concerné(s) : `Data Scientist`, `Responsable Juridique`
+
+- le [critère 7.2](../../backend/7-2_durees-conservation/) (durées de conservation) : une donnée collectée doit aussi avoir une date de fin ;
+- le [critère 5.8](../../contenus/5-8_archivage-suppression/) (archivage et suppression des contenus) : la même logique pour les contenus publiés ;
+- le [critère 1.7](../1-7_niveau-chiffrement/) (niveau de chiffrement) : moins de données sensibles, moins de données à protéger ;
+- le [critère 6.6](../../frontend/6-6_capteurs-terminaux/) (capteurs des terminaux) : une donnée de capteur est une collecte comme une autre ;
+- le [critère 9.4](../../algorithmie/9-4_donnees-apprentissage/) (données d'apprentissage) : la même minimisation pour l'entraînement des modèles.
+
+{{% /tab %}}
 {{< /tabs >}}
 
 
@@ -128,15 +195,15 @@ Le guide pratique de la CNIL [Minimiser les données collectées](https://www.cn
 
 {{% tab tabName="Retours d'expériences" %}}
 
-Contrairement aux autres critères de la famille Stratégie, les déclarations d'écoconception publiques consultées (DiaLog, SPOTE, cdg69, Acigné…) ne détaillent pas spécifiquement leur politique de collecte de données au sens de ce critère — elles se concentrent sur les budgets techniques (poids, requêtes) plutôt que sur le nombre d'outils de tracking ou la durée de conservation des données. Ce silence documentaire est en soi une indication : la minimisation des données reste, en pratique, plus documentée sous l'angle RGPD (registre de traitement, PIA) que sous l'angle écoconception.
+Contrairement aux autres critères de la famille Stratégie, les déclarations d'écoconception consultées détaillent peu leur politique de collecte. [DiaLog](https://dialog.beta.gouv.fr/ecoconception) et [FACE](https://declarations-f52e8c.gitlab-pages.din.developpement-durable.gouv.fr/uploads/73f86f8cf0659b4e84d9c83adc0f0a97/face_rgesn_2024_outil_declaration_ecoconception.pdf) valident le critère en deux phrases : pas de « collecte de métadonnées à des fins publicitaires », et des données personnelles traitées selon le RGPD. Aucune ne parle du nombre d'outils de mesure ni de la durée de conservation des données. Ce silence documentaire est en soi une indication : la minimisation des données reste, en pratique, plus documentée sous l'angle RGPD (registre de traitement, PIA) que sous l'angle écoconception.
 
 L'anti-pattern décrit par la fiche [RWEB 0111](https://rweb.greenit.fr/fr/fiches/RWEB_0111-limiter-les-outils-d-analytics-et-les-donnees-collectees) reste néanmoins l'illustration la plus concrète et la plus fréquemment observée en audit : plusieurs outils d'analytics concurrents (Google Analytics, Matomo, ContentSquare...) coexistant sur un même service, chacun ajouté par une équipe différente sans concertation ni suppression des outils devenus redondants — un cas qui justifie à lui seul de vérifier ce critère lors de toute revue d'écoconception ([critère 1.4](../1-4_revue-ecoconception/)).
 
-Une exception à ce silence documentaire : la [déclaration d'écoconception de « Les entreprises s'engagent »](https://lesentreprises-sengagent.gouv.fr/eco-conception) (communauté lancée par la Présidence de la République, dernière mise à jour le 25 novembre 2022) affirme explicitement « aucun tracking non nécessaire et donc aucun cookie nécessitant le consentement des utilisateurs ». Cette déclaration s'appuie toutefois sur la **version 1** du RGESN (79 critères, réponse positive à 67,09 %) et non sur la v2 utilisée dans ce guide — elle ne peut donc pas être citée critère par critère avec la même précision que FACE, mais elle reste un exemple positif rare et concret sur ce point précis.
+Une exception à ce silence documentaire : la [déclaration d'écoconception de « Les entreprises s'engagent »](https://lesentreprises-sengagent.gouv.fr/eco-conception) (communauté lancée par la Présidence de la République, dernière mise à jour le 25 novembre 2022) affirme n'utiliser « aucun tracking non nécessaire », et donc aucun cookie soumis au consentement des utilisateurs. Cette déclaration s'appuie toutefois sur la **version 1** du RGESN (79 critères, dont 53 validés en octobre 2022, soit 67,09 %) et non sur la v2 utilisée dans ce guide — elle ne peut donc pas être citée critère par critère avec la même précision que FACE, mais elle reste un exemple positif rare et concret sur ce point précis.
 
-La [déclaration d'écoconception du Musée d'arts de Nantes](https://museedartsdenantes.nantesmetropole.fr/declaration-d-ecoconception/) (Nantes Métropole, sur la v2 du RGESN) illustre une nuance plus honnête encore : critère marqué « En cours de validation », avec une auto-critique explicite plutôt qu'une déclaration de conformité totale — « la collecte de données personnelles se fait dans le respect du RGPD [mais] l'intégration de Youtube nécessite la collecte de données supplémentaires qui sont soumises au consentement des utilisateurs. Dans cette optique, l'utilisation de Youtube devrait être remise en question. » Le service identifie donc lui-même son point faible plutôt que de le passer sous silence — un exemple rare de transparence sur un compromis non résolu.
+La [déclaration d'écoconception du Musée d'arts de Nantes](https://museedartsdenantes.nantesmetropole.fr/declaration-d-ecoconception/) (Nantes Métropole, sur la v2 du RGESN) illustre une nuance plus honnête encore : critère marqué « En cours de validation », avec une auto-critique explicite plutôt qu'une déclaration de conformité totale — « La collecte de données personnelles se fait dans le respect du RGPD. […] L'intégration de Youtube nécessite la collecte de données supplémentaires qui sont soumises au consentement des utilisateurs. Dans cette optique, l'utilisation de Youtube devrait être remise en question. » Le service identifie donc lui-même son point faible plutôt que de le passer sous silence — un exemple rare de transparence sur un compromis non résolu.
 
-[Les e-novateurs](https://les-enovateurs.com/eco-conception) (média associatif sur le numérique responsable) marquent ce critère « Validé » avec une collecte réduite à deux éléments : les données de visite via [Matomo](https://matomo.org/) auto-hébergé sur leur propre serveur (pas de délégation à un tiers), et l'adresse e-mail collectée avec consentement explicite dans le seul but d'envoyer la newsletter mensuelle — un exemple concret et minimal de collecte proportionnée au besoin réel.
+[Les e-novateurs](https://les-enovateurs.com/eco-conception) (média associatif sur le numérique responsable) marquent ce critère « Validé » dans leur déclaration mise à jour le 21 septembre 2026. Leur mesure d'audience passe par Wysistat, « dans les conditions d'exemption de consentement fixées par la CNIL » : statistiques anonymes, sans suivi d'un site à l'autre. L'adresse e-mail n'est collectée qu'avec consentement, pour la newsletter, et les comptes lecteurs se limitent au « strict nécessaire », sans mot de passe stocké grâce à une connexion par lien à usage unique.
 
 {{% /tab %}}
 

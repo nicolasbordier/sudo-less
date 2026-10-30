@@ -29,7 +29,7 @@ toc: true
 | **Phase** | `Exploration` |
 | **Priorité** | `Prioritaire` |
 | **Difficulté** | `Moyen` |
-| **Applicabilité** | `Tous les services` |
+| **Applicabilité** | `Applicable à tous les services` |
 | **Métiers concernés** | `Responsable IT` `Responsable RSE/Numérique soutenable` `Développeur` |
 | **Permalink** | https://ecoresponsable.numerique.gouv.fr/publications/referentiel-general-ecoconception/critere/2.1/ |
 {{< /table >}}
@@ -68,7 +68,7 @@ Si certaines fonctionnalités nécessitent une version plus récente, **indiquer
 
 Via ces différentes sources :
 
-{{< tabs tabTotal="2">}}
+{{< tabs tabTotal="3">}}
 {{% tab tabName="INR - GR491" %}}
 
 Profil(s) métier concerné(s) : `Responsable IT`, `Responsable RSE/Numérique soutenable`
@@ -92,6 +92,18 @@ Pour définir un profil matériel réaliste plutôt qu'arbitraire, le [Baromètr
 - 82 % de la population se connecte quotidiennement à internet — une part significative reste donc en dehors de ce socle, avec des équipements et usages hétérogènes.
 
 Exclure les équipements anciens revient ainsi, de façon disproportionnée, à exclure les **populations les plus âgées** — un angle mort fréquent si le profil matériel est calé sur l'équipe projet elle-même plutôt que sur la base d'utilisateurs réelle ou visée.
+
+{{% /tab %}}
+
+{{% tab tabName="Critère associé" %}}
+
+Profil(s) métier concerné(s) : `Responsable IT`, `Développeur`
+
+- le [critère 1.2](../../strategie/1-2_cibles-utilisatrices/) (cibles utilisatrices) : les profils de matériels se déduisent des cibles ;
+- le [critère 2.2](../2-2_anciens-terminaux/) (anciens terminaux) : le profil le plus ancien fixe ce qu'il faut tester ;
+- le [critère 2.3](../2-3_connexion-bas-debit/) (connexion bas débit) : le profil de connexion, à côté du profil de matériel ;
+- le [critère 2.4](../2-4_anciennes-versions-os/) (anciennes versions d'OS et de navigateurs) : les versions logicielles de ces matériels ;
+- le [critère 2.5](../2-5_terminaux-affichage/) (terminaux d'affichage) : les tailles d'écran de ces matériels.
 
 {{% /tab %}}
 {{< /tabs >}}

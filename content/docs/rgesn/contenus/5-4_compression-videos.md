@@ -87,15 +87,9 @@ Via ces différentes sources :
 
 Profil(s) métier concerné(s) : `Designer`, `Contributeur`
 
-Le [Guide d'écoconception de services numériques](https://designersethiques.org/fr/thematiques/ecoconception/guide-d-ecoconception/) des Designers Éthiques cite **explicitement** le critère 5.4 dans sa section [**7.2 Vidéos et sons**](https://designersethiques.org/fr/thematiques/ecoconception/guide-d-ecoconception/7-realiser-et-developper/7-2-videos-et-sons), déjà présentée au [critère 5.3](../5-3_definition-videos/). Son exemple : « le logiciel Handbrake permet de compresser une vidéo HD de 1mn35 en 720p, réduisant ainsi son poids de 38% soit de 11,7 Mo ».
+Le [Guide d'écoconception de services numériques](https://designersethiques.org/fr/thematiques/ecoconception/guide-d-ecoconception/) des Designers Éthiques cite **explicitement** le critère 5.4 dans sa section [**7.2 Vidéos et sons**](https://designersethiques.org/fr/thematiques/ecoconception/guide-d-ecoconception/7-realiser-et-developper/7-2-videos-et-sons). Son exemple : HandBrake réduit « une vidéo HD de 1mn35 en 720p » de 38 %. Ce gain vient surtout du passage au 720p, c'est-à-dire de la **définition**, qui relève du [critère 5.3](../5-3_definition-videos/). Le 5.4 porte sur un autre levier, à définition égale : le **codec** et son **réglage**. Les deux se cumulent.
 
-Ce gain vient surtout du passage de la HD au 720p, c'est-à-dire de la **définition**, qui relève du critère 5.3. Le critère 5.4 porte sur un autre levier : à définition égale, le **codec** et son **réglage**. Les deux se cumulent.
-
-Le guide parle d'outils de « compression sans perte de qualité perceptible ». Tous les codecs cités par le RGESN compressent pourtant **avec perte**. Leur réglage consiste à choisir une perte qui ne se voit pas. C'est la règle du RGESN : utiliser « le niveau de qualité le plus faible sans dégrader la vidéo visuellement dans le contexte d'utilisation ».
-
-Pour le son, le guide propose de compresser les bandes sonores « en mp3 », et rappelle que « dans le secteur musical ou cinématographique, il sera préférable de ne pas compresser les fichiers ». Pour la piste son d'une vidéo, le codec Opus fait mieux que le MP3 à débit égal (voir l'onglet « Mise en œuvre technique »).
-
-La section renvoie enfin, pour aller plus loin, au guide de The Shift Project présenté dans l'onglet suivant.
+Le guide parle de « compression sans perte de qualité perceptible ». Tous les codecs cités par le RGESN compressent pourtant **avec perte** : les régler consiste à choisir une perte qui ne se voit pas.
 
 {{% /tab %}}
 
@@ -103,20 +97,16 @@ La section renvoie enfin, pour aller plus loin, au guide de The Shift Project pr
 
 Profil(s) métier concerné(s) : `Contributeur`, `Développeur`
 
-Le guide [**« Comment réduire en 5 minutes le poids d'une vidéo tout en gardant une bonne qualité »**](https://theshiftproject.org/guide-reduire-poids-video-5-minutes/), conçu par Gauthier Roussilhe et finalisé avec The Shift Project (document de 2019), détaille un réglage du logiciel libre [HandBrake](https://handbrake.fr/). Ses principaux réglages, au regard du critère 5.4 :
+Le guide [**« Comment réduire en 5 minutes le poids d'une vidéo tout en gardant une bonne qualité »**](https://theshiftproject.org/guide-reduire-poids-video-5-minutes/), de Gauthier Roussilhe et The Shift Project (2019), détaille un réglage du logiciel libre [HandBrake](https://handbrake.fr/) :
 
 | Réglage du guide | Valeur | Au regard du critère 5.4 |
 |---|---|---|
 | Encodeur vidéo | « H264 (x264) » | À partir de 720p, H.264 n'est plus accepté qu'en repli d'un codec plus efficace |
 | Qualité | « Constant Quality », valeur 22 (19 à 23 en 720p, 20 à 24 en 1080p) | Débit variable : conforme |
-| Dimensions | 1280 × 720 | Définition qui relève du critère 5.3 |
+| Dimensions | 1280 × 720 | Définition qui relève du [critère 5.3](../5-3_definition-videos/) |
 | Audio | Stéréo, débit d'origine conservé | À adapter : le RGESN demande le mono pour les dialogues |
 
-Le mode « Constant Quality » correspond au débit variable demandé par le RGESN. L'encodeur vise une qualité constante et dépense donc moins de données sur les scènes simples. La méthode reste valable, à condition de changer d'encodeur : HandBrake propose un encodeur AV1 (SVT-AV1) depuis sa version 1.6.0 ([notes de version](https://github.com/HandBrake/HandBrake/blob/master/NEWS.markdown)). Les valeurs ne se transposent pas d'un encodeur à l'autre : la valeur 22 vaut pour x264, et le réglage est à refaire pour AV1 (voir l'onglet « Mise en œuvre technique »).
-
-Pour l'audio, le guide juge le gain « minime » sous 160 kbit/s, la qualité sonore étant « très importante pour l'usager ». L'argument se comprend pour une vidéo H.264, dont la piste image pèse beaucoup plus lourd que le son. Avec un codec vidéo plus efficace, la piste son pèse proportionnellement plus. Passer en mono pour une vidéo de parole, comme le demande le RGESN, devient alors un gain réel.
-
-Le guide se termine sur un constat qui dépasse la compression : réduire le poids de ses vidéos « m'a fait remettre en question l'utilité de leur présence. J'ai décidé d'en supprimer trois ».
+La méthode reste valable en changeant d'encodeur : HandBrake propose AV1 (SVT-AV1) depuis sa [version 1.6.0](https://github.com/HandBrake/HandBrake/blob/master/NEWS.markdown), mais la valeur 22 ne vaut que pour x264. Le guide se termine sur un constat qui dépasse la compression : réduire le poids de ses vidéos « m'a fait remettre en question l'utilité de leur présence. J'ai décidé d'en supprimer trois ».
 
 {{% /tab %}}
 
@@ -124,14 +114,9 @@ Le guide se termine sur un constat qui dépasse la compression : réduire le poi
 
 Profil(s) métier concerné(s) : `Contributeur`, `Développeur`
 
-Le référentiel [RWEB du Collectif GreenIT](https://rweb.greenit.fr/) n'a qu'une fiche étiquetée « RGESN 5.4 » : [**RWEB 0108 — « Compresser les documents »**](https://rweb.greenit.fr/fr/fiches/RWEB_0108-compresser-les-documents), également rattachée aux critères 5.2 et 5.6. Elle recommande de compresser les fichiers téléchargeables (avec WinZip dans son exemple) et cite parmi eux les « contenus multimédias (images, audio et vidéo) ».
+Le référentiel [RWEB du Collectif GreenIT](https://rweb.greenit.fr/) n'a qu'une fiche étiquetée « RGESN 5.4 » : [**RWEB 0108 — « Compresser les documents »**](https://rweb.greenit.fr/fr/fiches/RWEB_0108-compresser-les-documents), qui recommande de compresser les fichiers téléchargeables, vidéos comprises. Pour une vidéo, ce levier ne joue presque pas : une compression ZIP ne fait gagner que 2,2 % sur la vidéo AV1 de l'onglet « Mise en œuvre technique ». Tout se joue à l'encodage.
 
-Pour une vidéo, ce levier ne joue presque pas : un fichier produit par un codec vidéo est déjà compressé. Sur les fichiers de test de l'onglet « Mise en œuvre technique », une compression ZIP au niveau maximal ne fait gagner que 2,2 % sur la vidéo AV1 et 0,34 % sur la vidéo VP9. La fiche prévoit d'ailleurs cette exception : « sauf si la compression n'apporte pas un gain évident ». Pour le critère 5.4, tout se joue à l'encodage.
-
-Deux autres fiches sont plus utiles, même sans l'étiquette :
-
-- [**RWEB 0098 — « Optimiser et générer les médias avant importation sur un CMS »**](https://rweb.greenit.fr/fr/fiches/RWEB_0098-optimiser-et-generer-les-medias-avant-importation-sur-un-cms), notée **5/5** en priorité. Elle recommande d'encoder les médias sur son poste, avant de les importer, plutôt que par des plugins de CMS, « consommateurs en terme de CPU, de mémoire vive, de réseau et de stockage ». Elle cite FFmpeg, l'outil utilisé dans l'onglet « Mise en œuvre technique ».
-- [**RWEB 0107**](https://rweb.greenit.fr/fr/fiches/RWEB_0107-adapter-les-videos-aux-contextes-de-visualisation), présentée au [critère 5.3](../5-3_definition-videos/). Son exemple encode les vidéos en « MPEG-4 / H.264 / AAC ». Au sens du critère 5.4, ce format n'est plus qu'un repli à partir de 720p.
+Plus utile, [**RWEB 0098 — « Optimiser et générer les médias avant importation sur un CMS »**](https://rweb.greenit.fr/fr/fiches/RWEB_0098-optimiser-et-generer-les-medias-avant-importation-sur-un-cms) (priorité 5/5) recommande d'encoder les médias avant de les importer, avec FFmpeg par exemple, plutôt que par des plugins de CMS « consommateurs en terme de CPU, de mémoire vive, de réseau et de stockage ».
 
 {{% /tab %}}
 
@@ -139,15 +124,12 @@ Deux autres fiches sont plus utiles, même sans l'étiquette :
 
 Profil(s) métier concerné(s) : `Développeur`, `Architecte Logiciel`
 
-La fiche [**« Optimize media to reduce resource use »**](https://www.w3.org/TR/web-sustainability-guidelines/#optimize-media-to-reduce-resource-use) des [Web Sustainability Guidelines](https://www.w3.org/TR/web-sustainability-guidelines/) du W3C, déjà citée aux critères [5.2](../5-2_compression-images/) et [5.3](../5-3_definition-videos/), comporte un critère de succès « Optimized media » qui rejoint le 5.4 point par point (version du 16 octobre 2026) :
+La fiche [**« Optimize media to reduce resource use »**](https://www.w3.org/TR/web-sustainability-guidelines/#optimize-media-to-reduce-resource-use) des [Web Sustainability Guidelines](https://www.w3.org/TR/web-sustainability-guidelines/) du W3C (version du 16 octobre 2026) rejoint le 5.4 :
 
 - « Use widely supported, efficient formats that enable native presentation or playback where possible. »
-- « Avoid unnecessary custom or non-native media players. »
 - « Use hardware-accelerated playback when available and compatible with security requirements. »
 
-Le troisième point est l'exigence d'accélération matérielle du RGESN. Le W3C y ajoute une réserve que le RGESN ne formule pas : la compatibilité avec les exigences de sécurité. Le deuxième point va dans le même sens : un lecteur qui décode lui-même la vidéo, en JavaScript ou en WebAssembly, se prive du décodeur matériel du terminal.
-
-La fiche [**« Reduce data transfer with compression »**](https://www.w3.org/TR/web-sustainability-guidelines/#reduce-data-transfer-with-compression) demande aussi, dans son critère « Media compression », de « Compress media files such as images, video, and audio before uploading anywhere ». C'est le principe de la fiche RWEB 0098 : encoder avant la mise en ligne.
+Un lecteur qui décode lui-même la vidéo, en JavaScript ou en WebAssembly, se prive du décodeur matériel du terminal.
 
 {{% /tab %}}
 
@@ -155,11 +137,9 @@ La fiche [**« Reduce data transfer with compression »**](https://www.w3.org/TR
 
 Profil(s) métier concerné(s) : `Contributeur`, `Développeur`
 
-Le [GR491](https://gr491.isit-europe.org/) (INR) n'a pas de critère sur les codecs vidéo. Dans la [recommandation n°3 de la famille Contenus](https://gr491.isit-europe.org/?famille=contenus&num_reco=3), déjà citée au [critère 5.3](../5-3_definition-videos/), le conseil [« Est-ce que les CODECS des sons sont compressés au maximum ? »](https://gr491.isit-europe.org/crit.php?id=3-contenus-le-volume-de-donnees-utilise-par-la-a013d4) pose pourtant le compromis au cœur du critère 5.4 : « Les mécanismes de compression audio (CODEC) vont réduire le volume de données échangées mais demander plus de ressources CPU pour décoder et restituer les sons sur le périphérique utilisateur. »
+Le [GR491](https://gr491.isit-europe.org/) (INR) n'a pas de critère sur les codecs vidéo. Son conseil sur l'audio, [« Est-ce que les CODECS des sons sont compressés au maximum ? »](https://gr491.isit-europe.org/crit.php?id=3-contenus-le-volume-de-donnees-utilise-par-la-a013d4) ([recommandation n°3 de la famille Contenus](https://gr491.isit-europe.org/?famille=contenus&num_reco=3)), pose pourtant le compromis au cœur du 5.4 : la compression réduit les données échangées, mais demande « plus de ressources CPU pour décoder ».
 
-Le RGESN tranche ce compromis pour la vidéo. Un codec plus efficace réduit le volume transféré, mais son décodage demande plus de calcul, sauf si le terminal dispose d'un décodeur matériel. D'où la condition du moyen de test : des codecs « accélérés matériellement par la majorité du parc des terminaux ». Un codec très efficace, mais décodé par le processeur sur la plupart des terminaux, déplace l'impact du réseau vers le terminal, au détriment de son autonomie et de sa durée de vie.
-
-Le test associé à ce conseil, « La qualité du son est-elle réduite et testée pour rester compréhensive ? », suit la même logique que le RGESN : la qualité la plus faible qui reste compréhensible.
+Le RGESN le tranche par l'accélération matérielle : un codec très efficace, mais décodé par le processeur, déplace l'impact du réseau vers le terminal.
 
 {{% /tab %}}
 
@@ -167,7 +147,7 @@ Le test associé à ce conseil, « La qualité du son est-elle réduite et test�
 
 Profil(s) métier concerné(s) : `Développeur`, `Architecte Logiciel`
 
-Le RGESN cite trois codecs efficaces (AV1, VP9 et HEVC) et accepte H.264 en repli. D'après [Can I use](https://caniuse.com/) (consulté le 20 octobre 2026), en part des navigateurs utilisés dans le monde, et la [documentation MDN sur les codecs vidéo](https://developer.mozilla.org/en-US/docs/Web/Media/Guides/Formats/Video_codecs) pour le décodage matériel :
+Le RGESN cite trois codecs efficaces (AV1, VP9 et HEVC) et accepte H.264 en repli. D'après [Can I use](https://caniuse.com/) (consulté le 20 octobre 2026), en part des navigateurs utilisés dans le monde, et la [documentation MDN sur les codecs vidéo](https://developer.mozilla.org/en-US/docs/Web/Media/Guides/Formats/Video_codecs) :
 
 | Codec | Prise en charge | Décodage matériel | Rôle |
 |---|---:|---|---|
@@ -176,11 +156,7 @@ Le RGESN cite trois codecs efficaces (AV1, VP9 et HEVC) et accepte H.264 en repl
 | [HEVC](https://caniuse.com/hevc) | 19,99 % (+ 74,95 % partielle) | Dans Chrome, Edge et Firefox, prise en charge souvent limitée aux terminaux équipés d'un décodeur matériel | Codec breveté, soumis à licence (MDN) |
 | [H.264](https://caniuse.com/mpeg4) | 97,49 % | Très répandu (MDN) | Repli uniquement, à partir de 720p |
 
-**Lisible ne veut pas dire décodé matériellement.** Chrome et Firefox intègrent un décodeur AV1 logiciel (dav1d) : ils lisent AV1 sur tous les terminaux, y compris sans décodeur matériel. La vidéo est alors décodée par le processeur, ce que l'objectif du critère cherche justement à éviter. Safari fait l'inverse et ne lit AV1 qu'avec un décodeur matériel.
-
-La condition « majorité du parc des terminaux » dépend donc du public du service. Pour un outil interne utilisé sur des ordinateurs récents, AV1 peut la remplir. Pour un service grand public, consulté aussi sur d'anciens terminaux (voir le [critère 2.1](../../specifications/2-1_profils-materiels/)), VP9 peut être le choix le plus sûr. Dans tous les cas, la décision se vérifie sur des terminaux représentatifs, avec la méthode de l'étape 5 de l'onglet « Mise en œuvre technique ».
-
-L'API Media Capabilities (`navigator.mediaCapabilities.decodingInfo()`) semble faite pour ce choix : elle indique si un décodage serait `powerEfficient`. Mais MDN précise que les navigateurs répondent `smooth` et `powerEfficient` tant qu'ils n'ont pas enregistré de statistiques sur l'appareil (« until stats on this device have been recorded »). On ne peut donc pas s'y fier dès la première visite.
+**Lisible ne veut pas dire décodé matériellement.** Chrome et Firefox lisent AV1 sur tous les terminaux grâce à un décodeur logiciel (dav1d), donc par le processeur quand le terminal n'a pas de décodeur matériel. La condition « majorité du parc des terminaux » dépend du public : AV1 peut la remplir pour un outil interne utilisé sur des ordinateurs récents ; pour un service grand public, consulté aussi sur d'anciens terminaux (voir le [critère 2.1](../../specifications/2-1_profils-materiels/)), VP9 est le choix le plus sûr.
 
 {{% /tab %}}
 
@@ -188,7 +164,7 @@ L'API Media Capabilities (`navigator.mediaCapabilities.decodingInfo()`) semble f
 
 Profil(s) métier concerné(s) : `Développeur`, `Contributeur`
 
-**1. Encoder une fois, avant la mise en ligne** (voir les onglets RWEB et W3C). En reprenant la vidéo 720p du [critère 5.3](../5-3_definition-videos/), avec FFmpeg :
+**1. Encoder une fois, avant la mise en ligne.** En reprenant la vidéo 720p du [critère 5.3](../5-3_definition-videos/), avec FFmpeg :
 
 ```bash
 # Version principale : AV1 + Opus (WebM), débit variable plafonné
@@ -202,12 +178,11 @@ ffmpeg -i source.mp4 -vf "scale=-2:720" \
        -c:a aac -b:a 64k -ac 1 -movflags +faststart video-720p.mp4
 ```
 
-- **`-crf`** fixe une qualité cible plutôt qu'un débit : c'est l'encodage à débit variable demandé par le RGESN. 35 est la valeur par défaut de SVT-AV1 (échelle de 1 à 70), 23 celle de x264. Plus la valeur est haute, plus le fichier est léger.
-- **`-maxrate` et `-bufsize`** ajoutent le plafond : en moyenne sur 2 secondes (3 000 kbit de tampon à 1 500 kbit/s), le débit ne doit pas dépasser 1,5 Mbit/s. Ce plafond se choisit d'après la connexion la plus lente visée. Le [critère 2.3](../../specifications/2-3_connexion-bas-debit/) teste le service à 512 kbit/s en fixe : à ce débit, seule une version de plus faible définition (critère 5.3) se lit sans attente.
-- **`-preset`** règle le compromis entre vitesse d'encodage et taille du fichier : plus la valeur est basse, plus l'encodage est lent et le fichier compact.
-- **Audio** : `-ac 1` passe la piste en mono, ce qui convient à une vidéo de parole (conférence, tutoriel). Le [wiki de Xiph.Org](https://wiki.xiph.org/Opus_Recommended_Settings), qui maintient la bibliothèque de référence d'Opus, recommande 24 kbit/s en mono pour un livre audio ou un podcast, et 64 à 96 kbit/s en stéréo pour de la musique, débits auxquels « Opus has better quality than MP3, AAC and Vorbis ». Pour une vidéo musicale, remplacer `-b:a 24k -ac 1` par `-b:a 96k`. AAC, moins efficace, demande un débit plus élevé dans la version de repli.
+- **`-crf`** fixe une qualité cible plutôt qu'un débit : c'est le débit variable demandé par le RGESN. Plus la valeur est haute, plus le fichier est léger (35 est la valeur par défaut de SVT-AV1, 23 celle de x264).
+- **`-maxrate` et `-bufsize`** plafonnent le débit à 1,5 Mbit/s en moyenne sur 2 secondes. Ce plafond se choisit d'après la connexion la plus lente visée (voir le [critère 2.3](../../specifications/2-3_connexion-bas-debit/)).
+- **Audio** : `-ac 1` passe la piste en mono pour une vidéo de parole. D'après le [wiki de Xiph.Org](https://wiki.xiph.org/Opus_Recommended_Settings), Opus suffit à 24 kbit/s en mono pour de la parole, 64 à 96 kbit/s en stéréo pour de la musique.
 
-**2. Régler la qualité d'après le rendu.** Le RGESN demande « le niveau de qualité le plus faible sans dégrader la vidéo visuellement ». La démarche est la même qu'au [critère 5.2](../5-2_compression-images/) pour les images. On encode un extrait de 20 secondes, choisi parmi les scènes les plus difficiles (mouvements rapides, texte à l'écran, dégradés), à plusieurs niveaux de qualité :
+**2. Régler la qualité d'après le rendu**, comme pour les images au [critère 5.2](../5-2_compression-images/) : encoder un extrait difficile (mouvements rapides, texte à l'écran, dégradés) à plusieurs niveaux de qualité.
 
 ```bash
 for crf in 35 40 45; do
@@ -216,9 +191,9 @@ for crf in 35 40 45; do
 done
 ```
 
-Regarder les extraits **à leur taille d'affichage réelle** et retenir la valeur la plus haute sans défaut visible : aplats dans les dégradés, texte flou, blocs dans les scènes en mouvement. Comme au critère 5.2, on calibre une fois par **type de vidéo** (conférence filmée, capture d'écran, animation…), puis on applique la valeur retenue à toutes les vidéos du même type. Dans HandBrake, la même démarche passe par l'aperçu (*Preview*) et le curseur « Constant Quality ».
+Regarder les extraits **à leur taille d'affichage réelle** et retenir la valeur la plus haute sans défaut visible, une fois par **type de vidéo** (conférence filmée, capture d'écran, animation…).
 
-**3. Proposer les deux versions dans l'élément `<video>`.** Le navigateur prend la première source qu'il sait lire et ne télécharge qu'elle :
+**3. Proposer les deux versions dans l'élément `<video>`.** Grâce au paramètre `codecs`, le navigateur prend la première source qu'il sait lire, sans télécharger les autres :
 
 ```html
 <video controls preload="none" width="1280" height="720" poster="conference.webp">
@@ -227,9 +202,7 @@ Regarder les extraits **à leur taille d'affichage réelle** et retenir la valeu
 </video>
 ```
 
-- Le paramètre `codecs` permet au navigateur de choisir sans télécharger le fichier. `av01.0.05M.08` désigne de l'AV1 en profil Main, niveau 3.1, 8 bits, ce que produit la commande de l'étape 1 en 720p. `avc1.64001F` désigne du H.264 en profil High, niveau 3.1.
-- L'ordre des sources traduit le choix de l'onglet « Codecs et décodage matériel ». AV1 ne passe en premier que si la majorité du parc le décode matériellement ; sinon, une version VP9 prend sa place (encodeur `libvpx-vp9` de FFmpeg, mais voir la limite de son plafond à l'étape 4).
-- `preload="none"` évite tout téléchargement avant que l'utilisateur lance la lecture (voir le [critère 4.1](../../ux-ui/4-1_lecture-automatique/)).
+AV1 ne passe en premier que si la majorité du parc le décode matériellement ; sinon, une version VP9 prend sa place. `preload="none"` évite tout téléchargement avant le clic (voir le [critère 4.1](../../ux-ui/4-1_lecture-automatique/)).
 
 **4. Vérifier l'encodage.** `ffprobe`, fourni avec FFmpeg, donne les codecs, la définition et le nombre de canaux à reporter dans la déclaration :
 
@@ -246,7 +219,7 @@ ffprobe -v error -select_streams v:0 -show_entries packet=pts_time,size -of csv=
   | sort -n
 ```
 
-Exemple sur une séquence de test de 10 secondes : 5 secondes d'aplat de couleur, puis 5 secondes d'image animée couverte de bruit, le contenu le plus difficile à compresser. Encodage en 720p avec la commande de l'étape 1 (FFmpeg avec SVT-AV1 3.1.2) :
+Testé sur une séquence de 10 secondes, 5 secondes d'aplat de couleur puis 5 secondes de bruit, le contenu le plus difficile à compresser (720p, SVT-AV1 3.1.2) :
 
 | | Sans plafond | Avec plafond à 1,5 Mbit/s |
 |---|---:|---:|
@@ -254,9 +227,9 @@ Exemple sur une séquence de test de 10 secondes : 5 secondes d'aplat de couleur
 | Débit sur le bruit, seconde par seconde | 13,8 à 19,6 Mbit/s | 1,1 à 2,8 Mbit/s |
 | Poids du fichier | 10,8 Mo | 1,3 Mo |
 
-Le débit variable fait chuter le débit sur la scène simple, avec ou sans plafond. Le plafond contient la scène complexe, au prix d'une qualité dégradée sur cette scène : c'est le compromis voulu par le RGESN pour rester « lisible avec une connexion internet à bas débit ». Ce n'est pas une limite stricte. SVT-AV1 autorise par défaut un dépassement de 50 % (paramètre [`mbr-overshoot-pct`](https://gitlab.com/AOMediaCodec/SVT-AV1/-/blob/master/Docs/Parameters.md)), d'où les pointes à 2,8 Mbit/s. L'encodeur VP9 l'est encore moins : sur la même séquence en 1080p, `libvpx-vp9` avec `-crf 33 -b:v 3M` a produit 10,9 Mbit/s en moyenne, contre 2,2 Mbit/s pour SVT-AV1 plafonné à 3 Mbit/s.
+Le plafond contient la scène complexe, au prix de sa qualité. Ce n'est pas une limite stricte : SVT-AV1 autorise un dépassement de 50 % ([`mbr-overshoot-pct`](https://gitlab.com/AOMediaCodec/SVT-AV1/-/blob/master/Docs/Parameters.md)), et l'encodeur VP9 `libvpx-vp9` le respecte encore moins.
 
-**5. Vérifier le décodage matériel** sur des terminaux représentatifs du parc. Dans Chrome ou Edge, ouvrir les outils de développement, puis le panneau **Media** (menu « More tools »). Pendant la lecture, la propriété **Hardware decoder** (décodeur matériel) vaut `true` si la vidéo est décodée par le processeur graphique. La propriété **Decoder name** donne le décodeur utilisé : `Dav1dVideoDecoder` (AV1), `VpxVideoDecoder` (VP9) ou `FFmpegVideoDecoder` signalent un décodage logiciel, par le processeur. La page `chrome://gpu`, section « Video Acceleration Information », liste aussi les codecs que le terminal décode matériellement.
+**5. Vérifier le décodage matériel** sur des terminaux représentatifs du parc. Dans Chrome ou Edge, ouvrir le panneau **Media** des outils de développement (menu « More tools ») : pendant la lecture, **Hardware decoder** vaut `true` si la vidéo est décodée par le processeur graphique. Dans **Decoder name**, `Dav1dVideoDecoder` (AV1) ou `VpxVideoDecoder` (VP9) signalent un décodage logiciel.
 
 **6. Documenter**, comme l'exige le moyen de test, dans la déclaration d'écoconception. Par exemple :
 
@@ -270,15 +243,12 @@ Le débit variable fait chuter le débit sur la scène simple, avec ou sans plaf
 
 Profil(s) métier concerné(s) : `Porteur de projet`, `Développeur`
 
-Le critère 5.4 forme une paire avec le [critère 5.3](../5-3_definition-videos/) (définition adaptée), déjà publié sur ce site. Le 5.3 porte sur la **définition**, le 5.4 sur le **codec** et son **réglage**. Les deux partagent le seuil de 720p : en dessous, le moyen de test du 5.4 accepte H.264 seul. Le mode « sobriété énergétique » du 5.3, plafonné à 480p sur smartphone, peut donc rester en H.264, à condition d'être encodé en débit variable.
+Le 5.4 forme une paire avec le [critère 5.3](../5-3_definition-videos/) : le 5.3 porte sur la **définition**, le 5.4 sur le **codec**. Sous 720p, le moyen de test du 5.4 accepte H.264 seul, à condition d'un encodage en débit variable.
 
-Le RGESN renvoie lui-même au [critère 5.6](../5-6_compression-audio/) (compression des contenus audio) pour le choix entre mono et stéréo. Le [critère 5.5](../5-5_ecoute-seule/) (mode « écoute seule ») donne encore plus de poids à ce réglage : dans ce mode, la piste son est tout ce qui est transféré.
-
-Plusieurs critères de la famille Spécifications, déjà publiés, entrent en jeu :
-
-- le [critère 2.10](../../specifications/2-10_services-tiers/) (services tiers) demande qu'une vidéo intégrée depuis un service tiers valide, entre autres, le critère 5.4. Sur YouTube, par exemple, un clic droit sur le lecteur, puis « Stats for nerds », affiche les codecs effectivement reçus (`av01`, `vp09` ou `avc1` pour la vidéo, `opus` ou `mp4a` pour le son) ;
-- le [critère 2.4](../../specifications/2-4_anciennes-versions-os/) (anciennes versions d'OS et de navigateurs) : la version de repli en H.264 sert précisément les terminaux qui ne lisent pas le codec principal ;
-- le [critère 2.3](../../specifications/2-3_connexion-bas-debit/) (connexion bas débit) donne le débit de référence pour choisir le plafond.
+- le [critère 5.6](../5-6_compression-audio/) (compression audio) : le choix entre mono et stéréo ;
+- le [critère 5.5](../5-5_ecoute-seule/) (écoute seule) : la piste son est alors tout ce qui est transféré ;
+- le [critère 2.10](../../specifications/2-10_services-tiers/) (services tiers) : une vidéo YouTube intégrée doit aussi valider le 5.4. Un clic droit sur le lecteur, puis « Stats for nerds », affiche les codecs reçus ;
+- le [critère 2.3](../../specifications/2-3_connexion-bas-debit/) (bas débit) : le débit de référence pour choisir le plafond.
 
 {{% /tab %}}
 {{< /tabs >}}
@@ -292,15 +262,9 @@ Plusieurs critères de la famille Spécifications, déjà publiés, entrent en j
 
 {{% tab tabName="Retours d'expériences" %}}
 
-[DiaLog](https://dialog.beta.gouv.fr/ecoconception) (beta.gouv.fr, [déclaration du 23 avril 2025](https://dialog.beta.gouv.fr/files/2025-04-23%20-%20Declaration.ecoconception.DiaLog-2_compressed.pdf)) marque les critères 5.3, 5.4 et 5.5 **« Non-applicable »** : « Pas de vidéo ». La justification correspond exactement au cas prévu par le RGESN (« N/A si le service numérique ne propose pas de vidéos »).
+[DiaLog](https://dialog.beta.gouv.fr/ecoconception) (beta.gouv.fr, [déclaration du 23 avril 2025](https://dialog.beta.gouv.fr/files/2025-04-23%20-%20Declaration.ecoconception.DiaLog-2_compressed.pdf)) marque les critères [5.3](../5-3_definition-videos/), 5.4 et [5.5](../5-5_ecoute-seule/) **« Non-applicable »** : « Pas de vidéo », le cas prévu par le RGESN.
 
-Netflix indique selon un [billet de son blog technique](https://netflixtechblog.com/av1-now-powering-30-of-netflix-streaming-02f592242d80) de décembre 2025, repris par [Streaming Media Blog](https://www.streamingmediablog.com/2025/12/netflix-av1.html) :
-
-- AV1 représente environ **30 %** des visionnages, derrière H.264 (AVC), qui reste le premier codec ;
-- les sessions en AV1 consomment **un tiers de bande passante en moins** qu'en H.264 ou en HEVC, avec **45 %** d'interruptions pour chargement en moins ;
-- **88 %** des téléviseurs, box et clés de streaming soumis à la certification Netflix entre 2021 et 2025 prennent en charge AV1.
-
-Ce dernier chiffre porte sur les modèles récents, pas sur l'ensemble du parc installé. Il montre que, sur les téléviseurs récents, AV1 peut remplir la condition de décodage matériel du RGESN. Netflix garde H.264 pour les autres terminaux : c'est le schéma du critère 5.4, un codec efficace accompagné d'un repli.
+Netflix indique, dans un [billet de son blog technique](https://netflixtechblog.com/av1-now-powering-30-of-netflix-streaming-02f592242d80) de décembre 2025 repris par [Streaming Media Blog](https://www.streamingmediablog.com/2025/12/netflix-av1.html), qu'AV1 représente environ **30 %** des visionnages, derrière H.264. Les sessions en AV1 consomment **un tiers de bande passante en moins**, avec **45 %** d'interruptions pour chargement en moins. **88 %** des téléviseurs et boîtiers certifiés entre 2021 et 2025 prennent en charge AV1. Netflix garde H.264 pour les autres terminaux : c'est le schéma du 5.4, un codec efficace accompagné d'un repli.
 
 {{% /tab %}}
 

@@ -79,7 +79,7 @@ Pour valider ce critère :
 
 Via ces différentes sources :
 
-{{< tabs tabTotal="3">}}
+{{< tabs tabTotal="4">}}
 {{% tab tabName="Semantic Versioning" %}}
 
 Profil(s) métier concerné(s) : `Architecte Logiciel`, `Développeur`
@@ -130,6 +130,16 @@ Le même principe existe aussi au niveau des systèmes d'exploitation, avec là 
 | macOS | Pas de politique LTS publiée | Apple ne publie **aucun engagement officiel de durée de support** — une nouvelle version majeure par an, avec des correctifs de sécurité généralement maintenus sur les **deux versions précédentes** en plus de la dernière (donc ~3 ans de facto), sans annonce publique de fin de support ni garantie contractuelle (suivi communautaire via [endoflife.date](https://endoflife.date/macos)). |
 
 Le signal à retenir : une politique « LTS » n'est pas un standard universel — elle doit être définie et documentée pour le langage/framework/OS réellement utilisé, plutôt que supposée par analogie avec Node.js ou Ubuntu.
+
+{{% /tab %}}
+
+{{% tab tabName="Critère associé" %}}
+
+Profil(s) métier concerné(s) : `Architecte Logiciel`, `Responsable Qualité`
+
+- le [critère 3.4](../3-4_mises-a-jour-correctives/) (mises à jour correctives des équipements) : la durée pendant laquelle les correctifs sont fournis ;
+- le [critère 3.6](../3-6_mises-a-jour-incrementielles/) (mises à jour incrémentielles) : des mises à jour qui ne transfèrent que ce qui change ;
+- le [critère 2.4](../../specifications/2-4_anciennes-versions-os/) (anciennes versions d'OS et de navigateurs) : un correctif séparé reste installable sur une version ancienne.
 
 {{% /tab %}}
 {{< /tabs >}}

@@ -70,7 +70,7 @@ Démontrer dans la déclaration d'écoconception l'adaptation de la consommation
 
 Via ces différentes sources :
 
-{{< tabs tabTotal="4">}}
+{{< tabs tabTotal="5">}}
 {{% tab tabName="INR - GR491" %}}
 
 Profil(s) métier concerné(s) : `Architecte Système`, `Responsable IT`
@@ -122,6 +122,17 @@ Les mécanismes ci-dessus ajustent les ressources en temps réel selon la charge
 Les deux approches ci-dessus — auto-scaling temps réel et rightsizing périodique — sont présentées séparément ici car ce sont deux mécanismes distincts, mais certaines plateformes commerciales les unifient en un seul moteur continu plutôt que de traiter chaque plateforme (VM, conteneurs, cloud, on-premises) séparément : [**IBM Turbonomic**](https://www.ibm.com/products/turbonomic) (ex-Turbonomic, racheté par IBM en 2021) analyse en continu la demande réelle des applications pour à la fois redimensionner les VM et conteneurs (rightsizing), replacer les charges de travail (placement) et ajuster les répliques Kubernetes, sur un périmètre hybride couvrant VMware, AWS, Azure, GCP et OpenShift/Kubernetes. Chaque action proposée est simulée et validée au regard des contraintes de performance avant exécution — automatique ou soumise à validation selon la politique définie. IBM revendique une réduction moyenne de **33 %** du gaspillage cloud et infrastructure chez ses clients, un chiffre à prendre comme une donnée commerciale plutôt qu'une mesure indépendante.
 
 Pour vérifier après coup que ces mécanismes fonctionnent réellement (plutôt que de les supposer actifs), voir les outils de suivi continu déjà cités en page [Outils > Run](../../../outils/par-phase-projet/run/) (Kepler, Scaphandre, tableaux de bord natifs cloud) : c'est la confrontation entre ressources allouées et ressources réellement consommées, dans la durée, qui objective le « Suivi de l'évolution du ratio » demandé par le critère.
+
+{{% /tab %}}
+
+{{% tab tabName="Critère associé" %}}
+
+Profil(s) métier concerné(s) : `Architecte Système`, `Développeur`
+
+- le [critère 3.7](../3-7_environnements-developpement-test/) (environnements de développement et de test) : la même adaptation, pour les environnements hors production ;
+- le [critère 7.1](../../backend/7-1_cache-serveur/) (cache serveur) : un cache absorbe les pics sans ajouter de serveur ;
+- le [critère 8.9](../../hebergement/8-9_duplication-donnees/) (duplication des données) : le niveau de disponibilité visé fixe la capacité de secours ;
+- le [critère 8.10](../../hebergement/8-10_decalage-asynchrone/) (traitements décalés) : décaler les calculs lisse la charge.
 
 {{% /tab %}}
 {{< /tabs >}}

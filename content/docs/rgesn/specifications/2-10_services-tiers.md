@@ -83,17 +83,6 @@ Cette question précède logiquement celle du critère 2.10 : avant même de com
 
 {{% /tab %}}
 
-{{% tab tabName="Critères associés" %}}
-
-Profil(s) métier concerné(s) : `Architecte Logiciel`, `Responsable RSE/Numérique soutenable`
-
-Le « Moyen de test » du critère 2.10 renvoie vers une dizaine d'autres critères RGESN, ce qui en fait l'un des critères les plus transversaux du référentiel :
-
-- Pour **tout** service tiers : les critères [1.4](../../strategie/1-4_revue-ecoconception/) (revue d'écoconception) et [1.5](../../strategie/1-5_objectifs-environnementaux/) (objectifs environnementaux) s'appliquent systématiquement — le service tiers doit être traité comme une brique du service numérique à part entière, pas comme une boîte noire externe qu'on peut ignorer.
-- Selon le **type** de service tiers, des critères UX/UI et médias supplémentaires s'appliquent (vidéo : 4.4, 4.11, 4.12, 4.15, 5.3, 5.4, 5.5 ; réseau social : 4.1, 4.6, 4.9, 4.12, 4.13, 4.15 ; générateur d'image : 4.6, 4.11, 4.12, 4.13, 4.15). Ces portent notamment sur la lecture automatique, le chargement différé et le poids des médias.
-
-{{% /tab %}}
-
 {{% tab tabName="RWEB (GreenIT)" %}}
 
 Profil(s) métier concerné(s) : `Développeur`, `Designer`
@@ -149,6 +138,17 @@ Ces alternatives rejoignent directement la logique du GR491 ci-contre : avant de
 Profil(s) métier concerné(s) : `Architecte Logiciel`, `Développeur`
 
 Pour objectiver le poids réel des services tiers déjà en place plutôt que de le découvrir a posteriori, [Request Map Generator](https://requestmap.webperf.tools/) (Simon Hearne, basé sur l'API WebPageTest) génère une carte interactive de toutes les requêtes déclenchées par une page, en distinguant les domaines internes des domaines tiers et les requêtes que ces derniers déclenchent à leur tour en cascade — utile pour visualiser concrètement l'ampleur des services tiers avant de statuer sur leur avancement au regard des critères ci-dessus.
+
+{{% /tab %}}
+
+{{% tab tabName="Critère associé" %}}
+
+Profil(s) métier concerné(s) : `Architecte Logiciel`, `Responsable RSE/Numérique soutenable`
+
+Le « Moyen de test » du critère 2.10 renvoie vers une dizaine d'autres critères RGESN, ce qui en fait l'un des critères les plus transversaux du référentiel :
+
+- Pour **tout** service tiers : les critères [1.4](../../strategie/1-4_revue-ecoconception/) (revue d'écoconception) et [1.5](../../strategie/1-5_objectifs-environnementaux/) (objectifs environnementaux) s'appliquent systématiquement — le service tiers doit être traité comme une brique du service numérique à part entière, pas comme une boîte noire externe qu'on peut ignorer.
+- Selon le **type** de service tiers, des critères UX/UI et médias supplémentaires s'appliquent (vidéo : [4.4](../../ux-ui/4-4_activation-service-tiers/), [4.11](../../ux-ui/4-11_poids-formats-fichiers/), [4.12](../../ux-ui/4-12_impacts-fonctionnalites/), [4.15](../../ux-ui/4-15_controle-usages/), [5.3](../../contenus/5-3_definition-videos/), [5.4](../../contenus/5-4_compression-videos/), [5.5](../../contenus/5-5_ecoute-seule/) ; réseau social : [4.1](../../ux-ui/4-1_lecture-automatique/), [4.6](../../ux-ui/4-6_contenu-porteur-information/), [4.9](../../ux-ui/4-9_requetes-saisie-utilisateur/), [4.12](../../ux-ui/4-12_impacts-fonctionnalites/), [4.13](../../ux-ui/4-13_notifications/), [4.15](../../ux-ui/4-15_controle-usages/) ; générateur d'image : [4.6](../../ux-ui/4-6_contenu-porteur-information/), [4.11](../../ux-ui/4-11_poids-formats-fichiers/), [4.12](../../ux-ui/4-12_impacts-fonctionnalites/), [4.13](../../ux-ui/4-13_notifications/), [4.15](../../ux-ui/4-15_controle-usages/)). Ces critères portent notamment sur la lecture automatique, le chargement différé et le poids des médias.
 
 {{% /tab %}}
 {{< /tabs >}}

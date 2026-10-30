@@ -114,7 +114,7 @@ La fiche [**RWEB 0047 — « Limiter le nombre de requêtes HTTP »**](https://r
 
 Profil(s) métier concerné(s) : `Designer`, `Développeur`
 
-La ressource des Designers Éthiques [**« RGESN, ce que doivent faire les designers »**](https://designersethiques.org/fr/thematiques/ecoconception/rgesn-ce-que-doivent-faire-les-designers), déjà citée au [critère 4.7](../4-7_choix-sobre-format/) sur ce site, consacre au critère 4.9 trois lignes de la rubrique **Formulaires**, dans la phase de **prototypage** :
+La ressource des Designers Éthiques [**« RGESN, ce que doivent faire les designers »**](https://designersethiques.org/fr/thematiques/ecoconception/rgesn-ce-que-doivent-faire-les-designers), déjà citée au [critère 4.7](../4-7_choix-sobre-format/), consacre au critère 4.9 trois lignes de la rubrique **Formulaires**, dans la phase de **prototypage** :
 
 - « Limiter les requêtes serveur lors de la saisie utilisateur : éviter l'auto-complétion, les résultats suggérés… »
 - « Si sa mise en place est justifiée, attendre d'avoir 3 caractères et 500 ms après chaque saisie avant de lancer une requête réseau. »
@@ -207,7 +207,7 @@ Pour le **contrôle**, les outils de développement du navigateur suffisent :
 
 Profil(s) métier concerné(s) : `Développeur`, `Architecte Logiciel`
 
-La première phrase de la « Mise en œuvre » du critère 4.9 (« réduire les appels à des API, scripts, librairies ou polices de caractères tiers ») dépasse largement le seul cas de la saisie utilisateur, et recoupe deux critères déjà publiés sur ce site :
+La première phrase de la « Mise en œuvre » du critère 4.9 (« réduire les appels à des API, scripts, librairies ou polices de caractères tiers ») dépasse largement le seul cas de la saisie utilisateur, et recoupe deux autres critères :
 
 - le [critère 4.4](../4-4_activation-service-tiers/) (activation des services tiers), qui porte sur le **moment** où un script ou un service tiers est chargé — systématiquement, ou seulement à la demande de l'utilisateur ;
 - le [critère 4.8](../4-8_polices-caracteres/) (polices de caractères téléchargées), qui fixe des seuils chiffrés (deux polices, 400 Ko) pour l'un des appels tiers explicitement cités ici.

@@ -29,7 +29,7 @@ toc: true
 | **Phase** | `Conception` |
 | **Priorité** | `Recommandé` |
 | **Difficulté** | `Moyen` |
-| **Applicabilité** | `Tous les services` |
+| **Applicabilité** | `Applicable à tous les services` |
 | **Métiers concernés** | `Architecte Logiciel` `Développeur` `Responsable RSE/Numérique soutenable` |
 | **Permalink** | https://ecoresponsable.numerique.gouv.fr/publications/referentiel-general-ecoconception/critere/2.6/ |
 {{< /table >}}
@@ -73,7 +73,7 @@ Ces revues sont — le cas échéant — référencées dans la **déclaration d
 
 Via ces différentes sources :
 
-{{< tabs tabTotal="3">}}
+{{< tabs tabTotal="4">}}
 {{% tab tabName="Empreinte Projet (ADEME)" %}}
 
 Profil(s) métier concerné(s) : `Architecte Logiciel`, `Responsable RSE/Numérique soutenable`
@@ -109,6 +109,17 @@ Cette revue en deux temps s'outille différemment selon la phase :
 
 - **Revue de conception** : [EcoSimulateur](https://www.figma.com/community/plugin/1430170108116488365/ecosimulateur) (plugin Figma) donne un retour immédiat sur l'impact d'une maquette pendant que les choix sont encore modifiables — voir la page [Outils > UX Designer](../../../outils/par-metier/ux-designer/).
 - **Revue de code** : [GreenIT-Analysis](https://github.com/cnumr/GreenIT-Analysis), [EcoSonar](https://github.com/green-code-initiative/EcoSonar) et les outils de mesure par processus (Scaphandre, GreenFrame) permettent d'objectiver le coût environnemental du code produit — voir le détail complet sur les pages [Outils > Dev Front](../../../outils/par-metier/dev-front/) et [Outils > Dev Back](../../../outils/par-metier/dev-back/).
+
+{{% /tab %}}
+
+{{% tab tabName="Critère associé" %}}
+
+Profil(s) métier concerné(s) : `Architecte Logiciel`, `Développeur`
+
+- le [critère 1.4](../../strategie/1-4_revue-ecoconception/) (revue d'écoconception) : la revue d'ensemble, à intervalles réguliers ;
+- le [critère 3.1](../../architecture/3-1_architecture-composants/) (composants écoconçus) : le choix des briques se discute en revue de conception ;
+- le [critère 2.9](../2-9_composants-interface/) (composants d'interface) : leur impact s'examine avant de les intégrer ;
+- le [critère 6.1](../../frontend/6-1_poids-requetes-ecran/) (poids et requêtes par écran) : un seuil vérifiable automatiquement à chaque modification.
 
 {{% /tab %}}
 {{< /tabs >}}

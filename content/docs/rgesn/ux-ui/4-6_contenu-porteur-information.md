@@ -68,7 +68,7 @@ Le critère est validé si le service ne contient pas de contenu vidéo, audio o
 
 Via ces différentes sources :
 
-{{< tabs tabTotal="4">}}
+{{< tabs tabTotal="5">}}
 {{% tab tabName="INR - GR491" %}}
 
 Profil(s) métier concerné(s) : `Développeur`, `Designer`
@@ -82,7 +82,7 @@ La même recommandation couvre aussi des questions voisines et complémentaires 
 - « Est-ce que la fonctionnalité peut être proposée sans l'appel de scripts ou de bibliothèques externes ? », 
 - « Est-ce que les fonctionnalités et composants natifs du système peuvent correspondre au besoin ? » 
 
-Un rappel que la question de la pertinence du média (4.6) et celle du poids technique de son implémentation (proche du critère 4.5) sont souvent traitées ensemble dans la pratique.
+Un rappel que la question de la pertinence du média (4.6) et celle du poids technique de son implémentation (proche du [critère 4.5](../4-5_composants-natifs/)) sont souvent traitées ensemble dans la pratique.
 
 {{% /tab %}}
 
@@ -105,7 +105,7 @@ Profil(s) métier concerné(s) : `Développeur`, `Designer`
 Les [Web Sustainability Guidelines](https://www.w3.org/TR/web-sustainability-guidelines/) du W3C couvrent ce critère à travers deux recommandations complémentaires :
 
 - [**« Optimize media to reduce resource use »**](https://www.w3.org/TR/web-sustainability-guidelines/#optimize-media-to-reduce-resource-use) : « Only include media when it supports user experience or improves understanding and keep the number of media items to a minimum. »
-- [**« Design to assist and not to distract »**](https://www.w3.org/TR/web-sustainability-guidelines/#design-to-assist-and-not-to-distract) (déjà citée au critère 4.2) : « Use decorative design only when it improves the user experience, and make optional assets removable or turned off by default. »
+- [**« Design to assist and not to distract »**](https://www.w3.org/TR/web-sustainability-guidelines/#design-to-assist-and-not-to-distract) (déjà citée au [critère 4.2](../4-2_defilement-infini/)) : « Use decorative design only when it improves the user experience, and make optional assets removable or turned off by default. »
 
 Les deux fiches posent la même question de fond que le RGESN, sous un angle légèrement différent : plutôt que d'interdire le contenu décoratif dans l'absolu, elles conditionnent sa présence à une amélioration réelle et démontrable de l'expérience utilisateur — charge à l'équipe projet de documenter cette justification, exactement comme le demande le « Moyen de test » du critère RGESN.
 
@@ -125,6 +125,17 @@ Le guide va jusqu'à relier la question à la captation de l'attention plutôt q
 - « Une vidéo qui attire l'attention de l'utilisateur n'est pas forcément une vidéo qui lui est utile ». 
 
 Sa recommandation pratique, formulée sans détour : « Il est plus important d'avoir les bons mots plutôt qu'une vidéo de remplissage » — un rappel qu'un contenu textuel bien écrit peut parfois remplacer une vidéo, plutôt que la compléter ou l'habiller.
+
+{{% /tab %}}
+
+{{% tab tabName="Critère associé" %}}
+
+Profil(s) métier concerné(s) : `Développeur`, `Designer`
+
+- le [critère 4.1](../4-1_lecture-automatique/) (lecture automatique) : un média utile se lance à la demande ;
+- le [critère 4.7](../4-7_choix-sobre-format/) (format le plus sobre) : le format le plus léger qui porte la même information ;
+- le [critère 5.1](../../contenus/5-1_format-images/) (format des images) : le format de fichier de chaque image ;
+- le [critère 6.4](../../frontend/6-4_dimensions-images/) (dimensions des images) : des images à la taille de leur affichage.
 
 {{% /tab %}}
 {{< /tabs >}}

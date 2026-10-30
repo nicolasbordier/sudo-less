@@ -1,0 +1,18 @@
+{{- /* Durée de lecture des fiches RGESN : texte à 230 mots par minute, code à 600.
+       Seuls comptent les mots contenant une lettre ou un chiffre, pour ne pas compter
+       la ponctuation précédée d'une espace (« : », « ; », guillemets). */ -}}
+{{- with .File -}}
+{{- if and $.IsPage (hasPrefix (replace .Path "\\" "/") "docs/rgesn/") -}}
+{{- $mot := `\S*[\p{L}\p{N}]\S*` -}}
+{{- $mots := len (findRE $mot $.Plain) -}}
+{{- $code := 0 -}}
+{{- range findRE "(?s)```[^\n]*\n.*?\n```" $.RawContent -}}
+  {{- $code = add $code (len (findRE $mot (replaceRE "^```[^\n]*\n|\n```$" "" .))) -}}
+{{- end -}}
+{{- $minutes := int (math.Max 1 (math.Round (add (div (float (sub $mots $code)) 230) (div (float $code) 600)))) -}}
+<p class="reading-time mb-2 opacity-85">
+    <span class="material-icons size-20 align-text-bottom opacity-75" aria-hidden="true">schedule</span>
+    Temps de lecture : environ {{ $minutes }} minute{{ if gt $minutes 1 }}s{{ end }}
+</p>
+{{- end -}}
+{{- end -}}

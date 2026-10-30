@@ -28,7 +28,7 @@ toc: true
 | **Phase** | `Exploration` |
 | **Priorité** | `Prioritaire` |
 | **Difficulté** | `Fort` |
-| **Applicabilité** | `Tous les services` |
+| **Applicabilité** | `Applicable à tous les services` |
 | **Métiers concernés** | `Porteur de projet` `Responsable RSE/Numérique soutenable` `UX Designer` |
 | **Permalink** | https://ecoresponsable.numerique.gouv.fr/publications/referentiel-general-ecoconception/critere/1.1/ |
 {{< /table >}}
@@ -92,8 +92,8 @@ Par ailleurs, cette étude devrait inclure une analyse qualitative des impacts e
 
 Via ces différentes sources :
 
-{{< tabs tabTotal="8">}}
-{{% tab tabName="Designers Ethiques" %}}
+{{< tabs tabTotal="9">}}
+{{% tab tabName="Designers Éthiques" %}}
 
 Profil(s) métier concerné(s) : `Porteur de projet`, `UX Designer`
 
@@ -119,15 +119,7 @@ Nous vous conseillons de consulter en détail :
 
 Profil(s) métier concerné(s) : `Porteur de projet`, `Responsable RSE/Numérique soutenable`
 
-L'ADEME propose un [Guide de questionnement pour le développement de services numériques (2021, 23 pages, téléchargement gratuit sur inscription)](https://librairie.ademe.fr/industrie-et-production-durable/4739-guide-de-questionnement-pour-le-developpement-de-services-numeriques-9791029717932.html), conçu avec Ouishare pour les équipes projet.
-
-Il permet de s'interroger, à chaque étape du projet, sur le sens et l'utilité du recours au numérique, et d'objectiver les effets sociaux et environnementaux associés. Il agit à trois niveaux :
-
-- celui des **pratiques collectives**, en proposant un cadre d'analyse et décisionnel associé au projet ;
-- celui de l'**imaginaire collectif et de la culture de l'organisation**, en permettant de s'extraire des croyances et habitudes ;
-- celui de la **prise de conscience individuelle**, en ouvrant sur une lecture systémique des enjeux.
-
-Ce guide est particulièrement adapté pour ouvrir des espaces de discussion et de débat en amont d'un projet, avant même le cadrage technique.
+L'ADEME propose un [Guide de questionnement pour le développement de services numériques (2021, 23 pages, téléchargement gratuit sur inscription)](https://librairie.ademe.fr/industrie-et-production-durable/4739-guide-de-questionnement-pour-le-developpement-de-services-numeriques-9791029717932.html), conçu avec Ouishare pour les équipes projet. Il aide à s'interroger, à chaque étape, sur le sens et l'utilité du recours au numérique, et à objectiver ses effets sociaux et environnementaux. Il est particulièrement adapté pour ouvrir le débat en amont d'un projet, avant même le cadrage technique.
 
 {{% /tab %}}
 
@@ -135,12 +127,12 @@ Ce guide est particulièrement adapté pour ouvrir des espaces de discussion et 
 
 Profil(s) métier concerné(s) : `Responsable RSE/Numérique soutenable`, `Porteur de projet`
 
-Pour construire concrètement l'arbre de conséquences mentionné dans le « Moyen de test ou de contrôle » de ce critère, l'ADEME met à disposition :
+Pour construire l'arbre de conséquences demandé par le moyen de test, l'ADEME met à disposition :
 
-- l'[outil web Empreinte Projet™ (niveau 1, gratuit et sans inscription)](https://base-empreinte.ademe.fr/empreinte-projet), qui guide pas à pas la comparaison entre un scénario « avec projet » et un scénario de référence « sans projet » ;
-- le [guide méthodologique complet « Empreinte projet : évaluer l'empreinte environnementale d'un projet » (PDF, 2021)](https://librairie.ademe.fr/industrie-et-production-durable/5040-empreinte-projet-evaluer-l-empreinte-environnementale-d-un-projet.html), qui détaille les 5 niveaux de la méthode (du qualitatif niveau 1 jusqu'à l'analyse de cycle de vie multicritère aux niveaux 4 et 5).
+- l'[outil web Empreinte Projet™ (niveau 1, gratuit et sans inscription)](https://base-empreinte.ademe.fr/empreinte-projet), qui compare pas à pas un scénario « avec projet » à un scénario de référence « sans projet » ;
+- le [guide méthodologique « Empreinte projet » (PDF, 2021)](https://librairie.ademe.fr/industrie-et-production-durable/5040-empreinte-projet-evaluer-l-empreinte-environnementale-d-un-projet.html), qui détaille les 5 niveaux de la méthode, jusqu'à l'analyse de cycle de vie.
 
-Le niveau 1, seul requis pour ce critère, permet d'identifier et de comparer qualitativement les conséquences environnementales du service par rapport à une situation de référence où il n'aurait pas été développé — utile notamment pour objectiver les **risques d'effets rebond**.
+Le niveau 1, qualitatif, est le seul requis : il suffit à identifier les **risques d'effets rebond**.
 
 {{% /tab %}}
 
@@ -148,15 +140,15 @@ Le niveau 1, seul requis pour ce critère, permet d'identifier et de comparer qu
 
 Profil(s) métier concerné(s) : `UX Designer`, `Porteur de projet`
 
-Le guide [AFNOR SPEC 2201 « Écoconception des services numériques »](https://www.boutique.afnor.org/fr-fr/norme/afnor-spec-2201/ecoconception-des-services-numeriques/fa203506/323315) (téléchargement gratuit) s'ouvre, dès sa première fiche, sur la même question que ce critère : avant de concevoir la solution, il convient de questionner la pertinence du besoin.
+Le guide [AFNOR SPEC 2201 « Écoconception des services numériques »](https://www.boutique.afnor.org/fr-fr/norme/afnor-spec-2201/ecoconception-des-services-numeriques/fa203506/323315) (avril 2022, consultation gratuite) rassemble 32 fiches pratiques. La norme internationale ISO/IEC TS 20125-1 en est issue (voir l'onglet « Normes internationales »).
 
-Pour cela, le guide propose une grille de questionnement simple à partager avec les équipes projet, connue sous le nom de **règle des 3U** :
+Pour questionner la pertinence du besoin, l'INR propose la **règle des 3U** ([Utile, Utilisable, Utilisé](https://fr.wiki.isit-europe.org/nr/Utile_Utilisable_Utilis%C3%A9)) :
 
-- **Utile** : le service (ou la fonctionnalité) répond-il à un besoin réel et apporte-t-il une valeur ajoutée à l'utilisateur ?
-- **Utilisable** : est-il facile à prendre en main, y compris sans formation spécifique ?
-- **Utilisé** : son usage réel est-il suivi dans le temps, au-delà de la seule intention affichée au moment de la conception ?
+- **Utile** : le service répond-il à un besoin réel ?
+- **Utilisable** : est-il facile à prendre en main, sans formation spécifique ?
+- **Utilisé** : son usage réel est-il suivi dans le temps ?
 
-Un service ou une fonctionnalité qui ne satisfait pas ces trois critères est considéré comme superflu (ce que certains experts qualifient d'« obésité numérique ») et constitue une piste de simplification à privilégier. Voir aussi la fiche de référence de l'INR : [Utile, Utilisable, Utilisé](https://fr.wiki.isit-europe.org/nr/Utile_Utilisable_Utilis%C3%A9).
+Une fonctionnalité qui ne satisfait pas ces trois critères est une piste de simplification.
 
 {{% /tab %}}
 
@@ -164,16 +156,13 @@ Un service ou une fonctionnalité qui ne satisfait pas ces trois critères est c
 
 Profil(s) métier concerné(s) : `Responsable RSE/Numérique soutenable`, `Porteur de projet`
 
-Le critère 1.1 du RGESN est directement issu du [GR491](https://gr491.isit-europe.org/), le Guide de Référence de Conception Responsable de Services Numériques de l'**Institut du Numérique Responsable (INR)** : le RGESN a été construit en ne conservant, parmi les recommandations du GR491, que celles jugées prioritaires et les plus génériques.
+Le RGESN a été construit à partir du [GR491](https://gr491.isit-europe.org/) de l'**Institut du Numérique Responsable (INR)**, en ne gardant que ses recommandations prioritaires et les plus génériques. Sa [famille « Stratégie »](https://gr491.isit-europe.org/?famille=strategie) va plus loin que ce critère :
 
-La [famille « Stratégie » du GR491](https://gr491.isit-europe.org/?famille=strategie) va plus loin que ce critère et aborde des questions complémentaires, par exemple :
+- **Mutualiser plutôt que créer** : une refonte allant vers la mutualisation a-t-elle été étudiée avant de développer un nouveau service ? ([recommandation n°6](https://gr491.isit-europe.org/?famille=strategie&num_reco=6))
+- **Refondre plutôt que reconstruire** un développement existant, si le projet est déjà avancé ([recommandation n°4](https://gr491.isit-europe.org/?famille=strategie&num_reco=4)) ;
+- **Partager les objectifs** de numérique responsable avec toutes les parties prenantes ([recommandation n°1](https://gr491.isit-europe.org/?famille=strategie&num_reco=1)).
 
-- **Mutualisation plutôt que création** : avez-vous étudié des projets de refonte (« reengineering ») allant dans le sens de la mutualisation, donc de la frugalité, plutôt que de développer un nouveau service ? ([recommandation n°6](https://gr491.isit-europe.org/?famille=strategie&num_reco=6))
-- **Refonte vs reconstruction** : dans le cas d'un développement interne déjà existant (CMS, Framework…), quelle est la pertinence de le retravailler sous l'angle d'une optimisation NR plutôt que d'en repartir de zéro, si la démarche NR est peu maîtrisée et le projet déjà avancé ? ([recommandation n°4](https://gr491.isit-europe.org/?famille=strategie&num_reco=4))
-- **Partage des objectifs** : les objectifs de numérique responsable du projet sont-ils exposés clairement et partagés par l'ensemble des parties prenantes, internes comme externes à l'organisation ? ([recommandation n°1](https://gr491.isit-europe.org/?famille=strategie&num_reco=1))
-- **Maturité organisationnelle** : l'organisation est-elle en mesure de faire progresser son niveau de maturité vis-à-vis de l'écoconception grâce à la réalisation de ce projet ?
-
-Cette famille est particulièrement utile aux organisations qui souhaitent structurer une démarche de numérique responsable plus large que la seule dimension environnementale du RGESN (le GR491 couvre aussi les volets social et économique).
+Le GR491 couvre aussi les volets social et économique, au-delà de la seule dimension environnementale du RGESN.
 
 {{% /tab %}}
 
@@ -181,15 +170,15 @@ Cette famille est particulièrement utile aux organisations qui souhaitent struc
 
 Profil(s) métier concerné(s) : `Porteur de projet`, `Responsable RSE/Numérique soutenable`
 
-L'INR (Institut du Numérique Responsable) propose une hiérarchie de décision en [5 étapes, dite des « 5R »](https://fr.wiki.isit-europe.org/nr/5R), à parcourir dans l'ordre avant tout investissement dans une nouvelle solution logicielle ou un nouvel équipement :
+L'INR propose une hiérarchie de décision en [5 étapes, dite des « 5R »](https://fr.wiki.isit-europe.org/nr/5R), à parcourir dans l'ordre avant tout investissement dans une nouvelle solution logicielle ou un nouvel équipement :
 
-1. **Refuser** : la compréhension et l'analyse détaillée du besoin permettent d'établir la réelle nécessité d'investir dans une nouvelle solution logicielle ou un nouvel équipement — c'est exactement la question posée par ce critère 1.1.
-2. **Réduire** : limiter les investissements et installations, en particulier si l'usage envisagé n'est qu'occasionnel.
-3. **Réparer** : évaluer la possibilité de réparer ou de faire évoluer un équipement existant plutôt que de le remplacer.
-4. **Réutiliser** : envisager le prêt, la location ou le matériel reconditionné avant tout achat neuf.
-5. **Recycler** : en dernier recours, confier le matériel hors d'usage à une filière de recyclage DEEE.
+1. **Refuser** : établir la réelle nécessité d'investir, la question même du critère 1.1 ;
+2. **Réduire** les investissements, surtout pour un usage occasionnel ;
+3. **Réparer** ou faire évoluer l'existant plutôt que le remplacer ;
+4. **Réutiliser** : prêt, location ou matériel reconditionné avant tout achat neuf ;
+5. **Recycler** en dernier recours, dans une filière DEEE.
 
-Cette hiérarchie prolonge la logique du critère 1.1 au-delà de la seule question initiale (« Refuser ») : une fois l'utilité du service confirmée, les étapes suivantes guident les arbitrages matériels qui en découlent — voir les critères [1.10](../1-10_api-materiel/) (API ouvertes pour prolonger la durée de vie du matériel) et [2.1](../../specifications/2-1_profils-materiels/) (profils de matériels), ainsi que la fiche [Fin de vie](../../../outils/par-phase-projet/fin-de-vie/) pour le réemploi et le recyclage.
+Une fois l'utilité confirmée, les étapes suivantes guident les choix matériels : voir les critères [1.10](../1-10_api-materiel/) et [2.1](../../specifications/2-1_profils-materiels/), et la fiche [Fin de vie](../../../outils/par-phase-projet/fin-de-vie/).
 
 {{% /tab %}}
 
@@ -197,11 +186,9 @@ Cette hiérarchie prolonge la logique du critère 1.1 au-delà de la seule quest
 
 Profil(s) métier concerné(s) : `Porteur de projet`, `Responsable RSE/Numérique soutenable`
 
-Le programme [beta.gouv.fr](https://beta.gouv.fr/approche/) intègre nativement l'évaluation de l'utilité dans son mode de financement des « startups d'État ». Chaque produit est financé par cycles de 6 mois maximum, à l'issue desquels un [comité d'investissement](https://doc.incubateur.net/gerer-son-produit/gestion-au-quotidien/budget/preparer-un-comite-dinvestissement) (sponsors de l'administration porteuse, incubateur, intrapreneur) confronte les **indicateurs d'impact** mesurés aux objectifs fixés six mois plus tôt.
+Le programme [beta.gouv.fr](https://beta.gouv.fr/approche/) finance ses « startups d'État » par cycles de 6 mois au plus. À chaque fin de cycle, un [comité d'investissement](https://doc.incubateur.net/gerer-son-produit/gestion-au-quotidien/budget/preparer-un-comite-dinvestissement) confronte les **indicateurs d'impact** mesurés aux objectifs fixés.
 
-Si le service ne parvient pas à prouver son utilité, le comité d'investissement peut décider d'arrêter son financement — dès la phase d'investigation (**une idée sur trois est abandonnée avant même la construction d'un produit**) ou plus tard, y compris après plusieurs années (ex. : [Talents numériques](https://beta.gouv.fr/startups/talents.numeriques.html), ou [Peps](https://beta.gouv.fr/startups/peps.html), transféré à une association faute d'impact suffisant pour justifier son maintien par l'État). À l'inverse, un impact avéré peut déclencher un passage en phase d'accélération et une hausse des moyens.
-
-Ce mécanisme illustre concrètement l'esprit du critère 1.1 : l'utilité d'un service numérique ne se présuppose pas, elle se prouve et se réévalue dans la durée.
+Si le service ne prouve pas son utilité, le comité peut arrêter son financement : dès la phase d'investigation, puisque, d'après le [bilan 2025 du programme](https://www.beta.gouv.fr/content/docs/betagouv_bilan_2025.pdf), « une investigation sur trois s'arrête », ou plus tard, comme pour [Talents numériques](https://beta.gouv.fr/startups/talents.numeriques.html). L'utilité d'un service ne se présuppose pas : elle se prouve et se réévalue dans la durée.
 
 {{% /tab %}}
 
@@ -209,17 +196,29 @@ Ce mécanisme illustre concrètement l'esprit du critère 1.1 : l'utilité d'un 
 
 Profil(s) métier concerné(s) : `Porteur de projet`, `Responsable RSE/Numérique soutenable`, `UX Designer`
 
-Plusieurs outils gratuits permettent d'outiller concrètement l'évaluation de l'utilité et des impacts environnementaux d'un service numérique :
+Des outils gratuits pour évaluer l'utilité et les impacts d'un service :
 
-- [EcoSimulateur](https://www.figma.com/community/plugin/1430170108116488365/ecosimulateur) (Adveris) : plugin Figma gratuit qui prédit en temps réel le score EcoIndex d'une maquette, directement pendant la conception — avant même d'écrire la moindre ligne de code.
-- [NumEcoDiag](https://ecoresponsable.numerique.gouv.fr/ressources/documents-reference/referentiel-general-ecoconception/numecodiag/) (MiNumEco / DINUM) : extension navigateur gratuite qui permet de s'auto-évaluer sur les 79 critères du RGESN, dont le critère 1.1. Elle génère un badge HTML et un export CSV à intégrer dans la déclaration d'écoconception.
-- [monACVnumérique.fr](https://globalecoconcept.com/outil/) : outil en ligne permettant de réaliser une ACV simplifiée (screening) d'un service numérique en quelques minutes à partir de 10 questions macro. Utile pour obtenir rapidement un ordre de grandeur des impacts environnementaux et argumenter la justification de l'utilité du service face à ces impacts.
-- [NumEcoEval](https://spote.developpement-durable.gouv.fr/offre/numecoeval-outil-de-mesure-de-l-empreinte-environnementale-du-numerique) (MiNumEco / MTE) : solution open source permettant de calculer l'empreinte environnementale d'un système d'information complet (équipements, VMs, applications). Plus adapté à l'échelle d'un SI qu'à un seul service.
+- [EcoSimulateur](https://www.figma.com/community/plugin/1430170108116488365/ecosimulateur) (Adveris) : plugin Figma qui prédit le score EcoIndex d'une maquette, avant d'écrire du code ;
+- [NumEcoDiag](https://ecoresponsable.numerique.gouv.fr/ressources/documents-reference/referentiel-general-ecoconception/numecodiag/) (MiNumEco) : extension navigateur pour s'auto-évaluer sur les critères du RGESN, avec un export à intégrer dans la déclaration d'écoconception ;
+- [monACVnumérique.fr](https://globalecoconcept.com/outil/) : ACV simplifiée d'un service en 10 questions, pour un premier ordre de grandeur des impacts ;
+- [NumEcoEval](https://spote.developpement-durable.gouv.fr/offre/numecoeval-outil-de-mesure-de-l-empreinte-environnementale-du-numerique) (MiNumEco) : empreinte d'un système d'information complet, plus adapté à un SI qu'à un seul service.
 
-Deux méthodes d'atelier complètent ces outils de mesure, à des moments différents du projet :
+Deux méthodes d'atelier :
 
-- [Impact Poker](https://www.suricats-consulting.com/impact-poker-agile-engage/) (Suricats Consulting, démarche « Agile Engagé », licence Creative Commons BY-SA) : adapte le planning poker à l'évaluation d'impact — lors d'un rituel agile (refinement, planning), chaque membre de l'équipe évalue simultanément l'impact environnemental et/ou social d'une user story, avant une discussion collective. Permet de questionner l'utilité **au fil de l'eau**, fonctionnalité par fonctionnalité, sans audit ponctuel séparé.
-- [Tarot Cards of Tech](https://tarotcardsoftech.artefactgroup.com/) (Artefact, licence libre, jeu de cartes téléchargeable en PDF) : révèle les conséquences involontaires d'un produit **avant** sa mise en œuvre, sur trois dimensions (*Scale Disruption*, *Usage*, *Equity Access*). Se joue en amont, au moment du cadrage, pour anticiper les effets rebond du type de ceux illustrés dans l'onglet « Retours d'expériences » (Air BnB...), plutôt que les constater après coup.
+- [Impact Poker](https://www.suricats-consulting.com/impact-poker-agile-engage/) (Suricats Consulting, CC BY-SA) adapte le planning poker : chaque membre de l'équipe évalue l'impact d'une user story, puis l'équipe en discute. L'utilité se questionne ainsi **au fil de l'eau**, fonctionnalité par fonctionnalité ;
+- [Tarot Cards of Tech](https://tarotcardsoftech.artefactgroup.com/) (Artefact) révèle, au moment du cadrage, les conséquences involontaires d'un produit, pour anticiper les effets rebond.
+
+{{% /tab %}}
+
+{{% tab tabName="Critère associé" %}}
+
+Profil(s) métier concerné(s) : `Porteur de projet`, `Responsable RSE/Numérique soutenable`
+
+- le [critère 1.2](../1-2_cibles-utilisatrices/) (cibles utilisatrices) : l'utilité se mesure au regard des besoins de cibles identifiées ;
+- le [critère 1.5](../1-5_objectifs-environnementaux/) (objectifs environnementaux) : l'évaluation fournit la situation de départ des objectifs à fixer ;
+- le [critère 4.12](../../ux-ui/4-12_impacts-fonctionnalites/) (fonctionnalités à fort impact) : la même question, posée à l'échelle d'une fonctionnalité ;
+- le [critère 2.7](../../specifications/2-7_maintenance-decommissionnement/) (maintenance et décommissionnement) : un service dont l'utilité n'est plus démontrée se décommissionne ;
+- le [critère 9.1](../../algorithmie/9-1_necessite-entrainement/) (nécessité d'un entraînement) : la même question, pour l'apprentissage automatique.
 
 {{% /tab %}}
 {{< /tabs >}}
@@ -233,35 +232,25 @@ Deux méthodes d'atelier complètent ces outils de mesure, à des moments diffé
 
 {{% tab tabName="Retours d'expériences" %}}
 
-Exemples illustrant les **effets rebond** ou les limites d'un service numérique non questionné :
+Exemples d'**effets rebond** ou de services non questionnés :
 
-- Air BnB : le service propose des offres compétitives d'hébergement via une interface ergonomique mais accroît la crise du logement dans les métropoles et génère de l'évasion fiscale. (source : [Designers Ethiques](https://designersethiques.org/fr/thematiques/ecoconception/quand-faut-il-numeriser))
-- Plusieurs études (Thomas 2019, Cast Software, Standish Group) révèlent qu'entre **50 % et 80 % des fonctionnalités** des logiciels ne sont que rarement voire jamais utilisées, tout en ayant eu un impact environnemental lors de leur production. (source : [MOOC Impacts environnementaux du numérique – INRIA](https://learninglab.gitlabpages.inria.fr/mooc-impacts-num/mooc-impacts-num-ressources/Partie3/FichesConcept/FC3.4.2-bonnespratiques-MoocImpactNum.html))
+- Airbnb propose des hébergements compétitifs, mais accroît la crise du logement dans les métropoles (source : [Designers Éthiques](https://designersethiques.org/fr/thematiques/ecoconception/quand-faut-il-numeriser)) ;
+- plusieurs études (Thomas 2019, Cast Software, Standish Group) estiment qu'entre **50 et 80 % des fonctionnalités** des logiciels sont rarement ou jamais utilisées (source : [MOOC Impacts environnementaux du numérique, Inria](https://learninglab.gitlabpages.inria.fr/mooc-impacts-num/mooc-impacts-num-ressources/Partie3/FichesConcept/FC3.4.2-bonnespratiques-MoocImpactNum.html)).
 
-Exemples de services numériques ayant **questionné leur utilité** dans une démarche d'écoconception :
+Services ayant **questionné leur utilité** :
 
-- [Alt Impact](https://altimpact.fr/ecoconception-du-site/) (programme de sensibilisation à la sobriété numérique porté par l'ADEME, audit Conserto du 26/09/2024, score global 87 % sur RGESN v1) : critère marqué « Validé », avec une utilité assumée dès le cahier des charges — « ce site internet vient en complément de diverses campagnes de l'ADEME visant à encourager l'usage d'un numérique responsable » — un cas assez savoureux d'un site *sur* la sobriété numérique audité *pour* sa propre sobriété numérique.
-- [Musée d'arts de Nantes](https://museedartsdenantes.nantesmetropole.fr/declaration-d-ecoconception/) (Nantes Métropole) : critère marqué « Validé », avec une comparaison explicite à l'alternative non numérique — « une alternative aux services proposés (actualités, horaires, billetterie...) serait de se rendre sur place, mais l'utilisation du site web apparaît a priori moins impactante environnementalement » — et des fonctionnalités volontairement réduites au strict nécessaire.
-- [SPOTE](https://spote.developpement-durable.gouv.fr/article/declaration-d-ecoconception) (Pôle ministériel Écologie) : déclaration d'écoconception exemplaire, avec un mapping ODD détaillé et le décommissionnement de fonctionnalités peu utilisées (ex. panier de services supprimé).
-- [DiaLog](https://dialog.beta.gouv.fr/ecoconception) (beta.gouv.fr) : numérisation de la réglementation de circulation, déclaration d'écoconception publique, avec justification du besoin métier et contraintes d'accessibilité (terminaux anciens, connectivité dégradée).
-- [SNE - Système national d'enregistrement des demandes de logement social](https://ecoresponsable.numerique.gouv.fr/ressources/documents-reference/referentiel-general-ecoconception/retour-experience/) : retour d'expérience d'expérimentation du RGESN avec accompagnement INR, incluant le décommissionnement d'un module dont l'usage avait été détourné.
-- [Site Digital4Better](https://digital4better.com/actualites/retour-d-experience-l-ecoconception-d-un-site-web-appliquee...a-nous-saison-1-episode-1/) (2020) : retour d'expérience montrant que la réduction des fonctionnalités a eu un impact direct sur l'empreinte carbone, les charges en jours-hommes et le planning.
-- [Extia / Vamos](https://www.extia-group.com/fr-fr/blog/audit-d-ecoconception-d-un-service-numerique-existant-l-exemple-de-vamos-1) : audit d'écoconception RGESN d'un service existant — à rebours des études de cas portant sur des nouveaux services.
-- [Orange — Impulser une démarche d'écoconception](https://www.sofrecom.com/news-insights/impulser-demarche-eco-conception.html) (2022) : 8 mois de travail avec 60 à 80 participants pour structurer la démarche « écoconception by Orange » à l'échelle du groupe.
+- [Alt Impact](https://altimpact.fr/ecoconception-du-site/) (ADEME) : critère « Validé », avec une utilité posée dès le cahier des charges, en complément des campagnes de l'ADEME sur le numérique responsable ;
+- [Musée d'arts de Nantes](https://museedartsdenantes.nantesmetropole.fr/declaration-d-ecoconception/) : critère « Validé », avec une comparaison à l'alternative non numérique, se rendre sur place, et des fonctionnalités réduites au strict nécessaire ;
+- [SPOTE](https://spote.developpement-durable.gouv.fr/article/declaration-d-ecoconception) : un rattachement détaillé aux ODD et la suppression de fonctionnalités peu utilisées ;
+- [DiaLog](https://dialog.beta.gouv.fr/ecoconception) (beta.gouv.fr) : critère « Validé », avec un rattachement à quatre ODD (sécurité routière, infrastructures, villes, qualité de l'air) et des ateliers sur les externalités du service ;
+- le [SNE](https://ecoresponsable.numerique.gouv.fr/ressources/documents-reference/referentiel-general-ecoconception/retour-experience/) (demandes de logement social) a créé un module de recherche pour, à terme, décommissionner un module dont l'usage avait été détourné ;
+- le [site de Digital4Better](https://digital4better.com/actualites/retour-d-experience-l-ecoconception-d-un-site-web-appliquee...a-nous-saison-1-episode-1/) (2020) : moins de fonctionnalités, c'est moins d'empreinte carbone, de charge et de délai ;
+- [Orange](https://www.sofrecom.com/news-insights/impulser-demarche-eco-conception.html) (2022) : 8 mois de travail pour structurer la démarche d'écoconception du groupe.
 
-Exemples historiques de services numériques à **forte utilité sociétale** :
+Services à **forte utilité sociétale** : [circuits courts (2020)](https://www.greenit.fr/2020/01/14/une-appli-eco-concue-pour-favoriser-les-circuits-courts/), [Chalkboard Education (2019)](https://www.24joursdeweb.fr/2019/une-application-qui-sauve-des-vies-et-change-la-notre/), [M-Pedigree (2011)](https://www.greenit.fr/2011/03/02/m-pedigree-sauver-une-vie-par-sms/), [eCall (2011)](https://www.greenit.fr/2011/05/31/ecall-moins-de-tues-sur-les-routes-grace-a-un-sms/).
 
-- [Une application éco-conçue pour favoriser les circuits courts (2020)](https://www.greenit.fr/2020/01/14/une-appli-eco-concue-pour-favoriser-les-circuits-courts/)
-- [Chalkboard Education - Une application qui sauve des vies et change la notre (2019)](https://www.24joursdeweb.fr/2019/une-application-qui-sauve-des-vies-et-change-la-notre/)
-- [M-Pedigree - Sauver une vie par SMS (2011)](https://www.greenit.fr/2011/03/02/m-pedigree-sauver-une-vie-par-sms/)
-- [eCall - Moins de tués sur les routes grâce à un SMS (2011)](https://www.greenit.fr/2011/05/31/ecall-moins-de-tues-sur-les-routes-grace-a-un-sms/)
+Listes de sites écoconçus : [Designers Éthiques](https://designersethiques.org/fr/thematiques/ecoconception/guide-d-ecoconception/exemples-sites-ecoconcus), [retours d'expérience RGESN (MiNumEco)](https://ecoresponsable.numerique.gouv.fr/ressources/documents-reference/referentiel-general-ecoconception/retour-experience/), [Lowww](https://www.lowww.directory/) et [Lowwwcarbon](https://lowwwcarbon.com/) (sans garantie sur le niveau d'écoconception).
 
-Listes de sites éco-conçus :
-
-- [Exemples de site - validés par les Designers Ethiques](https://designersethiques.org/fr/thematiques/ecoconception/guide-d-ecoconception/exemples-sites-ecoconcus)
-- [Retours d'expérience RGESN - Numérique écoresponsable (MiNumEco)](https://ecoresponsable.numerique.gouv.fr/ressources/documents-reference/referentiel-general-ecoconception/retour-experience/)
-- [Lowww](https://www.lowww.directory/) (sans garantie sur le niveau d'écoconception)
-- [Lowwwcarbon](https://lowwwcarbon.com/) (sans garantie sur le niveau d'écoconception)
 {{% /tab %}}
 
 {{% tab tabName="Design systèmique" %}}
@@ -270,7 +259,7 @@ Pour éviter les effets rebonds et prendre en comptes les externalité négative
 {{% /tab %}}
 
 {{% tab tabName="Normes internationales" %}}
-La norme [ISO/IEC TS 20125](https://www.iso.org/fr/standard/86105.html) « Technologies de l'information — Écoconception des services numériques » (publiée en 2026) est la première norme internationale dédiée à l'écoconception des services numériques. Son étape 1 — « Requirements gathering, prioritization and contextualization » — pose la même exigence fondatrice que le critère 1.1 du RGESN : questionner la pertinence du besoin avant de concevoir la solution.
+La spécification technique [ISO/IEC TS 20125-1](https://www.iso.org/fr/standard/86105.html) « Technologies de l'information — Écoconception des services numériques — Partie 1 : Écopratiques pour les étapes du cycle de vie » (février 2026) est la première norme internationale dédiée à l'écoconception des services numériques. Elle prolonge l'AFNOR SPEC 2201. Sa première étape, « Requirements gathering, definition and prioritisation » (recueil, définition et priorisation des besoins), pose la même exigence fondatrice que le critère 1.1 du RGESN : questionner la pertinence du besoin avant de concevoir la solution.
 
 Cette norme donne une **portée internationale** au cadre aujourd'hui franco-français du RGESN et de l'AFNOR SPEC 2201, et constitue une référence utile pour les organisations opérant à l'international ou souhaitant anticiper de futures exigences réglementaires.
 {{% /tab %}}

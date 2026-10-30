@@ -85,14 +85,14 @@ Le critère est validé si le choix des protocoles nécessaires au fonctionnemen
 
 Via ces différentes sources :
 
-{{< tabs tabTotal="4">}}
+{{< tabs tabTotal="5">}}
 {{% tab tabName="W3C - Web Sustainability Guidelines" %}}
 
 Profil(s) métier concerné(s) : `Architecte Système`, `Développeur`
 
 Les [Web Sustainability Guidelines](https://www.w3.org/TR/web-sustainability-guidelines/) du W3C recoupent directement ce critère dans la fiche [**« Assess the impact and requirements of data processing »**](https://www.w3.org/TR/web-sustainability-guidelines/#assess-the-impact-and-requirements-of-data-processing) : « Choose communication protocols that balance user needs, security, and sustainability... Prioritize secure options like HTTPS and SFTP/SSH, avoid insecure legacy protocols such as HTTP and FTP, and adopt modern standards like HTTP/2 or HTTP/3 for better performance and lower network overhead. »
 
-La même fiche recommande aussi de privilégier une architecture événementielle ou des microservices plutôt que des API REST synchrones lorsque cela réduit la charge serveur et l'impact environnemental — un prolongement direct de la question posée par le RGESN sur le choix du protocole d'échange de données (REST, GraphQL, Protocol Buffers…).
+La même fiche propose une architecture événementielle plutôt que des API synchrones, quand elle réduit la charge du serveur : c'est la question du protocole d'échange de données que pose le RGESN.
 
 {{% /tab %}}
 
@@ -100,47 +100,24 @@ La même fiche recommande aussi de privilégier une architecture événementiell
 
 Profil(s) métier concerné(s) : `Architecte Système`, `Développeur`
 
-Le critère cite REST, SOAP, GraphQL et Protocol Buffers sans trancher — le choix dépend du contexte. Quelques repères pour comparer :
+Le critère cite REST, SOAP, GraphQL et Protocol Buffers sans trancher : le choix dépend du contexte.
 
-- [**gRPC**](https://grpc.io/) / [**Protocol Buffers**](https://protobuf.dev/) : sérialisation binaire (plutôt que JSON textuel) et HTTP/2, ce qui réduit généralement la taille des messages de l'ordre de 30 à 50 % par rapport à un équivalent JSON, avec une latence plus faible — pertinent pour des échanges internes à fort volume (service à service).
-- [**GraphQL**](https://graphql.org/) : le client ne demande que les champs dont il a besoin, ce qui peut réduire le volume transféré par rapport à un endpoint REST qui renvoie systématiquement l'objet complet — au prix d'un coût de traitement (parsing, validation) côté serveur à chaque requête.
-- [**REST**](https://ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm) : le plus simple à mettre en œuvre et à déboguer, et le seul des trois à tirer pleinement parti du cache HTTP standard (CDN, cache navigateur) grâce à des URLs stables — un avantage réseau que gRPC et GraphQL n'ont pas nativement.
+- [**REST**](https://ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm) : le plus simple à mettre en œuvre et à déboguer, et le seul des trois à profiter pleinement du cache HTTP (navigateur, CDN) grâce à des adresses stables ;
+- [**GraphQL**](https://graphql.org/) : le client ne demande que les champs dont il a besoin, au prix d'un traitement supplémentaire côté serveur à chaque requête ;
+- [**gRPC**](https://grpc.io/) et [**Protocol Buffers**](https://protobuf.dev/) : un encodage binaire sur HTTP/2, adapté aux échanges internes à fort volume, de service à service.
 
-D'autres formats de sérialisation, plus légers qu'un remplacement de protocole entier, peuvent aussi réduire la charge utile d'un échange REST ou temps réel sans en changer l'architecture :
+**Le format d'encodage pèse moins qu'on ne le dit.** Les gains de 20 à 50 % souvent annoncés pour les formats binaires sont mesurés face à du JSON non compressé. L'étude [« A Benchmark of JSON-compatible Binary Serialization Specifications »](https://arxiv.org/abs/2201.03051) (Viotti et Kinderkhedia, université d'Oxford, 2022) les compare à du JSON **compressé en gzip**, sur 480 documents réels :
 
-- [**MessagePack**](https://msgpack.org/) : sérialisation binaire compacte, utilisable comme remplacement direct de JSON dans un échange REST existant, sans changer de protocole de transport.
-- [**CBOR**](https://cbor.io/) (Concise Binary Object Representation) : même principe que MessagePack, mais normalisé par l'IETF ([RFC 8949](https://www.rfc-editor.org/rfc/rfc8949)) — pertinent quand l'interopérabilité entre systèmes tiers importe autant que la sobriété.
-- [**Apache Avro**](https://avro.apache.org/) : sérialisation binaire avec schéma, plutôt utilisée en amont pour l'ingestion et le streaming d'événements (Kafka…) que pour des échanges API classiques ; souvent complémentaire d'un format de stockage analytique comme Parquet en aval, une fois les données arrivées dans un data lake.
+| Format (compressé) | Schéma | Gain médian face au JSON compressé | Usage typique |
+|---|---|---:|---|
+| [Apache Avro](https://avro.apache.org/) | Oui | 52,2 % | Flux d'événements (Kafka), pipelines de données |
+| [Protocol Buffers](https://protobuf.dev/) | Oui | 46,4 % | gRPC, échanges entre services, API mobiles |
+| [CBOR](https://cbor.io/) ([RFC 8949](https://www.rfc-editor.org/rfc/rfc8949)) | Non | 8,8 % | Objets connectés (CoAP), WebAuthn |
+| [MessagePack](https://msgpack.org/) | Non | 7,5 % | Temps réel sur WebSocket |
 
-Les chiffres de gain varient beaucoup d'un article à l'autre (20 à 50 % selon les cas), car la plupart ne comparent qu'à du JSON brut. L'étude la plus rigoureuse sur le sujet, [« A Benchmark of JSON-compatible Binary Serialization Specifications »](https://arxiv.org/abs/2201.03051) (Viotti & Kinderkhedia, University of Oxford, 2022 — 480 documents JSON réels du dépôt SchemaStore), compare aussi ces formats **face à du JSON compressé en gzip**, ce qui change beaucoup la donne :
+Une fois la compression HTTP en place ([critère 6.3](../../frontend/6-3_compression-ressources/)), un format binaire **sans schéma** n'apporte presque rien. Le gain vient des formats **avec schéma**, qui n'envoient pas le nom des champs à chaque message.
 
-- Face à du JSON compressé, **CBOR** compressé reste le seul format sans schéma à obtenir un gain médian positif (**+8,8 %**, moyenne +8,1 %) ; **MessagePack** compressé fait un peu moins bien (médiane +7,5 %, moyenne +5,9 %). Les gains à 20-50 % annoncés ailleurs supposent presque toujours une comparaison à du JSON non compressé, un scénario peu réaliste puisque plus de 92 % des sites compressent déjà leurs réponses JSON en HTTP.
-- **Avro**, grâce à son schéma, s'en sort nettement mieux : même non compressé, il bat le JSON compressé avec une réduction médiane de **72,7 %** (moyenne 39,4 %) ; une fois lui-même compressé, il gagne dans 100 % des cas testés (médiane 52,2 %, moyenne 52,3 %).
-
-Le signal à retenir : le principal gain d'un format binaire **sans schéma** (MessagePack, CBOR) est surtout marginal une fois la compression HTTP déjà en place ; le vrai levier de sobriété réseau se trouve du côté des formats **avec schéma** (Avro, Protocol Buffers), qui compressent mieux la structure elle-même plutôt que le seul texte.
-
-Il n'y a pas de choix universellement le plus sobre : un protocole binaire réduit la charge utile, mais un protocole cacheable par un CDN peut éviter la requête réseau elle-même, ce qui est souvent le gain le plus important. Le critère demande de documenter ce choix, pas d'imposer un protocole en particulier.
-
----
-
-**Tableau de synthèse** — gain de taille médian par rapport à du JSON déjà compressé en gzip (source : [Viotti & Kinderkhedia, University of Oxford, 2022](https://arxiv.org/abs/2201.03051), sur 480 documents JSON réels) :
-
-| Format | Schéma | Gain médian vs JSON compressé | Bat le JSON compressé | Protocole(s) réseau associé(s) | Cas d'usage typiques |
-|---|---|---|---|---|---|
-| [JSON](https://www.json.org/json-fr.html) compressé (gzip) — référence | Non | — (référence) | — | HTTP (quasi universel) ; également WebSocket, la plupart des message brokers | Web, Mobile, API REST — le format par défaut, lisible et débogable, supporté nativement par tous les navigateurs |
-| [Apache Avro](https://avro.apache.org/) (compressé) | Oui | +52,2 % | 100 % des cas testés | Protocole binaire TCP de [Kafka](https://kafka.apache.org/protocol.html) (usage principal) ; HTTP via un proxy REST ou un schema registry | Kafka, pipelines de données (Hadoop, Spark), ingestion/streaming d'événements — peu utilisé pour du Web ou du Mobile côté client |
-| [Protocol Buffers](https://protobuf.dev/) (compressé) | Oui | +46,4 % | 100 % des cas testés | [gRPC](https://grpc.io/) sur HTTP/2 (usage principal) ; transport-agnostique, utilisable sur toute connexion TCP | Micro-services (communication interne service à service), API mobile (Android/iOS vers backend), systèmes temps réel à forte fréquence |
-| [Apache Avro](https://avro.apache.org/) (non compressé) | Oui | +72,7 % | 81,5 % des cas testés | Idem ci-dessus | Idem ci-dessus |
-| [CBOR](https://cbor.io/) (compressé) | Non | +8,8 % | 85,2 % des cas testés | [CoAP](https://coap.space/) (RFC 7252, format natif pour l'IoT) ; également utilisable sur HTTP | IoT (objets contraints), authentification Web (WebAuthn/FIDO2 utilise CBOR pour encoder les clés et signatures), API où la compacité prime sur la lisibilité |
-| [MessagePack](https://msgpack.org/) (compressé) | Non | +7,5 % | 63 % des cas testés | WebSocket ou TCP (MessagePack-RPC) ; peu utilisé sur HTTP classique | Applications Web temps réel (chat, dashboards live), Mobile (réseaux cellulaires), gaming multijoueur (ex. Unity) |
-
----
-
-**Note** : le gain médian d'Avro *baisse* quand on le compresse lui-même (72,7 % → 52,2 %), ce qui peut sembler contre-intuitif. La compression gzip a des rendements décroissants sur du binaire déjà dense (Avro compresse mal une seconde fois), alors qu'elle reste très efficace sur du JSON textuel redondant — ce qui referme un peu l'écart dans le cas médian/typique. Mais la moyenne, elle, *monte* (39,4 % → 52,3 %) et les cas où Avro fait pire que JSON compressé disparaissent totalement (18,5 % → 0 %) : compresser Avro le rend moins spectaculaire dans le cas courant, mais bien plus fiable sur les pires cas (petits documents où le poids du schéma est proportionnellement élevé).
-
----
-
-[REST](https://ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm) et [GraphQL](https://graphql.org/) ne figurent pas dans ce tableau : ce sont des styles d'architecture d'API qui utilisent en général JSON comme format d'encodage plutôt que des alternatives à celui-ci — leur gain se mesure en nombre de requêtes ou en champs transférés, pas en compacité de l'encodage.
+Un format compact réduit la taille de la réponse, mais une réponse servie depuis un cache évite la requête elle-même, ce qui est souvent le gain le plus important. Le critère demande de documenter le choix, pas d'imposer un protocole.
 
 {{% /tab %}}
 
@@ -180,7 +157,7 @@ Profil(s) métier concerné(s) : `Architecte Système`, `Développeur`
   Protocols h2 http/1.1
   ```
   L'ordre compte : le protocole le plus à gauche est le plus préféré par le serveur.
-- HTTP/3 : **Apache httpd ne supporte pas HTTP/3 nativement à ce jour** — il n'existe pas de module officiel `mod_http3` dans les sources Apache (contrairement à ce que certains articles en ligne laissent entendre). La raison est architecturale : HTTP/3 repose sur QUIC, un protocole UDP, alors qu'Apache httpd est conçu autour de connexions TCP ; contrairement à HTTP/2 (TCP), le portage nécessiterait de revoir en profondeur le cœur du serveur. La solution pratique consultée sur le forum officiel Apache Lounge reste de placer un reverse proxy ou un CDN compatible HTTP/3 (Nginx, Caddy, Cloudflare…) devant Apache, qui continue de servir HTTP/1.1 ou HTTP/2 en interne.
+- HTTP/3 : **Apache httpd ne le prend pas en charge**. Il n'existe pas de module `mod_http3` dans ses sources, contrairement à ce que laissent entendre certains articles : HTTP/3 repose sur QUIC, un protocole UDP, alors qu'Apache est conçu autour de connexions TCP. Pour proposer HTTP/3, il faut placer devant Apache un proxy inverse ou un CDN qui le gère (Nginx, Caddy…), Apache continuant de servir HTTP/1.1 ou HTTP/2 en interne.
 
 {{% /tab %}}
 
@@ -192,7 +169,17 @@ Pour vérifier concrètement les trois volets du critère plutôt que de les pr�
 
 - [test-ipv6.com](https://test-ipv6.com/) diagnostique l'accessibilité IPv6 d'un service et détecte les composants qui ne fonctionnent qu'en IPv4.
 - [Qualys SSL Labs](https://www.ssllabs.com/ssltest/) audite la configuration TLS d'un serveur public (versions supportées, suites de chiffrement, note de A à F) ; [testssl.sh](https://testssl.sh/) fait de même en ligne de commande, utile pour l'intégrer en CI/CD ou tester un serveur non accessible publiquement.
-- Le [Mozilla SSL Configuration Generator](https://ssl-config.mozilla.org/) génère une configuration TLS prête à l'emploi (Apache, Nginx, etc.) selon le niveau de compatibilité souhaité, avec désactivation automatique des versions de TLS obsolètes — l'équivalent generator de la ligne de configuration Apache citée dans la « Mise en œuvre » du critère.
+- Le [Mozilla SSL Configuration Generator](https://ssl-config.mozilla.org/) génère une configuration TLS prête à l'emploi (Apache, Nginx, etc.) selon le niveau de compatibilité souhaité, sans les versions de TLS obsolètes : c'est l'équivalent, pour tous les serveurs, de la ligne de configuration Apache citée dans la « Mise en œuvre » du critère.
+
+{{% /tab %}}
+
+{{% tab tabName="Critère associé" %}}
+
+Profil(s) métier concerné(s) : `Architecte Système`, `Développeur`
+
+- le [critère 6.7](../../frontend/6-7_domaine-unique/) (domaine unique) : HTTP/2 et HTTP/3 sur tous les domaines du service ;
+- le [critère 6.3](../../frontend/6-3_compression-ressources/) (compression des ressources) : HTTP/2 compresse les en-têtes, le 6.3 le contenu ;
+- le [critère 1.7](../../strategie/1-7_niveau-chiffrement/) (niveau de chiffrement) : les versions de TLS à prendre en charge.
 
 {{% /tab %}}
 {{< /tabs >}}
@@ -210,7 +197,7 @@ Pour vérifier concrètement les trois volets du critère plutôt que de les pr�
 
 Ce cas illustre bien la structure du critère : les trois volets (adressage, chiffrement, échange de données) sont évalués indépendamment, et il suffit qu'un seul ne soit pas respecté — ici l'IPv6 — pour que le critère dans son ensemble soit marqué « Non validé », même si les deux autres volets (HTTPS, TLS 1.3) sont pleinement conformes.
 
-[Alt Impact](https://altimpact.fr/ecoconception-du-site/) (site porté par l'ADEME, audit Conserto) réussit là où FACE échoue, avec une justification aussi concise que complète : « l'hébergeur Datacampus est accessible en IPv6 / HTTPS / TLS 1.3. » Les trois volets du critère sont validés simultanément, chez le même type d'acteur (hébergeur mutualisé pour le compte d'une administration) que le cas FACE — la différence ne tient donc pas au contexte organisationnel mais bien au choix de l'hébergeur lui-même.
+[Alt Impact](https://altimpact.fr/ecoconception-du-site/) (site porté par l'ADEME, audit Conserto) valide les trois volets à la fois, en une phrase : « l'hébergeur Datacampus est accessible en IPv6 / HTTPS / TLS 1.3. » Pour un service public comme pour FACE, l'IPv6 dépend d'abord du choix de l'hébergeur.
 
 {{% /tab %}}
 

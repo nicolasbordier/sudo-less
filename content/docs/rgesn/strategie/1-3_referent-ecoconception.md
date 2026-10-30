@@ -29,7 +29,7 @@ toc: true
 | **Phase** | `Toutes les phases` |
 | **Priorité** | `Recommandé` |
 | **Difficulté** | `Faible` |
-| **Applicabilité** | `Tous les services` |
+| **Applicabilité** | `Applicable à tous les services` |
 | **Métiers concernés** | `Porteur de projet` `Responsable RSE/Numérique soutenable` |
 | **Permalink** | https://ecoresponsable.numerique.gouv.fr/publications/referentiel-general-ecoconception/critere/1.3/ |
 {{< /table >}}
@@ -75,20 +75,22 @@ Le critère est validé si un **contact** (nominal ou générique) est **précis
 ---
 
 ###
-### Comment appliquer cette recommandation ?
+### Complément pour appliquer concrètement cette recommandation ?
 
 Via ces différentes sources :
 
-{{< tabs tabTotal="4">}}
-{{% tab tabName="Designer Ethiques" %}}
+{{< tabs tabTotal="5">}}
+{{% tab tabName="Designers Éthiques" %}}
 
-Les designers éthiques propose un guide pouvant aider un référent écoconception (quelque soit son expertise : `designer`, `dev`, `ops`, `archi` …) à débuter dans sa démarche : 
+Profil(s) métier concerné(s) : `Porteur de projet`, `Responsable RSE/Numérique soutenable`
+
+Les Designers Éthiques proposent un guide pour aider un référent écoconception, quelle que soit son expertise (`designer`, `dev`, `ops`, `archi`…), à débuter sa démarche : 
 - [Comment initier une démarche d’écoconception en tant que designer ?](https://designersethiques.org/fr/thematiques/ecoconception/comment-initier-une-demarche-d-ecoconception)
 
 Nous vous conseillons de consulter en détail ces 3 pages :
 
 - [1. Monter en compétences](https://designersethiques.org/fr/thematiques/ecoconception/comment-initier-une-demarche-d-ecoconception/monter-en-competences)
-- [2. Appliquer](https://designersethiques.org/fr/thematiques/ecoconception/comment-initier-une-demarche-d-ecoconception/appliquer) (cette démarches s'applique plus à un `designer` ou un `dev front`, mais peu inspirer un `dev back`, `archi`, `ops` …)
+- [2. Appliquer](https://designersethiques.org/fr/thematiques/ecoconception/comment-initier-une-demarche-d-ecoconception/appliquer) (cette démarche s'adresse surtout à un `designer` ou à un `dev front`, mais peut inspirer un `dev back`, un `archi` ou un `ops`)
 - [3. Sensibiliser et embarquer](https://designersethiques.org/fr/thematiques/ecoconception/comment-initier-une-demarche-d-ecoconception/sensibiliser-et-embarquer)
 
 {{% /tab %}}
@@ -130,6 +132,16 @@ Pour outiller la prise de poste d'un référent (ou objectiver les compétences 
 Il couvre **9 domaines** (usages quotidiens, green IT, écoconception applicative, données/IA, matériel, hébergement, réseaux/télécoms, mesure d'impact environnemental, achats) évalués sur **5 niveaux**, du « non nécessaire » à « expert capable de définir une stratégie ». Il cible l'ensemble des métiers du numérique public (nomenclature DGAFP) et peut servir de base à une fiche de poste de référent écoconception ou à un plan de montée en compétences.
 
 {{% /tab %}}
+
+{{% tab tabName="Critère associé" %}}
+
+Profil(s) métier concerné(s) : `Porteur de projet`, `Responsable RSE/Numérique soutenable`
+
+- le [critère 1.4](../1-4_revue-ecoconception/) (revue d'écoconception) : le référent organise les revues et en garde la trace ;
+- le [critère 1.5](../1-5_objectifs-environnementaux/) (objectifs environnementaux) : le référent suit l'atteinte des objectifs ;
+- le [critère 2.6](../../specifications/2-6_revue-conception-code/) (revue de conception et de code) : le référent veille à ce que l'écoconception figure dans ces revues.
+
+{{% /tab %}}
 {{< /tabs >}}
 
 
@@ -145,8 +157,8 @@ Il couvre **9 domaines** (usages quotidiens, green IT, écoconception applicativ
 
 Le réseau des référents numérique éco-responsable ministériels, animé par MiNumEco depuis 2021, illustre à la fois l'intérêt et les limites du rôle de référent dans une grande organisation (source : [Acteurs Publics](https://acteurspublics.fr/articles/numerique-ecoresponsable-la-voie-reste-a-baliser-dans-les-ministeres/)) :
 
-- Chaque ministère désigne un ou plusieurs agents référents, mais leur mise en œuvre reste **hétérogène** d'un ministère à l'autre — faute d'indicateurs harmonisés, chacun a longtemps avancé « comme il pouvait ».
-- Le **ministère de la Culture** a obtenu le label « Numérique Responsable » (juillet 2024) et fait état d'un effet concret du rôle de référent : le passage d'une évaluation systématique des besoins a permis de réduire les demandes de projets numériques de 40 à 15 par an.
+- Chaque ministère désigne un ou plusieurs agents référents, mais leur mise en œuvre reste **hétérogène** d'un ministère à l'autre — faute d'indicateurs harmonisés, « chacun faisait ce qu'il pouvait ».
+- Le **ministère de la Culture** a obtenu le label « Numérique Responsable » (juillet 2024) et fait état d'un effet concret du rôle de référent : une politique de maîtrise des projets, qui questionne chaque porteur, a fait passer les demandes de projets numériques d'une quarantaine en 2021 à une quinzaine par an au plus.
 - Le **ministère de l'Intérieur** a orienté l'action de ses référents vers le réemploi et la réparation du parc matériel.
 - Le rôle de référent se heurte parfois à des **priorités contradictoires** : aux ministères de la Justice et de l'Europe et des Affaires étrangères, des contraintes de sécurité imposent le retrait de matériels encore fonctionnels, à rebours des objectifs de sobriété.
 

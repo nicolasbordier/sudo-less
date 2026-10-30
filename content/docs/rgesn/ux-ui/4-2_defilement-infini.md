@@ -66,7 +66,7 @@ Le critère est validé si le design du service numérique repose sur un chargem
 
 Via ces différentes sources :
 
-{{< tabs tabTotal="5">}}
+{{< tabs tabTotal="6">}}
 {{% tab tabName="RWEB (GreenIT)" %}}
 
 Profil(s) métier concerné(s) : `Designer`, `Concepteur UX / UI`, `Développeur`
@@ -115,6 +115,17 @@ Deux implémentations distinctes répondent au critère, selon le contexte :
 - **Bouton « Voir plus »**, pour les cas où une continuité de lecture est réellement utile (fil d'actualité, résultats de recherche) : le chargement suivant reste déclenché par une action explicite de l'utilisateur (clic ou activation clavier sur un `<button>`), plutôt que par la seule position de défilement. C'est la différence essentielle avec le défilement infini automatique : la page ne charge du contenu supplémentaire que si l'utilisateur en fait la demande, ce qui correspond exactement au « chargement à la demande » exigé par le « Moyen de test » du critère.
 
 Dans les deux cas, le point commun est de conserver un **élément d'interface standard** (lien ou bouton) comme déclencheur, plutôt qu'un événement de défilement — c'est précisément ce qui manque au défilement infini et qui explique à la fois son impact environnemental (chargement continu non borné) et son problème d'accessibilité (absence de point d'arrêt ou de contrôle explicite).
+
+{{% /tab %}}
+
+{{% tab tabName="Critère associé" %}}
+
+Profil(s) métier concerné(s) : `Développeur`, `Concepteur UX / UI`
+
+- le [critère 4.3](../4-3_parcours-navigation/) (parcours de navigation) : un parcours court rend le défilement sans fin inutile ;
+- le [critère 6.5](../../frontend/6-5_chargement-ressources/) (chargement des seules ressources utiles) : le chargement à la demande, sans défilement infini ;
+- le [critère 6.1](../../frontend/6-1_poids-requetes-ecran/) (poids et requêtes par écran) : une page qui grossit sans fin n'a plus de budget ;
+- le [critère 4.14](../4-14_dark-patterns/) (procédés manipulatoires) : le défilement infini sert souvent à capter l'attention.
 
 {{% /tab %}}
 {{< /tabs >}}

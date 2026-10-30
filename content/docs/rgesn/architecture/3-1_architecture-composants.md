@@ -108,14 +108,6 @@ Les [Web Sustainability Guidelines](https://www.w3.org/TR/web-sustainability-gui
 
 {{% /tab %}}
 
-{{% tab tabName="Critères associés" %}}
-
-Profil(s) métier concerné(s) : `Architecte Système`, `Responsable RSE/Numérique soutenable`
-
-Le texte du critère renvoie lui-même explicitement aux critères [2.9](../../specifications/2-9_composants-interface/) (impacts des composants d'interface prêts à l'emploi) et [2.10](../../specifications/2-10_services-tiers/) (impacts des services tiers) : le 3.1 porte sur les briques d'architecture et les frameworks frontend/backend, quand 2.9 et 2.10 portent respectivement sur les composants d'interface (design systems) et les services tiers fonctionnels (analytics, vidéo…). Les trois critères se complètent pour couvrir l'ensemble des dépendances externes d'un service numérique, à des niveaux différents de la stack.
-
-{{% /tab %}}
-
 {{% tab tabName="Étude énergie par langage" %}}
 
 Profil(s) métier concerné(s) : `Développeur`, `Architecte Système`
@@ -143,6 +135,14 @@ Un débit de requêtes plus élevé n'est pas strictement équivalent à une con
 Profil(s) métier concerné(s) : `Développeur`, `Architecte Système`
 
 Pour mesurer directement la consommation d'un composant ou d'un algorithme plutôt que de se fier à un classement générique, [CodeCarbon](https://github.com/mlco2/codecarbon) (projet Data For Good, initié notamment par Yoshua Bengio) est un package Python léger qui s'installe via `pip install codecarbon` et s'utilise avec un simple décorateur `@track_emissions` sur la fonction à mesurer. Il estime la consommation CPU/GPU/RAM réelle et la convertit en kg de CO2 équivalent selon l'intensité carbone du réseau électrique local — particulièrement pertinent pour les « algorithmes d'apprentissage » mentionnés dans l'objectif du critère, dont le coût énergétique est rarement mesuré en pratique.
+
+{{% /tab %}}
+
+{{% tab tabName="Critère associé" %}}
+
+Profil(s) métier concerné(s) : `Architecte Système`, `Responsable RSE/Numérique soutenable`
+
+Le texte du critère renvoie lui-même explicitement aux critères [2.9](../../specifications/2-9_composants-interface/) (impacts des composants d'interface prêts à l'emploi) et [2.10](../../specifications/2-10_services-tiers/) (impacts des services tiers) : le 3.1 porte sur les briques d'architecture et les frameworks frontend/backend, quand 2.9 et 2.10 portent respectivement sur les composants d'interface (design systems) et les services tiers fonctionnels (analytics, vidéo…). Les trois critères se complètent pour couvrir l'ensemble des dépendances externes d'un service numérique, à des niveaux différents de la stack.
 
 {{% /tab %}}
 {{< /tabs >}}

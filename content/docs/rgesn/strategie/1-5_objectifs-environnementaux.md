@@ -29,7 +29,7 @@ toc: true
 | **Phase** | `Exploration` |
 | **Priorité** | `Prioritaire` |
 | **Difficulté** | `Fort` |
-| **Applicabilité** | `Tous les services` |
+| **Applicabilité** | `Applicable à tous les services` |
 | **Métiers concernés** |  `Responsable RSE/Numérique soutenable` `Porteur de projet` |
 | **Permalink** | https://ecoresponsable.numerique.gouv.fr/publications/referentiel-general-ecoconception/critere/1.5/ |
 {{< /table >}}
@@ -83,7 +83,7 @@ Le **critère est validé** si l’empreinte environnementale du service a été
 
 Via ces différentes sources :
 
-{{< tabs tabTotal="3">}}
+{{< tabs tabTotal="5">}}
 {{% tab tabName="Designers Éthiques" %}}
 
 Dans le cas où la réalisation d'une ACV n'est pas envisagée en priorité, voici 2 alternatives :
@@ -128,9 +128,56 @@ Profil(s) métier concerné(s) : `Responsable RSE/Numérique soutenable`
 Pour aligner des objectifs de réduction sur une trajectoire climatique reconnue plutôt que sur un pourcentage arbitraire, deux référentiels complémentaires, déjà cités dans la fiche RGESN de ce critère, méritent d'être détaillés :
 
 - La [Science Based Targets initiative (SBTi)](https://sciencebasedtargets.org/) traduit les conclusions du GIEC en objectifs mesurables adaptés à chaque secteur, sur la base du GHG Protocol. Une organisation soumet sa trajectoire de réduction (scopes 1, 2 et 3), évaluée par des experts SBTi selon des critères scientifiques stricts, pour vérifier sa compatibilité avec une limitation du réchauffement à 1,5°C.
-- La recommandation [ITU-T L.1470](https://www.itu.int/rec/T-REC-L.1470), développée avec le GeSI, la GSMA et la SBTi elle-même, décline cette approche **spécifiquement pour le secteur des TIC** (réseaux mobiles et fixes, data centers, réseaux d'entreprise, terminaux utilisateurs) : elle fixe une cible sectorielle de **réduction de 45 % des émissions de GES entre 2015 et 2030**, avec une ambition de long terme à horizon 2050. Ce sont les premiers objectifs sectoriels spécifiques aux TIC validés par la SBTi.
+- La recommandation [ITU-T L.1470](https://www.itu.int/rec/T-REC-L.1470), développée avec le GeSI, la GSMA et la SBTi elle-même, décline cette approche **spécifiquement pour le secteur des TIC**, avec des trajectoires pour les opérateurs de réseaux mobiles, de réseaux fixes et de centres de données : elle fixe une cible sectorielle de **réduction de 45 % des émissions de GES entre 2020 et 2030** ([ITU, 2020](https://www.itu.int/en/mediacentre/Pages/PR04-2020-ICT-industry-to-reduce-greenhouse-gas-emissions-by-45-percent-by-2030.aspx)). Ce sont les premiers objectifs sectoriels spécifiques aux TIC validés par la SBTi. Une révision, avec des objectifs pour 2035, est en cours.
 
 Ces deux référentiels sont surtout pertinents à l'échelle d'une organisation ou d'un grand programme ; pour un service unique, ils servent davantage de **point de repère** (un service numérique isolé peut difficilement obtenir une validation SBTi individuelle) que d'objectif directement applicable.
+
+{{% /tab %}}
+
+{{% tab tabName="Mise en œuvre technique" %}}
+
+Profil(s) métier concerné(s) : `Responsable RSE/Numérique soutenable`, `Développeur`
+
+**1. Choisir l'unité et le périmètre.** Chaque indicateur se suit en valeur absolue (par an) et en valeur relative (par utilisateur ou par visite), comme le précise la mise en œuvre. Le périmètre couvre la fabrication et l'usage de l'hébergement, du réseau et des terminaux.
+
+**2. Estimer l'hébergement** avec l'[API de Boavizta](https://api.boavizta.org/), qui calcule par analyse de cycle de vie trois des quatre indicateurs prioritaires. Pour une instance Scaleway située en France, utilisée à 30 %, sur un an (8 760 heures) :
+
+```sh
+curl -s -X POST 'https://api.boavizta.org/v1/cloud/instance?verbose=false&duration=8760&criteria=gwp&criteria=pe&criteria=adpe' \
+  -H 'Content-Type: application/json' \
+  -d '{"provider": "scaleway", "instance_type": "pop2-2c-8g", "usage": {"usage_location": "FRA", "time_workload": 30}}'
+```
+
+| Indicateur | Fabrication | Usage |
+|---|---:|---:|
+| Émissions de GES (`gwp`) | 3,4 kg CO2e | 6,0 kg CO2e |
+| Énergie primaire (`pe`) | 44 MJ | 690 MJ |
+| Ressources minérales et métalliques (`adpe`) | 9,8 × 10⁻⁵ kg Sb éq. | 3 × 10⁻⁶ kg Sb éq. |
+
+Testé le 30 octobre 2026 (API version 2.5.0). L'API compte l'électricité française à 98 gCO2e/kWh, une valeur de 2021 (voir le [critère 8.2](../../hebergement/8-2_gestion-equipements/)). L'eau n'est pas couverte : l'indicateur `wu` n'est pas calculé pour l'usage, et sa valeur de fabrication, tirée de données génériques, est négative. Le calculateur de Scaleway, cité dans l'onglet « Infrastructure / Architecture » du [critère 1.4](../1-4_revue-ecoconception/), donne l'eau.
+
+**3. Compléter avec les terminaux et le réseau**, que cette API ne couvre pas. Le [RCP d'un service numérique](https://librairie.ademe.fr/societe-et-politiques-publiques/9418-methodologie-d-evaluation-environnementale-basee-sur-l-analyse-du-cycle-de-vie-acv-pour-un-service-numerique.html) de l'ADEME décrit comment attribuer au service une part de leur empreinte.
+
+**4. Fixer une trajectoire chiffrée.** Pour chaque indicateur : la valeur de départ et sa date, l'objectif, l'échéance et la méthode. S'aligner sur l'ITU-T L.1470, soit −45 % entre 2020 et 2030 (onglet « SBTi & ITU-T L.1470 »), revient à environ 6 % de baisse par an :
+
+```
+réduction annuelle = 1 − (1 − 0,45)^(1/10) ≈ 5,8 %
+```
+
+Les budgets techniques du [critère 6.1](../../frontend/6-1_poids-requetes-ecran/) servent alors de jalons, vérifiés à chaque mise en production, entre deux évaluations complètes.
+
+**5. Documenter** dans la déclaration d'écoconception : les valeurs, la trajectoire et la méthode, avec l'outil, sa version et les hypothèses (durée de vie, taux d'utilisation, localisation). Le moyen de test pose la question : « La méthodologie d'évaluation des indicateurs suivis est-elle accessible publiquement ? »
+
+{{% /tab %}}
+
+{{% tab tabName="Critère associé" %}}
+
+Profil(s) métier concerné(s) : `Responsable RSE/Numérique soutenable`, `Porteur de projet`
+
+- le [critère 1.1](../1-1_evaluation-utilite/) (évaluation de l'utilité) : la situation de départ des objectifs ;
+- le [critère 1.4](../1-4_revue-ecoconception/) (revue d'écoconception) : le suivi des objectifs dans le temps ;
+- le [critère 6.1](../../frontend/6-1_poids-requetes-ecran/) (poids et requêtes par écran) : un objectif chiffré, vérifiable sur chaque écran ;
+- le [critère 2.8](../../specifications/2-8_fournisseurs-impacts-environnementaux/) (fournisseurs) : les objectifs du service s'étendent aux fournisseurs.
 
 {{% /tab %}}
 {{< /tabs >}}
@@ -146,9 +193,9 @@ Ces deux référentiels sont surtout pertinents à l'échelle d'une organisation
 
 En pratique, les déclarations d'écoconception publiées par les services publics numériques recourent plus souvent à des **budgets techniques proxy** (option 2 de l'onglet Designers Éthiques ci-dessus) qu'à une ACV multicritère complète — cohérent avec la préconisation du critère qui n'impose pas l'ACV en priorité :
 
-- Le [Musée d'arts de Nantes](https://museedartsdenantes.nantesmetropole.fr/declaration-d-ecoconception/) (Nantes Métropole) fixe un budget technique proxy tout aussi précis, critère marqué « Validé » : pas plus de 3 secondes de chargement d'une page (mesuré sur Samsung Galaxy S10, WiFi), pas plus de 750 Ko de données transférées au premier chargement, pas plus de 30 requêtes par page — avec des seuils de régression distincts et plus larges (1 Mo, 50 requêtes) pour détecter une dérive avant qu'elle ne devienne critique.
+- Le [Musée d'arts de Nantes](https://museedartsdenantes.nantesmetropole.fr/declaration-d-ecoconception/) (Nantes Métropole) fixe un budget technique proxy précis, critère marqué « Validé » : pas plus de 3 secondes de chargement d'une page (mesuré sur Samsung Galaxy S10, WiFi), pas plus de 750 Ko de données transférées au premier chargement, pas plus de 30 requêtes par page. Au [critère 6.1](../../frontend/6-1_poids-requetes-ecran/), il ajoute des seuils de régression plus larges (1 Mo, 50 requêtes) pour détecter une dérive avant qu'elle ne devienne critique.
 - [Alt Impact](https://altimpact.fr/ecoconception-du-site/) (site porté par l'ADEME) combine budget technique et outils de mesure nommés avec objectif chiffré : [Fruggr](https://fruggr.io/) (Digital4Better) évalué à chaque fin de sprint avec un objectif de 80/100, Lighthouse (Google) avec un objectif de 90 % sur chaque page, et un budget de 5 Mo / 50 requêtes maximum par page — un exemple rare qui documente à la fois l'outil de mesure utilisé et sa fréquence d'évaluation (à chaque sprint, pas seulement au lancement).
-- [DiaLog](https://dialog.beta.gouv.fr/ecoconception) (beta.gouv.fr) fixe un **budget de performance chiffré** (40 requêtes serveur maximum par écran, 900 Ko de ressources maximum par écran) et un **objectif quantifié de progression** dans le temps : faire passer son taux de conformité RGESN de 71 % (mars 2025) à 80 % (juin 2026) — un exemple concret d'objectif suivi dans la durée, même sans indicateur d'ACV (énergie primaire, GES, eau, ressources abiotiques).
+- [DiaLog](https://dialog.beta.gouv.fr/ecoconception) (beta.gouv.fr) marque le critère **« Non validé »** : il a estimé son empreinte avec GreenIT-Analysis, sans objectif de réduction. Il fixe en revanche un **budget par écran** au critère 6.1 (900 Ko et 40 requêtes au plus) et un **objectif de score RGESN** : de 71 % en mars 2025 à 80 % en juin 2026. Ces objectifs de moyens ne remplacent pas un objectif de réduction des impacts eux-mêmes.
 - [SPOTE](https://spote.developpement-durable.gouv.fr/article/declaration-d-ecoconception) (Pôle ministériel Écologie) suit la même logique de budget technique (2 Mo de transfert réseau compressé par page, 120 requêtes et 5 noms de domaine maximum) et publie une page dédiée à l'évolution de son impact écologique dans le temps, mais sans objectif chiffré de réduction publié.
 
 Ce contraste illustre une limite pratique du critère 1.5 : suivre un **budget technique proxy dans la durée** est aujourd'hui plus répandu et plus accessible que publier une trajectoire alignée sur des indicateurs d'ACV (SBTi, ITU-T L.1470) — une voie que le critère autorise explicitement, tant que des objectifs sont fixés, suivis et documentés publiquement.

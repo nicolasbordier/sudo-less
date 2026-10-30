@@ -178,7 +178,7 @@ Le poids annoncé peut être calculé à partir du nombre de lignes à exporter,
 
 Profil(s) métier concerné(s) : `Développeur`, `Concepteur UX / UI`
 
-Ce critère généralise le [critère 4.11](../4-11_poids-formats-fichiers/) (poids et formats de fichier attendus), déjà publié sur ce site. Le 4.11 demande d'afficher le poids de **tous** les fichiers de plus de 10 Mo. Le 4.12 demande d'informer avant toute **fonctionnalité** significativement plus coûteuse que le reste du service, même quand elle ne produit pas de fichier : visionnage d'une vidéo, traitement long, recherche lourde. Pour un fichier téléchargeable volumineux, les deux critères demandent la même chose, et une seule information (le poids, affiché avant le téléchargement) répond aux deux.
+Ce critère généralise le [critère 4.11](../4-11_poids-formats-fichiers/) (poids et formats de fichier attendus). Le 4.11 demande d'afficher le poids de **tous** les fichiers de plus de 10 Mo. Le 4.12 demande d'informer avant toute **fonctionnalité** significativement plus coûteuse que le reste du service, même quand elle ne produit pas de fichier : visionnage d'une vidéo, traitement long, recherche lourde. Pour un fichier téléchargeable volumineux, les deux critères demandent la même chose, et une seule information (le poids, affiché avant le téléchargement) répond aux deux.
 
 Le RGESN rattache explicitement ce critère à deux autres :
 

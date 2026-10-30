@@ -135,7 +135,7 @@ Les trois formats cités par le RGESN ne sont pas pris en charge de la même fa�
 
 Le RGESN cite JPEG XL à égalité avec WebP et AVIF, mais en octobre 2026, un service qui n'utiliserait que du JPEG XL afficherait des images manquantes pour une part importante de ses utilisateurs. C'est pour ce cas que le moyen de test prévoit explicitement la validation « dans deux formats ».
 
-Ce repli rejoint le [critère 2.4](../../specifications/2-4_anciennes-versions-os/) (anciennes versions d'OS et de navigateurs), déjà publié sur ce site : un format récent sans repli exclut précisément les utilisateurs des terminaux les plus anciens. Avec l'élément `<picture>`, le navigateur ne télécharge qu'**un seul** des formats proposés. Prévoir un repli ne coûte donc rien en transfert aux navigateurs récents, seulement un peu de stockage côté serveur.
+Ce repli rejoint le [critère 2.4](../../specifications/2-4_anciennes-versions-os/) (anciennes versions d'OS et de navigateurs) : un format récent sans repli exclut précisément les utilisateurs des terminaux les plus anciens. Avec l'élément `<picture>`, le navigateur ne télécharge qu'**un seul** des formats proposés. Prévoir un repli ne coûte donc rien en transfert aux navigateurs récents, seulement un peu de stockage côté serveur.
 
 {{% /tab %}}
 
@@ -204,7 +204,7 @@ La propriété `currentSrc` donne le fichier réellement choisi par le navigateu
 
 Profil(s) métier concerné(s) : `Développeur`, `Designer`
 
-Le critère 5.1 intervient **après** deux questions traitées par des critères déjà publiés sur ce site :
+Le critère 5.1 intervient **après** deux questions traitées par d'autres critères :
 
 - le [critère 4.6](../../ux-ui/4-6_contenu-porteur-information/) : ce média est-il porteur d'information, ou seulement décoratif ?
 - le [critère 4.7](../../ux-ui/4-7_choix-sobre-format/) : faut-il une image, ou un texte suffirait-il ?

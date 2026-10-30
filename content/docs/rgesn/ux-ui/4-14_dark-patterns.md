@@ -195,7 +195,7 @@ Les deux boutons ont le même style et des libellés neutres. On évite un bouto
 
 Profil(s) métier concerné(s) : `Concepteur UX / UI`, `Développeur`
 
-Le critère 4.14 est le plus général des critères du RGESN sur la captation de l'attention. Plusieurs critères déjà publiés sur ce site en traitent des formes particulières :
+Le critère 4.14 est le plus général des critères du RGESN sur la captation de l'attention. Plusieurs autres critères en traitent des formes particulières :
 
 - le [critère 4.1](../4-1_lecture-automatique/) (lecture automatique), que le GR491 range explicitement parmi les dark patterns (« Binge watching ») ;
 - le [critère 4.2](../4-2_defilement-infini/) (défilement infini) ;

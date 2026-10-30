@@ -71,7 +71,7 @@ Les recommandations du Guide pratique pour des achats numériques responsables e
 
 Via ces différentes sources :
 
-{{< tabs tabTotal="4">}}
+{{< tabs tabTotal="5">}}
 {{% tab tabName="Guide pratique / ISO 20400" %}}
 
 Profil(s) métier concerné(s) : `Responsable Partenariats`, `Porteur de projet`
@@ -117,6 +117,17 @@ Pour objectiver la démarche environnementale d'un fournisseur plutôt que de se
 - Pour le matériel spécifiquement, les écolabels [TCO Certified](https://tcocertified.com/) et [EPEAT](https://www.epeat.net/) évaluent le cycle de vie complet des équipements (efficacité énergétique, substances dangereuses, durabilité) et donnent un critère de sélection vérifiable par un tiers plutôt qu'une simple déclaration du fournisseur.
 
 Ces outils s'articulent avec le [critère 1.10](../../strategie/1-10_api-materiel/) : un fournisseur de matériel labellisé EPEAT ou TCO Certified est aussi, par construction, plus regardant sur la durée de vie et la réparabilité de ses produits.
+
+{{% /tab %}}
+
+{{% tab tabName="Critère associé" %}}
+
+Profil(s) métier concerné(s) : `Responsable Partenariats`, `Responsable RSE/Numérique soutenable`
+
+- le [critère 2.10](../2-10_services-tiers/) (services tiers) : la même démarche pour les services intégrés au produit ;
+- le [critère 8.1](../../hebergement/8-1_demarche-hebergeur/) (démarche de l'hébergeur) : l'hébergeur est souvent le premier fournisseur à évaluer ;
+- le [critère 8.2](../../hebergement/8-2_gestion-equipements/) (équipements de l'hébergeur) : la gestion du matériel, une question à poser à chaque fournisseur d'infrastructure ;
+- le [critère 1.5](../../strategie/1-5_objectifs-environnementaux/) (objectifs environnementaux) : les objectifs du service s'étendent aux fournisseurs.
 
 {{% /tab %}}
 {{< /tabs >}}

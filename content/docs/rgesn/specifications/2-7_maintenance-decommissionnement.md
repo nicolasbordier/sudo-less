@@ -29,7 +29,7 @@ toc: true
 | **Phase** | `Fin de vie` |
 | **Priorité** | `Prioritaire` |
 | **Difficulté** | `Moyen` |
-| **Applicabilité** | `Tous les services` |
+| **Applicabilité** | `Applicable à tous les services` |
 | **Métiers concernés** | `Responsable IT` `Architecte Logiciel` |
 | **Permalink** | https://ecoresponsable.numerique.gouv.fr/publications/referentiel-general-ecoconception/critere/2.7/ |
 {{< /table >}}
@@ -81,7 +81,7 @@ Les résultats doivent être documentés dans la **déclaration d'écoconception
 
 Via ces différentes sources :
 
-{{< tabs tabTotal="6">}}
+{{< tabs tabTotal="7">}}
 {{% tab tabName="INR - GR491" %}}
 
 Profil(s) métier concerné(s) : `Responsable IT`, `Architecte Logiciel`
@@ -106,7 +106,7 @@ Elle illustre aussi la démarche par un exemple concret (fin de vie d'un site vi
 
 Profil(s) métier concerné(s) : `Architecte Logiciel`, `Responsable IT`
 
-Le texte du critère recommande explicitement, en cas de fin de vie d'un service propriétaire, une **publication en open source** du code source — rejoignant directement le [critère 1.8](../../strategie/1-8_efforts-open-source/) et le [guide des licences libres](https://code.gouv.fr/fr/doc/licences-libres-dinum/) de la DINUM déjà cité sur ce site : publier le code **avant** l'arrêt d'un service est la seule mesure qui donne une chance réelle à une communauté de le reprendre ([critère 1.8](../../strategie/1-8_efforts-open-source/), retours d'expérience Murena/ATF/Ordi3.0).
+Le texte du critère recommande explicitement, en cas de fin de vie d'un service propriétaire, une **publication en open source** du code source — rejoignant directement le [critère 1.8](../../strategie/1-8_efforts-open-source/) et le [guide des licences libres](https://code.gouv.fr/fr/doc/licences-libres-dinum/) de la DINUM, déjà cité : publier le code **avant** l'arrêt d'un service est la seule mesure qui donne une chance réelle à une communauté de le reprendre ([critère 1.8](../../strategie/1-8_efforts-open-source/), retours d'expérience Murena/ATF/Ordi3.0).
 
 Pour les données non personnelles, la mise en **open data** rejoint la logique de collecte raisonnée du [critère 1.6](../../strategie/1-6_collecte-donnees/) : une donnée qui ne sert plus au service peut encore avoir de la valeur pour d'autres, à condition d'anticiper cette seconde vie avant la suppression pure et simple.
 
@@ -145,6 +145,17 @@ Ce signal de dépendance se combine avec le suivi FinOps / GreenOps (voir onglet
 Profil(s) métier concerné(s) : `Responsable IT`, `Architecte Logiciel`
 
 Pour la seconde vie du **matériel** libéré par un décommissionnement (réutilisation, reconditionnement, recyclage), voir la page [Outils > Fin de vie](../../../outils/par-phase-projet/fin-de-vie/) — réseau [Ordi3.0](http://www.ordi3-0.fr/), OS mobile open source, guide des licences libres.
+
+{{% /tab %}}
+
+{{% tab tabName="Critère associé" %}}
+
+Profil(s) métier concerné(s) : `Responsable IT`, `Architecte Logiciel`
+
+- le [critère 1.1](../../strategie/1-1_evaluation-utilite/) (évaluation de l'utilité) : la décision de décommissionner part d'une utilité qui n'est plus démontrée ;
+- le [critère 5.8](../../contenus/5-8_archivage-suppression/) (archivage et suppression des contenus) : les contenus à archiver ou supprimer à la fin du service ;
+- le [critère 7.2](../../backend/7-2_durees-conservation/) (durées de conservation) : les données à archiver ou supprimer à la fin du service ;
+- le [critère 3.7](../../architecture/3-7_environnements-developpement-test/) (environnements de développement et de test) : les environnements à éteindre avec le service.
 
 {{% /tab %}}
 {{< /tabs >}}

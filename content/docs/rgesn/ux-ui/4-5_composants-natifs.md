@@ -73,7 +73,7 @@ Via ces différentes sources :
 
 Profil(s) métier concerné(s) : `Développeur`, `Architecte Logiciel`
 
-Le critère 4.5 rejoint la [recommandation n°3 de la famille Frontend](https://gr491.isit-europe.org/?famille=frontend&num_reco=3) du [GR491](https://gr491.isit-europe.org/) (INR), « Utiliser les environnements et outils qui permettent de limiter les impacts » — déjà citée à la page [critère 2.9](../../specifications/2-9_composants-interface/) sur ce site. La question posée est directement transposable : « Est-ce que la fonctionnalité attendue ne pourrait pas être mise en place avec les capacités natives du navigateur ? » Cette recommandation cadre bien la logique du critère : avant de charger une bibliothèque ou un design system pour un composant donné, la première question à se poser reste de vérifier si un équivalent HTML natif ne suffirait pas déjà.
+Le critère 4.5 rejoint la [recommandation n°3 de la famille Frontend](https://gr491.isit-europe.org/?famille=frontend&num_reco=3) du [GR491](https://gr491.isit-europe.org/) (INR), « Utiliser les environnements et outils qui permettent de limiter les impacts » — déjà citée à la page [critère 2.9](../../specifications/2-9_composants-interface/). La question posée est directement transposable : « Est-ce que la fonctionnalité attendue ne pourrait pas être mise en place avec les capacités natives du navigateur ? » Cette recommandation cadre bien la logique du critère : avant de charger une bibliothèque ou un design system pour un composant donné, la première question à se poser reste de vérifier si un équivalent HTML natif ne suffirait pas déjà.
 
 {{% /tab %}}
 
@@ -121,7 +121,7 @@ Pour les cas où un vrai composant réutilisable est nécessaire et qu'aucun él
 
 Profil(s) métier concerné(s) : `Développeur`, `Designer`
 
-Ce critère est le pendant « composant par composant » du [critère 2.9](../../specifications/2-9_composants-interface/) (composants d'interface prêts à l'emploi), déjà publié sur ce site : le 2.9 porte sur la **comparaison des impacts environnementaux** entre plusieurs composants ou design systems équivalents une fois le choix fait de ne pas utiliser de solution native, tandis que le 4.5 porte sur l'étape logiquement antérieure — se demander si un composant natif ne suffirait pas avant même d'envisager cette comparaison. Un design system peut être le plus sobre de sa catégorie au sens du critère 2.9, tout en restant non conforme au 4.5 s'il remplace systématiquement des éléments qu'un simple HTML natif aurait suffi à couvrir.
+Ce critère est le pendant « composant par composant » du [critère 2.9](../../specifications/2-9_composants-interface/) (composants d'interface prêts à l'emploi) : le 2.9 porte sur la **comparaison des impacts environnementaux** entre plusieurs composants ou design systems équivalents une fois le choix fait de ne pas utiliser de solution native, tandis que le 4.5 porte sur l'étape logiquement antérieure — se demander si un composant natif ne suffirait pas avant même d'envisager cette comparaison. Un design system peut être le plus sobre de sa catégorie au sens du critère 2.9, tout en restant non conforme au 4.5 s'il remplace systématiquement des éléments qu'un simple HTML natif aurait suffi à couvrir.
 
 {{% /tab %}}
 {{< /tabs >}}

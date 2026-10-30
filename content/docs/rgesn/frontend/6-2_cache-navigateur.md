@@ -81,7 +81,7 @@ Le référentiel [RWEB du Collectif GreenIT](https://rweb.greenit.fr/) rattache 
 
 **Les fichiers.** [**RWEB 0075 — « Ajouter des entêtes Expires ou Cache-Control »**](https://rweb.greenit.fr/fr/fiches/RWEB_0075-ajouter-des-entetes-expires-ou-cache-control) demande que la durée de vie des CSS, scripts et images soit « la plus longue possible, afin que le navigateur ne les redemande pas au serveur ». Son exemple Nginx applique `expires max` à une longue liste d'extensions. D'après la [documentation de Nginx](https://nginx.org/en/docs/http/ngx_http_headers_module.html), `max` fixe une expiration au 31 décembre 2037 et un `Cache-Control` de 10 ans. C'est sans risque pour un fichier dont le nom change à chaque modification, mais pas pour un fichier qui garde le même nom : `/css/style.css` modifié resterait servi dans son ancienne version pendant des années. Le principe de validation de la fiche, **aucun** en-tête `Expires` ou `Cache-Control` manquant, reste juste.
 
-**Les réponses de l'API.** [**RWEB 0072 — « Mettre en cache les réponses AJAX »**](https://rweb.greenit.fr/fr/fiches/RWEB_0072-mettre-en-cache-les-reponses-ajax) vise les réponses « inchangées dans un futur proche », comme une liste de villes, avec un seuil de 10 % de réponses non mises en cache au plus. [**RWEB 0021 — « Limiter le nombre d'appels aux API HTTP »**](https://rweb.greenit.fr/fr/fiches/RWEB_0021-limiter-le-nombre-d-appels-aux-api-http), rattachée aux critères 6.2 et 7.1, donne des durées à adapter : un appel par jour pour des avis clients, un par heure pour un flux de réseau social affiché sur le site.
+**Les réponses de l'API.** [**RWEB 0072 — « Mettre en cache les réponses AJAX »**](https://rweb.greenit.fr/fr/fiches/RWEB_0072-mettre-en-cache-les-reponses-ajax) vise les réponses « inchangées dans un futur proche », comme une liste de villes, avec un seuil de 10 % de réponses non mises en cache au plus. [**RWEB 0021 — « Limiter le nombre d'appels aux API HTTP »**](https://rweb.greenit.fr/fr/fiches/RWEB_0021-limiter-le-nombre-d-appels-aux-api-http), rattachée aux critères 6.2 et [7.1](../../backend/7-1_cache-serveur/), donne des durées à adapter : un appel par jour pour des avis clients, un par heure pour un flux de réseau social affiché sur le site.
 
 **Les données.** [**RWEB 0064 — « Stocker les données statiques localement »**](https://rweb.greenit.fr/fr/fiches/RWEB_0064-stocker-les-donnees-statiques-localement) cite les stockages du navigateur (IndexedDB, Web Storage, Cache Storage) pour éviter les allers-retours avec le serveur.
 
@@ -191,14 +191,14 @@ Profil(s) métier concerné(s) : `Développeur`, `Architecte Logiciel`
 
 Ce critère est le premier levier du budget fixé par le [critère 6.1](../6-1_poids-requetes-ecran/) (poids et requêtes par écran) : à la deuxième visite, un cache bien réglé ramène le poids d'un écran de près de 1 Mo à quelques kilo-octets (voir les retours d'expériences).
 
-Il croise aussi plusieurs critères déjà publiés sur ce site :
+Il croise aussi plusieurs autres critères :
 
 - le [critère 2.3](../../specifications/2-3_connexion-bas-debit/) (connexion bas débit ou hors connexion), pour la question du mode hors ligne ;
 - le [critère 4.9](../../ux-ui/4-9_requetes-saisie-utilisateur/) (requêtes lors de la saisie) : une liste de suggestions mise en cache évite de redemander les mêmes résultats à chaque frappe ;
 - le [critère 2.10](../../specifications/2-10_services-tiers/) (services tiers) : depuis le cloisonnement du cache par site, une ressource tierce n'est plus partagée entre sites, ce qui plaide pour héberger soi-même ses ressources ;
 - le [critère 6.3](../6-3_compression-ressources/) (compression) : un fichier précompressé au déploiement se met en cache comme les autres, à condition d'envoyer l'en-tête `Vary: Accept-Encoding`.
 
-Le critère 7.1 (cache côté serveur), dans la famille Backend, et le critère 6.7 (ressources hébergées sur un même domaine), complètent celui-ci.
+Le [critère 7.1](../../backend/7-1_cache-serveur/) (cache côté serveur), dans la famille Backend, et le [critère 6.7](../6-7_domaine-unique/) (ressources hébergées sur un même domaine), complètent celui-ci.
 
 {{% /tab %}}
 {{< /tabs >}}
@@ -212,7 +212,7 @@ Le critère 7.1 (cache côté serveur), dans la famille Backend, et le critère 
 
 {{% tab tabName="Retours d'expériences" %}}
 
-[DiaLog](https://dialog.beta.gouv.fr/ecoconception) (beta.gouv.fr, [déclaration du 23 avril 2025](https://dialog.beta.gouv.fr/files/2025-04-23%20-%20Declaration.ecoconception.DiaLog-2_compressed.pdf)) valide les critères 6.2 et 7.1 ensemble, avec côté terminal la « mise en cache des fichiers statiques par le navigateur ».
+[DiaLog](https://dialog.beta.gouv.fr/ecoconception) (beta.gouv.fr, [déclaration du 23 avril 2025](https://dialog.beta.gouv.fr/files/2025-04-23%20-%20Declaration.ecoconception.DiaLog-2_compressed.pdf)) valide les critères 6.2 et [7.1](../../backend/7-1_cache-serveur/) ensemble, avec côté terminal la « mise en cache des fichiers statiques par le navigateur ».
 
 Cinq sites ont été analysés le 20 octobre 2026 dans Chromium 155 : une première visite, puis une seconde dans un nouvel onglet. À la seconde visite, tous servent plus de 90 % de leurs ressources depuis le cache. Le test du RGESN, appliqué tel quel, les valide donc tous. Pour aller plus loin, les en-têtes de chaque ressource ont été relevés et la règle de Chromium appliquée, pour estimer ce qui resterait en cache **un jour plus tard**, sans mise en production entre-temps :
 

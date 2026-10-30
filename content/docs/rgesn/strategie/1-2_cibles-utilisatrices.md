@@ -28,8 +28,8 @@ toc: true
 | **Phase** | `Exploration` |
 | **Priorité** | `Prioritaire` |
 | **Difficulté** | `Faible` |
-| **Applicabilité** | `Tous les services` |
-| **Métiers concernés** | `Porteur de projet` `Chef de produit marketing` `UX Designer` |
+| **Applicabilité** | `Applicable à tous les services` |
+| **Métiers concernés** | `Porteur de projet` `Chef de produit marketing` |
 | **Permalink** | https://ecoresponsable.numerique.gouv.fr/publications/referentiel-general-ecoconception/critere/1.2/ |
 {{< /table >}}
 
@@ -75,8 +75,8 @@ Pour valider ce critère, le **profil des cibles utilisatrices ainsi que l’ana
 
 Via ces différentes sources :
 
-{{< tabs tabTotal="4">}}
-{{% tab tabName="Designers Ethiques" %}}
+{{< tabs tabTotal="5">}}
+{{% tab tabName="Designers Éthiques" %}}
 
 Profil(s) métier concerné(s) : `Porteur de projet`, `UX Designer`
 
@@ -92,9 +92,9 @@ Profil(s) métier concerné(s) : `Porteur de projet`, `UX Designer`
 
 Voici quelques exemples issus du RWEB :
 
-- [Quantifier precisement le-besoin](https://rweb.greenit.fr/fr/fiches/RWEB_0002-quantifier-precisement-le-besoin) : chiffrer précisément chaque dimension fonctionnelle (taux de compression d'image, temps de réponse maximal, nombre d'éléments affichés…) au regard du besoin métier réel plutôt que de s'en tenir à des valeurs par défaut, pour ne pas surdimensionner le service.
-- [Eliminer les fonctionnalités non utilisees](https://rweb.greenit.fr/fr/fiches/RWEB_0003-eliminer-les-fonctionnalites-non-utilisees) : mesurer l'usage réel des fonctionnalités en production et désactiver ou supprimer celles qui ne sont pas ou peu utilisées, pour alléger l'application et son empreinte (calcul, stockage, réseau, maintenance).
-- [Eliminer les fonctionnalités non essentielles](https://rweb.greenit.fr/fr/fiches/RWEB_0001-eliminer-les-fonctionnalites-non-essentielles) : jusqu'à 45 % des fonctionnalités demandées ne sont jamais utilisées et 70 % peuvent être considérées comme non essentielles ; réduire le périmètre fonctionnel dès la conception limite l'impact environnemental et améliore l'utilisabilité.
+- [RWEB 0002 — « Quantifier précisément le besoin »](https://rweb.greenit.fr/fr/fiches/RWEB_0002-quantifier-precisement-le-besoin) : chiffrer précisément chaque dimension fonctionnelle (taux de compression d'image, temps de réponse maximal, nombre d'éléments affichés…) au regard du besoin métier réel plutôt que de s'en tenir à des valeurs par défaut, pour ne pas surdimensionner le service.
+- [RWEB 0003 — « Supprimer les fonctionnalités non utilisées »](https://rweb.greenit.fr/fr/fiches/RWEB_0003-eliminer-les-fonctionnalites-non-utilisees) : mesurer l'usage réel des fonctionnalités en production et désactiver ou supprimer celles qui ne sont pas ou peu utilisées, pour alléger l'application et son empreinte (calcul, stockage, réseau, maintenance).
+- [RWEB 0001 — « Éliminer les fonctionnalités non essentielles »](https://rweb.greenit.fr/fr/fiches/RWEB_0001-eliminer-les-fonctionnalites-non-essentielles) : jusqu'à 45 % des fonctionnalités demandées ne sont jamais utilisées et 70 % peuvent être considérées comme non essentielles ; réduire le périmètre fonctionnel dès la conception limite l'impact environnemental et améliore l'utilisabilité.
 
 {{% /tab %}}
 
@@ -125,6 +125,17 @@ Profil(s) métier concerné(s) : `Porteur de projet`, `Chef de produit marketing
 Les équipes peuvent également solliciter gratuitement l'accompagnement d'experts en recherche utilisateur via le dispositif [Commando UX](https://design.numerique.gouv.fr/commando-ux/).
 
 {{% /tab %}}
+
+{{% tab tabName="Critère associé" %}}
+
+Profil(s) métier concerné(s) : `Porteur de projet`, `Chef de produit marketing`
+
+- le [critère 1.1](../1-1_evaluation-utilite/) (évaluation de l'utilité) : les besoins des cibles fondent l'évaluation de l'utilité ;
+- le [critère 2.1](../../specifications/2-1_profils-materiels/) (profils de matériels) : les cibles déterminent les terminaux et les connexions à prendre en charge ;
+- le [critère 4.3](../../ux-ui/4-3_parcours-navigation/) (parcours de navigation) : les parcours se conçoivent à partir des besoins des cibles ;
+- le [critère 9.1](../../algorithmie/9-1_necessite-entrainement/) (nécessité d'un entraînement) : un apprentissage ne se justifie que par un besoin documenté de ces cibles.
+
+{{% /tab %}}
 {{< /tabs >}}
 
 ---
@@ -150,7 +161,7 @@ Exemples de services numériques ayant documenté leurs cibles utilisatrices dan
 {{% /tab %}}
 
 {{% tab tabName="Normes internationales" %}}
-La norme [ISO/IEC TS 20125](https://www.iso.org/fr/standard/86105.html) « Technologies de l'information — Écoconception des services numériques » consacre son étape 1 — « Requirements gathering, prioritization and contextualization » — à la même exigence que le critère 1.2 du RGESN : identifier précisément les utilisateurs-cibles et leurs besoins avant de concevoir la solution.
+La spécification technique [ISO/IEC TS 20125-1](https://www.iso.org/fr/standard/86105.html) « Technologies de l'information — Écoconception des services numériques — Partie 1 : Écopratiques pour les étapes du cycle de vie » (février 2026) consacre sa première étape, « Requirements gathering, definition and prioritisation » (recueil, définition et priorisation des besoins), à la même exigence que le critère 1.2 du RGESN : identifier précisément les utilisateurs-cibles et leurs besoins avant de concevoir la solution.
 
 Cette norme donne une **portée internationale** à cette exigence, aujourd'hui portée en France par le RGESN et le GR491, et constitue une référence utile pour les organisations opérant à l'international.
 {{% /tab %}}

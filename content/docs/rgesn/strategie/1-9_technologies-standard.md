@@ -29,7 +29,7 @@ toc: true
 | **Phase** | `Conception` |
 | **Priorité** | `Prioritaire` |
 | **Difficulté** | `Moyen` |
-| **Applicabilité** | `Tous les services` |
+| **Applicabilité** | `Applicable à tous les services` |
 | **Métiers concernés** | `Responsable IT` `Développeur` |
 | **Permalink** | https://ecoresponsable.numerique.gouv.fr/publications/referentiel-general-ecoconception/critere/1.9/ |
 {{< /table >}}
@@ -72,18 +72,18 @@ Le critère est **validé** si le service s'appuie sur des **standards interopé
 
 Via ces différentes sources :
 
-{{< tabs tabTotal="2">}}
+{{< tabs tabTotal="4">}}
 {{% tab tabName="INR - GR491" %}}
 
 Profil(s) métier concerné(s) : `Responsable IT`, `Développeur`, `Architecte`
 
-Le critère 1.9 du RGESN correspond directement à la [recommandation n°4 de la famille Frontend](https://gr491.isit-europe.org/?famille=frontend&num_reco=4) du [GR491](https://gr491.isit-europe.org/) (INR) : « Réduire les effets d'obsolescence », classée **« Incontournable »**. Elle pousse le questionnement au-delà du simple choix web/natif :
+Le critère 1.9 du RGESN correspond directement à la [recommandation n°4 de la famille Frontend](https://gr491.isit-europe.org/?famille=frontend&num_reco=4) du [GR491](https://gr491.isit-europe.org/) (INR) : « Réduire les effets d'obsolescence », dont le premier critère est classé **« Incontournable »**. Elle pousse le questionnement au-delà du simple choix web/natif :
 
 - **Rétrocompatibilité** : la plage de rétro-compatibilité visée est-elle explicitement définie ?
 - **Version allégée** : une version plus légère du service existe-t-elle pour les équipements anciens ou les connexions limitées ?
 - **Compatibilité future** : les équipements plus anciens resteront-ils compatibles, et dans quelles limites ?
 
-La [recommandation n°3](https://gr491.isit-europe.org/?famille=frontend&num_reco=3) (« Utiliser des environnements et outils limitant les impacts ») de la même famille ajoute un critère directement actionnable : la fonctionnalité visée pourrait-elle être couverte par une **capacité native du navigateur**, plutôt que par une dépendance externe ?
+La [recommandation n°3](https://gr491.isit-europe.org/?famille=frontend&num_reco=3) (« Utiliser les environnements et outils qui permettent de limiter les impacts ») de la même famille ajoute un critère directement actionnable : la fonctionnalité visée pourrait-elle être couverte par une **capacité native du navigateur**, plutôt que par une dépendance externe ?
 
 {{% /tab %}}
 
@@ -95,8 +95,8 @@ Pour vérifier concrètement qu'une API ou une fonctionnalité web est « standa
 
 - [**Baseline**](https://web.dev/baseline) (initiative intersectorielle du W3C WebDX Community Group, soutenue par Google, Microsoft, Apple et Mozilla) donne un verdict unique et normalisé par fonctionnalité web : **Widely available** (supportée par tous les navigateurs majeurs depuis au moins 2,5 ans), **Newly available** (récente, pas encore fiable sur les anciens terminaux) ou **Limited** (support partiel). Ce statut est directement visible sur les pages [MDN Web Docs](https://developer.mozilla.org/) et [Can I Use](https://caniuse.com/).
 - Une **Web App** (voire une [Progressive Web App](https://web.dev/learn/pwa/progressive-web-apps)) reste, par construction, la façon la plus directe de répondre au critère : une seule base de code HTML/CSS/JS, interopérable nativement entre systèmes d'exploitation et terminaux, sans passer par un magasin d'applications ni imposer de version d'OS minimale. Deux retours d'expérience chiffrés, documentés par leurs propres équipes d'ingénierie, confirment ce gain de légèreté et de compatibilité :
-  - [**Twitter Lite**](https://web.dev/case-studies/twitter) : la PWA ne pesait que **600 Ko** contre **23,5 Mo** pour l'application Android native équivalente — 1 à 3 % de sa taille — avec un chargement 30 % plus rapide et une consommation de données réduite de 70 %.
-  - [**Uber (m.uber.com)**](https://www.uber.com/en-GB/blog/m-uber/) : conçue pour ne peser que **50 Ko** afin de rester utilisable sur des réseaux 2G, l'équipe d'ingénierie précise explicitement que cette PWA est « compatible avec tous les navigateurs modernes, y compris sur des terminaux non pris en charge par l'application native » — l'illustration la plus directe du gain de rétrocompatibilité visé par ce critère.
+  - [**Twitter Lite**](https://web.dev/case-studies/twitter) : la PWA ne pesait que **600 Ko** contre **23,5 Mo** pour l'application Android native équivalente — 1 à 3 % de sa taille — avec un temps de chargement moyen réduit de 30 % pour les utilisateurs connectés, et jusqu'à 70 % de données en moins grâce à l'optimisation des images.
+  - [**Uber (m.uber.com)**](https://www.uber.com/en-GB/blog/m-uber/) : conçue pour ne peser que **50 Ko** afin de rester utilisable sur des réseaux 2G, l'équipe d'ingénierie la décrit comme « compatible with all modern browsers », avec une expérience proche de l'application sur les terminaux d'entrée de gamme, « including those not supported by our native client ». C'est l'illustration la plus directe du gain de rétrocompatibilité visé par ce critère.
 
 Côté mobile, trois repères complémentaires :
 
@@ -105,6 +105,70 @@ Côté mobile, trois repères complémentaires :
 - [**PWABuilder**](https://www.pwabuilder.com/) (Microsoft, open source) empaquette une Progressive Web App existante en application installable pour l'App Store et le Play Store via [Bubblewrap](https://github.com/GoogleChromeLabs/bubblewrap) — utile lorsqu'une présence en magasin d'applications est requise, sans pour autant renoncer à une base de code web unique et interopérable.
 
 Si une application réellement native reste nécessaire, éviter de fixer un `minSdkVersion` (Android) ou une version minimale d'iOS supérieure au strict besoin technique : chaque palier relevé sans justification exclut immédiatement les terminaux plus anciens du service, à rebours de l'objectif du critère.
+
+{{% /tab %}}
+
+{{% tab tabName="Mise en œuvre technique" %}}
+
+Profil(s) métier concerné(s) : `Développeur`, `Architecte`
+
+**1. Vérifier le statut Baseline d'une API avant de l'adopter.** Le W3C WebDX Community Group publie les statuts de toutes les fonctionnalités web dans le paquet [web-features](https://github.com/web-platform-dx/web-features), lisible sans Node.js :
+
+```sh
+curl -sL https://cdn.jsdelivr.net/npm/web-features/data.json -o web-features.json
+for f in intl structured-clone share; do
+  jq -r --arg f "$f" '.features[$f].status | "\($f) : \(.baseline) \(.baseline_high_date // "")"' web-features.json
+done
+```
+
+```
+intl : high 2020-03-28
+structured-clone : high 2024-09-14
+share : false
+```
+
+`high` signifie « Widely available », depuis la date indiquée ; `low`, « Newly available » ; `false`, « Limited ». Testé le 30 octobre 2026 avec web-features 3.44.0. Pour vérifier tout le code d'un coup, eslint-plugin-compat, présenté au [critère 2.4](../../specifications/2-4_anciennes-versions-os/), compare les API utilisées à la liste de navigateurs visée.
+
+**2. Remplacer une bibliothèque par une API standard**, dans l'esprit de la recommandation n°3 du GR491 (onglet « INR - GR491 ») :
+
+| Besoin | Bibliothèque courante | API standard | Widely available depuis |
+|---|---|---|---|
+| Formater dates et nombres | Moment.js, Numeral.js | `Intl` | mars 2020 |
+| Requêtes HTTP annulables | Axios | `fetch()` et `AbortController` | septembre 2021 |
+| Copier un objet en profondeur | `cloneDeep` de Lodash | `structuredClone()` | septembre 2024 |
+
+Pour les composants d'interface (`<dialog>`, `<details>`…), voir le [critère 4.5](../../ux-ui/4-5_composants-natifs/).
+
+**3. Détecter la fonctionnalité, pas le navigateur**, pour une API encore « Limited ». `navigator.share()` ouvre le menu de partage du système, mais n'existe pas partout. Le lien fonctionne pour tous ; le menu du système le remplace là où il existe :
+
+```html
+<a id="partager" href="mailto:?body=https://exemple.fr/fiche">Partager par e-mail</a>
+<script>
+  if ('share' in navigator) {
+    document.querySelector('#partager').addEventListener('click', (e) => {
+      e.preventDefault();
+      navigator.share({ title: document.title, url: location.href });
+    });
+  }
+</script>
+```
+
+Testé le 30 octobre 2026 dans Chromium 155 sous Linux, qui n'a pas `navigator.share` : le lien reste un simple lien. Avec un `navigator.share` simulé, le clic appelle le partage avec le titre et l'adresse de la page.
+
+**4. Pour une application native**, justifier ce choix dans la déclaration (contrainte technique, matériel cible maîtrisé), comme le demande le moyen de test, avec les versions minimales d'Android et d'iOS (voir l'onglet « Outils »).
+
+**5. Documenter** dans la déclaration d'écoconception : les standards retenus (HTML, CSS, API JavaScript « Widely available »), les exceptions et leur solution de repli.
+
+{{% /tab %}}
+
+{{% tab tabName="Critère associé" %}}
+
+Profil(s) métier concerné(s) : `Responsable IT`, `Développeur`
+
+- le [critère 1.8](../1-8_efforts-open-source/) (open source) : des technologies ouvertes, que chacun peut maintenir ;
+- le [critère 1.10](../1-10_api-materiel/) (API ouvertes pour le matériel) : des interfaces documentées pour le matériel ;
+- le [critère 2.4](../../specifications/2-4_anciennes-versions-os/) (anciennes versions d'OS et de navigateurs) : les standards restent pris en charge par les anciennes versions ;
+- le [critère 4.5](../../ux-ui/4-5_composants-natifs/) (composants natifs) : les composants standard du navigateur ou du système.
 
 {{% /tab %}}
 {{< /tabs >}}
@@ -118,7 +182,7 @@ Si une application réellement native reste nécessaire, éviter de fixer un `mi
 
 {{% tab tabName="Retours d'expériences" %}}
 
-[FACE](https://declarations-f52e8c.gitlab-pages.din.developpement-durable.gouv.fr/uploads/73f86f8cf0659b4e84d9c83adc0f0a97/face_rgesn_2024_outil_declaration_ecoconception.pdf) (Ministères Territoires Écologie Logement, déclaration du 30 janvier 2025) valide ce critère avec une justification simple et directement transposable : « Le service numérique est une application web qui s'appuie sur des standards interopérables communs aux principaux écosystèmes (terminaux, systèmes d'exploitation, navigateurs…). »
+[FACE](https://declarations-f52e8c.gitlab-pages.din.developpement-durable.gouv.fr/uploads/73f86f8cf0659b4e84d9c83adc0f0a97/face_rgesn_2024_outil_declaration_ecoconception.pdf) (Ministères Territoires Écologie Logement, évaluation de janvier 2025) valide ce critère avec une justification simple et directement transposable : « Le service numérique est une application web qui s'appuie sur des standards interopérables communs aux principaux écosystèmes (terminaux, systèmes d'exploitation, navigateurs…). »
 
 Ce cas illustre bien la logique du critère : contrairement à d'autres critères de cette fiche (1.7, 1.8) où la conformité demande un effort dédié, le choix d'une **architecture web standard dès la conception** rend ce critère 1.9 quasiment automatique — alors qu'une application native nécessiterait, a posteriori, de justifier ce choix et d'en documenter les limites de compatibilité dans la déclaration d'écoconception.
 

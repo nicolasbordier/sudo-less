@@ -233,7 +233,7 @@ Le RGESN demande de ne pas confondre ce critère avec le [critère 6.3](../../fr
 
 [FACE](https://declarations-f52e8c.gitlab-pages.din.developpement-durable.gouv.fr/uploads/73f86f8cf0659b4e84d9c83adc0f0a97/face_rgesn_2024_outil_declaration_ecoconception.pdf) (Ministères Territoires Écologie Logement, critère évalué le 29 janvier 2025) le marque **« Non applicable »**, avec la même justification qu'au critère 5.1 : « Les seules images utilisées sont les logos et bannières chargées une seule fois (produit web de type SPA), dont le poids de données transférés est inférieur à 40 ko. » La même réserve s'applique : la non-applicabilité n'est prévue que si le service n'utilise aucune image matricielle (voir le [critère 5.1](../5-1_format-images/)).
 
-Sur le site de [Niji](https://www.niji.fr/fr/), déjà cité aux critères 4.15 et 5.1, chaque photo de la page d'accueil est proposée en deux largeurs (375 et 768 pixels) dans chacun des trois formats (AVIF, WebP, JPEG), avec un attribut `sizes` qui laisse le navigateur choisir (constaté le 20 octobre 2026).
+Sur le site de [Niji](https://www.niji.fr/fr/), déjà cité aux critères [4.15](../../ux-ui/4-15_controle-usages/) et 5.1, chaque photo de la page d'accueil est proposée en deux largeurs (375 et 768 pixels) dans chacun des trois formats (AVIF, WebP, JPEG), avec un attribut `sizes` qui laisse le navigateur choisir (constaté le 20 octobre 2026).
 
 {{% /tab %}}
 

@@ -210,7 +210,7 @@ Profil(s) métier concerné(s) : `Concepteur UX / UI`, `Développeur`
 
 Le RGESN répond à l'article 25 de la loi du 15 novembre 2021 visant à réduire l'empreinte environnementale du numérique en France (loi REEN). Selon cet article, les critères du référentiel concernent « notamment l'affichage et la lecture des contenus multimédias pour permettre de limiter le recours aux stratégies de captation de l'attention des utilisateurs des services numériques ».
 
-Le critère 4.13 traite l'une de ces stratégies, aux côtés de deux critères déjà publiés sur ce site :
+Le critère 4.13 traite l'une de ces stratégies, aux côtés de deux autres critères :
 
 - le [critère 4.1](../4-1_lecture-automatique/) (lecture automatique des vidéos et sons) ;
 - le [critère 4.2](../4-2_defilement-infini/) (défilement infini).
