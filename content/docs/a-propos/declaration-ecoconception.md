@@ -26,17 +26,17 @@ Cette page est la déclaration d'écoconception propre à **sudo-less.dev**, ré
 
 | Score actuel | Score précédent | Score visé (octobre 2028) |
 |---|---|---|
-| **57 %** | Aucun, première déclaration | 78 % |
+| **58 %** | Aucun, première déclaration | 78 % |
 
-**33 critères validés sur 56 applicables** ; 22 critères ne s'appliquent pas au site. Le score pondère chaque critère par sa priorité :
+**34 critères validés sur 56 applicables** ; 22 critères ne s'appliquent pas au site. Le score pondère chaque critère par sa priorité :
 
 | Priorité | Pondération | Critères applicables | Critères validés |
 |---|---:|---:|---:|
 | Prioritaire | 1,5 | 20 | 9 |
-| Recommandé | 1,25 | 26 | 14 |
+| Recommandé | 1,25 | 26 | 15 |
 | Modéré | 1 | 10 | 10 |
 
-Score = (9 × 1,5 + 14 × 1,25 + 10 × 1) / (20 × 1,5 + 26 × 1,25 + 10 × 1) = 41 / 72,5 = **57 %**.
+Score = (9 × 1,5 + 15 × 1,25 + 10 × 1) / (20 × 1,5 + 26 × 1,25 + 10 × 1) = 42,25 / 72,5 = **58 %**.
 
 Ce score mesure l'avancement dans le référentiel, pas l'impact environnemental du site. Le score visé suppose que les actions 1 à 5 du plan d'avancement soient réalisées ; il ne compte pas les critères d'hébergement, qui dépendent de GitHub.
 
@@ -60,6 +60,26 @@ Quatre parcours ont été testés le 31 octobre 2026 dans Chromium 155, cache d�
 | Autres référentiels | 8 | 77 Ko |
 
 Sur une fiche, ce poids se répartit en 22 Ko de HTML, 14 Ko de CSS, 31 Ko de JavaScript (Bootstrap 19 Ko, FlexSearch 6,4 Ko, thème 5 Ko) et 11,3 Ko pour la police d'icônes. La première recherche télécharge en plus l'index de recherche : 336 Ko compressés, 1 058 Ko une fois décompressés.
+
+---
+
+## Budget par page
+
+Chaque page du site doit respecter ce budget au premier chargement : cache désactivé, page entièrement défilée, sans interaction.
+
+| | Budget | Maximum mesuré | Page la plus lourde |
+|---|---:|---:|---|
+| Poids transféré | 100 Ko | 79 Ko | Fiche [6.5](../../rgesn/frontend/6-5_chargement-ressources/) |
+| Requêtes | 10 | 8 | Toutes les pages de la documentation |
+| Éléments du DOM | 1 500 | 1 390 | Fiche [6.5](../../rgesn/frontend/6-5_chargement-ressources/) |
+
+Mesuré le 31 octobre 2026 dans Chromium 155 sur les 132 pages du site, page d'erreur comprise, à 1 366 × 768 et 390 × 844 pixels : toutes respectent le budget. Le DOM compte toutes les balises de la page, y compris celles des images SVG.
+
+À 512 kbit/s, le débit testé pour le critère 2.3, 100 Ko se transfèrent en 1,6 seconde environ.
+
+Le budget porte sur le chargement de la page. Il ne compte pas la recherche : à sa première ouverture, elle télécharge son index en une requête de 336 Ko (critère 4.12).
+
+Avec le cache, passer d'une page à l'autre ne télécharge que le HTML : 1 requête et 22 Ko au plus. Une page revue dans les 10 minutes ne demande aucune requête ; au-delà, le navigateur revérifie ses 8 fichiers sans les télécharger de nouveau (critère 6.2).
 
 ---
 
@@ -156,7 +176,7 @@ Sur une fiche, ce poids se répartit en 22 Ko de HTML, 14 Ko de CSS, 31 Ko de Ja
 
 | Critère | Statut | Justification |
 |---|---|---|
-| [6.1](../../rgesn/frontend/6-1_poids-requetes-ecran/) Poids et requêtes par écran | Non validé | Aucun budget fixé. Mesuré : 8 requêtes et 49 à 79 Ko par page. |
+| [6.1](../../rgesn/frontend/6-1_poids-requetes-ecran/) Poids et requêtes par écran | Validé | Budget par page, détaillé dans la section [Budget par page](#budget-par-page) : 100 Ko transférés, 10 requêtes et 1 500 éléments au plus, au chargement de la page, recherche non comprise. Toutes les pages le respectent : 79 Ko, 8 requêtes et 1 390 éléments au plus. Le contrôle se fait encore à la main. |
 | [6.2](../../rgesn/frontend/6-2_cache-navigateur/) Cache côté utilisateur | Validé | À la deuxième visite d'une fiche, les 8 ressources viennent du cache. GitHub Pages fixe la durée de cache à 10 minutes (`max-age=600`) pour tous les fichiers, sans réglage possible. Au-delà, le navigateur revalide chaque fichier, sans le télécharger de nouveau (réponse 304). Les CSS et JavaScript ont un nom qui change avec leur contenu : ils pourraient être gardés bien plus longtemps. |
 | [6.3](../../rgesn/frontend/6-3_compression-ressources/) Compression des ressources | Validé | Tous les fichiers texte arrivent compressés en gzip. GitHub Pages ne propose pas Brotli. |
 | [6.4](../../rgesn/frontend/6-4_dimensions-images/) Dimensions des images | Validé | L'illustration d'accueil existe en quatre largeurs, de 480 à 1 280 pixels, et l'attribut `sizes` indique sa largeur affichée à chaque taille d'écran. Vérifié dans Chromium de 360 à 1 920 pixels de large : en densité 1 et 2, le navigateur charge une version au plus 1,5 fois plus large que l'affichage. Sur un ordinateur de densité 1, elle pèse 17,6 Ko au lieu de 45 Ko. |
@@ -216,7 +236,7 @@ Les actions sont classées de la plus simple à la plus longue.
 | Action | Critères |
 |---|---|
 | 1. Charger FlexSearch à l'ouverture de la recherche, avec l'index, et annoncer le poids de l'index | 6.5, 4.12 |
-| 2. Fixer un budget par écran, en poids et en requêtes, contrôlé à chaque publication | 6.1 |
+| 2. Contrôler le budget par page à chaque publication, dans l'intégration continue | 6.1 |
 | 3. Tester les parcours sur un Safari de plus de deux ans, pour compléter le critère 2.4 | 2.4 |
 | 4. Écrire l'étude d'utilité, la description des besoins des publics visés, les objectifs environnementaux, la comparaison d'architecture, la stratégie de maintenance et de fin de vie, et la règle de revue des fiches | 1.1, 1.2, 1.5, 3.1, 2.7, 5.8, 7.2 |
 | 5. Refaire cette évaluation à chaque évolution importante, et au plus tard en octobre 2027 | 1.4 |
