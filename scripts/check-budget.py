@@ -6,7 +6,8 @@ Usage : python3 scripts/check-budget.py public [--chrome COMMANDE]
 le dossier en local, compressé en gzip comme par GitHub Pages, puis ouvre chaque page dans Chrome,
 cache désactivé, en 1 366 × 768 et 390 × 844, et la fait défiler jusqu'en bas. Il relève le nombre
 de requêtes, le poids transféré et le nombre d'éléments du DOM, et échoue si une page dépasse le
-budget.
+budget. Il écrit aussi dans le pied de chaque page son poids et son nombre de requêtes, les plus
+élevés des deux tailles d'écran, pour informer les visiteurs.
 
 Les pages appellent certains fichiers par leur adresse publique (https://…) : Chrome les demande
 au serveur local, sans que la page voie la différence.
@@ -17,6 +18,7 @@ import argparse
 import gzip
 import http.server
 import json
+import math
 import mimetypes
 import os
 import re
@@ -50,6 +52,8 @@ SCROLL = """(async () => {
   scrollTo(0, document.documentElement.scrollHeight);
   return true;
 })()"""
+# Indicateur du pied de page, masqué tant qu'il n'est pas rempli (voir les partials footer.html)
+PAGE_COST = re.compile(r'<span data-page-cost hidden(?:="")?>(.*?)>Cette page</a></span>', re.S)
 
 mimetypes.add_type("application/manifest+json", ".webmanifest")
 mimetypes.add_type("font/woff2", ".woff2")
@@ -234,6 +238,20 @@ def pages(root):
                 yield path[:-len("index.html")] if name == "index.html" else path
 
 
+def write_cost(root, page, size, requests):
+    """Affiche dans le pied de la page son poids et son nombre de requêtes."""
+    path = os.path.join(root, page if page.endswith(".html") else page + "index.html")
+    with open(path, encoding="utf-8") as f:
+        html = f.read()
+    # Arrondi au Ko supérieur : les en-têtes de GitHub Pages ajoutent quelques centaines d'octets
+    # au poids mesuré ici
+    text = f"Cette page : {math.ceil(size / 1024)} Ko, {requests} requête{'s' if requests > 1 else ''}"
+    updated = PAGE_COST.sub(lambda m: f"<span data-page-cost>{m.group(1)}>{text}</a></span>", html)
+    if updated != html:
+        with open(path, "w", encoding="utf-8") as f:
+            f.write(updated)
+
+
 def show(metric, value):
     return f"{value / 1024:.1f} Ko" if metric == "poids" else str(value)
 
@@ -258,8 +276,10 @@ def main():
     worst, over = {m: (0, None) for m in BUDGET}, 0
     try:
         for page in sorted(pages(root)):
+            results = []
             for width, height in VIEWPORTS:
                 result = measure(chrome, base + page, width, height)
+                results.append(result)
                 label = f"/{page} ({width} × {height})"
                 for metric, value in result.items():
                     if value > worst[metric][0]:
@@ -270,6 +290,7 @@ def main():
                     detail = ", ".join(f"{m} {show(m, result[m])} (budget {show(m, BUDGET[m])})" for m in exceeded)
                     print(("::error title=Budget par page dépassé::" if github else "Budget dépassé : ")
                           + f"{label} : {detail}")
+            write_cost(root, page, max(r["poids"] for r in results), max(r["requêtes"] for r in results))
     finally:
         chrome.close()
         server.shutdown()

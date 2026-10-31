@@ -75,7 +75,7 @@ Chaque page du site doit respecter ce budget au premier chargement : cache désa
 
 Mesuré le 31 octobre 2026 dans Chromium 155 sur les 132 pages du site, page d'erreur comprise, à 1 366 × 768 et 390 × 844 pixels : toutes respectent le budget. Le DOM compte toutes les balises de la page, y compris celles des images SVG.
 
-Le budget est vérifié à chaque publication, avant la mise en ligne : le site construit est servi en local, compressé comme par GitHub Pages, et chaque page est chargée dans Chrome aux deux tailles d'écran. Si une page dépasse le budget, la publication échoue.
+Le budget est vérifié à chaque publication, avant la mise en ligne : le site construit est servi en local, compressé comme par GitHub Pages, et chaque page est chargée dans Chrome aux deux tailles d'écran. Si une page dépasse le budget, la publication échoue. Chaque page affiche en pied de page son propre poids et son nombre de requêtes, issus de cette mesure et arrondis au Ko supérieur.
 
 À 512 kbit/s, le débit testé pour le critère 2.3, 100 Ko se transfèrent en 1,6 seconde environ.
 
@@ -96,7 +96,7 @@ Inventaire au 31 octobre 2026 des fonctionnalités, composants et environnements
 | Production : GitHub Pages | Utilisé | Voir la famille 8. Hébergement. |
 | Construction : GitHub Actions | Utilisé à chaque publication | L'archive de déploiement expire après 1 jour, le cache après 7 jours sans usage, les journaux après 30 jours. |
 | Développement : `hugo server` sur le poste du mainteneur | Utilisé | Pas d'environnement de préproduction. |
-| Outils de construction : Hugo 0.168, Go, Dart Sass 1.105, Python et 4 scripts | Utilisés | Versions fixées dans la construction, mises à jour à chaque revue. |
+| Outils de construction : Hugo 0.168, Go, Dart Sass 1.105, Python et 5 scripts | Utilisés | Versions fixées dans la construction, mises à jour à chaque revue. |
 | Thème Lotus Docs 0.3.0 et Bootstrap 5.3 | Utilisés. La dernière version du thème date d'avril 2026 ; il emploie des fonctions que Hugo a dépréciées, et Bootstrap 5 des règles Sass que Dart Sass 3 supprimera. | À chaque revue, vérifier leur compatibilité avec Hugo et Dart Sass. Si le thème n'est plus maintenu, le figer dans le dépôt ou le remplacer. |
 
 Retirés le 31 octobre 2026, car inutilisés : l'analyse de sécurité GitLab (le dépôt n'est que sur GitHub), l'installation de Node.js dans la construction (aucune dépendance JavaScript), LibSass, remplacé par Dart Sass qui était installé sans servir, les cartes de source du CSS publiées sans utilité (1,7 Mo) et le JavaScript de Bootstrap sur la page d'accueil, qui n'a pas d'onglets.
@@ -181,7 +181,7 @@ Le code (MIT) et le contenu (CC BY-SA 4.0) restent ainsi réutilisables, y compr
 | [4.12](../../rgesn/ux-ui/4-12_impacts-fonctionnalites/) Fonctionnalités à fort impact | Validé | La fonctionnalité la plus lourde, la recherche, annonce son poids dès son ouverture : « La recherche télécharge l'index du site, soit 344 Ko, à la première saisie. » Rien n'est téléchargé avant cette saisie. Ce poids, plus de quatre fois celui d'une page, est recalculé à chaque publication. |
 | [4.13](../../rgesn/ux-ui/4-13_notifications/) Notifications | Validé | Aucune notification. |
 | [4.14](../../rgesn/ux-ui/4-14_dark-patterns/) Dark patterns | Validé | Interface relue au regard des exemples de l'article 25 du DSA : ni compte à rebours, ni case précochée, ni bandeau de consentement, ni incitation à s'inscrire. |
-| [4.15](../../rgesn/ux-ui/4-15_controle-usages/) Contrôle des usages et mode sobre | Non validé | Le site a un mode sombre, mais ni information sur l'empreinte de son usage, ni mode sobre. |
+| [4.15](../../rgesn/ux-ui/4-15_controle-usages/) Contrôle des usages et mode sobre | Non validé | Le site est sobre par défaut : 73 Ko et 7 requêtes au plus par page, sans vidéo, avec une recherche téléchargée seulement à la demande. Depuis le 31 octobre 2026, chaque page affiche en pied de page son poids et son nombre de requêtes. Ce ne sont pas des indicateurs d'empreinte environnementale : en afficher suppose une évaluation par une méthode reconnue, comme le référentiel de l'ADEME pour les services numériques, prévue à l'action 2 du plan (critère 1.5). Le mode sombre n'est pas non plus un mode sobre au sens du critère. Il suit la préférence du système et s'active en un clic, mais ne réduit pas le poids des pages. Il économise l'énergie de l'écran sur un smartphone OLED, surtout à forte luminosité : de 39 à 47 % à pleine luminosité, de 3 à 9 % entre 30 et 50 %, selon une [étude de l'université Purdue](https://www.purdue.edu/research/features/stories/dark-mode-may-not-save-your-phones-battery-life-as-much-as-you-think-but-there-are-a-few-silver-linings) (2021). Sur un écran LCD, il n'apporte rien. |
 
 {{% /tab %}}
 

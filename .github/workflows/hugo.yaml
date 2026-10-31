@@ -91,7 +91,7 @@ jobs:
       - name: Announce search weight
         run: |
           python3 scripts/search-weight.py public
-      - name: Check page budget
+      - name: Check page budget and show page weight
         run: |
           "${{ runner.temp }}/venv/bin/python" scripts/check-budget.py public
       - name: Cache save
