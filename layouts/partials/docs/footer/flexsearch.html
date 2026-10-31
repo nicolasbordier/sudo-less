@@ -1,4 +1,34 @@
-<script type="module">
+{{ $list := slice }}
+{{- if and (isset .Site.Params.flexsearch "searchsectionsindex") (not (eq (len .Site.Params.flexsearch.searchSectionsIndex) 0)) }}
+    {{- if eq .Site.Params.flexsearch.searchSectionsIndex "ALL" }}
+        {{- $list = .Site.Pages }}
+    {{- else }}
+        {{- $list = (where .Site.Pages "Type" "in" .Site.Params.flexsearch.searchSectionsIndex) }}
+    {{- if (in .Site.Params.flexsearch.searchSectionsIndex "HomePage") }}
+        {{ $list = $list | append .Site.Home }}
+    {{- end }}
+    {{- end }}
+{{- else }}
+    {{- $list = (where .Site.Pages "Section" ($.Scratch.Get "pathName")) }}
+{{- end }}
+
+{{- /* sudo-less : l'index est écrit une seule fois dans un fichier JSON, au lieu d'être recopié dans
+       chaque page. Il est chargé à la première saisie dans la recherche, avec la bibliothèque
+       FlexSearch. Leur poids est annoncé avant : Hugo écrit ici leur poids non compressé, que
+       scripts/search-weight.py remplace à la publication par leur poids transféré. */}}
+{{ $docs := slice -}}
+{{ range $index, $element := $list -}}
+    {{ $description := .Description | default (.Summary | htmlUnescape | plainify) -}}
+    {{ $docs = $docs | append (dict
+        "id" $index
+        "href" .RelPermalink
+        "title" .Title
+        "description" $description
+        "content" (.Content | htmlUnescape | plainify)) -}}
+{{ end -}}
+{{ $searchIndex := resources.FromString "search-index.json" (jsonify $docs) | fingerprint "sha256" -}}
+{{ $flexSearch := resources.Get (printf "/%s/%s" ($.Scratch.Get "pathName") "js/flexsearch.bundle.js") | minify | fingerprint "sha384" -}}
+<script type="module" data-search-weight="{{ add (len $searchIndex.Content) (len $flexSearch.Content) }}">
     var suggestions = document.getElementById('suggestions');
     var search = document.getElementById('flexsearch');
 
@@ -85,78 +115,49 @@
 
     (function(){
 
-    var index = new FlexSearch.Document({
-        // charset: "latin:default",
-        tokenize: {{ .Site.Params.flexsearch.tokenize | default "forward" }},
-        minlength: {{ .Site.Params.flexsearch.minQueryChar | default 0}},
-        cache: {{ .Site.Params.flexsearch.cache | default 100 }},
-        optimize: {{ .Site.Params.flexsearch.optimize | default true }},
-        document: {
-        id: 'id',
-        store: [
-            "href", "title", "description"
-        ],
-        index: ["title", "description", "content"]
-        }
-    });
-
-
-    // Not yet supported: https://github.com/nextapps-de/flexsearch#complex-documents
-
-
-    // var docs = [
-    //     {{ range $index, $page := (where .Site.Pages "Section" "docs") -}}
-    //     {
-    //         id: {{ $index }},
-    //         href: {{ .Permalink }},
-    //         title: {{ .Title }},
-    //         description: {{ .Params.description }},
-    //         content: {{ .Content }}
-    //     },
-    //     {{ end -}}
-    // ];
-
-
-    // https://discourse.gohugo.io/t/range-length-or-last-element/3803/2
-
-    {{ $list := slice }}
-    {{- if and (isset .Site.Params.flexsearch "searchsectionsindex") (not (eq (len .Site.Params.flexsearch.searchSectionsIndex) 0)) }}
-        {{- if eq .Site.Params.flexsearch.searchSectionsIndex "ALL" }}
-            {{- $list = .Site.Pages }}
-        {{- else }}
-            {{- $list = (where .Site.Pages "Type" "in" .Site.Params.flexsearch.searchSectionsIndex) }}
-        {{- if (in .Site.Params.flexsearch.searchSectionsIndex "HomePage") }}
-            {{ $list = $list | append .Site.Home }}
-        {{- end }}
-        {{- end }}
-    {{- else }}
-        {{- $list = (where .Site.Pages "Section" ($.Scratch.Get "pathName")) }}
-    {{- end }}
-
-    {{- /* sudo-less : l'index est écrit une seule fois dans un fichier JSON, chargé à la
-           première ouverture de la recherche, au lieu d'être recopié dans chaque page. */}}
-    {{ $docs := slice -}}
-    {{ range $index, $element := $list -}}
-        {{ $description := .Description | default (.Summary | htmlUnescape | plainify) -}}
-        {{ $docs = $docs | append (dict
-            "id" $index
-            "href" .RelPermalink
-            "title" .Title
-            "description" $description
-            "content" (.Content | htmlUnescape | plainify)) -}}
-    {{ end -}}
-    {{ $searchIndex := resources.FromString "search-index.json" (jsonify $docs) | fingerprint "sha256" -}}
-
+    var index = null;
     var indexLoading = null;
     var indexReady = false;
 
+    function loadFlexSearch() {
+        return new Promise((resolve, reject) => {
+            const script = document.createElement('script');
+            script.src = {{ $flexSearch.RelPermalink }};
+            script.integrity = {{ $flexSearch.Data.Integrity }};
+            script.crossOrigin = 'anonymous';
+            script.onload = resolve;
+            script.onerror = () => {
+                script.remove(); // nouvel essai à la prochaine saisie
+                reject(new Error('FlexSearch'));
+            };
+            document.head.appendChild(script);
+        });
+    }
+
     function loadIndex() {
-        indexLoading ??= fetch({{ $searchIndex.RelPermalink }})
-            .then((response) => {
+        // bibliothèque et index téléchargés en parallèle
+        indexLoading ??= Promise.all([
+            window.FlexSearch || loadFlexSearch(),
+            fetch({{ $searchIndex.RelPermalink }}).then((response) => {
                 if (!response.ok) throw new Error(response.status);
                 return response.json();
             })
-            .then(async (docs) => {
+        ])
+            .then(async ([, docs]) => {
+                index = new FlexSearch.Document({
+                    // charset: "latin:default",
+                    tokenize: {{ .Site.Params.flexsearch.tokenize | default "forward" }},
+                    minlength: {{ .Site.Params.flexsearch.minQueryChar | default 0}},
+                    cache: {{ .Site.Params.flexsearch.cache | default 100 }},
+                    optimize: {{ .Site.Params.flexsearch.optimize | default true }},
+                    document: {
+                    id: 'id',
+                    store: [
+                        "href", "title", "description"
+                    ],
+                    index: ["title", "description", "content"]
+                    }
+                });
                 // indexer par paquets d'environ 10 ms en rendant la main au navigateur entre deux,
                 // pour ne pas figer l'ouverture de la recherche
                 let start = performance.now();
@@ -176,9 +177,15 @@
         return indexLoading;
     }
 
-    // télécharger l'index dès l'ouverture de la recherche, avant la première saisie
-    flexsearchContainer.addEventListener('show.bs.collapse', () => loadIndex().catch(() => {}));
-    search.addEventListener('focus', () => loadIndex().catch(() => {}));
+    // sudo-less : à l'ouverture de la recherche, annoncer son poids avant tout téléchargement (critère
+    // RGESN 4.12) ; l'index et la bibliothèque ne sont téléchargés qu'à la première saisie
+    const searchWeight = Number(document.querySelector('script[data-search-weight]').dataset.searchWeight);
+    flexsearchContainer.addEventListener('shown.bs.collapse', () => {
+        if (!indexLoading && !search.value) {
+            showMessage({{ i18n "search_weight" | default "La recherche télécharge l'index du site, soit {poids}, à la première saisie." }}
+                .replace('{poids}', Math.round(searchWeight / 1024).toLocaleString('fr-FR') + ' Ko'));
+        }
+    });
 
     search.addEventListener('input', show_results, true);
 

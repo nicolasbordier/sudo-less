@@ -41,19 +41,8 @@
         {{ $darkModeInit := resources.Get (printf "/%s/%s" ($.Scratch.Get "pathName") "js/darkmode-init.js") | js.Build | minify -}}
         <script>{{ $darkModeInit.Content | safeJS }}</script>
     {{ end -}}
-    <!-- FlexSearch -->
-    {{ if or (not (isset .Site.Params.flexsearch "enabled")) (eq .Site.Params.flexsearch.enabled true) -}}
-        {{ if and (.Site.Params.docsearch.appID) (.Site.Params.docsearch.apiKey) -}}
-        {{ else }}
-            {{ $flexSearch := resources.Get (printf "/%s/%s" ($.Scratch.Get "pathName") "js/flexsearch.bundle.js") }}
-            {{- if not hugo.IsServer }}
-                {{ $flexSearch := $flexSearch | minify | fingerprint "sha384" }}
-                <script type="text/javascript" src="{{ $flexSearch.Permalink }}" integrity="{{ $flexSearch.Data.Integrity }}" crossorigin="anonymous"></script>
-                {{ else }}
-                <script type="text/javascript" src="{{ $flexSearch.Permalink }}"></script>
-            {{ end }}
-        {{ end }}
-    {{ end }}
+    {{- /* sudo-less : FlexSearch n'est plus chargé dans l'en-tête de chaque page, mais avec l'index,
+           à la première saisie dans la recherche (partial docs/footer/flexsearch.html). */}}
     <!-- Google Fonts -->
     {{- partialCached "google-fonts" . }}
     <!-- Custom CSS -->

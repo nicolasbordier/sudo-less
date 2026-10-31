@@ -88,6 +88,9 @@ jobs:
       - name: Subset icon font
         run: |
           "${{ runner.temp }}/venv/bin/python" scripts/subset-icons.py public
+      - name: Announce search weight
+        run: |
+          python3 scripts/search-weight.py public
       - name: Check page budget
         run: |
           "${{ runner.temp }}/venv/bin/python" scripts/check-budget.py public
