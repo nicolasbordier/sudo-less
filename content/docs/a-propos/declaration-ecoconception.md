@@ -26,19 +26,19 @@ Cette page est la déclaration d'écoconception propre à **sudo-less.dev**, ré
 
 | Score actuel | Score précédent | Score visé (octobre 2028) |
 |---|---|---|
-| **64 %** | Aucun, première déclaration | 78 % |
+| **67 %** | Aucun, première déclaration | 78 % |
 
-**37 critères validés sur 56 applicables** ; 22 critères ne s'appliquent pas au site. Le score pondère chaque critère par sa priorité :
+**39 critères validés sur 56 applicables** ; 22 critères ne s'appliquent pas au site. Le score pondère chaque critère par sa priorité :
 
 | Priorité | Pondération | Critères applicables | Critères validés |
 |---|---:|---:|---:|
 | Prioritaire | 1,5 | 20 | 10 |
-| Recommandé | 1,25 | 26 | 17 |
+| Recommandé | 1,25 | 26 | 19 |
 | Modéré | 1 | 10 | 10 |
 
-Score = (10 × 1,5 + 17 × 1,25 + 10 × 1) / (20 × 1,5 + 26 × 1,25 + 10 × 1) = 46,25 / 72,5 = **64 %**.
+Score = (10 × 1,5 + 19 × 1,25 + 10 × 1) / (20 × 1,5 + 26 × 1,25 + 10 × 1) = 48,75 / 72,5 = **67 %**.
 
-Ce score mesure l'avancement dans le référentiel, pas l'impact environnemental du site. Le score visé suppose que les actions 1 à 4 du plan d'avancement soient réalisées ; il ne compte pas les critères d'hébergement, qui dépendent de GitHub.
+Ce score mesure l'avancement dans le référentiel, pas l'impact environnemental du site. Le score visé suppose que les actions 1 à 3 du plan d'avancement soient réalisées ; il ne compte pas les critères d'hébergement, qui dépendent de GitHub.
 
 ---
 
@@ -53,13 +53,13 @@ Quatre parcours ont été testés le 31 octobre 2026 dans Chromium 155, cache d�
 
 | Page | Requêtes | Poids transféré |
 |---|---:|---:|
-| Accueil | 8 | 49 Ko |
-| Sommaire de la documentation | 8 | 68 Ko |
-| Fiche [6.5](../../rgesn/frontend/6-5_chargement-ressources/) | 8 | 79 Ko |
-| Retours d'expérience | 8 | 77 Ko |
-| Autres référentiels | 8 | 77 Ko |
+| Accueil | 7 | 44 Ko |
+| Sommaire de la documentation | 7 | 62 Ko |
+| Fiche [6.5](../../rgesn/frontend/6-5_chargement-ressources/) | 7 | 73 Ko |
+| Retours d'expérience | 7 | 71 Ko |
+| Autres référentiels | 7 | 71 Ko |
 
-Sur une fiche, ce poids se répartit en 22 Ko de HTML, 14 Ko de CSS, 31 Ko de JavaScript (Bootstrap 19 Ko, FlexSearch 6,4 Ko, thème 5 Ko) et 11,3 Ko pour la police d'icônes. La première recherche télécharge en plus l'index de recherche : 336 Ko compressés, 1 058 Ko une fois décompressés.
+Sur une fiche, ce poids se répartit en 22 Ko de HTML, 14 Ko de CSS, 24 Ko de JavaScript (Bootstrap 19 Ko, thème 5 Ko) et 11,3 Ko pour la police d'icônes. La première saisie dans la recherche télécharge en plus la bibliothèque FlexSearch et l'index de recherche : 344 Ko compressés, 1 076 Ko une fois décompressés.
 
 ---
 
@@ -69,9 +69,9 @@ Chaque page du site doit respecter ce budget au premier chargement : cache désa
 
 | | Budget | Maximum mesuré | Page la plus lourde |
 |---|---:|---:|---|
-| Poids transféré | 100 Ko | 79 Ko | Fiche [6.5](../../rgesn/frontend/6-5_chargement-ressources/) |
-| Requêtes | 10 | 8 | Toutes les pages de la documentation |
-| Éléments du DOM | 1 500 | 1 390 | Fiche [6.5](../../rgesn/frontend/6-5_chargement-ressources/) |
+| Poids transféré | 100 Ko | 73 Ko | Fiche [6.5](../../rgesn/frontend/6-5_chargement-ressources/) |
+| Requêtes | 10 | 7 | Toutes les pages, sauf la page d'erreur |
+| Éléments du DOM | 1 500 | 1 389 | Fiche [6.5](../../rgesn/frontend/6-5_chargement-ressources/) |
 
 Mesuré le 31 octobre 2026 dans Chromium 155 sur les 132 pages du site, page d'erreur comprise, à 1 366 × 768 et 390 × 844 pixels : toutes respectent le budget. Le DOM compte toutes les balises de la page, y compris celles des images SVG.
 
@@ -79,9 +79,9 @@ Le budget est vérifié à chaque publication, avant la mise en ligne : le site 
 
 À 512 kbit/s, le débit testé pour le critère 2.3, 100 Ko se transfèrent en 1,6 seconde environ.
 
-Le budget porte sur le chargement de la page. Il ne compte pas la recherche : à sa première ouverture, elle télécharge son index en une requête de 336 Ko (critère 4.12).
+Le budget porte sur le chargement de la page. Il ne compte pas la recherche : à la première saisie, elle télécharge sa bibliothèque et son index, en 2 requêtes et 344 Ko, un poids annoncé dès son ouverture (critère 4.12).
 
-Avec le cache, passer d'une page à l'autre ne télécharge que le HTML : 1 requête et 22 Ko au plus. Une page revue dans les 10 minutes ne demande aucune requête ; au-delà, le navigateur revérifie ses 8 fichiers sans les télécharger de nouveau (critère 6.2).
+Avec le cache, passer d'une page à l'autre ne télécharge que le HTML : 1 requête et 22 Ko au plus. Une page revue dans les 10 minutes ne demande aucune requête ; au-delà, le navigateur revérifie ses 7 fichiers sans les télécharger de nouveau (critère 6.2).
 
 ---
 
@@ -99,7 +99,7 @@ Inventaire au 31 octobre 2026 des fonctionnalités, composants et environnements
 | Outils de construction : Hugo 0.168, Go, Dart Sass 1.105, Python et 4 scripts | Utilisés | Versions fixées dans la construction, mises à jour à chaque revue. |
 | Thème Lotus Docs 0.3.0 et Bootstrap 5.3 | Utilisés. La dernière version du thème date d'avril 2026 ; il emploie des fonctions que Hugo a dépréciées, et Bootstrap 5 des règles Sass que Dart Sass 3 supprimera. | À chaque revue, vérifier leur compatibilité avec Hugo et Dart Sass. Si le thème n'est plus maintenu, le figer dans le dépôt ou le remplacer. |
 
-Retirés le 31 octobre 2026, car inutilisés : l'analyse de sécurité GitLab (le dépôt n'est que sur GitHub), l'installation de Node.js dans la construction (aucune dépendance JavaScript), LibSass, remplacé par Dart Sass qui était installé sans servir, et les cartes de source du CSS publiées sans utilité (1,7 Mo).
+Retirés le 31 octobre 2026, car inutilisés : l'analyse de sécurité GitLab (le dépôt n'est que sur GitHub), l'installation de Node.js dans la construction (aucune dépendance JavaScript), LibSass, remplacé par Dart Sass qui était installé sans servir, les cartes de source du CSS publiées sans utilité (1,7 Mo) et le JavaScript de Bootstrap sur la page d'accueil, qui n'a pas d'onglets.
 
 **Fin de vie du service.** Si le site ne reçoit aucune publication pendant 12 mois, si son mainteneur l'arrête ou si le RGESN est remplacé :
 
@@ -138,11 +138,11 @@ Le code (MIT) et le contenu (CC BY-SA 4.0) restent ainsi réutilisables, y compr
 |---|---|---|
 | [2.1](../../rgesn/specifications/2-1_profils-materiels/) Profils de matériels | Validé | Profil minimal établi par l'analyse du code servi : tout terminal équipé de Chrome ou Edge 88 (janvier 2021), Firefox 89 (juin 2021) ou Safari 15 (septembre 2021), versions imposées par la propriété CSS `aspect-ratio`. La recherche fonctionne dès Chrome 85, Firefox 79 et Safari 14 (2020), à cause de l'opérateur `??=`. Sur iPhone, Safari 15 est disponible dès l'iPhone 6s (2015). Aucune évolution n'est prévue. |
 | [2.2](../../rgesn/specifications/2-2_anciens-terminaux/) Anciens modèles de terminaux | Validé | Testé le 31 octobre 2026 sur un ordinateur de bureau équipé d'un processeur Intel Core i5 760 (2010), sous Linux Mint 22.3 avec Firefox 158 : les parcours essentiels fonctionnent. |
-| [2.3](../../rgesn/specifications/2-3_connexion-bas-debit/) Connexion bas débit | Validé | Débit limité dans Chromium. À 512 kbit/s (latence 100 ms), une fiche s'affiche en 0,9 s, et la recherche donne ses résultats 6 s après son ouverture. À 400 kbit/s (latence 400 ms), 1,4 s et 7,8 s. Débit minimum testé : 400 kbit/s. |
+| [2.3](../../rgesn/specifications/2-3_connexion-bas-debit/) Connexion bas débit | Validé | Débit limité dans Chromium. À 512 kbit/s (latence 100 ms), une fiche s'affiche en 0,8 s, et la recherche donne ses résultats 6,4 s après son ouverture. À 400 kbit/s (latence 400 ms), 1,3 s et 8,2 s. Débit minimum testé : 400 kbit/s. |
 | [2.4](../../rgesn/specifications/2-4_anciennes-versions-os/) Anciennes versions d'OS et de navigateurs | Validé | Testé le 31 octobre 2026 sur Chrome 120 (décembre 2023) et Firefox 115 ESR (juillet 2023), dans des versions sans mise à jour automatique : les parcours essentiels fonctionnent. Safari n'a pas encore été testé. Les versions minimales du critère 2.1 restent estimées par l'analyse du code. |
 | [2.5](../../rgesn/specifications/2-5_terminaux-affichage/) Terminaux d'affichage | Validé | Testé le 31 octobre 2026 sur les 130 pages du site, à 1 200, 768 et 390 pixels de large : aucune page ne déborde, les tableaux larges défilant dans leur propre cadre. Les menus sont des boutons : ils s'ouvrent au clavier comme à la souris ou au doigt. |
 | [2.6](../../rgesn/specifications/2-6_revue-conception-code/) Revue de conception et de code | Validé | Revue de conception : l'[arbre des conséquences](../revue-conception/) de chaque fonctionnalité, selon le niveau 1 de la méthode Empreinte Projet de l'ADEME (31 octobre 2026). Revue de code : le mainteneur relit chaque commit, code ou contenu, et chaque contribution externe avant de l'intégrer, selon les points décrits dans la page [Contribuer](../contribuer/). |
-| [2.7](../../rgesn/specifications/2-7_maintenance-decommissionnement/) Maintenance et décommissionnement | Validé | Inventaire et stratégie dans la section [Maintenance et fin de vie](#maintenance-et-fin-de-vie) : revue chaque année en octobre, avec un rappel automatique ; quatre éléments inutilisés retirés le 31 octobre 2026 ; en fin de vie, dépôt archivé et site dépublié 12 mois plus tard. |
+| [2.7](../../rgesn/specifications/2-7_maintenance-decommissionnement/) Maintenance et décommissionnement | Validé | Inventaire et stratégie dans la section [Maintenance et fin de vie](#maintenance-et-fin-de-vie) : revue chaque année en octobre, avec un rappel automatique ; cinq éléments inutilisés retirés le 31 octobre 2026 ; en fin de vie, dépôt archivé et site dépublié 12 mois plus tard. |
 | [2.8](../../rgesn/specifications/2-8_fournisseurs-impacts-environnementaux/) Fournisseurs | Non validé | Le seul fournisseur, GitHub (hébergement et intégration continue), a été choisi sans critère environnemental documenté. |
 | [2.9](../../rgesn/specifications/2-9_composants-interface/) Composants d'interface prêts à l'emploi | Validé | Le thème Lotus Docs apporte Bootstrap 5, allégé à la construction du site. Depuis le 31 octobre 2026, le CSS est réduit aux règles qui s'appliquent aux pages : 14 Ko compressés sur une fiche, au lieu de 43 Ko. Le JavaScript de Bootstrap (19 Ko) se limite à cinq composants, dont un seul ne sert sur aucune page : l'infobulle. La police d'icônes est réduite aux icônes utilisées (11,3 Ko), et l'index de recherche n'est téléchargé qu'à la demande. |
 | [2.10](../../rgesn/specifications/2-10_services-tiers/) Services tiers | Non validé | Deux services tiers : GitHub Pages (hébergement, avec le CDN Fastly) et GitHub Actions (construction du site). Leur avancement sur les critères 1.4 et 1.5 n'a pas été vérifié. |
@@ -178,7 +178,7 @@ Le code (MIT) et le contenu (CC BY-SA 4.0) restent ainsi réutilisables, y compr
 | [4.9](../../rgesn/ux-ui/4-9_requetes-saisie-utilisateur/) Requêtes lors de la saisie | Validé | La recherche s'exécute dans le navigateur : aucune requête au serveur pendant la saisie, et un seul téléchargement de l'index par page. |
 | [4.10](../../rgesn/ux-ui/4-10_format-saisie/) Format de saisie | Non applicable | Aucun formulaire envoyé au serveur ; le champ de recherche reste local. |
 | [4.11](../../rgesn/ux-ui/4-11_poids-formats-fichiers/) Poids et formats de fichier | Non applicable | Aucun envoi ni téléchargement de fichier. |
-| [4.12](../../rgesn/ux-ui/4-12_impacts-fonctionnalites/) Fonctionnalités à fort impact | Non validé | La fonctionnalité la plus lourde, la recherche, télécharge à sa première ouverture un index de 336 Ko compressés, plus de quatre fois le poids d'une page, sans l'annoncer. |
+| [4.12](../../rgesn/ux-ui/4-12_impacts-fonctionnalites/) Fonctionnalités à fort impact | Validé | La fonctionnalité la plus lourde, la recherche, annonce son poids dès son ouverture : « La recherche télécharge l'index du site, soit 344 Ko, à la première saisie. » Rien n'est téléchargé avant cette saisie. Ce poids, plus de quatre fois celui d'une page, est recalculé à chaque publication. |
 | [4.13](../../rgesn/ux-ui/4-13_notifications/) Notifications | Validé | Aucune notification. |
 | [4.14](../../rgesn/ux-ui/4-14_dark-patterns/) Dark patterns | Validé | Interface relue au regard des exemples de l'article 25 du DSA : ni compte à rebours, ni case précochée, ni bandeau de consentement, ni incitation à s'inscrire. |
 | [4.15](../../rgesn/ux-ui/4-15_controle-usages/) Contrôle des usages et mode sobre | Non validé | Le site a un mode sombre, mais ni information sur l'empreinte de son usage, ni mode sobre. |
@@ -204,11 +204,11 @@ Le code (MIT) et le contenu (CC BY-SA 4.0) restent ainsi réutilisables, y compr
 
 | Critère | Statut | Justification |
 |---|---|---|
-| [6.1](../../rgesn/frontend/6-1_poids-requetes-ecran/) Poids et requêtes par écran | Validé | Budget par page, détaillé dans la section [Budget par page](#budget-par-page) : 100 Ko transférés, 10 requêtes et 1 500 éléments au plus, au chargement de la page, recherche non comprise. Toutes les pages le respectent : 79 Ko, 8 requêtes et 1 390 éléments au plus. Il est vérifié à chaque publication : si une page le dépasse, le site n'est pas mis en ligne. |
+| [6.1](../../rgesn/frontend/6-1_poids-requetes-ecran/) Poids et requêtes par écran | Validé | Budget par page, détaillé dans la section [Budget par page](#budget-par-page) : 100 Ko transférés, 10 requêtes et 1 500 éléments au plus, au chargement de la page, recherche non comprise. Toutes les pages le respectent : 73 Ko, 7 requêtes et 1 389 éléments au plus. Il est vérifié à chaque publication : si une page le dépasse, le site n'est pas mis en ligne. |
 | [6.2](../../rgesn/frontend/6-2_cache-navigateur/) Cache côté utilisateur | Validé | À la deuxième visite d'une fiche, les 8 ressources viennent du cache. GitHub Pages fixe la durée de cache à 10 minutes (`max-age=600`) pour tous les fichiers, sans réglage possible. Au-delà, le navigateur revalide chaque fichier, sans le télécharger de nouveau (réponse 304). Les CSS et JavaScript ont un nom qui change avec leur contenu : ils pourraient être gardés bien plus longtemps. |
 | [6.3](../../rgesn/frontend/6-3_compression-ressources/) Compression des ressources | Validé | Tous les fichiers texte arrivent compressés en gzip. GitHub Pages ne propose pas Brotli. |
 | [6.4](../../rgesn/frontend/6-4_dimensions-images/) Dimensions des images | Validé | L'illustration d'accueil existe en quatre largeurs, de 480 à 1 280 pixels, et l'attribut `sizes` indique sa largeur affichée à chaque taille d'écran. Vérifié dans Chromium de 360 à 1 920 pixels de large : en densité 1 et 2, le navigateur charge une version au plus 1,5 fois plus large que l'affichage. Sur un ordinateur de densité 1, elle pèse 17,6 Ko au lieu de 45 Ko. |
-| [6.5](../../rgesn/frontend/6-5_chargement-ressources/) Ressources utiles | Non validé | L'index de recherche ne se télécharge qu'à l'ouverture de la recherche. Mais la bibliothèque FlexSearch (6,4 Ko) se charge sur chaque page, même sans recherche. |
+| [6.5](../../rgesn/frontend/6-5_chargement-ressources/) Ressources utiles | Validé | Depuis le 31 octobre 2026, chaque ressource chargée sert sur la page : la bibliothèque de recherche et son index ne se téléchargent qu'à la première saisie, la page d'accueil ne charge plus le JavaScript de Bootstrap, le CSS est réduit aux règles utilisées et la police d'icônes aux icônes utilisées. Seul le module d'infobulle de Bootstrap reste inutilisé, dans un fichier qui sert par ailleurs (critère 2.9). |
 | [6.6](../../rgesn/frontend/6-6_capteurs-terminaux/) Capteurs | Non applicable | Aucun capteur. |
 | [6.7](../../rgesn/frontend/6-7_domaine-unique/) Ressources statiques sur un même domaine | Validé | Toutes les ressources du site viennent de son propre domaine, en HTTP/2. |
 
@@ -263,8 +263,7 @@ Les actions sont classées de la plus simple à la plus longue.
 
 | Action | Critères |
 |---|---|
-| 1. Charger FlexSearch à l'ouverture de la recherche, avec l'index, et annoncer le poids de l'index | 6.5, 4.12 |
-| 2. Tester les parcours sur un Safari de plus de deux ans, pour compléter le critère 2.4 | 2.4 |
-| 3. Écrire l'étude d'utilité, la description des besoins des publics visés, les objectifs environnementaux et la comparaison d'architecture | 1.1, 1.2, 1.5, 3.1 |
-| 4. Refaire cette évaluation à chaque évolution importante, et au plus tard en octobre 2027 | 1.4 |
-| 5. Demander à GitHub ses indicateurs environnementaux, ou comparer avec un hébergeur qui les publie et permet de régler la durée de cache | 2.8, 2.10, 8.1 à 8.9 |
+| 1. Tester les parcours sur un Safari de plus de deux ans, pour compléter le critère 2.4 | 2.4 |
+| 2. Écrire l'étude d'utilité, la description des besoins des publics visés, les objectifs environnementaux et la comparaison d'architecture | 1.1, 1.2, 1.5, 3.1 |
+| 3. Refaire cette évaluation à chaque évolution importante, et au plus tard en octobre 2027 | 1.4 |
+| 4. Demander à GitHub ses indicateurs environnementaux, ou comparer avec un hébergeur qui les publie et permet de régler la durée de cache | 2.8, 2.10, 8.1 à 8.9 |

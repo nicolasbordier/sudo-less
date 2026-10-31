@@ -44,12 +44,12 @@ Sans sudo-less, une équipe qui applique le RGESN part du PDF du référentiel (
 ### 2. Recherche
 
 - **Conséquences directes**
-  - La première recherche télécharge un index de 336 Ko compressés ; tout se passe ensuite dans le navigateur, sans requête au serveur.
-  - La bibliothèque de recherche, FlexSearch (6,4 Ko), se charge sur chaque page, même sans recherche.
+  - La première saisie télécharge la bibliothèque de recherche, FlexSearch, et l'index : 344 Ko compressés ; tout se passe ensuite dans le navigateur, sans requête au serveur.
+  - Ouvrir la recherche ne télécharge rien : son poids est annoncé avant la première saisie.
 - **Conséquences indirectes**
   - (+) Trouver directement la bonne fiche évite d'en ouvrir plusieurs.
   - (−) Pour une seule recherche, l'index pèse plus de quatre fois le poids d'une page.
-- **Décision** : garder, avec l'index chargé seulement à l'ouverture de la recherche, ce qui est déjà fait. Charger aussi FlexSearch à ce moment, et annoncer le poids de l'index (action 1 du [plan d'avancement](../declaration-ecoconception/#plan-davancement)).
+- **Décision** : garder, avec la bibliothèque et l'index chargés seulement à la première saisie, et leur poids annoncé dès l'ouverture de la recherche, ce qui est fait depuis le 31 octobre 2026.
 
 ### 3. Pages de synthèse : Getting Started, Outils, Retours d'expérience, Autres référentiels
 
@@ -91,4 +91,4 @@ Sans sudo-less, une équipe qui applique le RGESN part du PDF du référentiel (
 - **Conséquences indirectes**
   - (+) Contrairement à un CMS, aucun serveur d'application ni aucune base de données ne tourne en permanence.
   - (−) L'hébergeur ne publie pas d'indicateurs environnementaux, et la durée de cache, fixée à 10 minutes, ne se règle pas.
-- **Décision** : garder pour l'instant, et comparer avec un hébergeur qui publie ses indicateurs (action 5 du plan d'avancement).
+- **Décision** : garder pour l'instant, et comparer avec un hébergeur qui publie ses indicateurs (action 4 du [plan d'avancement](../declaration-ecoconception/#plan-davancement)).
