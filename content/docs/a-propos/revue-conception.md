@@ -48,7 +48,7 @@ Sans sudo-less, une équipe qui applique le RGESN part du PDF du référentiel (
   - La bibliothèque de recherche, FlexSearch (6,4 Ko), se charge sur chaque page, même sans recherche.
 - **Conséquences indirectes**
   - (+) Trouver directement la bonne fiche évite d'en ouvrir plusieurs.
-  - (−) Pour une seule recherche, l'index pèse trois fois le poids d'une page.
+  - (−) Pour une seule recherche, l'index pèse plus de quatre fois le poids d'une page.
 - **Décision** : garder, avec l'index chargé seulement à l'ouverture de la recherche, ce qui est déjà fait. Charger aussi FlexSearch à ce moment, et annoncer le poids de l'index (action 1 du [plan d'avancement](../declaration-ecoconception/#plan-davancement)).
 
 ### 3. Pages de synthèse : Getting Started, Outils, Retours d'expérience, Autres référentiels
@@ -91,4 +91,4 @@ Sans sudo-less, une équipe qui applique le RGESN part du PDF du référentiel (
 - **Conséquences indirectes**
   - (+) Contrairement à un CMS, aucun serveur d'application ni aucune base de données ne tourne en permanence.
   - (−) L'hébergeur ne publie pas d'indicateurs environnementaux, et la durée de cache, fixée à 10 minutes, ne se règle pas.
-- **Décision** : garder pour l'instant, et comparer avec un hébergeur qui publie ses indicateurs (action 7 du plan d'avancement).
+- **Décision** : garder pour l'instant, et comparer avec un hébergeur qui publie ses indicateurs (action 6 du plan d'avancement).
