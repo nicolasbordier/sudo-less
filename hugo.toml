@@ -1,5 +1,5 @@
 baseURL = 'https://example.org/'
-languageCode = 'fr-FR'
+locale = 'fr-FR'
 title = 'Sudo Less'
 
 [module]
@@ -20,4 +20,7 @@ title = 'Sudo Less'
     [params.footer]
         copyright = "© :YEAR: sudo-less.dev · Contenu sous [**CC BY-SA 4.0**](https://creativecommons.org/licenses/by-sa/4.0/deed.fr) · Code sous [**MIT**](https://github.com/nicolasbordier/sudo-less/blob/main/LICENSE)"
         # version = true # includes git commit info
+
+    [params.flexsearch]
+        maxResult = 10 # 5 par défaut dans Lotus Docs
 
