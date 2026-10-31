@@ -4,7 +4,7 @@ title: "9.6 - Compression des modèles"
 description: "Critère 9.6 du RGESN : réduire la taille des modèles par quantification, distillation ou élagage, mesurer la qualité avant et après, et indiquer les gains obtenus dans la déclaration d'écoconception."
 icon: "unfold_less"
 date: "2026-10-30T00:00:00+01:00"
-lastmod: "2026-10-30T00:00:00+01:00"
+lastmod: "2026-10-31T00:00:00+01:00"
 draft: false
 toc: true
 ---
@@ -91,6 +91,8 @@ Les principales méthodes citées par le RGESN :
 | *Batch norm folding* | Fusionner les couches de normalisation dans les couches voisines, une fois l'entraînement terminé |
 
 Le RGESN cite aussi le *local scaling*, qui sert à limiter la perte de précision due à la quantification.
+
+Le [RIA](https://ria.greenit.fr/) du Collectif GreenIT, dans sa fiche [0021 « Compresser les modèles »](https://ria.greenit.fr/fr/fiches/RIA_0021-compresser-les-modeles), retient trois de ces méthodes (distillation, élagage, quantification) et demande d'évaluer la compression pour chaque modèle utilisé.
 
 **Un exemple publié : la distillation.** Les auteurs de [DistilBERT](https://arxiv.org/abs/1910.01108) ont réduit la taille de BERT « by 40% », en conservant « 97% of its language understanding capabilities » et en étant « 60% faster ».
 

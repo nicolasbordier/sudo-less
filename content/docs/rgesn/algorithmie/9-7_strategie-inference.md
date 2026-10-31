@@ -4,7 +4,7 @@ title: "9.7 - Stratégie d'inférence sobre"
 description: "Critère 9.7 du RGESN : choisir le plus petit modèle qui suffit, limiter la longueur des réponses et le nombre de requêtes, réutiliser les réponses identiques, héberger l'inférence là où l'électricité est peu carbonée et estimer l'énergie de chaque réponse."
 icon: "query_stats"
 date: "2026-10-30T00:00:00+01:00"
-lastmod: "2026-10-30T00:00:00+01:00"
+lastmod: "2026-10-31T00:00:00+01:00"
 draft: false
 toc: true
 ---
@@ -68,7 +68,7 @@ Le critère est validé si le service numérique démontre dans sa déclaration 
 
 Via ces différentes sources :
 
-{{< tabs tabTotal="5">}}
+{{< tabs tabTotal="6">}}
 {{% tab tabName="W3C et état de l'art" %}}
 
 Profil(s) métier concerné(s) : `Porteur de projet`, `Data Scientist`
@@ -76,6 +76,32 @@ Profil(s) métier concerné(s) : `Porteur de projet`, `Data Scientist`
 Les [Web Sustainability Guidelines](https://www.w3.org/TR/web-sustainability-guidelines/) du W3C (version du 16 octobre 2026), dans la fiche [**« Establish responsible practices around AI and emerging or disruptive technologies »**](https://www.w3.org/TR/web-sustainability-guidelines/#establish-responsible-practices-around-ai-and-emerging-or-disruptive-technologies), demandent d'« Optimize models and deployment processes for efficiency ». Pour les modèles fournis par des tiers, ils acceptent des « credible estimates » quand les données directes manquent.
 
 L'étude [« Power Hungry Processing »](https://arxiv.org/abs/2311.16863) (FAccT 2024), citée au [critère 9.2](../9-2_methode-apprentissage/), mesure justement le coût de l'inférence, pour 1 000 requêtes. Un modèle génératif polyvalent y coûte des ordres de grandeur plus cher qu'un modèle spécialisé pour la même tâche.
+
+{{% /tab %}}
+
+{{% tab tabName="RIA (GreenIT)" %}}
+
+Profil(s) métier concerné(s) : `Développeur`, `Porteur de projet`
+
+Le [RIA](https://ria.greenit.fr/) du Collectif GreenIT, référentiel de bonnes pratiques pour l'utilisation de l'IA générative, couvre la plupart des étapes de l'onglet « Mise en œuvre technique » :
+
+| Étape | Fiches RIA |
+|---|---|
+| 1. Plus petit modèle | [0003](https://ria.greenit.fr/fr/fiches/RIA_0003-choisir-le-modele-le-plus-leger) : le modèle le plus léger qui répond au besoin, choisi par comparaison |
+| 2. Longueur des réponses | [0009 « Minimiser la taille des réponses »](https://ria.greenit.fr/fr/fiches/RIA_0009-minimiser-la-taille-des-reponses) |
+| 3. Appel sur action de l'utilisateur | [0014](https://ria.greenit.fr/fr/fiches/RIA_0014-optimiser-par-defaut-le-nombre-d-appels-et-le-modele.) et [0015](https://ria.greenit.fr/fr/fiches/RIA_0015-permettre-a-l%27utilisateur-d%27eviter-les-appels-a-l-ia.) : un appel déclenché par l'utilisateur, sur un bouton qui annonce le recours à l'IA |
+| 4. Cache des réponses | [0008](https://ria.greenit.fr/fr/fiches/RIA_0008-mettre-en-cache-les-resultats-des-requetes), qui pointe la difficulté : trouver la clé du cache dans une question en langage naturel |
+| 5. Quotas | [0017](https://ria.greenit.fr/fr/fiches/RIA_0017-mettre-en-place-un-mecanisme-de-quota) : par exemple 420 appels par jour pour un outil qu'on interroge au plus une fois par minute |
+| 6. Hébergement | [0004](https://ria.greenit.fr/fr/fiches/RIA_0004-choisir-un-modele-heberge-ou-le-kwh-a-un-impact-minimal), [0005](https://ria.greenit.fr/fr/fiches/RIA_0005-choisir-centre-de-donnees-avec-une-bonne-performance-environnementale) et [0006](https://ria.greenit.fr/fr/fiches/RIA_0006-choisir-un-hebergeur-avec-des-engagements-ambitieux) : électricité, PUE et WUE, engagements de l'hébergeur |
+| 7. Estimer l'énergie | [0016](https://ria.greenit.fr/fr/fiches/RIA_0016-reporter-les-impacts-environnementaux-generes-par-l-ia) : afficher après chaque appel une estimation de ses impacts |
+
+Il ajoute trois leviers :
+
+- [0013](https://ria.greenit.fr/fr/fiches/RIA_0013-maximiser-le-prompt-caching), la mise en cache des prompts : répéter à l'identique les instructions communes, au même endroit du prompt, pour que le fournisseur les garde en cache ;
+- [0010](https://ria.greenit.fr/fr/fiches/RIA_0010-regrouper-les-taches-a-effectuer) : regrouper plusieurs tâches en une seule requête, au prix d'un cache moins efficace ;
+- [0011](https://ria.greenit.fr/fr/fiches/RIA_0011-eviter-de-generer-des-images) et [0012](https://ria.greenit.fr/fr/fiches/RIA_0012-eviter-de-generer-des-videos) : éviter de générer des images et des vidéos, bien plus coûteuses que du texte.
+
+Le RIA rattache certaines fiches à des critères web plutôt qu'à la famille 9 : il relie par exemple la mise en cache au 6.2, le cache du navigateur, alors qu'elle relève du [critère 7.1](../../backend/7-1_cache-serveur/).
 
 {{% /tab %}}
 

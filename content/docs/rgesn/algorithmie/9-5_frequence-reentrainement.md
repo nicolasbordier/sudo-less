@@ -4,7 +4,7 @@ title: "9.5 - Fréquence de réentraînement des modèles"
 description: "Critère 9.5 du RGESN : déclencher un réentraînement sur un signal mesuré (baisse de qualité, dérive des données, retours des utilisateurs, contrainte légale) plutôt que sur un calendrier fixe, et documenter ces conditions."
 icon: "event_repeat"
 date: "2026-10-30T00:00:00+01:00"
-lastmod: "2026-10-30T00:00:00+01:00"
+lastmod: "2026-10-31T00:00:00+01:00"
 draft: false
 toc: true
 ---
@@ -91,6 +91,8 @@ Un réentraînement « tous les mois » se déclenche même quand le modèle fon
 | Contrainte légale | Nouvelle réglementation, données à retirer | Dès qu'elle s'applique |
 
 Une **évolution technologique**, comme un nouveau modèle publié, n'est un signal que si elle apporte un gain mesuré sur l'une de ces lignes.
+
+Le [RIA](https://ria.greenit.fr/) du Collectif GreenIT propose des déclencheurs proches dans sa fiche [0019 « Définir des critères stricts justifiant un réentrainement »](https://ria.greenit.fr/fr/fiches/RIA_0019-definir-des-criteres-stricts-justifiant-un-reentrainement) : données de bien meilleure qualité, retours des utilisateurs, nouveaux publics ou nouvelles fonctionnalités. Il la rattache au critère 9.3, mais elle relève du 9.5.
 
 **Le chef de produit marketing** a ici un rôle, car la pression concurrentielle pousse à mettre à jour plus souvent. Le RGESN la cite parmi les éléments à considérer, mais demande de minimiser la fréquence : une nouvelle version doit apporter un gain que l'utilisateur perçoit.
 

@@ -4,7 +4,7 @@ title: "9.3 - Limiter la quantité d'entraînement"
 description: "Critère 9.3 du RGESN : réutiliser un modèle pré-entraîné, affiner seulement ce qui est nécessaire, mesurer l'énergie de chaque entraînement face à sa précision, et entraîner là où l'électricité est peu carbonée."
 icon: "model_training"
 date: "2026-10-30T00:00:00+01:00"
-lastmod: "2026-10-30T00:00:00+01:00"
+lastmod: "2026-10-31T00:00:00+01:00"
 draft: false
 toc: true
 ---
@@ -94,7 +94,7 @@ Du moins coûteux au plus coûteux :
 | Affinage complet d'un modèle pré-entraîné | Tous les paramètres, à partir d'un point de départ |
 | Entraînement depuis zéro | Tous les paramètres, depuis le hasard |
 
-**L'état de l'art se consulte avant de concevoir**, comme le demande le moyen de test : catalogues de modèles par tâche (le Hub de Hugging Face, par exemple), articles et modèles publiés par la communauté.
+**L'état de l'art se consulte avant de concevoir**, comme le demande le moyen de test : catalogues de modèles par tâche (le Hub de Hugging Face, par exemple), articles et modèles publiés par la communauté. Le [RIA](https://ria.greenit.fr/) du Collectif GreenIT en fait sa fiche [0018 « Utiliser des modèles déjà entraînés »](https://ria.greenit.fr/fr/fiches/RIA_0018-utiliser-des-modeles-deja-entraines), qui cite aussi les catalogues de Kaggle et de TensorFlow.
 
 **L'affinage partiel change l'ordre de grandeur.** Pour GPT-3, les auteurs de [LoRA](https://arxiv.org/abs/2106.09685) indiquent que la méthode « can reduce the number of trainable parameters by 10,000 times and the GPU memory requirement by 3 times », par rapport à un affinage complet.
 

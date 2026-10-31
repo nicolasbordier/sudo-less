@@ -4,7 +4,7 @@ title: "9.4 - Données d'apprentissage limitées au nécessaire"
 description: "Critère 9.4 du RGESN : réutiliser des jeux de données existants, mesurer la quantité de données réellement utile avec une courbe d'apprentissage, et appliquer cache, compression et durées de conservation aux données d'entraînement."
 icon: "dataset"
 date: "2026-10-30T00:00:00+01:00"
-lastmod: "2026-10-30T00:00:00+01:00"
+lastmod: "2026-10-31T00:00:00+01:00"
 draft: false
 toc: true
 ---
@@ -102,6 +102,8 @@ La précision n'augmente pas en proportion des données. Testé le 30 octobre 20
 La seconde moitié des données n'apporte que 1,9 point. Si le niveau de satisfaction fixé au [critère 9.1](../9-1_necessite-entrainement/) est de 69 %, la moitié des textes suffit : deux fois moins de données à collecter, stocker et traiter.
 
 Cette courbe d'apprentissage se trace avant toute nouvelle collecte, sur les données déjà disponibles. Si elle est plate, collecter davantage ne servira pas.
+
+Le [RIA](https://ria.greenit.fr/) du Collectif GreenIT le demande aussi, dans sa fiche [0020 « Minimiser la taille des jeux de données d'entraînement »](https://ria.greenit.fr/fr/fiches/RIA_0020-minimiser-la-taille-des-jeux-de-donnees-d-entrainement) : aucun entraînement sans avoir qualifié la taille et la qualité du jeu. Elle cite des jeux ouverts à réutiliser avant de collecter (Kaggle, Hugging Face, portail open data de l'ADEME).
 
 {{% /tab %}}
 

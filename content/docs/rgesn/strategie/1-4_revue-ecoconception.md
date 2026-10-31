@@ -4,7 +4,7 @@ title: "1.4 - Revue d'écoconception"
 description: "Critère 1.4 du RGESN : comment mettre en place des revues régulières et des outils de mesure pour vérifier dans la durée le respect de la démarche d'écoconception."
 icon: "article"
 date: "2025-12-21T13:29:09+01:00"
-lastmod: "2026-07-14T00:00:00+01:00"
+lastmod: "2026-10-31T00:00:00+01:00"
 draft: false
 toc: true
 ---
@@ -108,6 +108,8 @@ Pour une application publiée :
 - [Android Vitals](https://developer.android.com/topic/performance/vitals) (Play Console) remonte depuis les terminaux réels les **wake locks partiels excessifs** : [2 heures cumulées ou plus sur 24 heures](https://developer.android.com/google/play/vitals/excessive-wakelock), application en arrière-plan. Depuis le 1er mars 2026, une application dont 5 % des sessions dépassent ce seuil peut afficher un avertissement de consommation de batterie sur le Play Store ([BleepingComputer](https://www.bleepingcomputer.com/news/security/google-to-flag-android-apps-with-excessive-battery-use-on-the-play-store/)) ;
 - le [rapport de pré-lancement](https://support.google.com/googleplay/android-developer/answer/9842757) teste chaque build sur des appareils réels avant la mise en production ;
 - [MetricKit](https://developer.apple.com/documentation/MetricKit) remonte chaque jour, sur iOS, des métriques de processeur, mémoire, réseau et **impact énergétique**.
+
+Pour la revue du code lui-même, les extensions SonarQube [creedengo](https://github.com/green-code-initiative/creedengo-rules-specifications/blob/main/RULES.md) signalent à chaque analyse une partie des défauts du référentiel [Best Practices Mobile](https://github.com/cnumr/best-practices-mobile) du CNUMR : verrous de veille durables (règle GCI508), capteurs ou localisation jamais arrêtés (voir le [critère 6.6](../../frontend/6-6_capteurs-terminaux/)).
 
 {{% /tab %}}
 

@@ -4,7 +4,7 @@ title: "3.7 - Optimisation des environnements de développement, préproduction 
 description: "Critère 3.7 du RGESN : pourquoi et comment optimiser la sollicitation des environnements de développement, de préproduction ou de test en fonction des besoins réels (mutualisation, extinction automatique)."
 icon: "bedtime"
 date: "2026-07-15T00:00:00+01:00"
-lastmod: "2026-07-15T00:00:00+01:00"
+lastmod: "2026-10-31T00:00:00+01:00"
 draft: false
 toc: true
 ---
@@ -109,6 +109,8 @@ Profil(s) métier concerné(s) : `Architecte Logiciel`, `Responsable RSE/Numéri
 Le critère cite aussi la mutualisation comme alternative à l'extinction programmée. Une déclinaison moderne de cette mutualisation consiste à ne plus maintenir des environnements de préproduction permanents du tout, mais à en générer un **à la demande**, pour la durée exacte du besoin : les [Review Apps de GitLab](https://docs.gitlab.com/ci/review_apps/) déploient automatiquement un environnement éphémère pour chaque merge request, puis l'arrêtent dès que la branche est fusionnée ou supprimée — ou après un délai défini via `auto_stop_in` (par exemple une semaine), afin d'éviter l'accumulation d'environnements de revue oubliés. Le même principe existe chez la plupart des plateformes de déploiement continu (Vercel, Netlify, Heroku Review Apps…) sous le nom d'« environnements de prévisualisation » ou « preview deployments ».
 
 Cette approche répond aux deux volets du critère à la fois : elle mutualise l'infrastructure sous-jacente (un seul mécanisme de déploiement pour tous les environnements de revue) tout en garantissant qu'aucun environnement ne reste actif au-delà de son besoin réel, sans nécessiter de planning d'extinction manuel.
+
+**Les builds d'intégration continue** sollicitent eux aussi des environnements de test. Le référentiel [REIPRO](https://github.com/cnumr/best-practices-packaged-software) du CNUMR, écrit pour l'intégration de progiciels, propose d'en [limiter la fréquence](https://github.com/cnumr/best-practices-packaged-software/blob/main/practices/10_limiter-la-frequence-de-lancement-des-builds.md) : réserver à chaque pull request les pipelines qui la concernent, et lancer les autres, comme celui de la prochaine version majeure, une fois par mois. Il conseille aussi de [les répartir dans le temps](https://github.com/cnumr/best-practices-packaged-software/blob/main/practices/11_repartir-les-builds-dans-le-temps.md) entre projets : si 50 projets lancent le même build en même temps, les serveurs de build doivent être dimensionnés pour ce pic.
 
 {{% /tab %}}
 

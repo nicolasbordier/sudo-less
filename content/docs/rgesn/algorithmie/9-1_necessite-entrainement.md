@@ -4,7 +4,7 @@ title: "9.1 - Nécessité d'une phase d'entraînement"
 description: "Critère 9.1 du RGESN : avant d'entraîner un modèle, vérifier que le besoin est avéré, essayer une solution sans apprentissage ou un modèle existant, et fixer un niveau de satisfaction suffisant."
 icon: "quiz"
 date: "2026-10-30T00:00:00+01:00"
-lastmod: "2026-10-30T00:00:00+01:00"
+lastmod: "2026-10-31T00:00:00+01:00"
 draft: false
 toc: true
 ---
@@ -77,13 +77,15 @@ RWEB ne rattache aucune fiche à la famille Algorithmie, et le GR491 n'a pas de 
 Via ces différentes sources :
 
 {{< tabs tabTotal="4">}}
-{{% tab tabName="AFNOR et W3C" %}}
+{{% tab tabName="AFNOR, W3C et RIA" %}}
 
 Profil(s) métier concerné(s) : `Porteur de projet`, `Responsable RSE/Numérique soutenable`
 
 L'[**AFNOR Spec 2314 « Référentiel général pour l'IA frugale »**](https://www.boutique.afnor.org/en-gb/standard/afnor-spec-2314/fa208976/421140) (juin 2024, 100 pages, consultation gratuite) est né d'une initiative du ministère de la Transition écologique, dans la continuité du RGESN. Il propose une méthode d'évaluation des impacts sur tout le cycle de vie et des fiches de bonnes pratiques. Il distingue la **frugalité** d'un service d'IA, qui interroge le besoin et l'usage, de l'**efficience** du système technique. Le 9.1 relève de la première.
 
 Les [Web Sustainability Guidelines](https://www.w3.org/TR/web-sustainability-guidelines/) du W3C (version du 16 octobre 2026) le formulent dans le critère de succès « Environmental responsibilities » de la fiche [**« Establish responsible practices around AI and emerging or disruptive technologies »**](https://www.w3.org/TR/web-sustainability-guidelines/#establish-responsible-practices-around-ai-and-emerging-or-disruptive-technologies) : « Evaluate the need for AI and emerging or disruptive technologies before implementation to avoid unnecessary resource use. »
+
+Le [RIA](https://ria.greenit.fr/) du Collectif GreenIT pose les mêmes questions pour l'IA générative : ne pas l'utiliser si l'on peut répondre au besoin sans IA, par des règles de gestion, des statistiques ou une assistance humaine ([0001](https://ria.greenit.fr/fr/fiches/RIA_0001-envisager-de-se-passer-d-ia)), ou avec un algorithme plus léger ([0002](https://ria.greenit.fr/fr/fiches/RIA_0002-envisager-un-algorithme-plus-leger)). Leur principe de validation : aucune fonctionnalité d'IA générative sans recherche d'alternative.
 
 {{% /tab %}}
 

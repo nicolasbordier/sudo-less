@@ -4,7 +4,7 @@ title: "6.6 - Usage des capteurs limité au besoin du service"
 description: "Critère 6.6 du RGESN : ne déclencher la géolocalisation, la caméra ou le micro qu'à la demande de l'utilisateur, proposer une alternative sans capteur, arrêter le capteur dès qu'il ne sert plus et désactiver les capteurs inutilisés avec l'en-tête Permissions-Policy."
 icon: "sensors"
 date: "2026-10-30T00:00:00+01:00"
-lastmod: "2026-10-30T00:00:00+01:00"
+lastmod: "2026-10-31T00:00:00+01:00"
 draft: false
 toc: true
 ---
@@ -66,7 +66,7 @@ Le critère est validé si un mécanisme d'alerte et de consentement s'enclenche
 
 Via ces différentes sources :
 
-{{< tabs tabTotal="6">}}
+{{< tabs tabTotal="7">}}
 {{% tab tabName="INR - GR491" %}}
 
 Profil(s) métier concerné(s) : `Développeur`, `Concepteur UX / UI`
@@ -186,6 +186,23 @@ Un service qui géolocalise ses utilisateurs remplace `geolocation=()` par `geol
 **5. Vérifier.** À l'ouverture de chaque page, aucune demande d'autorisation ne doit apparaître. Le panneau **Sensors** des outils de développement de Chrome simule une position ou une orientation. Pour « examiner périodiquement » la durée d'utilisation, mesurer dans le code le temps entre l'ouverture et l'arrêt du capteur.
 
 **6. Documenter** dans la déclaration d'écoconception. Par exemple : « Géolocalisation proposée en option, au clic, en précision standard ; recherche par commune ou code postal toujours disponible. Caméra arrêtée dès la fin de la lecture du document. Autres capteurs désactivés par l'en-tête Permissions-Policy. » Un service sans capteur marque le critère « Non applicable ».
+
+{{% /tab %}}
+
+{{% tab tabName="Applications natives" %}}
+
+Profil(s) métier concerné(s) : `Développeur`
+
+Les mêmes règles valent pour une application Android ou iOS. Le référentiel [Best Practices Mobile](https://github.com/cnumr/best-practices-mobile) du CNUMR les décrit comme des défauts de code : capteur laissé actif quand l'application passe en arrière-plan (« Sensor Leak »), géolocalisation plus précise ou plus fréquente que nécessaire (« Thrifty Geolocation »), événements de capteur livrés un par un (« Sensor Coalesce »). Avec les API actuelles :
+
+| Règle | Android | iOS |
+|---|---|---|
+| Arrêter le capteur dès qu'il ne sert plus | `SensorManager.unregisterListener()` dans `onPause()`, `removeLocationUpdates()` | `stopUpdatingLocation()`, `stopAccelerometerUpdates()` |
+| Précision juste nécessaire | `Priority.PRIORITY_BALANCED_POWER_ACCURACY` du fournisseur de position de Google Play ; permission `ACCESS_COARSE_LOCATION` si une position approximative suffit | `desiredAccuracy = kCLLocationAccuracyHundredMeters` (précision de cent mètres) |
+| Une position ponctuelle plutôt qu'un suivi | `getCurrentLocation()` | `requestLocation()` |
+| Regrouper ou espacer les mesures | `registerListener(…, maxReportLatencyUs)` | `accelerometerUpdateInterval` ; laisser `pausesLocationUpdatesAutomatically` à `true`, sa valeur par défaut |
+
+**Ces défauts se détectent dans le code.** Les extensions SonarQube [creedengo](https://github.com/green-code-initiative/creedengo-rules-specifications/blob/main/RULES.md) signalent, sur Android et iOS, un capteur ou une localisation jamais arrêtés (règles GCI514 et GCI513) et une précision de géolocalisation trop élevée (GCI524) ; sur Android seulement, des événements non regroupés (GCI500). Les exemples Android du référentiel ont en partie vieilli : l'API `Camera` qu'il cite est dépréciée depuis Android 5.0, au profit de `camera2` ([documentation](https://developer.android.com/reference/android/hardware/Camera)).
 
 {{% /tab %}}
 
