@@ -38,7 +38,7 @@ Cette page est la déclaration d'écoconception propre à **sudo-less.dev**, ré
 
 Score = (9 × 1,5 + 15 × 1,25 + 10 × 1) / (20 × 1,5 + 26 × 1,25 + 10 × 1) = 42,25 / 72,5 = **58 %**.
 
-Ce score mesure l'avancement dans le référentiel, pas l'impact environnemental du site. Le score visé suppose que les actions 1 à 5 du plan d'avancement soient réalisées ; il ne compte pas les critères d'hébergement, qui dépendent de GitHub.
+Ce score mesure l'avancement dans le référentiel, pas l'impact environnemental du site. Le score visé suppose que les actions 1 à 4 du plan d'avancement soient réalisées ; il ne compte pas les critères d'hébergement, qui dépendent de GitHub.
 
 ---
 
@@ -74,6 +74,8 @@ Chaque page du site doit respecter ce budget au premier chargement : cache désa
 | Éléments du DOM | 1 500 | 1 390 | Fiche [6.5](../../rgesn/frontend/6-5_chargement-ressources/) |
 
 Mesuré le 31 octobre 2026 dans Chromium 155 sur les 132 pages du site, page d'erreur comprise, à 1 366 × 768 et 390 × 844 pixels : toutes respectent le budget. Le DOM compte toutes les balises de la page, y compris celles des images SVG.
+
+Le budget est vérifié à chaque publication, avant la mise en ligne : le site construit est servi en local, compressé comme par GitHub Pages, et chaque page est chargée dans Chrome aux deux tailles d'écran. Si une page dépasse le budget, la publication échoue.
 
 À 512 kbit/s, le débit testé pour le critère 2.3, 100 Ko se transfèrent en 1,6 seconde environ.
 
@@ -176,7 +178,7 @@ Avec le cache, passer d'une page à l'autre ne télécharge que le HTML : 1 requ
 
 | Critère | Statut | Justification |
 |---|---|---|
-| [6.1](../../rgesn/frontend/6-1_poids-requetes-ecran/) Poids et requêtes par écran | Validé | Budget par page, détaillé dans la section [Budget par page](#budget-par-page) : 100 Ko transférés, 10 requêtes et 1 500 éléments au plus, au chargement de la page, recherche non comprise. Toutes les pages le respectent : 79 Ko, 8 requêtes et 1 390 éléments au plus. Le contrôle se fait encore à la main. |
+| [6.1](../../rgesn/frontend/6-1_poids-requetes-ecran/) Poids et requêtes par écran | Validé | Budget par page, détaillé dans la section [Budget par page](#budget-par-page) : 100 Ko transférés, 10 requêtes et 1 500 éléments au plus, au chargement de la page, recherche non comprise. Toutes les pages le respectent : 79 Ko, 8 requêtes et 1 390 éléments au plus. Il est vérifié à chaque publication : si une page le dépasse, le site n'est pas mis en ligne. |
 | [6.2](../../rgesn/frontend/6-2_cache-navigateur/) Cache côté utilisateur | Validé | À la deuxième visite d'une fiche, les 8 ressources viennent du cache. GitHub Pages fixe la durée de cache à 10 minutes (`max-age=600`) pour tous les fichiers, sans réglage possible. Au-delà, le navigateur revalide chaque fichier, sans le télécharger de nouveau (réponse 304). Les CSS et JavaScript ont un nom qui change avec leur contenu : ils pourraient être gardés bien plus longtemps. |
 | [6.3](../../rgesn/frontend/6-3_compression-ressources/) Compression des ressources | Validé | Tous les fichiers texte arrivent compressés en gzip. GitHub Pages ne propose pas Brotli. |
 | [6.4](../../rgesn/frontend/6-4_dimensions-images/) Dimensions des images | Validé | L'illustration d'accueil existe en quatre largeurs, de 480 à 1 280 pixels, et l'attribut `sizes` indique sa largeur affichée à chaque taille d'écran. Vérifié dans Chromium de 360 à 1 920 pixels de large : en densité 1 et 2, le navigateur charge une version au plus 1,5 fois plus large que l'affichage. Sur un ordinateur de densité 1, elle pèse 17,6 Ko au lieu de 45 Ko. |
@@ -236,8 +238,7 @@ Les actions sont classées de la plus simple à la plus longue.
 | Action | Critères |
 |---|---|
 | 1. Charger FlexSearch à l'ouverture de la recherche, avec l'index, et annoncer le poids de l'index | 6.5, 4.12 |
-| 2. Contrôler le budget par page à chaque publication, dans l'intégration continue | 6.1 |
-| 3. Tester les parcours sur un Safari de plus de deux ans, pour compléter le critère 2.4 | 2.4 |
-| 4. Écrire l'étude d'utilité, la description des besoins des publics visés, les objectifs environnementaux, la comparaison d'architecture, la stratégie de maintenance et de fin de vie, et la règle de revue des fiches | 1.1, 1.2, 1.5, 3.1, 2.7, 5.8, 7.2 |
-| 5. Refaire cette évaluation à chaque évolution importante, et au plus tard en octobre 2027 | 1.4 |
-| 6. Demander à GitHub ses indicateurs environnementaux, ou comparer avec un hébergeur qui les publie et permet de régler la durée de cache | 2.8, 2.10, 8.1 à 8.9 |
+| 2. Tester les parcours sur un Safari de plus de deux ans, pour compléter le critère 2.4 | 2.4 |
+| 3. Écrire l'étude d'utilité, la description des besoins des publics visés, les objectifs environnementaux, la comparaison d'architecture, la stratégie de maintenance et de fin de vie, et la règle de revue des fiches | 1.1, 1.2, 1.5, 3.1, 2.7, 5.8, 7.2 |
+| 4. Refaire cette évaluation à chaque évolution importante, et au plus tard en octobre 2027 | 1.4 |
+| 5. Demander à GitHub ses indicateurs environnementaux, ou comparer avec un hébergeur qui les publie et permet de régler la durée de cache | 2.8, 2.10, 8.1 à 8.9 |

@@ -91,4 +91,4 @@ Sans sudo-less, une équipe qui applique le RGESN part du PDF du référentiel (
 - **Conséquences indirectes**
   - (+) Contrairement à un CMS, aucun serveur d'application ni aucune base de données ne tourne en permanence.
   - (−) L'hébergeur ne publie pas d'indicateurs environnementaux, et la durée de cache, fixée à 10 minutes, ne se règle pas.
-- **Décision** : garder pour l'instant, et comparer avec un hébergeur qui publie ses indicateurs (action 6 du plan d'avancement).
+- **Décision** : garder pour l'instant, et comparer avec un hébergeur qui publie ses indicateurs (action 5 du plan d'avancement).
