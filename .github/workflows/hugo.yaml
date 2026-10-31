@@ -84,10 +84,15 @@ jobs:
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/" \
             --cacheDir "${{ runner.temp }}/hugo_cache"
-      - name: Subset icon font
+      - name: Install Python dependencies
         run: |
           python3 -m venv "${{ runner.temp }}/venv"
-          "${{ runner.temp }}/venv/bin/pip" install --quiet fonttools==4.66.1 brotli==1.2.0
+          "${{ runner.temp }}/venv/bin/pip" install --quiet fonttools==4.66.1 brotli==1.2.0 tinycss2==1.5.1
+      - name: Purge unused CSS
+        run: |
+          "${{ runner.temp }}/venv/bin/python" scripts/purge-css.py public
+      - name: Subset icon font
+        run: |
           "${{ runner.temp }}/venv/bin/python" scripts/subset-icons.py public
       - name: Cache save
         id: cache-save
