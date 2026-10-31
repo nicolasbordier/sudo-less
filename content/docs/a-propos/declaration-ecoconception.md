@@ -26,17 +26,17 @@ Cette page est la déclaration d'écoconception propre à **sudo-less.dev**, ré
 
 | Score actuel | Score précédent | Score visé (octobre 2028) |
 |---|---|---|
-| **58 %** | Aucun, première déclaration | 78 % |
+| **62 %** | Aucun, première déclaration | 78 % |
 
-**34 critères validés sur 56 applicables** ; 22 critères ne s'appliquent pas au site. Le score pondère chaque critère par sa priorité :
+**36 critères validés sur 56 applicables** ; 22 critères ne s'appliquent pas au site. Le score pondère chaque critère par sa priorité :
 
 | Priorité | Pondération | Critères applicables | Critères validés |
 |---|---:|---:|---:|
 | Prioritaire | 1,5 | 20 | 9 |
-| Recommandé | 1,25 | 26 | 15 |
+| Recommandé | 1,25 | 26 | 17 |
 | Modéré | 1 | 10 | 10 |
 
-Score = (9 × 1,5 + 15 × 1,25 + 10 × 1) / (20 × 1,5 + 26 × 1,25 + 10 × 1) = 42,25 / 72,5 = **58 %**.
+Score = (9 × 1,5 + 17 × 1,25 + 10 × 1) / (20 × 1,5 + 26 × 1,25 + 10 × 1) = 44,75 / 72,5 = **62 %**.
 
 Ce score mesure l'avancement dans le référentiel, pas l'impact environnemental du site. Le score visé suppose que les actions 1 à 4 du plan d'avancement soient réalisées ; il ne compte pas les critères d'hébergement, qui dépendent de GitHub.
 
@@ -170,7 +170,7 @@ Avec le cache, passer d'une page à l'autre ne télécharge que le HTML : 1 requ
 | [5.5](../../rgesn/contenus/5-5_ecoute-seule/) Mode « écoute seule » | Non applicable | Aucune vidéo. |
 | [5.6](../../rgesn/contenus/5-6_compression-audio/) Compression audio | Non applicable | Aucun contenu audio. |
 | [5.7](../../rgesn/contenus/5-7_format-documents/) Format des documents | Non applicable | Aucun document à télécharger. |
-| [5.8](../../rgesn/contenus/5-8_archivage-suppression/) Archivage et suppression | Non validé | Chaque fiche affiche sa date de mise à jour, mais aucune stratégie écrite ne prévoit leur revue, leur archivage ou leur suppression. |
+| [5.8](../../rgesn/contenus/5-8_archivage-suppression/) Archivage et suppression | Validé | Stratégie décrite dans la page [Contribuer](../contribuer/#durée-de-vie-des-contenus) : chaque page est relue au plus tard 12 mois après sa dernière mise à jour, puis mise à jour, fusionnée ou retirée, et chaque fiche suit la version en vigueur du RGESN. La construction du site signale automatiquement les pages à relire. Les pages retirées restent dans l'historique du dépôt. |
 
 {{% /tab %}}
 
@@ -193,7 +193,7 @@ Avec le cache, passer d'une page à l'autre ne télécharge que le HTML : 1 requ
 | Critère | Statut | Justification |
 |---|---|---|
 | [7.1](../../rgesn/backend/7-1_cache-serveur/) Cache serveur | Validé | Site statique : chaque page est calculée une seule fois, à la construction, puis servie depuis le cache du CDN de GitHub Pages, renouvelé à chaque publication. |
-| [7.2](../../rgesn/backend/7-2_durees-conservation/) Durées de conservation | Non validé | Le site ne stocke aucune donnée d'utilisateur. La durée de vie des contenus reste à fixer (critère 5.8). |
+| [7.2](../../rgesn/backend/7-2_durees-conservation/) Durées de conservation | Validé | Le site ne stocke aucune donnée de visiteur. Les contenus sont relus au plus tard 12 mois après leur dernière mise à jour (critère 5.8). Chez GitHub, l'archive de chaque déploiement expire après 1 jour, le cache de construction après 7 jours sans usage, et les journaux de construction après 30 jours. Le 31 octobre 2026, le site construit pèse 29 Mo, dont 1 Mo d'index de recherche ; ce poids est relevé à chaque mise à jour de cette déclaration. |
 | [7.3](../../rgesn/backend/7-3_traitement-arriere-plan/) Information sur un traitement en cours | Validé | Seul traitement long : le chargement de l'index de recherche. Le message « Chargement de l'index de recherche… » s'affiche, et une saisie pendant le chargement ne relance pas le téléchargement. |
 | [7.4](../../rgesn/backend/7-4_mecanisme-consensus/) Mécanisme de consensus | Non applicable | Aucune blockchain. |
 
@@ -212,7 +212,7 @@ Le site est hébergé par GitHub Pages et servi par le CDN Fastly. Aucune inform
 | [8.5](../../rgesn/hebergement/8-5_electricite-renouvelable/) Électricité renouvelable | Non validé | Information non trouvée pour GitHub Pages. |
 | [8.6](../../rgesn/hebergement/8-6_localisation/) Localisation | Non validé | L'adresse du site est enregistrée par GitHub aux États-Unis. Les pages sont servies par un cache Fastly à Paris, mais l'emplacement des serveurs d'origine n'est pas publié. |
 | [8.7](../../rgesn/hebergement/8-7_chaleur-fatale/) Chaleur fatale | Non validé | Information non trouvée pour GitHub Pages. |
-| [8.8](../../rgesn/hebergement/8-8_donnees-chaudes-froides/) Données chaudes et froides | Non applicable | Le site construit pèse 38 Mo, loin du seuil de 10 To. |
+| [8.8](../../rgesn/hebergement/8-8_donnees-chaudes-froides/) Données chaudes et froides | Non applicable | Le site construit pèse 29 Mo, loin du seuil de 10 To. |
 | [8.9](../../rgesn/hebergement/8-9_duplication-donnees/) Duplication des données | Non validé | Aucun niveau de service défini : la redondance est celle de GitHub. Le site peut être reconstruit à tout moment depuis son dépôt. |
 | [8.10](../../rgesn/hebergement/8-10_decalage-asynchrone/) Calculs asynchrones | Non applicable | Aucun calcul ni transfert asynchrone. La construction du site se lance à chaque publication. |
 
@@ -239,6 +239,6 @@ Les actions sont classées de la plus simple à la plus longue.
 |---|---|
 | 1. Charger FlexSearch à l'ouverture de la recherche, avec l'index, et annoncer le poids de l'index | 6.5, 4.12 |
 | 2. Tester les parcours sur un Safari de plus de deux ans, pour compléter le critère 2.4 | 2.4 |
-| 3. Écrire l'étude d'utilité, la description des besoins des publics visés, les objectifs environnementaux, la comparaison d'architecture, la stratégie de maintenance et de fin de vie, et la règle de revue des fiches | 1.1, 1.2, 1.5, 3.1, 2.7, 5.8, 7.2 |
+| 3. Écrire l'étude d'utilité, la description des besoins des publics visés, les objectifs environnementaux, la comparaison d'architecture, et la stratégie de maintenance et de fin de vie | 1.1, 1.2, 1.5, 3.1, 2.7 |
 | 4. Refaire cette évaluation à chaque évolution importante, et au plus tard en octobre 2027 | 1.4 |
 | 5. Demander à GitHub ses indicateurs environnementaux, ou comparer avec un hébergeur qui les publie et permet de régler la durée de cache | 2.8, 2.10, 8.1 à 8.9 |
