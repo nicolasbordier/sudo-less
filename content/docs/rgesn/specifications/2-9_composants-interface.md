@@ -4,7 +4,7 @@ title: "2.9 - Composants d'interface prêts à l'emploi"
 description: "Critère 2.9 du RGESN : pourquoi et comment comparer les impacts environnementaux des composants d'interface et des design systems prêts à l'emploi."
 icon: "widgets"
 date: "2026-07-14T00:00:00+01:00"
-lastmod: "2026-07-14T00:00:00+01:00"
+lastmod: "2026-10-31T00:00:00+01:00"
 draft: false
 toc: true
 ---
@@ -68,7 +68,7 @@ Le critère est validé si la majorité des composants d'interfaces utilisés pa
 
 Via ces différentes sources :
 
-{{< tabs tabTotal="4">}}
+{{< tabs tabTotal="5">}}
 {{% tab tabName="INR - GR491" %}}
 
 Profil(s) métier concerné(s) : `Développeur`, `Designer`
@@ -106,6 +106,19 @@ Profil(s) métier concerné(s) : `Designer`, `Développeur`
 Les [Web Sustainability Guidelines](https://www.w3.org/TR/web-sustainability-guidelines/) du W3C consacrent une recommandation dédiée aux design systems, [**« Use a design system for interface consistency »**](https://www.w3.org/TR/web-sustainability-guidelines/#use-a-design-system-for-interface-consistency) : utiliser un design system pour les projets importants ou à contributeurs multiples, en s'appuyant sur des composants réutilisables basés sur les standards du web, en ne chargeant que les composants effectivement nécessaires à chaque page ou fonctionnalité, et en maintenant le système via une gouvernance claire (propriété, versionnage, documentation à jour).
 
 Une seconde recommandation, [**« Use optimized web typography »**](https://www.w3.org/TR/web-sustainability-guidelines/#use-optimized-web-typography), complète le critère sur un point précis et souvent oublié des design systems : limiter le nombre et la complexité des polices chargées, et restreindre les axes des polices variables aux seuls besoins réels du projet pour réduire la taille du fichier — exactement le type d'optimisation évoquée dans le retour d'expérience DSFR ci-dessous.
+
+{{% /tab %}}
+
+{{% tab tabName="RWP (GreenIT)" %}}
+
+Profil(s) métier concerné(s) : `Designer`, `Développeur`
+
+Sous WordPress, le composant prêt à l'emploi le plus lourd est souvent le **constructeur de pages**. Le [RWP](https://rwp.greenit.fr/), déclinaison WordPress du référentiel RWEB par le Collectif GreenIT, lui consacre deux fiches :
+
+- [**RWP 3.12 — « Utiliser le constructeur de pages Gutenberg »**](https://rwp.greenit.fr/fr/fiches/RWP_3.12-utiliser-le-constructeur-de-pages-gutenberg) : un constructeur ajouté, comme Elementor ou Divi, va « alourdir de manière très conséquente le poids des pages en surchargeant le CSS ». L'éditeur natif, Gutenberg, propose déjà les blocs courants (titres, images, colonnes, boutons) ;
+- [**RWP 3.08 — « Choisir son thème »**](https://rwp.greenit.fr/fr/fiches/RWP_3.08-choisir-son-theme) : un thème compatible avec Gutenberg, qui « ne propose pas plus que ce dont vous avez besoin », sans constructeur ni extensions superflues.
+
+Pour appliquer le moyen de test, mesurer une page type construite avec le constructeur, puis avec Gutenberg : c'est la comparaison que demande le critère.
 
 {{% /tab %}}
 

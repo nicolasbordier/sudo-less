@@ -4,7 +4,7 @@ title: "7.1 - Cache serveur pour les données les plus utilisées"
 description: "Critère 7.1 du RGESN : repérer les réponses les plus coûteuses et les plus demandées, les mettre en cache côté serveur avec une durée adaptée à chaque type de contenu, prévoir leur rafraîchissement et vérifier que le cache sert vraiment."
 icon: "memory"
 date: "2026-10-30T00:00:00+01:00"
-lastmod: "2026-10-30T00:00:00+01:00"
+lastmod: "2026-10-31T00:00:00+01:00"
 draft: false
 toc: true
 ---
@@ -84,6 +84,8 @@ Le référentiel [RWEB du Collectif GreenIT](https://rweb.greenit.fr/) rattache 
 - [**RWEB 0016 — « Mettre en cache les données calculées souvent utilisées »**](https://rweb.greenit.fr/fr/fiches/RWEB_0016-mettre-en-cache-les-donnees-calculees-souvent-utilisees), rattachée aux critères [6.2](../../frontend/6-2_cache-navigateur/) et 7.1, prend l'exemple du nombre de contenus d'une catégorie, recalculé à chaque affichage alors qu'il change rarement.
 
 [**RWEB 0074 — « Utiliser un cache HTTP »**](https://rweb.greenit.fr/fr/fiches/RWEB_0074-utiliser-un-cache-http) n'est rattachée à aucun critère, mais relève du 7.1 : un proxy inverse (Varnish, Nginx) sert les pages déjà calculées sans solliciter l'application.
+
+La déclinaison WordPress de RWEB, le [RWP](https://rwp.greenit.fr/), reprend les deux niveaux : [**RWP 7.02 — « Utiliser un système de cache »**](https://rwp.greenit.fr/fr/fiches/RWP_7.02-utiliser-un-systeme-de-cache) pour les pages, par une extension, et [**RWP 4.01 — « Mettre des données en cache »**](https://rwp.greenit.fr/fr/fiches/RWP_4.01-mettre-des-donnees-en-cache) pour les calculs (étape 3 de la « Mise en œuvre technique »). Contrairement à ce qu'indique RWP 7.02, `define('WP_CACHE', true)` n'active aucun cache : la constante charge seulement le fichier `advanced-cache.php` que fournit l'extension ([documentation](https://developer.wordpress.org/advanced-administration/wordpress/wp-config/)).
 
 {{% /tab %}}
 
@@ -185,6 +187,21 @@ public function nombreDeContenus(int $categorie): int
 
 // À chaque modification d'un contenu de la catégorie :
 $this->cache->invalidateTags(["categorie_{$categorie}"]);
+```
+
+Avec WordPress, l'[API Transients](https://developer.wordpress.org/apis/transients/) fait de même (RWP 4.01, dont l'exemple teste la condition à l'envers) :
+
+```php
+$derniers = get_transient( 'derniers_articles' );
+if ( false === $derniers ) {
+    $derniers = get_posts( array( 'numberposts' => 5 ) );
+    set_transient( 'derniers_articles', $derniers, HOUR_IN_SECONDS );
+}
+
+// À chaque enregistrement d'un article :
+add_action( 'save_post_post', function () {
+    delete_transient( 'derniers_articles' );
+} );
 ```
 
 Pour un résultat utilisé par tous, comme un export complet, une tâche planifiée peut le régénérer chaque nuit.

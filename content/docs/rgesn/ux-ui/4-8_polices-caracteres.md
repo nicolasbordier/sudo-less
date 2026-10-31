@@ -4,7 +4,7 @@ title: "4.8 - Limitation des polices de caractères téléchargées"
 description: "Critère 4.8 du RGESN : pourquoi et comment limiter le nombre et le poids des polices de caractères téléchargées, en privilégiant les polices nativement disponibles."
 icon: "font_download"
 date: "2026-07-16T00:00:00+01:00"
-lastmod: "2026-07-16T00:00:00+01:00"
+lastmod: "2026-10-31T00:00:00+01:00"
 draft: false
 toc: true
 ---
@@ -94,6 +94,8 @@ Le référentiel [RWEB du Collectif GreenIT](https://rweb.greenit.fr/) a une cor
 ```
 
 Avec ce code, la police Montserrat n'est téléchargée que si l'utilisateur n'a pas activé sa préférence de réduction des données ; dans le cas contraire, une police système (Arial par exemple) s'affiche sans aucun téléchargement. Principe de validation retenu par RWEB : le nombre de polices téléchargées doit être inférieur ou égal à deux — exactement le seuil du critère RGESN.
+
+Sous WordPress, la déclinaison [RWP](https://rwp.greenit.fr/) traite le cas des Google Fonts chargées depuis les serveurs de Google. La fiche [**RWP 3.14 — « Préférer les polices auto-hébergées aux polices CDN »**](https://rwp.greenit.fr/fr/fiches/RWP_3.14-preferer-l-utilisation-de-polices-auto-hebergees-aux-polices-cdn) conseille de les héberger sur le site, avec l'extension OMGF, et de ne garder que les variantes utilisées : le cache du navigateur étant cloisonné par site, le CDN n'apporte plus rien. Depuis WordPress 6.5, la bibliothèque de polices de l'éditeur le fait sans extension : une Google Font installée est téléchargée sur le serveur ([annonce](https://make.wordpress.org/core/2024/03/14/new-feature-font-library/)).
 
 {{% /tab %}}
 

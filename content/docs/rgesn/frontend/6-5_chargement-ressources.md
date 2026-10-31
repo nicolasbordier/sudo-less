@@ -4,7 +4,7 @@ title: "6.5 - Chargement des seules ressources utiles"
 description: "Critère 6.5 du RGESN : différer le chargement des images, iframes et vidéos hors écran sans retarder l'image principale, charger le JavaScript d'une fonctionnalité quand elle sert, limiter les styles aux composants utilisés et repérer les ressources téléchargées sans jamais être affichées."
 icon: "downloading"
 date: "2026-10-30T00:00:00+01:00"
-lastmod: "2026-10-30T00:00:00+01:00"
+lastmod: "2026-10-31T00:00:00+01:00"
 draft: false
 toc: true
 ---
@@ -80,7 +80,7 @@ Le référentiel [RWEB du Collectif GreenIT](https://rweb.greenit.fr/) rattache 
 - [**RWEB 0046 — « Ne charger des données ou du code que lorsque c'est indispensable »**](https://rweb.greenit.fr/fr/fiches/RWEB_0046-ne-charger-des-donneesdu-code-que-lorsqu-elles-sontil-est-necessaire) : pas de `preload`, `prefetch` ou `preconnect` pour une ressource « utilisée uniquement sous certaines conditions » ;
 - [**RWEB 0015 — « N'utilisez que les portions indispensables des bibliothèques JavaScript et frameworks CSS »**](https://rweb.greenit.fr/fr/fiches/RWEB_0015-n-utilisez-que-les-portions-indispensables-des-bibliotheques-javascript-et-frameworks-css) (priorité 5/5). Les « 17 Ko » économisés par la version « slim » de jQuery sont non compressés : l'écart n'est que de 6 Ko en gzip ;
 - [**RWEB 0035 — « Limiter le nombre de CSS »**](https://rweb.greenit.fr/fr/fiches/RWEB_0035-limiter-le-nombre-de-css) (priorité 5/5) : une feuille par media query, que le navigateur « dépriorise ». Il la télécharge quand même : dans Chromium 155 et Firefox 158, une feuille `media="print"` est téléchargée à chaque chargement ;
-- [**RWEB 0069 — « Bien choisir son thème et limiter les extensions dans un CMS »**](https://rweb.greenit.fr/fr/fiches/RWEB_0069-bien-choisir-son-theme-et-limiter-le-nombre-d-extensions-dans-un-cms) et [**RWEB 0022 — « Favoriser un développement sur-mesure à l'usage d'un CMS »**](https://rweb.greenit.fr/fr/fiches/RWEB_0022-favoriser-un-developpement-sur-mesure-a-l-usage-d-un-cms), car « chaque extension ajoute ses données en base, ses fichiers CSS et JavaScript ».
+- [**RWEB 0069 — « Bien choisir son thème et limiter les extensions dans un CMS »**](https://rweb.greenit.fr/fr/fiches/RWEB_0069-bien-choisir-son-theme-et-limiter-le-nombre-d-extensions-dans-un-cms) et [**RWEB 0022 — « Favoriser un développement sur-mesure à l'usage d'un CMS »**](https://rweb.greenit.fr/fr/fiches/RWEB_0022-favoriser-un-developpement-sur-mesure-a-l-usage-d-un-cms), car « chaque extension ajoute ses données en base, ses fichiers CSS et JavaScript ». Sous WordPress, le [RWP](https://rwp.greenit.fr/) conseille de supprimer les extensions inutilisées ([RWP 3.05](https://rwp.greenit.fr/fr/fiches/RWP_3.05-limiter-le-nombre-d_extensions)) et, dès l'installation, ce qui ne sert pas, comme le script des émojis ajouté à chaque page ([RWP 1.02](https://rwp.greenit.fr/fr/fiches/RWP_1.02-nettoyer-des-l-installation), dont le code pour les dégradés utilise une fonction obsolète depuis WordPress 6.3).
 
 {{% /tab %}}
 

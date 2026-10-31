@@ -4,7 +4,7 @@ title: "5.8 - Archivage et suppression des contenus obsolètes"
 description: "Critère 5.8 du RGESN : fixer une durée de vie à chaque type de contenu, purger automatiquement ce qui expire, prévoir une revue manuelle, respecter le RGPD et le droit des archives publiques, et suivre l'occupation du stockage."
 icon: "auto_delete"
 date: "2026-10-20T00:00:00+01:00"
-lastmod: "2026-10-20T00:00:00+01:00"
+lastmod: "2026-10-31T00:00:00+01:00"
 draft: false
 toc: true
 ---
@@ -207,6 +207,8 @@ Supprimer une partition « is far faster than a bulk operation » ([PostgreSQL](
 ```php
 define( 'WP_POST_REVISIONS', 5 );
 ```
+
+C'est la fiche [RWP 4.03](https://rwp.greenit.fr/fr/fiches/RWP_4.03-limiter-le-nombre-de-revisions) du [RWP](https://rwp.greenit.fr/), la déclinaison WordPress de RWEB. Sa fiche [RWP 8.01](https://rwp.greenit.fr/fr/fiches/RWP_8.01-entretenir-son-site-regulierement), version WordPress de RWEB 0116, ajoute trois nettoyages : les médias inutilisés de la bibliothèque, les résidus en base (commentaires indésirables, brouillons, données d'extensions supprimées) et les anciennes sauvegardes.
 
 **5. Prévoir la revue manuelle** des contenus dont l'obsolescence demande un jugement : une date de dernière revue sur chaque contenu, et chaque année, la liste des contenus non revus depuis plus d'un an. Un contenu ancien encore utile peut être allégé et présenté comme une archive.
 
