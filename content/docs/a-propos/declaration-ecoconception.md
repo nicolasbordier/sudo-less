@@ -26,17 +26,17 @@ Cette page est la déclaration d'écoconception propre à **sudo-less.dev**, ré
 
 | Score actuel | Score précédent | Score visé (octobre 2028) |
 |---|---|---|
-| **62 %** | Aucun, première déclaration | 78 % |
+| **64 %** | Aucun, première déclaration | 78 % |
 
-**36 critères validés sur 56 applicables** ; 22 critères ne s'appliquent pas au site. Le score pondère chaque critère par sa priorité :
+**37 critères validés sur 56 applicables** ; 22 critères ne s'appliquent pas au site. Le score pondère chaque critère par sa priorité :
 
 | Priorité | Pondération | Critères applicables | Critères validés |
 |---|---:|---:|---:|
-| Prioritaire | 1,5 | 20 | 9 |
+| Prioritaire | 1,5 | 20 | 10 |
 | Recommandé | 1,25 | 26 | 17 |
 | Modéré | 1 | 10 | 10 |
 
-Score = (9 × 1,5 + 17 × 1,25 + 10 × 1) / (20 × 1,5 + 26 × 1,25 + 10 × 1) = 44,75 / 72,5 = **62 %**.
+Score = (10 × 1,5 + 17 × 1,25 + 10 × 1) / (20 × 1,5 + 26 × 1,25 + 10 × 1) = 46,25 / 72,5 = **64 %**.
 
 Ce score mesure l'avancement dans le référentiel, pas l'impact environnemental du site. Le score visé suppose que les actions 1 à 4 du plan d'avancement soient réalisées ; il ne compte pas les critères d'hébergement, qui dépendent de GitHub.
 
@@ -85,6 +85,32 @@ Avec le cache, passer d'une page à l'autre ne télécharge que le HTML : 1 requ
 
 ---
 
+## Maintenance et fin de vie
+
+Inventaire au 31 octobre 2026 des fonctionnalités, composants et environnements du site. Il est revu chaque année en octobre, avec cette déclaration ; la construction du site signale cette page si elle n'a pas été mise à jour depuis 12 mois.
+
+| Élément | État d'utilisation | Maintenance |
+|---|---|---|
+| Fonctionnalités de la [revue de conception](../revue-conception/) : fiches, recherche, pages de synthèse, déclaration, page d'accueil, mode sombre | Utilisées. Faute de mesure d'audience (critère 1.6), leur usage est estimé à chaque revue d'après les issues et les retours reçus. | Une fonctionnalité retirée passe par la revue de conception ; son code et ses fichiers sont supprimés. |
+| Contenus | 129 pages, 27 Mo une fois le site construit | Durée de vie décrite dans la page [Contribuer](../contribuer/#durée-de-vie-des-contenus). |
+| Production : GitHub Pages | Utilisé | Voir la famille 8. Hébergement. |
+| Construction : GitHub Actions | Utilisé à chaque publication | L'archive de déploiement expire après 1 jour, le cache après 7 jours sans usage, les journaux après 30 jours. |
+| Développement : `hugo server` sur le poste du mainteneur | Utilisé | Pas d'environnement de préproduction. |
+| Outils de construction : Hugo 0.168, Go, Dart Sass 1.105, Python et 4 scripts | Utilisés | Versions fixées dans la construction, mises à jour à chaque revue. |
+| Thème Lotus Docs 0.3.0 et Bootstrap 5.3 | Utilisés. La dernière version du thème date d'avril 2026 ; il emploie des fonctions que Hugo a dépréciées, et Bootstrap 5 des règles Sass que Dart Sass 3 supprimera. | À chaque revue, vérifier leur compatibilité avec Hugo et Dart Sass. Si le thème n'est plus maintenu, le figer dans le dépôt ou le remplacer. |
+
+Retirés le 31 octobre 2026, car inutilisés : l'analyse de sécurité GitLab (le dépôt n'est que sur GitHub), l'installation de Node.js dans la construction (aucune dépendance JavaScript), LibSass, remplacé par Dart Sass qui était installé sans servir, et les cartes de source du CSS publiées sans utilité (1,7 Mo).
+
+**Fin de vie du service.** Si le site ne reçoit aucune publication pendant 12 mois, si son mainteneur l'arrête ou si le RGESN est remplacé :
+
+1. un bandeau indique sur chaque page que le site n'est plus maintenu, et depuis quand ;
+2. le dépôt GitHub est archivé en lecture seule, et une copie déposée sur [Software Heritage](https://www.softwareheritage.org/) ;
+3. le site est dépublié 12 mois plus tard.
+
+Le code (MIT) et le contenu (CC BY-SA 4.0) restent ainsi réutilisables, y compris pour reprendre le projet. Le site ne détient aucune donnée personnelle, et aucun équipement ne lui est dédié : il n'y a rien à reconditionner.
+
+---
+
 ## Résultats par critère
 
 {{< tabs tabTotal="9">}}
@@ -116,7 +142,7 @@ Avec le cache, passer d'une page à l'autre ne télécharge que le HTML : 1 requ
 | [2.4](../../rgesn/specifications/2-4_anciennes-versions-os/) Anciennes versions d'OS et de navigateurs | Validé | Testé le 31 octobre 2026 sur Chrome 120 (décembre 2023) et Firefox 115 ESR (juillet 2023), dans des versions sans mise à jour automatique : les parcours essentiels fonctionnent. Safari n'a pas encore été testé. Les versions minimales du critère 2.1 restent estimées par l'analyse du code. |
 | [2.5](../../rgesn/specifications/2-5_terminaux-affichage/) Terminaux d'affichage | Validé | Testé le 31 octobre 2026 sur les 130 pages du site, à 1 200, 768 et 390 pixels de large : aucune page ne déborde, les tableaux larges défilant dans leur propre cadre. Les menus sont des boutons : ils s'ouvrent au clavier comme à la souris ou au doigt. |
 | [2.6](../../rgesn/specifications/2-6_revue-conception-code/) Revue de conception et de code | Validé | Revue de conception : l'[arbre des conséquences](../revue-conception/) de chaque fonctionnalité, selon le niveau 1 de la méthode Empreinte Projet de l'ADEME (31 octobre 2026). Revue de code : le mainteneur relit chaque commit, code ou contenu, et chaque contribution externe avant de l'intégrer, selon les points décrits dans la page [Contribuer](../contribuer/). |
-| [2.7](../../rgesn/specifications/2-7_maintenance-decommissionnement/) Maintenance et décommissionnement | Non validé | Pas de stratégie écrite de maintenance et de fin de vie. |
+| [2.7](../../rgesn/specifications/2-7_maintenance-decommissionnement/) Maintenance et décommissionnement | Validé | Inventaire et stratégie dans la section [Maintenance et fin de vie](#maintenance-et-fin-de-vie) : revue chaque année en octobre, avec un rappel automatique ; quatre éléments inutilisés retirés le 31 octobre 2026 ; en fin de vie, dépôt archivé et site dépublié 12 mois plus tard. |
 | [2.8](../../rgesn/specifications/2-8_fournisseurs-impacts-environnementaux/) Fournisseurs | Non validé | Le seul fournisseur, GitHub (hébergement et intégration continue), a été choisi sans critère environnemental documenté. |
 | [2.9](../../rgesn/specifications/2-9_composants-interface/) Composants d'interface prêts à l'emploi | Validé | Le thème Lotus Docs apporte Bootstrap 5, allégé à la construction du site. Depuis le 31 octobre 2026, le CSS est réduit aux règles qui s'appliquent aux pages : 14 Ko compressés sur une fiche, au lieu de 43 Ko. Le JavaScript de Bootstrap (19 Ko) se limite à cinq composants, dont un seul ne sert sur aucune page : l'infobulle. La police d'icônes est réduite aux icônes utilisées (11,3 Ko), et l'index de recherche n'est téléchargé qu'à la demande. |
 | [2.10](../../rgesn/specifications/2-10_services-tiers/) Services tiers | Non validé | Deux services tiers : GitHub Pages (hébergement, avec le CDN Fastly) et GitHub Actions (construction du site). Leur avancement sur les critères 1.4 et 1.5 n'a pas été vérifié. |
@@ -193,7 +219,7 @@ Avec le cache, passer d'une page à l'autre ne télécharge que le HTML : 1 requ
 | Critère | Statut | Justification |
 |---|---|---|
 | [7.1](../../rgesn/backend/7-1_cache-serveur/) Cache serveur | Validé | Site statique : chaque page est calculée une seule fois, à la construction, puis servie depuis le cache du CDN de GitHub Pages, renouvelé à chaque publication. |
-| [7.2](../../rgesn/backend/7-2_durees-conservation/) Durées de conservation | Validé | Le site ne stocke aucune donnée de visiteur. Les contenus sont relus au plus tard 12 mois après leur dernière mise à jour (critère 5.8). Chez GitHub, l'archive de chaque déploiement expire après 1 jour, le cache de construction après 7 jours sans usage, et les journaux de construction après 30 jours. Le 31 octobre 2026, le site construit pèse 29 Mo, dont 1 Mo d'index de recherche ; ce poids est relevé à chaque mise à jour de cette déclaration. |
+| [7.2](../../rgesn/backend/7-2_durees-conservation/) Durées de conservation | Validé | Le site ne stocke aucune donnée de visiteur. Les contenus sont relus au plus tard 12 mois après leur dernière mise à jour (critère 5.8). Chez GitHub, l'archive de chaque déploiement expire après 1 jour, le cache de construction après 7 jours sans usage, et les journaux de construction après 30 jours. Le 31 octobre 2026, le site construit pèse 27 Mo, dont 1 Mo d'index de recherche ; ce poids est relevé à chaque mise à jour de cette déclaration. |
 | [7.3](../../rgesn/backend/7-3_traitement-arriere-plan/) Information sur un traitement en cours | Validé | Seul traitement long : le chargement de l'index de recherche. Le message « Chargement de l'index de recherche… » s'affiche, et une saisie pendant le chargement ne relance pas le téléchargement. |
 | [7.4](../../rgesn/backend/7-4_mecanisme-consensus/) Mécanisme de consensus | Non applicable | Aucune blockchain. |
 
@@ -212,7 +238,7 @@ Le site est hébergé par GitHub Pages et servi par le CDN Fastly. Aucune inform
 | [8.5](../../rgesn/hebergement/8-5_electricite-renouvelable/) Électricité renouvelable | Non validé | Information non trouvée pour GitHub Pages. |
 | [8.6](../../rgesn/hebergement/8-6_localisation/) Localisation | Non validé | L'adresse du site est enregistrée par GitHub aux États-Unis. Les pages sont servies par un cache Fastly à Paris, mais l'emplacement des serveurs d'origine n'est pas publié. |
 | [8.7](../../rgesn/hebergement/8-7_chaleur-fatale/) Chaleur fatale | Non validé | Information non trouvée pour GitHub Pages. |
-| [8.8](../../rgesn/hebergement/8-8_donnees-chaudes-froides/) Données chaudes et froides | Non applicable | Le site construit pèse 29 Mo, loin du seuil de 10 To. |
+| [8.8](../../rgesn/hebergement/8-8_donnees-chaudes-froides/) Données chaudes et froides | Non applicable | Le site construit pèse 27 Mo, loin du seuil de 10 To. |
 | [8.9](../../rgesn/hebergement/8-9_duplication-donnees/) Duplication des données | Non validé | Aucun niveau de service défini : la redondance est celle de GitHub. Le site peut être reconstruit à tout moment depuis son dépôt. |
 | [8.10](../../rgesn/hebergement/8-10_decalage-asynchrone/) Calculs asynchrones | Non applicable | Aucun calcul ni transfert asynchrone. La construction du site se lance à chaque publication. |
 
@@ -239,6 +265,6 @@ Les actions sont classées de la plus simple à la plus longue.
 |---|---|
 | 1. Charger FlexSearch à l'ouverture de la recherche, avec l'index, et annoncer le poids de l'index | 6.5, 4.12 |
 | 2. Tester les parcours sur un Safari de plus de deux ans, pour compléter le critère 2.4 | 2.4 |
-| 3. Écrire l'étude d'utilité, la description des besoins des publics visés, les objectifs environnementaux, la comparaison d'architecture, et la stratégie de maintenance et de fin de vie | 1.1, 1.2, 1.5, 3.1, 2.7 |
+| 3. Écrire l'étude d'utilité, la description des besoins des publics visés, les objectifs environnementaux et la comparaison d'architecture | 1.1, 1.2, 1.5, 3.1 |
 | 4. Refaire cette évaluation à chaque évolution importante, et au plus tard en octobre 2027 | 1.4 |
 | 5. Demander à GitHub ses indicateurs environnementaux, ou comparer avec un hébergeur qui les publie et permet de régler la durée de cache | 2.8, 2.10, 8.1 à 8.9 |

@@ -20,9 +20,12 @@
     <!-- Google Fonts -->
     {{- partial "google-fonts" . }}
     <!-- Custom CSS -->
-    {{- $options := dict "enableSourceMap" true }}
+    {{- /* sudo-less : Dart Sass (LibSass est déprécié par Hugo), sans carte de source en production (le thème
+           redéclarait $options dans le if, sans effet), et sans les avertissements de dépréciation de
+           Bootstrap 5 et du thème, à suivre avant Dart Sass 3 */}}
+    {{- $options := dict "transpiler" "dartsass" "enableSourceMap" true "silenceDeprecations" (slice "import" "global-builtin" "color-functions" "if-function") }}
     {{- if hugo.IsProduction}}
-        {{- $options := dict "enableSourceMap" false "outputStyle" "compressed" }}
+        {{- $options = merge $options (dict "enableSourceMap" false "outputStyle" "compressed") }}
     {{- end }}
     {{- $style := resources.Get "/scss/style.scss" }}
     {{- $style = $style | resources.ExecuteAsTemplate "/scss/style.scss" . | css.Sass $options }}
