@@ -26,19 +26,19 @@ Cette page est la déclaration d'écoconception propre à **sudo-less.dev**, ré
 
 | Score actuel | Score précédent | Score visé (octobre 2028) |
 |---|---|---|
-| **75 %** | Aucun, première déclaration | 79 % |
+| **77 %** | Aucun, première déclaration | 79 % |
 
-**43 critères validés sur 56 applicables** ; 22 critères ne s'appliquent pas au site. Le score pondère chaque critère par sa priorité :
+**44 critères validés sur 56 applicables** ; 22 critères ne s'appliquent pas au site. Le score pondère chaque critère par sa priorité :
 
 | Priorité | Pondération | Critères applicables | Critères validés |
 |---|---:|---:|---:|
-| Prioritaire | 1,5 | 20 | 13 |
+| Prioritaire | 1,5 | 20 | 14 |
 | Recommandé | 1,25 | 26 | 20 |
 | Modéré | 1 | 10 | 10 |
 
-Score = (13 × 1,5 + 20 × 1,25 + 10 × 1) / (20 × 1,5 + 26 × 1,25 + 10 × 1) = 54,5 / 72,5 = **75 %**.
+Score = (14 × 1,5 + 20 × 1,25 + 10 × 1) / (20 × 1,5 + 26 × 1,25 + 10 × 1) = 56 / 72,5 = **77 %**.
 
-Ce score mesure l'avancement dans le référentiel, pas l'impact environnemental du site. Le score visé suppose que les actions 1 à 3 du plan d'avancement soient réalisées ; il ne compte pas les critères d'hébergement, qui dépendent de GitHub.
+Ce score mesure l'avancement dans le référentiel, pas l'impact environnemental du site. Le score visé suppose que les actions 1 et 2 du plan d'avancement soient réalisées ; il ne compte pas les critères d'hébergement, qui dépendent de GitHub.
 
 ---
 
@@ -193,7 +193,7 @@ Le code (MIT) et le contenu (CC BY-SA 4.0) restent ainsi réutilisables, y compr
 
 | Critère | Statut | Justification |
 |---|---|---|
-| [3.1](../../rgesn/architecture/3-1_architecture-composants/) Architecture et composants | Non validé | L'architecture est sobre : un site statique généré par Hugo, sans serveur d'application ni base de données. Mais ce choix n'est pas comparé par écrit à d'autres options, et le critère 2.10 n'est pas validé. |
+| [3.1](../../rgesn/architecture/3-1_architecture-composants/) Architecture et composants | Validé | Site statique généré par Hugo : rien ne s'exécute sur un serveur à la consultation, et le navigateur n'exécute que 24 Ko de JavaScript. Ce choix est comparé à un autre générateur statique, à un générateur qui hydrate un framework JavaScript, à un CMS et à une plateforme hébergée, et chaque composant (thème, recherche, icônes, hébergement) à ses alternatives, dans la [revue de conception](../revue-conception/#comparaison-darchitecture). Aucune brique énergivore. Le critère 2.9 est validé ; le 2.10 ne l'est pas, car l'hébergeur a été choisi sans critère environnemental. |
 | [3.2](../../rgesn/architecture/3-2_architecture-elastique/) Architecture élastique | Validé | Aucune ressource serveur n'est réservée au site : ses fichiers statiques sont servis par l'infrastructure mutualisée de GitHub Pages et le CDN Fastly. |
 | [3.3](../../rgesn/architecture/3-3_evolution-protocoles/) Évolution des protocoles | Validé | Le site répond en HTTPS (HTTP redirigé), avec TLS 1.3, HTTP/2 et IPv6, des protocoles adaptés à des fichiers statiques. Depuis le 31 octobre 2026, la page d'accueil ne charge plus le badge Ecoindex, qui venait d'un serveur sans IPv6 : aucune ressource ne vient plus d'un service tiers. |
 | [3.4](../../rgesn/architecture/3-4_mises-a-jour-correctives/) Mises à jour correctives des équipements | Non applicable | Aucun terminal vendu avec le service. |
@@ -304,6 +304,5 @@ Les actions sont classées de la plus simple à la plus longue.
 | Action | Critères |
 |---|---|
 | 1. Tester les parcours sur un Safari de plus de deux ans, pour compléter le critère 2.4 | 2.4 |
-| 2. Écrire la comparaison d'architecture | 3.1 |
-| 3. Refaire cette évaluation à chaque évolution importante, et au plus tard en octobre 2027 | 1.4 |
-| 4. Demander à GitHub ses indicateurs environnementaux, ou comparer avec un hébergeur qui les publie et permet de régler la durée de cache | 2.8, 2.10, 8.1 à 8.9 |
+| 2. Refaire cette évaluation à chaque évolution importante, et au plus tard en octobre 2027 | 1.4 |
+| 3. Demander à GitHub ses indicateurs environnementaux, ou comparer avec un hébergeur qui les publie et permet de régler la durée de cache | 2.8, 2.10, 8.1 à 8.9 |
