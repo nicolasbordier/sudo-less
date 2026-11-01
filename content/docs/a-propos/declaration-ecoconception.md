@@ -26,7 +26,7 @@ Cette page est la déclaration d'écoconception propre à **sudo-less.dev**, ré
 
 | Score actuel | Score précédent | Score visé (octobre 2028) |
 |---|---|---|
-| **77 %** | Aucun, première déclaration | 79 % |
+| **77 %** | Aucun, première déclaration | 81 % |
 
 **44 critères validés sur 56 applicables** ; 22 critères ne s'appliquent pas au site. Le score pondère chaque critère par sa priorité :
 
@@ -38,7 +38,7 @@ Cette page est la déclaration d'écoconception propre à **sudo-less.dev**, ré
 
 Score = (14 × 1,5 + 20 × 1,25 + 10 × 1) / (20 × 1,5 + 26 × 1,25 + 10 × 1) = 56 / 72,5 = **77 %**.
 
-Ce score mesure l'avancement dans le référentiel, pas l'impact environnemental du site. Le score visé suppose que les actions 1 et 2 du plan d'avancement soient réalisées ; il ne compte pas les critères d'hébergement, qui dépendent de GitHub.
+Ce score mesure l'avancement dans le référentiel, pas l'impact environnemental du site. Le score visé suppose que les actions 1 à 3 du plan d'avancement soient réalisées ; il ne compte pas les critères d'hébergement, qui dépendent de GitHub.
 
 ---
 
@@ -131,7 +131,7 @@ Inventaire au 31 octobre 2026 des fonctionnalités, composants et environnements
 
 | Élément | État d'utilisation | Maintenance |
 |---|---|---|
-| Fonctionnalités de la [revue de conception](../revue-conception/) : fiches, recherche, pages de synthèse, déclaration, page d'accueil, mode sombre | Utilisées. Faute de mesure d'audience (critère 1.6), leur usage est estimé à chaque revue d'après les issues et les retours reçus. | Une fonctionnalité retirée passe par la revue de conception ; son code et ses fichiers sont supprimés. |
+| Fonctionnalités de la [revue de conception](../revue-conception/) : fiches, recherche, pages de synthèse, déclaration, page d'accueil, mode sombre | Utilisées. Faute de mesure d'audience (critère 1.6), leur usage est estimé à chaque revue d'après les tests utilisateurs menés en formation, les issues et les retours reçus. | Une fonctionnalité retirée passe par la revue de conception ; son code et ses fichiers sont supprimés. |
 | Contenus | 129 pages, 27 Mo une fois le site construit | Durée de vie décrite dans la page [Contribuer](../contribuer/#durée-de-vie-des-contenus). |
 | Production : GitHub Pages | Utilisé | Voir la famille 8. Hébergement. |
 | Construction : GitHub Actions | Utilisé à chaque publication | L'archive de déploiement expire après 1 jour, le cache après 7 jours sans usage, les journaux après 30 jours. |
@@ -209,7 +209,7 @@ Le code (MIT) et le contenu (CC BY-SA 4.0) restent ainsi réutilisables, y compr
 |---|---|---|
 | [4.1](../../rgesn/ux-ui/4-1_lecture-automatique/) Lecture automatique | Validé | Aucune lecture automatique, aucune animation de plus de 4 secondes. |
 | [4.2](../../rgesn/ux-ui/4-2_defilement-infini/) Défilement infini | Validé | Chaque page s'affiche en entier ; la recherche limite ses résultats à 10. |
-| [4.3](../../rgesn/ux-ui/4-3_parcours-navigation/) Parcours de navigation | Non validé | Ni outil UX ni statistiques d'usage : le site ne mesure pas son audience (critère 1.6). |
+| [4.3](../../rgesn/ux-ui/4-3_parcours-navigation/) Parcours de navigation | Non validé | Le site ne mesure pas son audience, par choix (critère 1.6). Ses parcours seront testés avec des participants aux formations animées par le mainteneur, selon le [protocole](../revue-conception/#tests-utilisateurs) de la revue de conception, et ces tests fourniront les statistiques d'usage. Les indicateurs techniques des parcours sont en place : budget vérifié à chaque publication, temps d'affichage en bas débit (critère 2.3). Le critère sera validé après la première campagne de tests. |
 | [4.4](../../rgesn/ux-ui/4-4_activation-service-tiers/) Activation d'un service tiers | Validé | Aucun service tiers ne se charge sans action de l'utilisateur : depuis le 31 octobre 2026, le badge Ecoindex de la page d'accueil est remplacé par un simple lien vers le résultat. |
 | [4.5](../../rgesn/ux-ui/4-5_composants-natifs/) Composants natifs | Validé | Liens, listes, tableaux et titres sont en HTML natif. Deux composants reposent sur JavaScript, faute d'équivalent natif : les onglets des fiches (Bootstrap) et la recherche (FlexSearch). |
 | [4.6](../../rgesn/ux-ui/4-6_contenu-porteur-information/) Contenu porteur d'information | Validé | Ni vidéo, ni son, ni animation décorative. |
@@ -304,5 +304,6 @@ Les actions sont classées de la plus simple à la plus longue.
 | Action | Critères |
 |---|---|
 | 1. Tester les parcours sur un Safari de plus de deux ans, pour compléter le critère 2.4 | 2.4 |
-| 2. Refaire cette évaluation à chaque évolution importante, et au plus tard en octobre 2027 | 1.4 |
-| 3. Demander à GitHub ses indicateurs environnementaux, ou comparer avec un hébergeur qui les publie et permet de régler la durée de cache | 2.8, 2.10, 8.1 à 8.9 |
+| 2. Tester les parcours avec au moins cinq participants à une formation, selon le protocole de la revue de conception | 4.3 |
+| 3. Refaire cette évaluation à chaque évolution importante, et au plus tard en octobre 2027 | 1.4 |
+| 4. Demander à GitHub ses indicateurs environnementaux, ou comparer avec un hébergeur qui les publie et permet de régler la durée de cache | 2.8, 2.10, 8.1 à 8.9 |

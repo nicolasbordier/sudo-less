@@ -1,7 +1,7 @@
 ---
 weight: 350
 title: "Revue de conception"
-description: "Revue de conception de sudo-less.dev : l'arbre des conséquences de chaque fonctionnalité, selon le niveau 1 de la méthode Empreinte Projet de l'ADEME (critère RGESN 2.6), et la comparaison de son architecture avec les autres options possibles (critère 3.1)."
+description: "Revue de conception de sudo-less.dev : l'arbre des conséquences de chaque fonctionnalité, selon le niveau 1 de la méthode Empreinte Projet de l'ADEME (critère RGESN 2.6), la comparaison de son architecture avec les autres options possibles (critère 3.1) et le protocole des tests utilisateurs de ses parcours (critère 4.3)."
 icon: "account_tree"
 date: "2026-10-31T00:00:00+01:00"
 lastmod: "2026-11-01T00:00:00+01:00"
@@ -9,11 +9,11 @@ draft: false
 toc: true
 ---
 
-Cette page est la revue de conception de **sudo-less.dev**, demandée par le critère [2.6](../../rgesn/specifications/2-6_revue-conception-code/) du RGESN. Pour chaque fonctionnalité, elle décrit les conséquences environnementales du site par rapport à un scénario sans le site, puis la décision prise. Elle suit le niveau 1, qualitatif, de la méthode [Empreinte Projet](https://base-empreinte.ademe.fr/empreinte-projet) de l'ADEME. Elle compare enfin l'architecture et les composants du site aux autres options possibles, comme le demande le critère [3.1](../../rgesn/architecture/3-1_architecture-composants/).
+Cette page est la revue de conception de **sudo-less.dev**, demandée par le critère [2.6](../../rgesn/specifications/2-6_revue-conception-code/) du RGESN. Pour chaque fonctionnalité, elle décrit les conséquences environnementales du site par rapport à un scénario sans le site, puis la décision prise. Elle suit le niveau 1, qualitatif, de la méthode [Empreinte Projet](https://base-empreinte.ademe.fr/empreinte-projet) de l'ADEME. Elle compare ensuite l'architecture et les composants du site aux autres options possibles, comme le demande le critère [3.1](../../rgesn/architecture/3-1_architecture-composants/), et décrit enfin comment ses parcours sont testés avec des utilisateurs (critère [4.3](../../rgesn/ux-ui/4-3_parcours-navigation/)).
 
 | | |
 |---|---|
-| **Date** | 31 octobre 2026 ; comparaison d'architecture le 1er novembre 2026 |
+| **Date** | 31 octobre 2026 ; comparaison d'architecture et protocole des tests utilisateurs le 1er novembre 2026 |
 | **Réalisée par** | Le mainteneur du site |
 | **Prochaine revue** | À chaque nouvelle fonctionnalité, et au plus tard en octobre 2027 |
 
@@ -91,7 +91,7 @@ Sans sudo-less, une équipe qui applique le RGESN part du PDF du référentiel (
 - **Conséquences indirectes**
   - (+) Contrairement à un CMS, aucun serveur d'application ni aucune base de données ne tourne en permanence.
   - (−) L'hébergeur ne publie pas d'indicateurs environnementaux, et la durée de cache, fixée à 10 minutes, ne se règle pas.
-- **Décision** : garder pour l'instant, et comparer avec un hébergeur qui publie ses indicateurs (action 3 du [plan d'avancement](../declaration-ecoconception/#plan-davancement)).
+- **Décision** : garder pour l'instant, et comparer avec un hébergeur qui publie ses indicateurs (action 4 du [plan d'avancement](../declaration-ecoconception/#plan-davancement)).
 
 ---
 
@@ -117,9 +117,35 @@ Sans sudo-less, une équipe qui applique le RGESN part du PDF du référentiel (
 | Recherche FlexSearch, fournie par le thème | Service tiers, comme Algolia DocSearch ; [Pagefind](https://pagefind.app/) ; pas de recherche | Gardée, chargée à la première saisie : 344 Ko avec l'index. Un service tiers recevrait chaque requête (critère 1.6). Pagefind découpe son index et ne télécharge que les morceaux utiles à la requête ; son site annonce environ 100 Ko pour la plupart des sites. Il pourrait donc réduire ce poids : à mesurer à la prochaine revue. |
 | Police d'icônes Material Symbols | Icônes SVG intégrées dans chaque page | Gardée, réduite aux icônes utilisées : 11,3 Ko, mis en cache par le navigateur. Des SVG intégrés ajouteraient des éléments au DOM de chaque page, le point du site le plus proche de son budget. |
 | Polices du texte | Police web | Polices du système : aucune police de texte n'est téléchargée. |
-| Hébergement GitHub Pages, avec le CDN Fastly ; construction sur GitHub Actions | Hébergeur qui publie ses indicateurs environnementaux ; serveur hébergé par le mainteneur | Gardés pour l'instant, mais choisis sans critère environnemental documenté (critères [2.8](../../rgesn/specifications/2-8_fournisseurs-impacts-environnementaux/) et [2.10](../../rgesn/specifications/2-10_services-tiers/) non validés) : à comparer (action 3 du [plan d'avancement](../declaration-ecoconception/#plan-davancement)). |
+| Hébergement GitHub Pages, avec le CDN Fastly ; construction sur GitHub Actions | Hébergeur qui publie ses indicateurs environnementaux ; serveur hébergé par le mainteneur | Gardés pour l'instant, mais choisis sans critère environnemental documenté (critères [2.8](../../rgesn/specifications/2-8_fournisseurs-impacts-environnementaux/) et [2.10](../../rgesn/specifications/2-10_services-tiers/) non validés) : à comparer (action 4 du [plan d'avancement](../declaration-ecoconception/#plan-davancement)). |
 | Contrôles à la construction : Dart Sass, scripts Python, Chromium pour vérifier le budget de chaque page | Ne pas vérifier le budget | Gardés. La vérification du budget est l'étape la plus longue de la publication, 199 s sur 244 : la réduire est l'objectif fixé par publication dans la page [Empreinte environnementale](../empreinte-environnementale/). |
 
 Le site ne repose sur aucune brique particulièrement énergivore : ni apprentissage automatique, ni chaîne de blocs, ni réalité virtuelle ou augmentée.
 
 **Limite.** Seul le site lui-même a été mesuré. Les autres options sont comparées d'après leur fonctionnement : elles n'ont pas été construites pour être mesurées.
+
+---
+
+## Tests utilisateurs
+
+Le site ne mesure pas son audience, par choix (critère [1.6](../../rgesn/strategie/1-6_collecte-donnees/)). Ses parcours sont donc testés avec des participants aux formations du mainteneur, qui font partie des publics visés : ces tests fournissent les statistiques d'usage. Les indicateurs techniques des parcours sont ceux du [budget par page](../empreinte-environnementale/#budget-par-page), vérifié à chaque publication.
+
+### Protocole
+
+- **Quand** : pendant une formation, en 15 minutes environ. Une campagne réunit au moins cinq participants, de métiers différents si possible. Elle a lieu au moins une fois par an, avant la revue d'octobre.
+- **Conditions** : sur le poste du participant, en partant de la page d'accueil, sans aide. Le participant dit à voix haute ce qu'il cherche.
+- **Relevé**, pour chaque tâche : réussite (seul, avec aide ou échec), temps, chemin suivi (menu, recherche, lien) et point de blocage. Seul le métier du participant est noté, pas son nom.
+- **Seuil d'action** : une tâche échouée, ou réussie avec aide, par au moins deux participants sur cinq est corrigée avant la campagne suivante, qui vérifie la correction.
+
+| Tâche | Besoin testé | Parcours attendu |
+|---|---|---|
+| 1. « Vous êtes développeur front et débutez en écoconception : par où commencer ? » | Savoir par où commencer | [Getting Started](../../getting-started/), par métier |
+| 2. « Trouvez comment activer HTTP/2 sur un serveur Nginx. » | Savoir mettre en œuvre | Fiche [3.3](../../rgesn/architecture/3-3_evolution-protocoles/), onglet « Activer HTTP/2 et HTTP/3 », par la recherche ou le menu |
+| 3. « Trouvez comment bloquer, dans l'intégration continue, une version dont les pages dépassent un poids donné. » | Automatiser la mesure | Fiche [6.1](../../rgesn/frontend/6-1_poids-requetes-ecran/) ou [1.4](../../rgesn/strategie/1-4_revue-ecoconception/), onglet « Mise en œuvre technique » |
+| 4. « Pour évaluer l'utilité d'un service, trouvez ce que le GR491 ajoute au RGESN. » | Vue d'ensemble des référentiels | Fiche [1.1](../../rgesn/strategie/1-1_evaluation-utilite/), onglet « INR - GR491 » |
+
+**Évaluation de fin de formation.** L'évaluation faite pour la certification Qualiopi pose deux questions sur le site : « Avez-vous trouvé ce que vous cherchiez sur sudo-less ? (oui, en partie, non) » et « Qu'est-ce qui vous a manqué ? ». Quand la formation prévoit une évaluation à froid, elle demande aussi : « Avez-vous utilisé sudo-less sur un projet depuis la formation ? Quelle fiche ? »
+
+### Résultats
+
+La première campagne aura lieu lors de la prochaine formation. Ses résultats et les corrections décidées seront publiés ici.
