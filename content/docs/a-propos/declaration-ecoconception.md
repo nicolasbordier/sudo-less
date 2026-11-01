@@ -26,19 +26,71 @@ Cette page est la déclaration d'écoconception propre à **sudo-less.dev**, ré
 
 | Score actuel | Score précédent | Score visé (octobre 2028) |
 |---|---|---|
-| **71 %** | Aucun, première déclaration | 79 % |
+| **75 %** | Aucun, première déclaration | 79 % |
 
-**41 critères validés sur 56 applicables** ; 22 critères ne s'appliquent pas au site. Le score pondère chaque critère par sa priorité :
+**43 critères validés sur 56 applicables** ; 22 critères ne s'appliquent pas au site. Le score pondère chaque critère par sa priorité :
 
 | Priorité | Pondération | Critères applicables | Critères validés |
 |---|---:|---:|---:|
-| Prioritaire | 1,5 | 20 | 11 |
+| Prioritaire | 1,5 | 20 | 13 |
 | Recommandé | 1,25 | 26 | 20 |
 | Modéré | 1 | 10 | 10 |
 
-Score = (11 × 1,5 + 20 × 1,25 + 10 × 1) / (20 × 1,5 + 26 × 1,25 + 10 × 1) = 51,5 / 72,5 = **71 %**.
+Score = (13 × 1,5 + 20 × 1,25 + 10 × 1) / (20 × 1,5 + 26 × 1,25 + 10 × 1) = 54,5 / 72,5 = **75 %**.
 
 Ce score mesure l'avancement dans le référentiel, pas l'impact environnemental du site. Le score visé suppose que les actions 1 à 3 du plan d'avancement soient réalisées ; il ne compte pas les critères d'hébergement, qui dépendent de GitHub.
+
+---
+
+## Utilité du service
+
+Les équipes qui débutent en écoconception ne savent pas par où commencer. Les référentiels (RGESN, GR491, RWEB, W3C…) se recoupent, chacun avec sa structure et son vocabulaire, et décrivent le résultat attendu plus souvent que la manière de l'obtenir. sudo-less part du RGESN et réunit, pour chaque critère, ce qu'en disent les autres référentiels, avec des exemples de mise en œuvre à copier et à adapter. Ce besoin a été recueilli auprès des publics visés (voir [Publics visés et besoins](#publics-visés-et-besoins)).
+
+**Objectifs de développement durable.** Le site transmet les connaissances nécessaires au développement durable, ce que visent trois cibles des [ODD](https://sdgs.un.org/fr/goals) :
+
+- **4.7** : faire acquérir à tous les apprenants les connaissances et compétences nécessaires pour promouvoir le développement durable ;
+- **12.8** : donner à tous les informations et connaissances nécessaires au développement durable ;
+- **13.3** : améliorer l'éducation, la sensibilisation et les capacités individuelles et institutionnelles en matière d'atténuation du changement climatique.
+
+**Solutions existantes**, recensées dans la page [Autres référentiels](../../autres-referentiels/) :
+
+| Solution | Limite pour ce besoin |
+|---|---|
+| Le RGESN seul, en ligne ou en PDF (131 pages) | Il décrit le résultat attendu et le moyen de le contrôler, rarement la configuration qui l'obtient. |
+| Les autres référentiels, un par un : GR491, RWEB, Web Sustainability Guidelines, guide des Designers Éthiques… | Certains indiquent leur correspondance avec le RGESN (RWEB, RIA, REIPRO), mais aucun de ceux recensés ne réunit, critère par critère, ce que disent les autres. |
+| Les formations et l'accompagnement | Ils répondent aux questions en direct, mais ne touchent que leurs participants, le temps de la session. Les questions de mise en œuvre se posent souvent ensuite, sur le projet. |
+| Les livres et guides imprimés | Figés à leur date d'édition, alors que les référentiels, les outils et les versions des serveurs évoluent. |
+
+**Réponses aux questions du moyen de test du critère 1.1 :**
+
+1. **L'utilisation du numérique est-elle nécessaire ?** Oui. Les publics visés conçoivent des services numériques, et ce qu'ils cherchent se copie : configurations, commandes, liens vers les sources et les outils. Une page web se corrige à chaque nouvelle version d'un référentiel ou d'un outil, et reste gratuite pour tous.
+2. **Existe-t-il d'autres solutions non numériques ?** La formation et les livres (tableau ci-dessus). Le site ne remplace pas la formation : il la prolonge, quand les questions de mise en œuvre se posent sur le projet.
+3. **Quels sont les réels besoins justifiant la création du service ?** Trouver les bonnes pratiques pertinentes parmi des référentiels qui se recoupent, savoir les mettre en œuvre, et automatiser la mesure. Voir [Publics visés et besoins](#publics-visés-et-besoins).
+4. **La valeur ajoutée du service justifie-t-elle les ressources mobilisées ?** Les ressources sont connues : 1,4 à 1,6 g CO2e par lecture d'une fiche, 14 à 16 kg CO2e par an pour une hypothèse de 10 000 lectures, et le temps du mainteneur. La valeur ajoutée n'est pas mesurée : faute de mesure d'audience, elle s'apprécie à chaque revue annuelle, d'après les retours des participants aux formations, les issues et les retours d'expérience proposés. Si le site cesse d'être utilisé, sa [fin de vie](#maintenance-et-fin-de-vie) est prévue.
+5. **Est-ce qu'on crée plus de valeur qu'on en détruit ?** Probablement, sans pouvoir le démontrer : le gain dépend de ce que les équipes appliquent ensuite sur leurs propres services, ce qui n'est pas suivi. Les conséquences négatives, effets rebond compris, sont décrites dans l'[arbre des conséquences](../revue-conception/#arbre-des-conséquences).
+6. **Pour chaque fonctionnalité, est-elle vraiment nécessaire ?** La [revue de conception](../revue-conception/) examine sept fonctionnalités. Toutes sont gardées ; la page d'accueil a été allégée, et la recherche ne se charge qu'à la première saisie.
+7. **Que se passerait-il si on ne l'avait pas ?** Les équipes partiraient du PDF du RGESN, chercheraient elles-mêmes les référentiels complémentaires, site par site, et trouveraient seules la configuration, souvent par essais et erreurs. C'est le [scénario de référence](../revue-conception/#scénario-de-référence) de la revue de conception.
+
+---
+
+## Publics visés et besoins
+
+**Recueil.** Le mainteneur du site forme et accompagne des équipes à l'écoconception de services numériques depuis 2020 : environ 1 000 participants, dans des organisations de toutes tailles, du groupe multinational à la PME, et de secteurs variés : assurance, banque, énergie, transport, luxe, télévision, aérospatiale, ESN, agences web. Ces formations sont certifiées Qualiopi : chacune commence par le recueil des attentes de chaque participant, et les échanges pendant la session font remonter les questions restées sans réponse.
+
+**Publics visés :**
+
+- **primaires** : les équipes qui débutent en écoconception, soit les porteurs de projet, designers UX, développeurs front, back et mobile, ops et architectes. Ce sont l'essentiel des participants aux formations. La page [Getting Started](../../getting-started/) les oriente par métier ;
+- **secondaires** : les responsables RSE ou numérique soutenable, qui pilotent la démarche, et les formateurs et accompagnateurs, qui peuvent réutiliser le contenu sous licence CC BY-SA.
+
+**Besoins exprimés et choix du site :**
+
+| Question récurrente en formation | Réponse du site |
+|---|---|
+| Où trouver les bonnes pratiques les plus pertinentes, alors que de nombreux référentiels se recoupent ? | Le RGESN sert de fil conducteur : chaque fiche réunit ce que disent les autres référentiels du même critère, et la page [Autres référentiels](../../autres-referentiels/) les présente par domaine. Getting Started indique par où commencer, par métier et par phase de projet. |
+| Comment les mettre en œuvre ? Les référentiels décrivent le résultat attendu, par exemple des requêtes en HTTP/2 au minimum, rarement la configuration qui l'obtient. | Des onglets de mise en œuvre technique, à copier et à adapter : par exemple « Activer HTTP/2 et HTTP/3 » pour Nginx et Apache, dans la fiche [3.3](../../rgesn/architecture/3-3_evolution-protocoles/). Les [retours d'expérience](../../retours-experience/) montrent ce que des services réels ont fait. |
+| Comment automatiser la mesure de l'empreinte et bloquer une version qui dépasse un seuil ? | Les fiches [1.4](../../rgesn/strategie/1-4_revue-ecoconception/) et [6.1](../../rgesn/frontend/6-1_poids-requetes-ecran/) automatisent les audits et bloquent une version hors budget, avec Lighthouse CI dans GitHub Actions. La fiche [1.5](../../rgesn/strategie/1-5_objectifs-environnementaux/) évalue l'empreinte, et la page [Outils](../../outils/) recense les outils par métier et par phase. |
+
+**Limites.** Les besoins ont été recueillis pendant les formations, par le mainteneur, et non lors d'entretiens dédiés. Les participants sont des personnes que leur organisation a déjà engagées dans la démarche : celles qui n'ont jamais été formées sont moins représentées. Le site n'a pas de mesure d'audience (critère 1.6) : les besoins sont réexaminés à chaque revue annuelle, en octobre, d'après les questions posées en formation et les issues du dépôt.
 
 ---
 
@@ -107,8 +159,8 @@ Le code (MIT) et le contenu (CC BY-SA 4.0) restent ainsi réutilisables, y compr
 
 | Critère | Statut | Justification |
 |---|---|---|
-| [1.1](../../rgesn/strategie/1-1_evaluation-utilite/) Évaluation de l'utilité | Non validé | L'utilité du site n'a pas fait l'objet d'une étude écrite : réponses aux questions du moyen de test et arbre des conséquences. |
-| [1.2](../../rgesn/strategie/1-2_cibles-utilisatrices/) Cibles utilisatrices | Non validé | Les publics visés sont décrits par métier dans la page [Getting Started](../../getting-started/) : porteur de projet, designer UX, développeurs, ops, architecte, responsable RSE. Leurs besoins n'ont pas été étudiés auprès d'eux. |
+| [1.1](../../rgesn/strategie/1-1_evaluation-utilite/) Évaluation de l'utilité | Validé | Étude d'utilité dans la section [Utilité du service](#utilité-du-service) : ODD 4.7, 12.8 et 13.3, solutions existantes, réponses aux questions du moyen de test. L'arbre des conséquences est dans la [revue de conception](../revue-conception/). Le bénéfice du site pour les services de ses lecteurs n'est pas mesuré. |
+| [1.2](../../rgesn/strategie/1-2_cibles-utilisatrices/) Cibles utilisatrices | Validé | Publics primaires et secondaires, besoins recueillis auprès d'environ 1 000 participants aux formations du mainteneur depuis 2020, et choix du site qui y répondent : section [Publics visés et besoins](#publics-visés-et-besoins). Les besoins n'ont pas été recueillis lors d'entretiens dédiés. |
 | [1.3](../../rgesn/strategie/1-3_referent-ecoconception/) Référent écoconception | Validé | Contact : le mainteneur du site, par les issues du dépôt GitHub. |
 | [1.4](../../rgesn/strategie/1-4_revue-ecoconception/) Revue d'écoconception | Non validé | Cette déclaration est la première auto-évaluation. La suivante sera réalisée à chaque évolution importante du site, et au plus tard en octobre 2027. Il manque encore des audits de performance réguliers ; des tests de charge n'auraient pas de sens pour un site statique servi par un CDN mutualisé. |
 | [1.5](../../rgesn/strategie/1-5_objectifs-environnementaux/) Objectifs environnementaux | Validé | Empreinte évaluée sur les quatre indicateurs prioritaires, par lecture de fiche, par publication et par an (14 à 16 kg CO2e pour 10 000 lectures, une hypothèse), selon le référentiel de l'ADEME et avec l'API Boavizta. Objectifs : aucune hausse par lecture jusqu'en 2030, −50 % par publication d'ici octobre 2027. Réévaluation chaque année en octobre. Voir la page [Empreinte environnementale](../empreinte-environnementale/). L'eau ne couvre que l'électricité, faute de données ouvertes sur la fabrication des terminaux. |
@@ -252,6 +304,6 @@ Les actions sont classées de la plus simple à la plus longue.
 | Action | Critères |
 |---|---|
 | 1. Tester les parcours sur un Safari de plus de deux ans, pour compléter le critère 2.4 | 2.4 |
-| 2. Écrire l'étude d'utilité, la description des besoins des publics visés et la comparaison d'architecture | 1.1, 1.2, 3.1 |
+| 2. Écrire la comparaison d'architecture | 3.1 |
 | 3. Refaire cette évaluation à chaque évolution importante, et au plus tard en octobre 2027 | 1.4 |
 | 4. Demander à GitHub ses indicateurs environnementaux, ou comparer avec un hébergeur qui les publie et permet de régler la durée de cache | 2.8, 2.10, 8.1 à 8.9 |
