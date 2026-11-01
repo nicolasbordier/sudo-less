@@ -24,3 +24,8 @@ title = 'Sudo Less'
     [params.flexsearch]
         maxResult = 10 # 5 par défaut dans Lotus Docs
 
+    # Empreinte d'une minute de lecture, affichée sous le titre des fiches : moyenne de
+    # l'ordinateur portable et du smartphone, donnée chaque année par scripts/estimate-footprint.py
+    [params.footprint]
+        gco2ePerMinute = 0.23
+

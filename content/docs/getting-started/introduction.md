@@ -30,7 +30,7 @@ Ces deux entrées pointent vers les **mêmes fiches RGESN** — elles ne font qu
 | **[RGESN](../../rgesn/)** | Les fiches critère par critère (Stratégie, Spécifications), avec pour chacune l'objectif officiel, comment l'appliquer concrètement, et des retours d'expérience réels. |
 | **[Outils](../../outils/)** | Les logiciels et services concrets pour mesurer, tester ou outiller chaque critère, classés par métier et par phase projet. |
 | **[Autres référentiels](../../autres-referentiels/)** | Les référentiels complémentaires au RGESN (GR491, RWEB, guide des Designers Éthiques...), classés par domaine. |
-| **[Déclaration d'écoconception](../../declaration-ecoconception/)** | Comment rédiger la vôtre et calculer votre score d'avancement. |
+| **[Déclaration d'écoconception](../../declaration/)** | Comment rédiger la vôtre et calculer votre score d'avancement. |
 
 ---
 
@@ -38,4 +38,4 @@ Ces deux entrées pointent vers les **mêmes fiches RGESN** — elles ne font qu
 
 {{< alert context="success" text=`1. **Situez votre service** : consultez la fiche [1.1 - Évaluation de l'utilité](../../rgesn/strategie/1-1_evaluation-utilite/), le point de départ officiel du référentiel.
 2. **Identifiez les critères qui vous concernent** : via votre métier ou la phase actuelle de votre projet (voir ci-dessus).
-3. **Outillez-vous et documentez** : chaque fiche RGESN renvoie vers des outils gratuits ou payants (page [Outils](../../outils/)) et vers des exemples réels de [déclaration d'écoconception](../../declaration-ecoconception/) (onglet « Exemples réels »).` />}}
+3. **Outillez-vous et documentez** : chaque fiche RGESN renvoie vers des outils gratuits ou payants (page [Outils](../../outils/)) et vers des exemples réels de [déclaration d'écoconception](../../declaration/) (onglet « Exemples réels »).` />}}

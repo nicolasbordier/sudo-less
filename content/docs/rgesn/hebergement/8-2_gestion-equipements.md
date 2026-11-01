@@ -4,7 +4,7 @@ title: "8.2 - Gestion durable des équipements de l'hébergeur"
 description: "Critère 8.2 du RGESN : choisir un hébergeur qui publie la durée de vie de ses équipements, vise plus de huit ans, répare et réemploie, et trace la fin de vie de son matériel."
 icon: "recycling"
 date: "2026-10-30T00:00:00+01:00"
-lastmod: "2026-10-30T00:00:00+01:00"
+lastmod: "2026-11-01T00:00:00+01:00"
 draft: false
 toc: true
 ---
@@ -97,14 +97,14 @@ L'[API de Boavizta](https://api.boavizta.org/) (version 2.5.0, interrogée le 30
 - la fabrication à **900 kgCO2e**, hors fin de vie ;
 - une consommation moyenne de **536 W**, soit environ 4 700 kWh par an.
 
-Boavizta compte l'électricité française à 98 gCO2e/kWh, une valeur publiée en 2021. Avec 32 g, la valeur 2025 d'[Electricity Maps](https://www.electricitymaps.com/grid-in-review-2025/france), l'usage émet environ 150 kgCO2e par an, hors refroidissement :
+Boavizta compte l'électricité française à 98 gCO2e/kWh, une valeur publiée en 2021. Avec 46 g, la valeur 2025 de la Base Empreinte de l'ADEME pour le mix moyen consommé, amont compris ([reprise par Nos Gestes Climat](https://nosgestesclimat.fr/documentation/commun/mix-%C3%A9lectrique/empreinte-carbone)), l'usage émet environ 216 kgCO2e par an, hors refroidissement :
 
 | Durée de vie | Fabrication | Usage | Total par an |
 |---|---:|---:|---:|
-| 4 ans | 900 kg | 600 kg | 375 kg |
-| 8 ans | 900 kg | 1 200 kg | 262 kg |
+| 4 ans | 900 kg | 866 kg | 441 kg |
+| 8 ans | 900 kg | 1 732 kg | 329 kg |
 
-Sur 4 ans, la fabrication représente 60 % de l'empreinte du serveur. Le garder 8 ans réduit son empreinte annuelle d'environ 30 %. Un serveur neuf qui consommerait 20 % de moins ne ferait gagner que 30 kg par an, soit trente ans pour amortir sa fabrication.
+Sur 4 ans, la fabrication représente la moitié de l'empreinte du serveur. Le garder 8 ans réduit son empreinte annuelle d'environ 25 %. Un serveur neuf qui consommerait 20 % de moins ne ferait gagner que 43 kg par an, soit 21 ans pour amortir sa fabrication.
 
 Le calcul ne porte que sur le climat. La fabrication pèse plus encore sur l'épuisement des ressources abiotiques, que le [8.1](../8-1_demarche-hebergeur/) demande aussi de suivre.
 

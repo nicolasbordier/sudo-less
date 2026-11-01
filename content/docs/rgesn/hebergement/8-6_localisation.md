@@ -4,7 +4,7 @@ title: "8.6 - Localisation de l'hébergement"
 description: "Critère 8.6 du RGESN : héberger le service dans un pays dont l'électricité émet moins de 100 gCO2eq/kWh, de préférence près des utilisateurs, vérifier où sont réellement les serveurs et citer la source de l'intensité carbone."
 icon: "location_on"
 date: "2026-10-30T00:00:00+01:00"
-lastmod: "2026-10-30T00:00:00+01:00"
+lastmod: "2026-11-01T00:00:00+01:00"
 draft: false
 toc: true
 ---
@@ -91,6 +91,7 @@ Le seuil de 100 gCO2eq/kWh s'applique à la moyenne annuelle du pays. Pour la Fr
 | Electricity Maps | 2025 | Électricité consommée, importations comprises | 32,0 g |
 | [RTE](https://analysesetdonnees.rte-france.com/en/annual-review-2025/ghg-emissions) | 2025 | Électricité produite, émissions directes | 19,6 g |
 | RTE | 2025 | Électricité produite, cycle de vie | 29,0 g |
+| Base Empreinte de l'ADEME, [reprise par Nos Gestes Climat](https://nosgestesclimat.fr/documentation/commun/mix-%C3%A9lectrique/empreinte-carbone) | 2025 | Électricité consommée, amont des combustibles et construction des centrales compris | 46,1 g |
 
 Toutes sont très en dessous du seuil de 100 g, et du seuil de 80 g qui s'appliquera à partir de 2030. L'écart entre elles compte quand on compare des pays : il faut comparer des valeurs de la même source, de la même année et de la même méthode.
 

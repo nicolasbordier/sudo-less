@@ -4,7 +4,7 @@ title: "1.5 - Objectifs environnementaux"
 description: "Critère 1.5 du RGESN : comment évaluer l'empreinte environnementale d'un service numérique et se fixer des objectifs de réduction chiffrés et suivis dans le temps."
 icon: "article"
 date: "2025-12-21T13:29:09+01:00"
-lastmod: "2026-07-14T00:00:00+01:00"
+lastmod: "2026-11-01T00:00:00+01:00"
 draft: false
 toc: true
 ---
@@ -150,13 +150,13 @@ curl -s -X POST 'https://api.boavizta.org/v1/cloud/instance?verbose=false&durati
 
 | Indicateur | Fabrication | Usage |
 |---|---:|---:|
-| Émissions de GES (`gwp`) | 3,4 kg CO2e | 6,0 kg CO2e |
+| Émissions de GES (`gwp`) | 3,4 kg CO2e | 2,8 kg CO2e |
 | Énergie primaire (`pe`) | 44 MJ | 690 MJ |
 | Ressources minérales et métalliques (`adpe`) | 9,8 × 10⁻⁵ kg Sb éq. | 3 × 10⁻⁶ kg Sb éq. |
 
-Testé le 30 octobre 2026 (API version 2.5.0). L'API compte l'électricité française à 98 gCO2e/kWh, une valeur de 2021 (voir le [critère 8.2](../../hebergement/8-2_gestion-equipements/)). L'eau n'est pas couverte : l'indicateur `wu` n'est pas calculé pour l'usage, et sa valeur de fabrication, tirée de données génériques, est négative. Le calculateur de Scaleway, cité dans l'onglet « Infrastructure / Architecture » du [critère 1.4](../1-4_revue-ecoconception/), donne l'eau.
+Testé le 1er novembre 2026 (API version 2.5.0). L'API compte l'électricité française à 98 gCO2e/kWh, une valeur de 2021. L'usage est recalculé ici avec 46 g, la valeur 2025 de la Base Empreinte de l'ADEME pour le mix moyen consommé, amont compris ([reprise par Nos Gestes Climat](https://nosgestesclimat.fr/documentation/commun/mix-%C3%A9lectrique/empreinte-carbone)) : l'instance consomme 61 kWh par an (champ `avg_power` avec `verbose=true`). Pour une instance cloud, l'API ignore le facteur passé dans `usage.elec_factors` ; pour un serveur ou un terminal, `"elec_factors": {"gwp": 0.0461}` suffit. L'eau n'est pas couverte : l'indicateur `wu` n'est pas calculé pour l'usage, et sa valeur de fabrication, tirée de données génériques, est négative. Le calculateur de Scaleway, cité dans l'onglet « Infrastructure / Architecture » du [critère 1.4](../1-4_revue-ecoconception/), donne l'eau.
 
-**3. Compléter avec les terminaux et le réseau**, que cette API ne couvre pas. Le [RCP d'un service numérique](https://librairie.ademe.fr/societe-et-politiques-publiques/9418-methodologie-d-evaluation-environnementale-basee-sur-l-analyse-du-cycle-de-vie-acv-pour-un-service-numerique.html) de l'ADEME décrit comment attribuer au service une part de leur empreinte.
+**3. Compléter avec les terminaux et le réseau.** L'API couvre aussi les terminaux (`/v1/terminal/laptop`, `/v1/terminal/smartphone`…), avec les données génériques de la Base IMPACTS de l'ADEME, mais sans l'énergie primaire de fabrication. Elle ne couvre pas le réseau : l'[étude ADEME-Arcep](https://www.arcep.fr/uploads/tx_gspublication/etude-numerique-environnement-ademe-arcep-volet02-synthese_janv2022.pdf) de 2022 donne sa consommation par Go. Le [RCP d'un service numérique](https://librairie.ademe.fr/societe-et-politiques-publiques/9418-methodologie-d-evaluation-environnementale-basee-sur-l-analyse-du-cycle-de-vie-acv-pour-un-service-numerique.html) de l'ADEME décrit comment attribuer au service une part de leur empreinte. Par défaut, le [référentiel de l'ADEME pour les services numériques](https://codde.fr/wp-content/uploads/2023/01/Referentiel-services-numeriques_v1.0_FR.pdf) l'attribue au temps d'utilisation pour un terminal et au volume de données pour le réseau.
 
 **4. Fixer une trajectoire chiffrée.** Pour chaque indicateur : la valeur de départ et sa date, l'objectif, l'échéance et la méthode. S'aligner sur l'ITU-T L.1470, soit −45 % entre 2020 et 2030 (onglet « SBTi & ITU-T L.1470 »), revient à environ 6 % de baisse par an :
 

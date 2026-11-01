@@ -4,7 +4,7 @@ title: "Déclaration d'écoconception"
 description: "Déclaration d'écoconception de sudo-less.dev selon le RGESN 2024 : score d'avancement, résultat de chaque critère et plan d'avancement."
 icon: "fact_check"
 date: "2026-07-05T00:00:00+01:00"
-lastmod: "2026-10-31T00:00:00+01:00"
+lastmod: "2026-11-01T00:00:00+01:00"
 draft: false
 toc: true
 ---
@@ -15,9 +15,9 @@ Cette page est la déclaration d'écoconception propre à **sudo-less.dev**, ré
 |---|---|
 | **Service évalué** | sudo-less.dev, publié à l'adresse [nicolasbordier.github.io/sudo-less](https://nicolasbordier.github.io/sudo-less/) |
 | **Date de rédaction** | 31 octobre 2026 |
-| **Dernière mise à jour** | 31 octobre 2026 |
+| **Dernière mise à jour** | 1er novembre 2026 |
 | **Référentiel appliqué** | RGESN, version 2024 |
-| **Méthode** | Auto-évaluation par le mainteneur du site, avec des mesures dans Chromium 155 |
+| **Méthode** | Auto-évaluation par le mainteneur du site, avec des mesures dans Chromium 155 et une évaluation d'empreinte avec l'API Boavizta |
 | **Contact écoconception** | Le mainteneur du site, par les [issues du dépôt GitHub](https://github.com/nicolasbordier/sudo-less/issues) |
 
 ---
@@ -26,17 +26,17 @@ Cette page est la déclaration d'écoconception propre à **sudo-less.dev**, ré
 
 | Score actuel | Score précédent | Score visé (octobre 2028) |
 |---|---|---|
-| **67 %** | Aucun, première déclaration | 78 % |
+| **71 %** | Aucun, première déclaration | 79 % |
 
-**39 critères validés sur 56 applicables** ; 22 critères ne s'appliquent pas au site. Le score pondère chaque critère par sa priorité :
+**41 critères validés sur 56 applicables** ; 22 critères ne s'appliquent pas au site. Le score pondère chaque critère par sa priorité :
 
 | Priorité | Pondération | Critères applicables | Critères validés |
 |---|---:|---:|---:|
-| Prioritaire | 1,5 | 20 | 10 |
-| Recommandé | 1,25 | 26 | 19 |
+| Prioritaire | 1,5 | 20 | 11 |
+| Recommandé | 1,25 | 26 | 20 |
 | Modéré | 1 | 10 | 10 |
 
-Score = (10 × 1,5 + 19 × 1,25 + 10 × 1) / (20 × 1,5 + 26 × 1,25 + 10 × 1) = 48,75 / 72,5 = **67 %**.
+Score = (11 × 1,5 + 20 × 1,25 + 10 × 1) / (20 × 1,5 + 26 × 1,25 + 10 × 1) = 51,5 / 72,5 = **71 %**.
 
 Ce score mesure l'avancement dans le référentiel, pas l'impact environnemental du site. Le score visé suppose que les actions 1 à 3 du plan d'avancement soient réalisées ; il ne compte pas les critères d'hébergement, qui dépendent de GitHub.
 
@@ -63,25 +63,13 @@ Sur une fiche, ce poids se répartit en 22 Ko de HTML, 14 Ko de CSS, 24 Ko de Ja
 
 ---
 
-## Budget par page
+## Empreinte environnementale et budget par page
 
-Chaque page du site doit respecter ce budget au premier chargement : cache désactivé, page entièrement défilée, sans interaction.
+Détaillés dans la page [Empreinte environnementale](../empreinte-environnementale/), évaluée le 1er novembre 2026 :
 
-| | Budget | Maximum mesuré | Page la plus lourde |
-|---|---:|---:|---|
-| Poids transféré | 100 Ko | 73 Ko | Fiche [6.5](../../rgesn/frontend/6-5_chargement-ressources/) |
-| Requêtes | 10 | 7 | Toutes les pages, sauf la page d'erreur |
-| Éléments du DOM | 1 500 | 1 389 | Fiche [6.5](../../rgesn/frontend/6-5_chargement-ressources/) |
-
-Mesuré le 31 octobre 2026 dans Chromium 155 sur les 132 pages du site, page d'erreur comprise, à 1 366 × 768 et 390 × 844 pixels : toutes respectent le budget. Le DOM compte toutes les balises de la page, y compris celles des images SVG.
-
-Le budget est vérifié à chaque publication, avant la mise en ligne : le site construit est servi en local, compressé comme par GitHub Pages, et chaque page est chargée dans Chrome aux deux tailles d'écran. Si une page dépasse le budget, la publication échoue. Chaque page affiche en pied de page son propre poids et son nombre de requêtes, issus de cette mesure et arrondis au Ko supérieur.
-
-À 512 kbit/s, le débit testé pour le critère 2.3, 100 Ko se transfèrent en 1,6 seconde environ.
-
-Le budget porte sur le chargement de la page. Il ne compte pas la recherche : à la première saisie, elle télécharge sa bibliothèque et son index, en 2 requêtes et 344 Ko, un poids annoncé dès son ouverture (critère 4.12).
-
-Avec le cache, passer d'une page à l'autre ne télécharge que le HTML : 1 requête et 22 Ko au plus. Une page revue dans les 10 minutes ne demande aucune requête ; au-delà, le navigateur revérifie ses 7 fichiers sans les télécharger de nouveau (critère 6.2).
+- **Empreinte** : lire une fiche émet 1,4 à 1,6 g CO2e, à plus de 95 % pour la fabrication du terminal du lecteur ; 14 à 16 kg CO2e par an pour une hypothèse de 10 000 lectures.
+- **Objectifs** : aucune hausse de l'empreinte d'une lecture jusqu'en 2030 ; −50 % par publication d'ici octobre 2027.
+- **Budget par page**, vérifié à chaque publication : 100 Ko transférés, 10 requêtes et 1 500 éléments du DOM au plus.
 
 ---
 
@@ -96,7 +84,7 @@ Inventaire au 31 octobre 2026 des fonctionnalités, composants et environnements
 | Production : GitHub Pages | Utilisé | Voir la famille 8. Hébergement. |
 | Construction : GitHub Actions | Utilisé à chaque publication | L'archive de déploiement expire après 1 jour, le cache après 7 jours sans usage, les journaux après 30 jours. |
 | Développement : `hugo server` sur le poste du mainteneur | Utilisé | Pas d'environnement de préproduction. |
-| Outils de construction : Hugo 0.168, Go, Dart Sass 1.105, Python et 5 scripts | Utilisés | Versions fixées dans la construction, mises à jour à chaque revue. |
+| Outils de construction : Hugo 0.168, Go, Dart Sass 1.105, Python et 6 scripts | Utilisés | Versions fixées dans la construction, mises à jour à chaque revue. |
 | Thème Lotus Docs 0.3.0 et Bootstrap 5.3 | Utilisés. La dernière version du thème date d'avril 2026 ; il emploie des fonctions que Hugo a dépréciées, et Bootstrap 5 des règles Sass que Dart Sass 3 supprimera. | À chaque revue, vérifier leur compatibilité avec Hugo et Dart Sass. Si le thème n'est plus maintenu, le figer dans le dépôt ou le remplacer. |
 
 Retirés le 31 octobre 2026, car inutilisés : l'analyse de sécurité GitLab (le dépôt n'est que sur GitHub), l'installation de Node.js dans la construction (aucune dépendance JavaScript), LibSass, remplacé par Dart Sass qui était installé sans servir, les cartes de source du CSS publiées sans utilité (1,7 Mo) et le JavaScript de Bootstrap sur la page d'accueil, qui n'a pas d'onglets.
@@ -123,7 +111,7 @@ Le code (MIT) et le contenu (CC BY-SA 4.0) restent ainsi réutilisables, y compr
 | [1.2](../../rgesn/strategie/1-2_cibles-utilisatrices/) Cibles utilisatrices | Non validé | Les publics visés sont décrits par métier dans la page [Getting Started](../../getting-started/) : porteur de projet, designer UX, développeurs, ops, architecte, responsable RSE. Leurs besoins n'ont pas été étudiés auprès d'eux. |
 | [1.3](../../rgesn/strategie/1-3_referent-ecoconception/) Référent écoconception | Validé | Contact : le mainteneur du site, par les issues du dépôt GitHub. |
 | [1.4](../../rgesn/strategie/1-4_revue-ecoconception/) Revue d'écoconception | Non validé | Cette déclaration est la première auto-évaluation. La suivante sera réalisée à chaque évolution importante du site, et au plus tard en octobre 2027. Il manque encore des audits de performance réguliers ; des tests de charge n'auraient pas de sens pour un site statique servi par un CDN mutualisé. |
-| [1.5](../../rgesn/strategie/1-5_objectifs-environnementaux/) Objectifs environnementaux | Non validé | Ni indicateur d'empreinte ni objectif de réduction. |
+| [1.5](../../rgesn/strategie/1-5_objectifs-environnementaux/) Objectifs environnementaux | Validé | Empreinte évaluée sur les quatre indicateurs prioritaires, par lecture de fiche, par publication et par an (14 à 16 kg CO2e pour 10 000 lectures, une hypothèse), selon le référentiel de l'ADEME et avec l'API Boavizta. Objectifs : aucune hausse par lecture jusqu'en 2030, −50 % par publication d'ici octobre 2027. Réévaluation chaque année en octobre. Voir la page [Empreinte environnementale](../empreinte-environnementale/). L'eau ne couvre que l'électricité, faute de données ouvertes sur la fabrication des terminaux. |
 | [1.6](../../rgesn/strategie/1-6_collecte-donnees/) Collecte de données | Validé | Le site ne pose aucun cookie et n'a ni mesure d'audience, ni formulaire, ni compte : il ne collecte aucune donnée. GitHub Pages enregistre l'adresse IP des visiteurs « for security purposes » ([documentation](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages#data-collection)). |
 | [1.7](../../rgesn/strategie/1-7_niveau-chiffrement/) Niveau de chiffrement | Non applicable | Aucun chiffrement au-delà du HTTPS. |
 | [1.8](../../rgesn/strategie/1-8_efforts-open-source/) Efforts d'open source | Validé | Code sous licence MIT et contenu sous CC BY-SA 4.0, dans un [dépôt public](https://github.com/nicolasbordier/sudo-less). Le site repose lui-même sur des logiciels libres : Hugo, le thème Lotus Docs, Bootstrap et FlexSearch. |
@@ -181,7 +169,7 @@ Le code (MIT) et le contenu (CC BY-SA 4.0) restent ainsi réutilisables, y compr
 | [4.12](../../rgesn/ux-ui/4-12_impacts-fonctionnalites/) Fonctionnalités à fort impact | Validé | La fonctionnalité la plus lourde, la recherche, annonce son poids dès son ouverture : « La recherche télécharge l'index du site, soit 344 Ko, à la première saisie. » Rien n'est téléchargé avant cette saisie. Ce poids, plus de quatre fois celui d'une page, est recalculé à chaque publication. |
 | [4.13](../../rgesn/ux-ui/4-13_notifications/) Notifications | Validé | Aucune notification. |
 | [4.14](../../rgesn/ux-ui/4-14_dark-patterns/) Dark patterns | Validé | Interface relue au regard des exemples de l'article 25 du DSA : ni compte à rebours, ni case précochée, ni bandeau de consentement, ni incitation à s'inscrire. |
-| [4.15](../../rgesn/ux-ui/4-15_controle-usages/) Contrôle des usages et mode sobre | Non validé | Le site est sobre par défaut : 73 Ko et 7 requêtes au plus par page, sans vidéo, avec une recherche téléchargée seulement à la demande. Depuis le 31 octobre 2026, chaque page affiche en pied de page son poids et son nombre de requêtes. Ce ne sont pas des indicateurs d'empreinte environnementale : en afficher suppose une évaluation par une méthode reconnue, comme le référentiel de l'ADEME pour les services numériques, prévue à l'action 2 du plan (critère 1.5). Le mode sombre n'est pas non plus un mode sobre au sens du critère. Il suit la préférence du système et s'active en un clic, mais ne réduit pas le poids des pages. Il économise l'énergie de l'écran sur un smartphone OLED, surtout à forte luminosité : de 39 à 47 % à pleine luminosité, de 3 à 9 % entre 30 et 50 %, selon une [étude de l'université Purdue](https://www.purdue.edu/research/features/stories/dark-mode-may-not-save-your-phones-battery-life-as-much-as-you-think-but-there-are-a-few-silver-linings) (2021). Sur un écran LCD, il n'apporte rien. |
+| [4.15](../../rgesn/ux-ui/4-15_controle-usages/) Contrôle des usages et mode sobre | Validé | **Information** : depuis le 1er novembre 2026, chaque fiche affiche sous son titre l'empreinte de sa lecture, à 0,23 g CO2e par minute selon la méthode de la page [Empreinte environnementale](../empreinte-environnementale/) ; chaque page affiche en pied de page son poids et son nombre de requêtes. **Mode sobre par défaut** : le site n'a pas de mode distinct, car il est sobre pour tous ses lecteurs. Ses paramètres : un budget de 100 Ko et 10 requêtes par page, vérifié à chaque publication ; aucune vidéo ; une recherche téléchargée seulement à la première saisie, avec son poids annoncé dès son ouverture. **Gains** : une page consultée sans recherche évite 344 Ko, soit au plus 0,004 g CO2e, 0,3 % d'une lecture sur réseau mobile. Aucun mode ne réduirait sensiblement l'empreinte d'une lecture : plus de 95 % vient de la fabrication du terminal, au prorata du temps de lecture, que la page [Contribuer](../contribuer/) limite à 10 minutes par fiche. Le mode sombre n'est pas compté comme mode sobre : il ne réduit pas le poids des pages, et n'économise l'énergie de l'écran que sur un smartphone OLED, de 39 à 47 % à pleine luminosité et de 3 à 9 % entre 30 et 50 %, selon une [étude de l'université Purdue](https://www.purdue.edu/research/features/stories/dark-mode-may-not-save-your-phones-battery-life-as-much-as-you-think-but-there-are-a-few-silver-linings) (2021). |
 
 {{% /tab %}}
 
@@ -204,7 +192,7 @@ Le code (MIT) et le contenu (CC BY-SA 4.0) restent ainsi réutilisables, y compr
 
 | Critère | Statut | Justification |
 |---|---|---|
-| [6.1](../../rgesn/frontend/6-1_poids-requetes-ecran/) Poids et requêtes par écran | Validé | Budget par page, détaillé dans la section [Budget par page](#budget-par-page) : 100 Ko transférés, 10 requêtes et 1 500 éléments au plus, au chargement de la page, recherche non comprise. Toutes les pages le respectent : 73 Ko, 7 requêtes et 1 389 éléments au plus. Il est vérifié à chaque publication : si une page le dépasse, le site n'est pas mis en ligne. |
+| [6.1](../../rgesn/frontend/6-1_poids-requetes-ecran/) Poids et requêtes par écran | Validé | Budget par page, détaillé dans la page [Empreinte environnementale](../empreinte-environnementale/#budget-par-page) : 100 Ko transférés, 10 requêtes et 1 500 éléments au plus, au chargement de la page, recherche non comprise. Toutes les pages le respectent : 73 Ko, 7 requêtes et 1 389 éléments au plus. Il est vérifié à chaque publication : si une page le dépasse, le site n'est pas mis en ligne. |
 | [6.2](../../rgesn/frontend/6-2_cache-navigateur/) Cache côté utilisateur | Validé | À la deuxième visite d'une fiche, les 8 ressources viennent du cache. GitHub Pages fixe la durée de cache à 10 minutes (`max-age=600`) pour tous les fichiers, sans réglage possible. Au-delà, le navigateur revalide chaque fichier, sans le télécharger de nouveau (réponse 304). Les CSS et JavaScript ont un nom qui change avec leur contenu : ils pourraient être gardés bien plus longtemps. |
 | [6.3](../../rgesn/frontend/6-3_compression-ressources/) Compression des ressources | Validé | Tous les fichiers texte arrivent compressés en gzip. GitHub Pages ne propose pas Brotli. |
 | [6.4](../../rgesn/frontend/6-4_dimensions-images/) Dimensions des images | Validé | L'illustration d'accueil existe en quatre largeurs, de 480 à 1 280 pixels, et l'attribut `sizes` indique sa largeur affichée à chaque taille d'écran. Vérifié dans Chromium de 360 à 1 920 pixels de large : en densité 1 et 2, le navigateur charge une version au plus 1,5 fois plus large que l'affichage. Sur un ordinateur de densité 1, elle pèse 17,6 Ko au lieu de 45 Ko. |
@@ -264,6 +252,6 @@ Les actions sont classées de la plus simple à la plus longue.
 | Action | Critères |
 |---|---|
 | 1. Tester les parcours sur un Safari de plus de deux ans, pour compléter le critère 2.4 | 2.4 |
-| 2. Écrire l'étude d'utilité, la description des besoins des publics visés, les objectifs environnementaux et la comparaison d'architecture | 1.1, 1.2, 1.5, 3.1 |
+| 2. Écrire l'étude d'utilité, la description des besoins des publics visés et la comparaison d'architecture | 1.1, 1.2, 3.1 |
 | 3. Refaire cette évaluation à chaque évolution importante, et au plus tard en octobre 2027 | 1.4 |
 | 4. Demander à GitHub ses indicateurs environnementaux, ou comparer avec un hébergeur qui les publie et permet de régler la durée de cache | 2.8, 2.10, 8.1 à 8.9 |

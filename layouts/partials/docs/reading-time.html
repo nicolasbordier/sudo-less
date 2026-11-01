@@ -1,6 +1,7 @@
 {{- /* Durée de lecture des fiches RGESN : texte à 230 mots par minute, code à 600.
        Seuls comptent les mots contenant une lettre ou un chiffre, pour ne pas compter
-       la ponctuation précédée d'une espace (« : », « ; », guillemets). */ -}}
+       la ponctuation précédée d'une espace (« : », « ; », guillemets).
+       L'empreinte de la lecture en découle : params.footprint.gco2ePerMinute (critère 4.15). */ -}}
 {{- with .File -}}
 {{- if and $.IsPage (hasPrefix (replace .Path "\\" "/") "docs/rgesn/") -}}
 {{- $mot := `\S*[\p{L}\p{N}]\S*` -}}
@@ -13,6 +14,7 @@
 <p class="reading-time mb-2 opacity-85">
     <span class="material-icons size-20 align-text-bottom opacity-75" aria-hidden="true">schedule</span>
     Temps de lecture : environ {{ $minutes }} minute{{ if gt $minutes 1 }}s{{ end }}
+    {{- with site.Params.footprint.gco2ePerMinute }}, soit environ <a href="{{ "docs/a-propos/empreinte-environnementale/" | relURL }}">{{ replace (printf "%.1f" (mul $minutes .)) "." "," }}&nbsp;g CO2e</a>{{ end }}
 </p>
 {{- end -}}
 {{- end -}}

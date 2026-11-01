@@ -1,4 +1,4 @@
-"""Vérifie que chaque page du site respecte le budget publié dans la déclaration d'écoconception.
+"""Vérifie que chaque page du site respecte le budget publié dans la page « Empreinte environnementale ».
 
 Usage : python3 scripts/check-budget.py public [--chrome COMMANDE]
 
@@ -35,7 +35,7 @@ import urllib.request
 
 import websocket
 
-# Budget publié dans la section « Budget par page » de la déclaration d'écoconception
+# Budget publié dans la section « Budget par page » de la page « Empreinte environnementale »
 BUDGET = {"poids": 100 * 1024, "requêtes": 10, "DOM": 1500}
 VIEWPORTS = [(1366, 768), (390, 844)]
 # GitHub Pages compresse en gzip de niveau 5 (mêmes tailles à l'octet près), sauf ces formats
